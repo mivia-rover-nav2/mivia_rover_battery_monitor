@@ -1,0 +1,1034 @@
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"I2C_screen.c"
+  16              		.text
+  17              		.section	.bss.ssd1306_buffer,"aw",%nobits
+  18              		.align	2
+  21              	ssd1306_buffer:
+  22 0000 00000000 		.space	1024
+  22      00000000 
+  22      00000000 
+  22      00000000 
+  22      00000000 
+  23              		.section	.rodata.font5x7,"a"
+  24              		.align	2
+  27              	font5x7:
+  28 0000 00000000 		.ascii	"\000\000\000\000\000"
+  28      00
+  29 0005 00005F00 		.ascii	"\000\000_\000\000"
+  29      00
+  30 000a 00070007 		.ascii	"\000\007\000\007\000"
+  30      00
+  31 000f 147F147F 		.ascii	"\024\177\024\177\024"
+  31      14
+  32 0014 242A7F2A 		.ascii	"$*\177*\022"
+  32      12
+  33 0019 23130864 		.ascii	"#\023\010db"
+  33      62
+  34 001e 36495522 		.ascii	"6IU\"P"
+  34      50
+  35 0023 00050300 		.ascii	"\000\005\003\000\000"
+  35      00
+  36 0028 001C2241 		.ascii	"\000\034\"A\000"
+  36      00
+  37 002d 0041221C 		.ascii	"\000A\"\034\000"
+  37      00
+  38 0032 14083E08 		.ascii	"\024\010>\010\024"
+  38      14
+  39 0037 08083E08 		.ascii	"\010\010>\010\010"
+  39      08
+  40 003c 00503000 		.ascii	"\000P0\000\000"
+  40      00
+  41 0041 08080808 		.ascii	"\010\010\010\010\010"
+  41      08
+  42 0046 00606000 		.ascii	"\000``\000\000"
+  42      00
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 2
+
+
+  43 004b 20100804 		.ascii	" \020\010\004\002"
+  43      02
+  44 0050 3E514945 		.ascii	">QIE>"
+  44      3E
+  45 0055 00427F40 		.ascii	"\000B\177@\000"
+  45      00
+  46 005a 42615149 		.ascii	"BaQIF"
+  46      46
+  47 005f 2141454B 		.ascii	"!AEK1"
+  47      31
+  48 0064 1814127F 		.ascii	"\030\024\022\177\020"
+  48      10
+  49 0069 27454545 		.ascii	"'EEE9"
+  49      39
+  50 006e 3C4A4949 		.ascii	"<JII0"
+  50      30
+  51 0073 01710905 		.ascii	"\001q\011\005\003"
+  51      03
+  52 0078 36494949 		.ascii	"6III6"
+  52      36
+  53 007d 06494929 		.ascii	"\006II)\036"
+  53      1E
+  54 0082 00363600 		.ascii	"\00066\000\000"
+  54      00
+  55 0087 00563600 		.ascii	"\000V6\000\000"
+  55      00
+  56 008c 08142241 		.ascii	"\010\024\"A\000"
+  56      00
+  57 0091 14141414 		.ascii	"\024\024\024\024\024"
+  57      14
+  58 0096 00412214 		.ascii	"\000A\"\024\010"
+  58      08
+  59 009b 02015109 		.ascii	"\002\001Q\011\006"
+  59      06
+  60 00a0 32497941 		.ascii	"2IyA>"
+  60      3E
+  61 00a5 7E111111 		.ascii	"~\021\021\021~"
+  61      7E
+  62 00aa 7F494949 		.ascii	"\177III6"
+  62      36
+  63 00af 3E414141 		.ascii	">AAA\""
+  63      22
+  64 00b4 7F414122 		.ascii	"\177AA\"\034"
+  64      1C
+  65 00b9 7F494949 		.ascii	"\177IIIA"
+  65      41
+  66 00be 7F090909 		.ascii	"\177\011\011\011\001"
+  66      01
+  67 00c3 3E414949 		.ascii	">AIIz"
+  67      7A
+  68 00c8 7F080808 		.ascii	"\177\010\010\010\177"
+  68      7F
+  69 00cd 00417F41 		.ascii	"\000A\177A\000"
+  69      00
+  70 00d2 2040413F 		.ascii	" @A?\001"
+  70      01
+  71 00d7 7F081422 		.ascii	"\177\010\024\"A"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 3
+
+
+  71      41
+  72 00dc 7F404040 		.ascii	"\177@@@@"
+  72      40
+  73 00e1 7F020402 		.ascii	"\177\002\004\002\177"
+  73      7F
+  74 00e6 7F040810 		.ascii	"\177\004\010\020\177"
+  74      7F
+  75 00eb 3E414141 		.ascii	">AAA>"
+  75      3E
+  76 00f0 7F090909 		.ascii	"\177\011\011\011\006"
+  76      06
+  77 00f5 3E415121 		.ascii	">AQ!^"
+  77      5E
+  78 00fa 7F091929 		.ascii	"\177\011\031)F"
+  78      46
+  79 00ff 46494949 		.ascii	"FIII1"
+  79      31
+  80 0104 01017F01 		.ascii	"\001\001\177\001\001"
+  80      01
+  81 0109 3F404040 		.ascii	"?@@@?"
+  81      3F
+  82 010e 1F204020 		.ascii	"\037 @ \037"
+  82      1F
+  83 0113 3F403840 		.ascii	"?@8@?"
+  83      3F
+  84 0118 63140814 		.ascii	"c\024\010\024c"
+  84      63
+  85 011d 07087008 		.ascii	"\007\010p\010\007"
+  85      07
+  86 0122 61514945 		.ascii	"aQIEC"
+  86      43
+  87 0127 007F4141 		.ascii	"\000\177AA\000"
+  87      00
+  88 012c 02040810 		.ascii	"\002\004\010\020 "
+  88      20
+  89 0131 0041417F 		.ascii	"\000AA\177\000"
+  89      00
+  90 0136 04020102 		.ascii	"\004\002\001\002\004"
+  90      04
+  91 013b 40404040 		.ascii	"@@@@@"
+  91      40
+  92 0140 00010204 		.ascii	"\000\001\002\004\000"
+  92      00
+  93 0145 20545454 		.ascii	" TTTx"
+  93      78
+  94 014a 7F484444 		.ascii	"\177HDD8"
+  94      38
+  95 014f 38444444 		.ascii	"8DDD "
+  95      20
+  96 0154 38444448 		.ascii	"8DDH\177"
+  96      7F
+  97 0159 38545454 		.ascii	"8TTT\030"
+  97      18
+  98 015e 087E0901 		.ascii	"\010~\011\001\002"
+  98      02
+  99 0163 0C525252 		.ascii	"\014RRR>"
+  99      3E
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 4
+
+
+ 100 0168 7F080404 		.ascii	"\177\010\004\004x"
+ 100      78
+ 101 016d 00447D40 		.ascii	"\000D}@\000"
+ 101      00
+ 102 0172 2040443D 		.ascii	" @D=\000"
+ 102      00
+ 103 0177 7F102844 		.ascii	"\177\020(D\000"
+ 103      00
+ 104 017c 00417F40 		.ascii	"\000A\177@\000"
+ 104      00
+ 105 0181 7C041804 		.ascii	"|\004\030\004x"
+ 105      78
+ 106 0186 7C080404 		.ascii	"|\010\004\004x"
+ 106      78
+ 107 018b 38444444 		.ascii	"8DDD8"
+ 107      38
+ 108 0190 7C141414 		.ascii	"|\024\024\024\010"
+ 108      08
+ 109 0195 08141418 		.ascii	"\010\024\024\030|"
+ 109      7C
+ 110 019a 7C080404 		.ascii	"|\010\004\004\010"
+ 110      08
+ 111 019f 48545454 		.ascii	"HTTT "
+ 111      20
+ 112 01a4 043F4440 		.ascii	"\004?D@ "
+ 112      20
+ 113 01a9 3C404020 		.ascii	"<@@ |"
+ 113      7C
+ 114 01ae 1C204020 		.ascii	"\034 @ \034"
+ 114      1C
+ 115 01b3 3C403040 		.ascii	"<@0@<"
+ 115      3C
+ 116 01b8 44281028 		.ascii	"D(\020(D"
+ 116      44
+ 117 01bd 0C505050 		.ascii	"\014PPP<"
+ 117      3C
+ 118 01c2 4464544C 		.ascii	"DdTLD"
+ 118      44
+ 119 01c7 00083641 		.ascii	"\000\0106A\000"
+ 119      00
+ 120 01cc 00007F00 		.ascii	"\000\000\177\000\000"
+ 120      00
+ 121 01d1 00413608 		.ascii	"\000A6\010\000"
+ 121      00
+ 122 01d6 10080810 		.ascii	"\020\010\010\020\010"
+ 122      08
+ 123              		.section	.text.SSD1306_WriteCmd,"ax",%progbits
+ 124              		.align	1
+ 125              		.syntax unified
+ 126              		.thumb
+ 127              		.thumb_func
+ 129              	SSD1306_WriteCmd:
+ 130              		@ args = 0, pretend = 0, frame = 16
+ 131              		@ frame_needed = 1, uses_anonymous_args = 0
+ 132 0000 80B5     		push	{r7, lr}
+ 133 0002 86B0     		sub	sp, sp, #24
+ 134 0004 02AF     		add	r7, sp, #8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 5
+
+
+ 135 0006 7860     		str	r0, [r7, #4]
+ 136 0008 0B46     		mov	r3, r1
+ 137 000a FB70     		strb	r3, [r7, #3]
+ 138 000c 0023     		movs	r3, #0
+ 139 000e 3B73     		strb	r3, [r7, #12]
+ 140 0010 FB78     		ldrb	r3, [r7, #3]
+ 141 0012 7B73     		strb	r3, [r7, #13]
+ 142 0014 07F10C02 		add	r2, r7, #12
+ 143 0018 6423     		movs	r3, #100
+ 144 001a 0093     		str	r3, [sp]
+ 145 001c 0223     		movs	r3, #2
+ 146 001e 7821     		movs	r1, #120
+ 147 0020 7868     		ldr	r0, [r7, #4]
+ 148 0022 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
+ 149 0026 0346     		mov	r3, r0
+ 150 0028 FB73     		strb	r3, [r7, #15]
+ 151 002a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 152 002c 1846     		mov	r0, r3
+ 153 002e 1037     		adds	r7, r7, #16
+ 154 0030 BD46     		mov	sp, r7
+ 155              		@ sp needed
+ 156 0032 80BD     		pop	{r7, pc}
+ 158              		.section	.rodata
+ 159              		.align	2
+ 160              	.LC0:
+ 161 0000 AED580A8 		.ascii	"\256\325\200\250?\323\000@\215\024 \000\241\310\332"
+ 161      3FD30040 
+ 161      8D142000 
+ 161      A1C8DA
+ 162 000f 1281CFD9 		.ascii	"\022\201\317\331\361\333@\244\246\257"
+ 162      F1DB40A4 
+ 162      A6AF
+ 163              		.section	.text.SSD1306_Init,"ax",%progbits
+ 164              		.align	1
+ 165              		.global	SSD1306_Init
+ 166              		.syntax unified
+ 167              		.thumb
+ 168              		.thumb_func
+ 170              	SSD1306_Init:
+ 171              		@ args = 0, pretend = 0, frame = 40
+ 172              		@ frame_needed = 1, uses_anonymous_args = 0
+ 173 0000 B0B5     		push	{r4, r5, r7, lr}
+ 174 0002 8AB0     		sub	sp, sp, #40
+ 175 0004 00AF     		add	r7, sp, #0
+ 176 0006 7860     		str	r0, [r7, #4]
+ 177 0008 0A20     		movs	r0, #10
+ 178 000a FFF7FEFF 		bl	HAL_Delay
+ 179 000e 1B4B     		ldr	r3, .L9
+ 180 0010 07F10C04 		add	r4, r7, #12
+ 181 0014 1D46     		mov	r5, r3
+ 182 0016 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 183 0018 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 184 001a 95E80700 		ldm	r5, {r0, r1, r2}
+ 185 001e 03C4     		stmia	r4!, {r0, r1}
+ 186 0020 2270     		strb	r2, [r4]
+ 187 0022 0023     		movs	r3, #0
+ 188 0024 87F82730 		strb	r3, [r7, #39]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 6
+
+
+ 189 0028 1AE0     		b	.L4
+ 190              	.L7:
+ 191 002a 97F82730 		ldrb	r3, [r7, #39]	@ zero_extendqisi2
+ 192 002e 2833     		adds	r3, r3, #40
+ 193 0030 3B44     		add	r3, r3, r7
+ 194 0032 13F81C3C 		ldrb	r3, [r3, #-28]	@ zero_extendqisi2
+ 195 0036 1946     		mov	r1, r3
+ 196 0038 7868     		ldr	r0, [r7, #4]
+ 197 003a FFF7FEFF 		bl	SSD1306_WriteCmd
+ 198 003e 0346     		mov	r3, r0
+ 199 0040 87F82630 		strb	r3, [r7, #38]
+ 200 0044 97F82630 		ldrb	r3, [r7, #38]	@ zero_extendqisi2
+ 201 0048 002B     		cmp	r3, #0
+ 202 004a 04D0     		beq	.L5
+ 203 004c 97F82730 		ldrb	r3, [r7, #39]
+ 204 0050 1033     		adds	r3, r3, #16
+ 205 0052 DBB2     		uxtb	r3, r3
+ 206 0054 0EE0     		b	.L8
+ 207              	.L5:
+ 208 0056 97F82730 		ldrb	r3, [r7, #39]	@ zero_extendqisi2
+ 209 005a 0133     		adds	r3, r3, #1
+ 210 005c 87F82730 		strb	r3, [r7, #39]
+ 211              	.L4:
+ 212 0060 97F82730 		ldrb	r3, [r7, #39]	@ zero_extendqisi2
+ 213 0064 182B     		cmp	r3, #24
+ 214 0066 E0D9     		bls	.L7
+ 215 0068 FFF7FEFF 		bl	SSD1306_ClearBuffer
+ 216 006c 7868     		ldr	r0, [r7, #4]
+ 217 006e FFF7FEFF 		bl	SSD1306_Display
+ 218 0072 0023     		movs	r3, #0
+ 219              	.L8:
+ 220 0074 1846     		mov	r0, r3
+ 221 0076 2837     		adds	r7, r7, #40
+ 222 0078 BD46     		mov	sp, r7
+ 223              		@ sp needed
+ 224 007a B0BD     		pop	{r4, r5, r7, pc}
+ 225              	.L10:
+ 226              		.align	2
+ 227              	.L9:
+ 228 007c 00000000 		.word	.LC0
+ 230              		.section	.text.SSD1306_ClearBuffer,"ax",%progbits
+ 231              		.align	1
+ 232              		.global	SSD1306_ClearBuffer
+ 233              		.syntax unified
+ 234              		.thumb
+ 235              		.thumb_func
+ 237              	SSD1306_ClearBuffer:
+ 238              		@ args = 0, pretend = 0, frame = 0
+ 239              		@ frame_needed = 1, uses_anonymous_args = 0
+ 240 0000 80B5     		push	{r7, lr}
+ 241 0002 00AF     		add	r7, sp, #0
+ 242 0004 4FF48062 		mov	r2, #1024
+ 243 0008 0021     		movs	r1, #0
+ 244 000a 0248     		ldr	r0, .L12
+ 245 000c FFF7FEFF 		bl	memset
+ 246 0010 00BF     		nop
+ 247 0012 80BD     		pop	{r7, pc}
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 7
+
+
+ 248              	.L13:
+ 249              		.align	2
+ 250              	.L12:
+ 251 0014 00000000 		.word	ssd1306_buffer
+ 253              		.section	.text.SSD1306_Display,"ax",%progbits
+ 254              		.align	1
+ 255              		.global	SSD1306_Display
+ 256              		.syntax unified
+ 257              		.thumb
+ 258              		.thumb_func
+ 260              	SSD1306_Display:
+ 261              		@ args = 0, pretend = 0, frame = 32
+ 262              		@ frame_needed = 1, uses_anonymous_args = 0
+ 263 0000 80B5     		push	{r7, lr}
+ 264 0002 8AB0     		sub	sp, sp, #40
+ 265 0004 02AF     		add	r7, sp, #8
+ 266 0006 7860     		str	r0, [r7, #4]
+ 267 0008 2121     		movs	r1, #33
+ 268 000a 7868     		ldr	r0, [r7, #4]
+ 269 000c FFF7FEFF 		bl	SSD1306_WriteCmd
+ 270 0010 0021     		movs	r1, #0
+ 271 0012 7868     		ldr	r0, [r7, #4]
+ 272 0014 FFF7FEFF 		bl	SSD1306_WriteCmd
+ 273 0018 7F21     		movs	r1, #127
+ 274 001a 7868     		ldr	r0, [r7, #4]
+ 275 001c FFF7FEFF 		bl	SSD1306_WriteCmd
+ 276 0020 2221     		movs	r1, #34
+ 277 0022 7868     		ldr	r0, [r7, #4]
+ 278 0024 FFF7FEFF 		bl	SSD1306_WriteCmd
+ 279 0028 0021     		movs	r1, #0
+ 280 002a 7868     		ldr	r0, [r7, #4]
+ 281 002c FFF7FEFF 		bl	SSD1306_WriteCmd
+ 282 0030 0721     		movs	r1, #7
+ 283 0032 7868     		ldr	r0, [r7, #4]
+ 284 0034 FFF7FEFF 		bl	SSD1306_WriteCmd
+ 285 0038 4023     		movs	r3, #64
+ 286 003a 3B73     		strb	r3, [r7, #12]
+ 287 003c 0023     		movs	r3, #0
+ 288 003e FB83     		strh	r3, [r7, #30]	@ movhi
+ 289 0040 25E0     		b	.L15
+ 290              	.L17:
+ 291 0042 1023     		movs	r3, #16
+ 292 0044 7B77     		strb	r3, [r7, #29]
+ 293 0046 FB8B     		ldrh	r3, [r7, #30]	@ movhi
+ 294 0048 1033     		adds	r3, r3, #16
+ 295 004a 9BB2     		uxth	r3, r3
+ 296 004c B3F5806F 		cmp	r3, #1024
+ 297 0050 03D9     		bls	.L16
+ 298 0052 FB8B     		ldrh	r3, [r7, #30]	@ movhi
+ 299 0054 DBB2     		uxtb	r3, r3
+ 300 0056 5B42     		rsbs	r3, r3, #0
+ 301 0058 7B77     		strb	r3, [r7, #29]
+ 302              	.L16:
+ 303 005a FB8B     		ldrh	r3, [r7, #30]
+ 304 005c 104A     		ldr	r2, .L18
+ 305 005e 9918     		adds	r1, r3, r2
+ 306 0060 7A7F     		ldrb	r2, [r7, #29]	@ zero_extendqisi2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 8
+
+
+ 307 0062 07F10C03 		add	r3, r7, #12
+ 308 0066 0133     		adds	r3, r3, #1
+ 309 0068 1846     		mov	r0, r3
+ 310 006a FFF7FEFF 		bl	memcpy
+ 311 006e 7B7F     		ldrb	r3, [r7, #29]	@ zero_extendqisi2
+ 312 0070 9BB2     		uxth	r3, r3
+ 313 0072 0133     		adds	r3, r3, #1
+ 314 0074 9BB2     		uxth	r3, r3
+ 315 0076 07F10C02 		add	r2, r7, #12
+ 316 007a 4FF0FF31 		mov	r1, #-1
+ 317 007e 0091     		str	r1, [sp]
+ 318 0080 7821     		movs	r1, #120
+ 319 0082 7868     		ldr	r0, [r7, #4]
+ 320 0084 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
+ 321 0088 FB8B     		ldrh	r3, [r7, #30]	@ movhi
+ 322 008a 1033     		adds	r3, r3, #16
+ 323 008c FB83     		strh	r3, [r7, #30]	@ movhi
+ 324              	.L15:
+ 325 008e FB8B     		ldrh	r3, [r7, #30]
+ 326 0090 B3F5806F 		cmp	r3, #1024
+ 327 0094 D5D3     		bcc	.L17
+ 328 0096 00BF     		nop
+ 329 0098 00BF     		nop
+ 330 009a 2037     		adds	r7, r7, #32
+ 331 009c BD46     		mov	sp, r7
+ 332              		@ sp needed
+ 333 009e 80BD     		pop	{r7, pc}
+ 334              	.L19:
+ 335              		.align	2
+ 336              	.L18:
+ 337 00a0 00000000 		.word	ssd1306_buffer
+ 339              		.section	.text.SSD1306_DrawPixel,"ax",%progbits
+ 340              		.align	1
+ 341              		.global	SSD1306_DrawPixel
+ 342              		.syntax unified
+ 343              		.thumb
+ 344              		.thumb_func
+ 346              	SSD1306_DrawPixel:
+ 347              		@ args = 0, pretend = 0, frame = 8
+ 348              		@ frame_needed = 1, uses_anonymous_args = 0
+ 349              		@ link register save eliminated.
+ 350 0000 90B4     		push	{r4, r7}
+ 351 0002 82B0     		sub	sp, sp, #8
+ 352 0004 00AF     		add	r7, sp, #0
+ 353 0006 0346     		mov	r3, r0
+ 354 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 355 000a 0B46     		mov	r3, r1	@ movhi
+ 356 000c BB80     		strh	r3, [r7, #4]	@ movhi
+ 357 000e 1346     		mov	r3, r2
+ 358 0010 FB70     		strb	r3, [r7, #3]
+ 359 0012 B7F90630 		ldrsh	r3, [r7, #6]
+ 360 0016 002B     		cmp	r3, #0
+ 361 0018 50DB     		blt	.L27
+ 362 001a B7F90630 		ldrsh	r3, [r7, #6]
+ 363 001e 7F2B     		cmp	r3, #127
+ 364 0020 4CDC     		bgt	.L27
+ 365 0022 B7F90430 		ldrsh	r3, [r7, #4]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 9
+
+
+ 366 0026 002B     		cmp	r3, #0
+ 367 0028 48DB     		blt	.L27
+ 368 002a B7F90430 		ldrsh	r3, [r7, #4]
+ 369 002e 3F2B     		cmp	r3, #63
+ 370 0030 44DC     		bgt	.L27
+ 371 0032 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 372 0034 002B     		cmp	r3, #0
+ 373 0036 1ED0     		beq	.L24
+ 374 0038 B7F90620 		ldrsh	r2, [r7, #6]
+ 375 003c B7F90430 		ldrsh	r3, [r7, #4]
+ 376 0040 002B     		cmp	r3, #0
+ 377 0042 00DA     		bge	.L25
+ 378 0044 0733     		adds	r3, r3, #7
+ 379              	.L25:
+ 380 0046 DB10     		asrs	r3, r3, #3
+ 381 0048 1CB2     		sxth	r4, r3
+ 382 004a 2346     		mov	r3, r4
+ 383 004c DB01     		lsls	r3, r3, #7
+ 384 004e 1344     		add	r3, r3, r2
+ 385 0050 1D4A     		ldr	r2, .L28
+ 386 0052 D15C     		ldrb	r1, [r2, r3]	@ zero_extendqisi2
+ 387 0054 BB88     		ldrh	r3, [r7, #4]
+ 388 0056 03F00703 		and	r3, r3, #7
+ 389 005a 0122     		movs	r2, #1
+ 390 005c 02FA03F3 		lsl	r3, r2, r3
+ 391 0060 DAB2     		uxtb	r2, r3
+ 392 0062 B7F90600 		ldrsh	r0, [r7, #6]
+ 393 0066 2346     		mov	r3, r4
+ 394 0068 DB01     		lsls	r3, r3, #7
+ 395 006a 0344     		add	r3, r3, r0
+ 396 006c 0A43     		orrs	r2, r2, r1
+ 397 006e D1B2     		uxtb	r1, r2
+ 398 0070 154A     		ldr	r2, .L28
+ 399 0072 D154     		strb	r1, [r2, r3]
+ 400 0074 23E0     		b	.L20
+ 401              	.L24:
+ 402 0076 B7F90620 		ldrsh	r2, [r7, #6]
+ 403 007a B7F90430 		ldrsh	r3, [r7, #4]
+ 404 007e 002B     		cmp	r3, #0
+ 405 0080 00DA     		bge	.L26
+ 406 0082 0733     		adds	r3, r3, #7
+ 407              	.L26:
+ 408 0084 DB10     		asrs	r3, r3, #3
+ 409 0086 18B2     		sxth	r0, r3
+ 410 0088 0346     		mov	r3, r0
+ 411 008a DB01     		lsls	r3, r3, #7
+ 412 008c 1344     		add	r3, r3, r2
+ 413 008e 0E4A     		ldr	r2, .L28
+ 414 0090 D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
+ 415 0092 5AB2     		sxtb	r2, r3
+ 416 0094 BB88     		ldrh	r3, [r7, #4]
+ 417 0096 03F00703 		and	r3, r3, #7
+ 418 009a 0121     		movs	r1, #1
+ 419 009c 01FA03F3 		lsl	r3, r1, r3
+ 420 00a0 5BB2     		sxtb	r3, r3
+ 421 00a2 DB43     		mvns	r3, r3
+ 422 00a4 5BB2     		sxtb	r3, r3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 10
+
+
+ 423 00a6 1340     		ands	r3, r3, r2
+ 424 00a8 59B2     		sxtb	r1, r3
+ 425 00aa B7F90620 		ldrsh	r2, [r7, #6]
+ 426 00ae 0346     		mov	r3, r0
+ 427 00b0 DB01     		lsls	r3, r3, #7
+ 428 00b2 1344     		add	r3, r3, r2
+ 429 00b4 C9B2     		uxtb	r1, r1
+ 430 00b6 044A     		ldr	r2, .L28
+ 431 00b8 D154     		strb	r1, [r2, r3]
+ 432 00ba 00E0     		b	.L20
+ 433              	.L27:
+ 434 00bc 00BF     		nop
+ 435              	.L20:
+ 436 00be 0837     		adds	r7, r7, #8
+ 437 00c0 BD46     		mov	sp, r7
+ 438              		@ sp needed
+ 439 00c2 90BC     		pop	{r4, r7}
+ 440 00c4 7047     		bx	lr
+ 441              	.L29:
+ 442 00c6 00BF     		.align	2
+ 443              	.L28:
+ 444 00c8 00000000 		.word	ssd1306_buffer
+ 446              		.section	.text.SSD1306_DrawChar,"ax",%progbits
+ 447              		.align	1
+ 448              		.global	SSD1306_DrawChar
+ 449              		.syntax unified
+ 450              		.thumb
+ 451              		.thumb_func
+ 453              	SSD1306_DrawChar:
+ 454              		@ args = 4, pretend = 0, frame = 24
+ 455              		@ frame_needed = 1, uses_anonymous_args = 0
+ 456 0000 90B5     		push	{r4, r7, lr}
+ 457 0002 89B0     		sub	sp, sp, #36
+ 458 0004 02AF     		add	r7, sp, #8
+ 459 0006 0446     		mov	r4, r0
+ 460 0008 0846     		mov	r0, r1
+ 461 000a 1146     		mov	r1, r2
+ 462 000c 1A46     		mov	r2, r3
+ 463 000e 2346     		mov	r3, r4	@ movhi
+ 464 0010 FB80     		strh	r3, [r7, #6]	@ movhi
+ 465 0012 0346     		mov	r3, r0	@ movhi
+ 466 0014 BB80     		strh	r3, [r7, #4]	@ movhi
+ 467 0016 0B46     		mov	r3, r1
+ 468 0018 FB70     		strb	r3, [r7, #3]
+ 469 001a 1346     		mov	r3, r2
+ 470 001c BB70     		strb	r3, [r7, #2]
+ 471 001e FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 472 0020 1F2B     		cmp	r3, #31
+ 473 0022 02D9     		bls	.L31
+ 474 0024 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 475 0026 7E2B     		cmp	r3, #126
+ 476 0028 01D9     		bls	.L32
+ 477              	.L31:
+ 478 002a 3F23     		movs	r3, #63
+ 479 002c FB70     		strb	r3, [r7, #3]
+ 480              	.L32:
+ 481 002e FB78     		ldrb	r3, [r7, #3]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 11
+
+
+ 482 0030 203B     		subs	r3, r3, #32
+ 483 0032 DBB2     		uxtb	r3, r3
+ 484 0034 1A46     		mov	r2, r3
+ 485 0036 1346     		mov	r3, r2
+ 486 0038 9B00     		lsls	r3, r3, #2
+ 487 003a 1344     		add	r3, r3, r2
+ 488 003c 344A     		ldr	r2, .L39
+ 489 003e 1344     		add	r3, r3, r2
+ 490 0040 3B61     		str	r3, [r7, #16]
+ 491 0042 0023     		movs	r3, #0
+ 492 0044 FB75     		strb	r3, [r7, #23]
+ 493 0046 5AE0     		b	.L33
+ 494              	.L38:
+ 495 0048 97F91730 		ldrsb	r3, [r7, #23]
+ 496 004c 3A69     		ldr	r2, [r7, #16]
+ 497 004e 1344     		add	r3, r3, r2
+ 498 0050 1B78     		ldrb	r3, [r3]
+ 499 0052 FB73     		strb	r3, [r7, #15]
+ 500 0054 0023     		movs	r3, #0
+ 501 0056 BB75     		strb	r3, [r7, #22]
+ 502 0058 47E0     		b	.L34
+ 503              	.L37:
+ 504 005a FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
+ 505 005c 97F91630 		ldrsb	r3, [r7, #22]
+ 506 0060 22FA03F3 		lsr	r3, r2, r3
+ 507 0064 03F00103 		and	r3, r3, #1
+ 508 0068 002B     		cmp	r3, #0
+ 509 006a 38D0     		beq	.L35
+ 510 006c BB78     		ldrb	r3, [r7, #2]	@ zero_extendqisi2
+ 511 006e 012B     		cmp	r3, #1
+ 512 0070 13D1     		bne	.L36
+ 513 0072 97F91730 		ldrsb	r3, [r7, #23]
+ 514 0076 9AB2     		uxth	r2, r3
+ 515 0078 FB88     		ldrh	r3, [r7, #6]
+ 516 007a 1344     		add	r3, r3, r2
+ 517 007c 9BB2     		uxth	r3, r3
+ 518 007e 18B2     		sxth	r0, r3
+ 519 0080 97F91630 		ldrsb	r3, [r7, #22]
+ 520 0084 9AB2     		uxth	r2, r3
+ 521 0086 BB88     		ldrh	r3, [r7, #4]
+ 522 0088 1344     		add	r3, r3, r2
+ 523 008a 9BB2     		uxth	r3, r3
+ 524 008c 1BB2     		sxth	r3, r3
+ 525 008e 97F82820 		ldrb	r2, [r7, #40]	@ zero_extendqisi2
+ 526 0092 1946     		mov	r1, r3
+ 527 0094 FFF7FEFF 		bl	SSD1306_DrawPixel
+ 528 0098 21E0     		b	.L35
+ 529              	.L36:
+ 530 009a 97F91730 		ldrsb	r3, [r7, #23]
+ 531 009e 9AB2     		uxth	r2, r3
+ 532 00a0 BB78     		ldrb	r3, [r7, #2]	@ zero_extendqisi2
+ 533 00a2 9BB2     		uxth	r3, r3
+ 534 00a4 12FB03F3 		smulbb	r3, r2, r3
+ 535 00a8 9AB2     		uxth	r2, r3
+ 536 00aa FB88     		ldrh	r3, [r7, #6]
+ 537 00ac 1344     		add	r3, r3, r2
+ 538 00ae 9BB2     		uxth	r3, r3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 12
+
+
+ 539 00b0 18B2     		sxth	r0, r3
+ 540 00b2 97F91630 		ldrsb	r3, [r7, #22]
+ 541 00b6 9AB2     		uxth	r2, r3
+ 542 00b8 BB78     		ldrb	r3, [r7, #2]	@ zero_extendqisi2
+ 543 00ba 9BB2     		uxth	r3, r3
+ 544 00bc 12FB03F3 		smulbb	r3, r2, r3
+ 545 00c0 9AB2     		uxth	r2, r3
+ 546 00c2 BB88     		ldrh	r3, [r7, #4]
+ 547 00c4 1344     		add	r3, r3, r2
+ 548 00c6 9BB2     		uxth	r3, r3
+ 549 00c8 19B2     		sxth	r1, r3
+ 550 00ca BB78     		ldrb	r3, [r7, #2]	@ zero_extendqisi2
+ 551 00cc 1AB2     		sxth	r2, r3
+ 552 00ce BB78     		ldrb	r3, [r7, #2]	@ zero_extendqisi2
+ 553 00d0 1CB2     		sxth	r4, r3
+ 554 00d2 97F82830 		ldrb	r3, [r7, #40]	@ zero_extendqisi2
+ 555 00d6 0093     		str	r3, [sp]
+ 556 00d8 2346     		mov	r3, r4
+ 557 00da FFF7FEFF 		bl	SSD1306_FillRect
+ 558              	.L35:
+ 559 00de 97F91630 		ldrsb	r3, [r7, #22]
+ 560 00e2 DBB2     		uxtb	r3, r3
+ 561 00e4 0133     		adds	r3, r3, #1
+ 562 00e6 DBB2     		uxtb	r3, r3
+ 563 00e8 BB75     		strb	r3, [r7, #22]
+ 564              	.L34:
+ 565 00ea 97F91630 		ldrsb	r3, [r7, #22]
+ 566 00ee 062B     		cmp	r3, #6
+ 567 00f0 B3DD     		ble	.L37
+ 568 00f2 97F91730 		ldrsb	r3, [r7, #23]
+ 569 00f6 DBB2     		uxtb	r3, r3
+ 570 00f8 0133     		adds	r3, r3, #1
+ 571 00fa DBB2     		uxtb	r3, r3
+ 572 00fc FB75     		strb	r3, [r7, #23]
+ 573              	.L33:
+ 574 00fe 97F91730 		ldrsb	r3, [r7, #23]
+ 575 0102 042B     		cmp	r3, #4
+ 576 0104 A0DD     		ble	.L38
+ 577 0106 00BF     		nop
+ 578 0108 00BF     		nop
+ 579 010a 1C37     		adds	r7, r7, #28
+ 580 010c BD46     		mov	sp, r7
+ 581              		@ sp needed
+ 582 010e 90BD     		pop	{r4, r7, pc}
+ 583              	.L40:
+ 584              		.align	2
+ 585              	.L39:
+ 586 0110 00000000 		.word	font5x7
+ 588              		.section	.text.SSD1306_DrawString,"ax",%progbits
+ 589              		.align	1
+ 590              		.global	SSD1306_DrawString
+ 591              		.syntax unified
+ 592              		.thumb
+ 593              		.thumb_func
+ 595              	SSD1306_DrawString:
+ 596              		@ args = 4, pretend = 0, frame = 24
+ 597              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 13
+
+
+ 598 0000 90B5     		push	{r4, r7, lr}
+ 599 0002 89B0     		sub	sp, sp, #36
+ 600 0004 02AF     		add	r7, sp, #8
+ 601 0006 BA60     		str	r2, [r7, #8]
+ 602 0008 1A46     		mov	r2, r3
+ 603 000a 0346     		mov	r3, r0	@ movhi
+ 604 000c FB81     		strh	r3, [r7, #14]	@ movhi
+ 605 000e 0B46     		mov	r3, r1	@ movhi
+ 606 0010 BB81     		strh	r3, [r7, #12]	@ movhi
+ 607 0012 1346     		mov	r3, r2
+ 608 0014 FB71     		strb	r3, [r7, #7]
+ 609 0016 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 610 0018 FB82     		strh	r3, [r7, #22]	@ movhi
+ 611 001a 29E0     		b	.L42
+ 612              	.L45:
+ 613 001c BB68     		ldr	r3, [r7, #8]
+ 614 001e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 615 0020 0A2B     		cmp	r3, #10
+ 616 0022 0AD1     		bne	.L43
+ 617 0024 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 618 0026 9BB2     		uxth	r3, r3
+ 619 0028 DB00     		lsls	r3, r3, #3
+ 620 002a 9AB2     		uxth	r2, r3
+ 621 002c BB89     		ldrh	r3, [r7, #12]
+ 622 002e 1344     		add	r3, r3, r2
+ 623 0030 9BB2     		uxth	r3, r3
+ 624 0032 BB81     		strh	r3, [r7, #12]	@ movhi
+ 625 0034 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 626 0036 FB82     		strh	r3, [r7, #22]	@ movhi
+ 627 0038 17E0     		b	.L44
+ 628              	.L43:
+ 629 003a BB68     		ldr	r3, [r7, #8]
+ 630 003c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 631 003e FC79     		ldrb	r4, [r7, #7]	@ zero_extendqisi2
+ 632 0040 B7F90C10 		ldrsh	r1, [r7, #12]
+ 633 0044 B7F91600 		ldrsh	r0, [r7, #22]
+ 634 0048 97F82830 		ldrb	r3, [r7, #40]	@ zero_extendqisi2
+ 635 004c 0093     		str	r3, [sp]
+ 636 004e 2346     		mov	r3, r4
+ 637 0050 FFF7FEFF 		bl	SSD1306_DrawChar
+ 638 0054 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 639 0056 9BB2     		uxth	r3, r3
+ 640 0058 1A46     		mov	r2, r3	@ movhi
+ 641 005a 5200     		lsls	r2, r2, #1
+ 642 005c 1344     		add	r3, r3, r2
+ 643 005e 5B00     		lsls	r3, r3, #1
+ 644 0060 9AB2     		uxth	r2, r3
+ 645 0062 FB8A     		ldrh	r3, [r7, #22]
+ 646 0064 1344     		add	r3, r3, r2
+ 647 0066 9BB2     		uxth	r3, r3
+ 648 0068 FB82     		strh	r3, [r7, #22]	@ movhi
+ 649              	.L44:
+ 650 006a BB68     		ldr	r3, [r7, #8]
+ 651 006c 0133     		adds	r3, r3, #1
+ 652 006e BB60     		str	r3, [r7, #8]
+ 653              	.L42:
+ 654 0070 BB68     		ldr	r3, [r7, #8]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 14
+
+
+ 655 0072 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 656 0074 002B     		cmp	r3, #0
+ 657 0076 D1D1     		bne	.L45
+ 658 0078 00BF     		nop
+ 659 007a 00BF     		nop
+ 660 007c 1C37     		adds	r7, r7, #28
+ 661 007e BD46     		mov	sp, r7
+ 662              		@ sp needed
+ 663 0080 90BD     		pop	{r4, r7, pc}
+ 665              		.section	.text.SSD1306_FillRect,"ax",%progbits
+ 666              		.align	1
+ 667              		.global	SSD1306_FillRect
+ 668              		.syntax unified
+ 669              		.thumb
+ 670              		.thumb_func
+ 672              	SSD1306_FillRect:
+ 673              		@ args = 4, pretend = 0, frame = 16
+ 674              		@ frame_needed = 1, uses_anonymous_args = 0
+ 675 0000 90B5     		push	{r4, r7, lr}
+ 676 0002 85B0     		sub	sp, sp, #20
+ 677 0004 00AF     		add	r7, sp, #0
+ 678 0006 0446     		mov	r4, r0
+ 679 0008 0846     		mov	r0, r1
+ 680 000a 1146     		mov	r1, r2
+ 681 000c 1A46     		mov	r2, r3
+ 682 000e 2346     		mov	r3, r4	@ movhi
+ 683 0010 FB80     		strh	r3, [r7, #6]	@ movhi
+ 684 0012 0346     		mov	r3, r0	@ movhi
+ 685 0014 BB80     		strh	r3, [r7, #4]	@ movhi
+ 686 0016 0B46     		mov	r3, r1	@ movhi
+ 687 0018 7B80     		strh	r3, [r7, #2]	@ movhi
+ 688 001a 1346     		mov	r3, r2	@ movhi
+ 689 001c 3B80     		strh	r3, [r7]	@ movhi
+ 690 001e FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 691 0020 FB81     		strh	r3, [r7, #14]	@ movhi
+ 692 0022 20E0     		b	.L47
+ 693              	.L50:
+ 694 0024 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 695 0026 BB81     		strh	r3, [r7, #12]	@ movhi
+ 696 0028 0EE0     		b	.L48
+ 697              	.L49:
+ 698 002a 97F82020 		ldrb	r2, [r7, #32]	@ zero_extendqisi2
+ 699 002e B7F90C10 		ldrsh	r1, [r7, #12]
+ 700 0032 B7F90E30 		ldrsh	r3, [r7, #14]
+ 701 0036 1846     		mov	r0, r3
+ 702 0038 FFF7FEFF 		bl	SSD1306_DrawPixel
+ 703 003c B7F90C30 		ldrsh	r3, [r7, #12]
+ 704 0040 9BB2     		uxth	r3, r3
+ 705 0042 0133     		adds	r3, r3, #1
+ 706 0044 9BB2     		uxth	r3, r3
+ 707 0046 BB81     		strh	r3, [r7, #12]	@ movhi
+ 708              	.L48:
+ 709 0048 B7F90C20 		ldrsh	r2, [r7, #12]
+ 710 004c B7F90410 		ldrsh	r1, [r7, #4]
+ 711 0050 B7F90030 		ldrsh	r3, [r7]
+ 712 0054 0B44     		add	r3, r3, r1
+ 713 0056 9A42     		cmp	r2, r3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 15
+
+
+ 714 0058 E7DB     		blt	.L49
+ 715 005a B7F90E30 		ldrsh	r3, [r7, #14]
+ 716 005e 9BB2     		uxth	r3, r3
+ 717 0060 0133     		adds	r3, r3, #1
+ 718 0062 9BB2     		uxth	r3, r3
+ 719 0064 FB81     		strh	r3, [r7, #14]	@ movhi
+ 720              	.L47:
+ 721 0066 B7F90E20 		ldrsh	r2, [r7, #14]
+ 722 006a B7F90610 		ldrsh	r1, [r7, #6]
+ 723 006e B7F90230 		ldrsh	r3, [r7, #2]
+ 724 0072 0B44     		add	r3, r3, r1
+ 725 0074 9A42     		cmp	r2, r3
+ 726 0076 D5DB     		blt	.L50
+ 727 0078 00BF     		nop
+ 728 007a 00BF     		nop
+ 729 007c 1437     		adds	r7, r7, #20
+ 730 007e BD46     		mov	sp, r7
+ 731              		@ sp needed
+ 732 0080 90BD     		pop	{r4, r7, pc}
+ 734              		.section	.text.SSD1306_DrawRect,"ax",%progbits
+ 735              		.align	1
+ 736              		.global	SSD1306_DrawRect
+ 737              		.syntax unified
+ 738              		.thumb
+ 739              		.thumb_func
+ 741              	SSD1306_DrawRect:
+ 742              		@ args = 4, pretend = 0, frame = 16
+ 743              		@ frame_needed = 1, uses_anonymous_args = 0
+ 744 0000 90B5     		push	{r4, r7, lr}
+ 745 0002 85B0     		sub	sp, sp, #20
+ 746 0004 00AF     		add	r7, sp, #0
+ 747 0006 0446     		mov	r4, r0
+ 748 0008 0846     		mov	r0, r1
+ 749 000a 1146     		mov	r1, r2
+ 750 000c 1A46     		mov	r2, r3
+ 751 000e 2346     		mov	r3, r4	@ movhi
+ 752 0010 FB80     		strh	r3, [r7, #6]	@ movhi
+ 753 0012 0346     		mov	r3, r0	@ movhi
+ 754 0014 BB80     		strh	r3, [r7, #4]	@ movhi
+ 755 0016 0B46     		mov	r3, r1	@ movhi
+ 756 0018 7B80     		strh	r3, [r7, #2]	@ movhi
+ 757 001a 1346     		mov	r3, r2	@ movhi
+ 758 001c 3B80     		strh	r3, [r7]	@ movhi
+ 759 001e FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 760 0020 FB81     		strh	r3, [r7, #14]	@ movhi
+ 761 0022 0EE0     		b	.L52
+ 762              	.L53:
+ 763 0024 97F82020 		ldrb	r2, [r7, #32]	@ zero_extendqisi2
+ 764 0028 B7F90410 		ldrsh	r1, [r7, #4]
+ 765 002c B7F90E30 		ldrsh	r3, [r7, #14]
+ 766 0030 1846     		mov	r0, r3
+ 767 0032 FFF7FEFF 		bl	SSD1306_DrawPixel
+ 768 0036 B7F90E30 		ldrsh	r3, [r7, #14]
+ 769 003a 9BB2     		uxth	r3, r3
+ 770 003c 0133     		adds	r3, r3, #1
+ 771 003e 9BB2     		uxth	r3, r3
+ 772 0040 FB81     		strh	r3, [r7, #14]	@ movhi
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 16
+
+
+ 773              	.L52:
+ 774 0042 B7F90E20 		ldrsh	r2, [r7, #14]
+ 775 0046 B7F90610 		ldrsh	r1, [r7, #6]
+ 776 004a B7F90230 		ldrsh	r3, [r7, #2]
+ 777 004e 0B44     		add	r3, r3, r1
+ 778 0050 9A42     		cmp	r2, r3
+ 779 0052 E7DB     		blt	.L53
+ 780 0054 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 781 0056 BB81     		strh	r3, [r7, #12]	@ movhi
+ 782 0058 13E0     		b	.L54
+ 783              	.L55:
+ 784 005a BA88     		ldrh	r2, [r7, #4]
+ 785 005c 3B88     		ldrh	r3, [r7]
+ 786 005e 1344     		add	r3, r3, r2
+ 787 0060 9BB2     		uxth	r3, r3
+ 788 0062 013B     		subs	r3, r3, #1
+ 789 0064 9BB2     		uxth	r3, r3
+ 790 0066 19B2     		sxth	r1, r3
+ 791 0068 97F82020 		ldrb	r2, [r7, #32]	@ zero_extendqisi2
+ 792 006c B7F90C30 		ldrsh	r3, [r7, #12]
+ 793 0070 1846     		mov	r0, r3
+ 794 0072 FFF7FEFF 		bl	SSD1306_DrawPixel
+ 795 0076 B7F90C30 		ldrsh	r3, [r7, #12]
+ 796 007a 9BB2     		uxth	r3, r3
+ 797 007c 0133     		adds	r3, r3, #1
+ 798 007e 9BB2     		uxth	r3, r3
+ 799 0080 BB81     		strh	r3, [r7, #12]	@ movhi
+ 800              	.L54:
+ 801 0082 B7F90C20 		ldrsh	r2, [r7, #12]
+ 802 0086 B7F90610 		ldrsh	r1, [r7, #6]
+ 803 008a B7F90230 		ldrsh	r3, [r7, #2]
+ 804 008e 0B44     		add	r3, r3, r1
+ 805 0090 9A42     		cmp	r2, r3
+ 806 0092 E2DB     		blt	.L55
+ 807 0094 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 808 0096 7B81     		strh	r3, [r7, #10]	@ movhi
+ 809 0098 0EE0     		b	.L56
+ 810              	.L57:
+ 811 009a 97F82020 		ldrb	r2, [r7, #32]	@ zero_extendqisi2
+ 812 009e B7F90A10 		ldrsh	r1, [r7, #10]
+ 813 00a2 B7F90630 		ldrsh	r3, [r7, #6]
+ 814 00a6 1846     		mov	r0, r3
+ 815 00a8 FFF7FEFF 		bl	SSD1306_DrawPixel
+ 816 00ac B7F90A30 		ldrsh	r3, [r7, #10]
+ 817 00b0 9BB2     		uxth	r3, r3
+ 818 00b2 0133     		adds	r3, r3, #1
+ 819 00b4 9BB2     		uxth	r3, r3
+ 820 00b6 7B81     		strh	r3, [r7, #10]	@ movhi
+ 821              	.L56:
+ 822 00b8 B7F90A20 		ldrsh	r2, [r7, #10]
+ 823 00bc B7F90410 		ldrsh	r1, [r7, #4]
+ 824 00c0 B7F90030 		ldrsh	r3, [r7]
+ 825 00c4 0B44     		add	r3, r3, r1
+ 826 00c6 9A42     		cmp	r2, r3
+ 827 00c8 E7DB     		blt	.L57
+ 828 00ca BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 829 00cc 3B81     		strh	r3, [r7, #8]	@ movhi
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 17
+
+
+ 830 00ce 13E0     		b	.L58
+ 831              	.L59:
+ 832 00d0 FA88     		ldrh	r2, [r7, #6]
+ 833 00d2 7B88     		ldrh	r3, [r7, #2]
+ 834 00d4 1344     		add	r3, r3, r2
+ 835 00d6 9BB2     		uxth	r3, r3
+ 836 00d8 013B     		subs	r3, r3, #1
+ 837 00da 9BB2     		uxth	r3, r3
+ 838 00dc 1BB2     		sxth	r3, r3
+ 839 00de 97F82020 		ldrb	r2, [r7, #32]	@ zero_extendqisi2
+ 840 00e2 B7F90810 		ldrsh	r1, [r7, #8]
+ 841 00e6 1846     		mov	r0, r3
+ 842 00e8 FFF7FEFF 		bl	SSD1306_DrawPixel
+ 843 00ec B7F90830 		ldrsh	r3, [r7, #8]
+ 844 00f0 9BB2     		uxth	r3, r3
+ 845 00f2 0133     		adds	r3, r3, #1
+ 846 00f4 9BB2     		uxth	r3, r3
+ 847 00f6 3B81     		strh	r3, [r7, #8]	@ movhi
+ 848              	.L58:
+ 849 00f8 B7F90820 		ldrsh	r2, [r7, #8]
+ 850 00fc B7F90410 		ldrsh	r1, [r7, #4]
+ 851 0100 B7F90030 		ldrsh	r3, [r7]
+ 852 0104 0B44     		add	r3, r3, r1
+ 853 0106 9A42     		cmp	r2, r3
+ 854 0108 E2DB     		blt	.L59
+ 855 010a 00BF     		nop
+ 856 010c 00BF     		nop
+ 857 010e 1437     		adds	r7, r7, #20
+ 858 0110 BD46     		mov	sp, r7
+ 859              		@ sp needed
+ 860 0112 90BD     		pop	{r4, r7, pc}
+ 862              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 18
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 I2C_screen.c
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:18     .bss.ssd1306_buffer:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:21     .bss.ssd1306_buffer:00000000 ssd1306_buffer
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:24     .rodata.font5x7:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:27     .rodata.font5x7:00000000 font5x7
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:124    .text.SSD1306_WriteCmd:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:129    .text.SSD1306_WriteCmd:00000000 SSD1306_WriteCmd
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:159    .rodata:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:164    .text.SSD1306_Init:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:170    .text.SSD1306_Init:00000000 SSD1306_Init
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:237    .text.SSD1306_ClearBuffer:00000000 SSD1306_ClearBuffer
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:260    .text.SSD1306_Display:00000000 SSD1306_Display
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:228    .text.SSD1306_Init:0000007c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:231    .text.SSD1306_ClearBuffer:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:251    .text.SSD1306_ClearBuffer:00000014 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:254    .text.SSD1306_Display:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:337    .text.SSD1306_Display:000000a0 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:340    .text.SSD1306_DrawPixel:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:346    .text.SSD1306_DrawPixel:00000000 SSD1306_DrawPixel
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:444    .text.SSD1306_DrawPixel:000000c8 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:447    .text.SSD1306_DrawChar:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:453    .text.SSD1306_DrawChar:00000000 SSD1306_DrawChar
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:672    .text.SSD1306_FillRect:00000000 SSD1306_FillRect
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:586    .text.SSD1306_DrawChar:00000110 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:589    .text.SSD1306_DrawString:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:595    .text.SSD1306_DrawString:00000000 SSD1306_DrawString
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:666    .text.SSD1306_FillRect:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:735    .text.SSD1306_DrawRect:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:741    .text.SSD1306_DrawRect:00000000 SSD1306_DrawRect
+
+UNDEFINED SYMBOLS
+HAL_I2C_Master_Transmit
+HAL_Delay
+memset
+memcpy

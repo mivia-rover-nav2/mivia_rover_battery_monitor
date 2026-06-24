@@ -1,0 +1,343 @@
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32g4xx_hal_flash_ramfunc.c"
+  16              		.text
+  17              		.section	.RamFunc,"ax",%progbits
+  18              		.align	1
+  19              		.global	HAL_FLASHEx_EnableRunPowerDown
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	HAL_FLASHEx_EnableRunPowerDown:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 1, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 80B4     		push	{r7}
+  29 0002 00AF     		add	r7, sp, #0
+  30 0004 084B     		ldr	r3, .L3
+  31 0006 094A     		ldr	r2, .L3+4
+  32 0008 5A60     		str	r2, [r3, #4]
+  33 000a 074B     		ldr	r3, .L3
+  34 000c 084A     		ldr	r2, .L3+8
+  35 000e 5A60     		str	r2, [r3, #4]
+  36 0010 054B     		ldr	r3, .L3
+  37 0012 1B68     		ldr	r3, [r3]
+  38 0014 044A     		ldr	r2, .L3
+  39 0016 43F40053 		orr	r3, r3, #8192
+  40 001a 1360     		str	r3, [r2]
+  41 001c 0023     		movs	r3, #0
+  42 001e 1846     		mov	r0, r3
+  43 0020 BD46     		mov	sp, r7
+  44              		@ sp needed
+  45 0022 5DF8047B 		ldr	r7, [sp], #4
+  46 0026 7047     		bx	lr
+  47              	.L4:
+  48              		.align	2
+  49              	.L3:
+  50 0028 00200240 		.word	1073881088
+  51 002c 37261504 		.word	68494903
+  52 0030 FDFCFBFA 		.word	-84148995
+  54              		.align	1
+  55              		.global	HAL_FLASHEx_DisableRunPowerDown
+  56              		.syntax unified
+  57              		.thumb
+  58              		.thumb_func
+  60              	HAL_FLASHEx_DisableRunPowerDown:
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s 			page 2
+
+
+  61              		@ args = 0, pretend = 0, frame = 0
+  62              		@ frame_needed = 1, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+  64 0034 80B4     		push	{r7}
+  65 0036 00AF     		add	r7, sp, #0
+  66 0038 084B     		ldr	r3, .L7
+  67 003a 094A     		ldr	r2, .L7+4
+  68 003c 5A60     		str	r2, [r3, #4]
+  69 003e 074B     		ldr	r3, .L7
+  70 0040 084A     		ldr	r2, .L7+8
+  71 0042 5A60     		str	r2, [r3, #4]
+  72 0044 054B     		ldr	r3, .L7
+  73 0046 1B68     		ldr	r3, [r3]
+  74 0048 044A     		ldr	r2, .L7
+  75 004a 23F40053 		bic	r3, r3, #8192
+  76 004e 1360     		str	r3, [r2]
+  77 0050 0023     		movs	r3, #0
+  78 0052 1846     		mov	r0, r3
+  79 0054 BD46     		mov	sp, r7
+  80              		@ sp needed
+  81 0056 5DF8047B 		ldr	r7, [sp], #4
+  82 005a 7047     		bx	lr
+  83              	.L8:
+  84              		.align	2
+  85              	.L7:
+  86 005c 00200240 		.word	1073881088
+  87 0060 37261504 		.word	68494903
+  88 0064 FDFCFBFA 		.word	-84148995
+  90              		.align	1
+  91              		.global	HAL_FLASHEx_OB_DBankConfig
+  92              		.syntax unified
+  93              		.thumb
+  94              		.thumb_func
+  96              	HAL_FLASHEx_OB_DBankConfig:
+  97              		@ args = 0, pretend = 0, frame = 24
+  98              		@ frame_needed = 1, uses_anonymous_args = 0
+  99              		@ link register save eliminated.
+ 100 0068 80B4     		push	{r7}
+ 101 006a 87B0     		sub	sp, sp, #28
+ 102 006c 00AF     		add	r7, sp, #0
+ 103 006e 7860     		str	r0, [r7, #4]
+ 104 0070 0123     		movs	r3, #1
+ 105 0072 FB74     		strb	r3, [r7, #19]
+ 106 0074 6F4B     		ldr	r3, .L23
+ 107 0076 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 108 0078 012B     		cmp	r3, #1
+ 109 007a 01D1     		bne	.L10
+ 110 007c 0223     		movs	r3, #2
+ 111 007e D2E0     		b	.L11
+ 112              	.L10:
+ 113 0080 6C4B     		ldr	r3, .L23
+ 114 0082 0122     		movs	r2, #1
+ 115 0084 1A70     		strb	r2, [r3]
+ 116 0086 6C4B     		ldr	r3, .L23+4
+ 117 0088 5B6A     		ldr	r3, [r3, #36]
+ 118 008a FB60     		str	r3, [r7, #12]
+ 119 008c 6A4B     		ldr	r3, .L23+4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s 			page 3
+
+
+ 120 008e 9B6A     		ldr	r3, [r3, #40]
+ 121 0090 FA68     		ldr	r2, [r7, #12]
+ 122 0092 9A42     		cmp	r2, r3
+ 123 0094 40F2C380 		bls	.L12
+ 124 0098 674B     		ldr	r3, .L23+4
+ 125 009a 5B6C     		ldr	r3, [r3, #68]
+ 126 009c FB60     		str	r3, [r7, #12]
+ 127 009e 664B     		ldr	r3, .L23+4
+ 128 00a0 9B6C     		ldr	r3, [r3, #72]
+ 129 00a2 FA68     		ldr	r2, [r7, #12]
+ 130 00a4 9A42     		cmp	r2, r3
+ 131 00a6 40F2BA80 		bls	.L12
+ 132 00aa 634B     		ldr	r3, .L23+4
+ 133 00ac 1B68     		ldr	r3, [r3]
+ 134 00ae 624A     		ldr	r2, .L23+4
+ 135 00b0 23F48073 		bic	r3, r3, #256
+ 136 00b4 1360     		str	r3, [r2]
+ 137 00b6 604B     		ldr	r3, .L23+4
+ 138 00b8 1B68     		ldr	r3, [r3]
+ 139 00ba 03F40073 		and	r3, r3, #512
+ 140 00be 002B     		cmp	r3, #0
+ 141 00c0 11D0     		beq	.L13
+ 142 00c2 5D4B     		ldr	r3, .L23+4
+ 143 00c4 1B68     		ldr	r3, [r3]
+ 144 00c6 5C4A     		ldr	r2, .L23+4
+ 145 00c8 23F40073 		bic	r3, r3, #512
+ 146 00cc 1360     		str	r3, [r2]
+ 147 00ce 5A4B     		ldr	r3, .L23+4
+ 148 00d0 1B68     		ldr	r3, [r3]
+ 149 00d2 594A     		ldr	r2, .L23+4
+ 150 00d4 43F40063 		orr	r3, r3, #2048
+ 151 00d8 1360     		str	r3, [r2]
+ 152 00da 574B     		ldr	r3, .L23+4
+ 153 00dc 1B68     		ldr	r3, [r3]
+ 154 00de 564A     		ldr	r2, .L23+4
+ 155 00e0 23F40063 		bic	r3, r3, #2048
+ 156 00e4 1360     		str	r3, [r2]
+ 157              	.L13:
+ 158 00e6 544B     		ldr	r3, .L23+4
+ 159 00e8 1B68     		ldr	r3, [r3]
+ 160 00ea 03F48063 		and	r3, r3, #1024
+ 161 00ee 002B     		cmp	r3, #0
+ 162 00f0 11D0     		beq	.L14
+ 163 00f2 514B     		ldr	r3, .L23+4
+ 164 00f4 1B68     		ldr	r3, [r3]
+ 165 00f6 504A     		ldr	r2, .L23+4
+ 166 00f8 23F48063 		bic	r3, r3, #1024
+ 167 00fc 1360     		str	r3, [r2]
+ 168 00fe 4E4B     		ldr	r3, .L23+4
+ 169 0100 1B68     		ldr	r3, [r3]
+ 170 0102 4D4A     		ldr	r2, .L23+4
+ 171 0104 43F48053 		orr	r3, r3, #4096
+ 172 0108 1360     		str	r3, [r2]
+ 173 010a 4B4B     		ldr	r3, .L23+4
+ 174 010c 1B68     		ldr	r3, [r3]
+ 175 010e 4A4A     		ldr	r2, .L23+4
+ 176 0110 23F48053 		bic	r3, r3, #4096
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s 			page 4
+
+
+ 177 0114 1360     		str	r3, [r2]
+ 178              	.L14:
+ 179 0116 484B     		ldr	r3, .L23+4
+ 180 0118 DB6A     		ldr	r3, [r3, #44]
+ 181 011a FB60     		str	r3, [r7, #12]
+ 182 011c FB68     		ldr	r3, [r7, #12]
+ 183 011e 03F07F02 		and	r2, r3, #127
+ 184 0122 FB68     		ldr	r3, [r7, #12]
+ 185 0124 1B0C     		lsrs	r3, r3, #16
+ 186 0126 03F07F03 		and	r3, r3, #127
+ 187 012a 9A42     		cmp	r2, r3
+ 188 012c 07D8     		bhi	.L15
+ 189 012e 424B     		ldr	r3, .L23+4
+ 190 0130 DB6A     		ldr	r3, [r3, #44]
+ 191 0132 23F07F13 		bic	r3, r3, #8323199
+ 192 0136 404A     		ldr	r2, .L23+4
+ 193 0138 43F07F03 		orr	r3, r3, #127
+ 194 013c D362     		str	r3, [r2, #44]
+ 195              	.L15:
+ 196 013e 3E4B     		ldr	r3, .L23+4
+ 197 0140 1B6B     		ldr	r3, [r3, #48]
+ 198 0142 FB60     		str	r3, [r7, #12]
+ 199 0144 FB68     		ldr	r3, [r7, #12]
+ 200 0146 03F07F02 		and	r2, r3, #127
+ 201 014a FB68     		ldr	r3, [r7, #12]
+ 202 014c 1B0C     		lsrs	r3, r3, #16
+ 203 014e 03F07F03 		and	r3, r3, #127
+ 204 0152 9A42     		cmp	r2, r3
+ 205 0154 07D8     		bhi	.L16
+ 206 0156 384B     		ldr	r3, .L23+4
+ 207 0158 1B6B     		ldr	r3, [r3, #48]
+ 208 015a 23F07F13 		bic	r3, r3, #8323199
+ 209 015e 364A     		ldr	r2, .L23+4
+ 210 0160 43F07F03 		orr	r3, r3, #127
+ 211 0164 1363     		str	r3, [r2, #48]
+ 212              	.L16:
+ 213 0166 344B     		ldr	r3, .L23+4
+ 214 0168 DB6C     		ldr	r3, [r3, #76]
+ 215 016a FB60     		str	r3, [r7, #12]
+ 216 016c FB68     		ldr	r3, [r7, #12]
+ 217 016e 03F07F02 		and	r2, r3, #127
+ 218 0172 FB68     		ldr	r3, [r7, #12]
+ 219 0174 1B0C     		lsrs	r3, r3, #16
+ 220 0176 03F07F03 		and	r3, r3, #127
+ 221 017a 9A42     		cmp	r2, r3
+ 222 017c 07D8     		bhi	.L17
+ 223 017e 2E4B     		ldr	r3, .L23+4
+ 224 0180 DB6C     		ldr	r3, [r3, #76]
+ 225 0182 23F07F13 		bic	r3, r3, #8323199
+ 226 0186 2C4A     		ldr	r2, .L23+4
+ 227 0188 43F07F03 		orr	r3, r3, #127
+ 228 018c D364     		str	r3, [r2, #76]
+ 229              	.L17:
+ 230 018e 2A4B     		ldr	r3, .L23+4
+ 231 0190 1B6D     		ldr	r3, [r3, #80]
+ 232 0192 FB60     		str	r3, [r7, #12]
+ 233 0194 FB68     		ldr	r3, [r7, #12]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s 			page 5
+
+
+ 234 0196 03F07F02 		and	r2, r3, #127
+ 235 019a FB68     		ldr	r3, [r7, #12]
+ 236 019c 1B0C     		lsrs	r3, r3, #16
+ 237 019e 03F07F03 		and	r3, r3, #127
+ 238 01a2 9A42     		cmp	r2, r3
+ 239 01a4 07D8     		bhi	.L18
+ 240 01a6 244B     		ldr	r3, .L23+4
+ 241 01a8 1B6D     		ldr	r3, [r3, #80]
+ 242 01aa 23F07F13 		bic	r3, r3, #8323199
+ 243 01ae 224A     		ldr	r2, .L23+4
+ 244 01b0 43F07F03 		orr	r3, r3, #127
+ 245 01b4 1365     		str	r3, [r2, #80]
+ 246              	.L18:
+ 247 01b6 204B     		ldr	r3, .L23+4
+ 248 01b8 1B6A     		ldr	r3, [r3, #32]
+ 249 01ba 23F48002 		bic	r2, r3, #4194304
+ 250 01be 1E49     		ldr	r1, .L23+4
+ 251 01c0 7B68     		ldr	r3, [r7, #4]
+ 252 01c2 1343     		orrs	r3, r3, r2
+ 253 01c4 0B62     		str	r3, [r1, #32]
+ 254 01c6 1C4B     		ldr	r3, .L23+4
+ 255 01c8 5B69     		ldr	r3, [r3, #20]
+ 256 01ca 1B4A     		ldr	r2, .L23+4
+ 257 01cc 43F40033 		orr	r3, r3, #131072
+ 258 01d0 5361     		str	r3, [r2, #20]
+ 259 01d2 1A4B     		ldr	r3, .L23+8
+ 260 01d4 1B68     		ldr	r3, [r3]
+ 261 01d6 1A4A     		ldr	r2, .L23+12
+ 262 01d8 A2FB0323 		umull	r2, r3, r2, r3
+ 263 01dc 5B0A     		lsrs	r3, r3, #9
+ 264 01de 4FF47A72 		mov	r2, #1000
+ 265 01e2 02FB03F3 		mul	r3, r2, r3
+ 266 01e6 7B61     		str	r3, [r7, #20]
+ 267              	.L21:
+ 268 01e8 7B69     		ldr	r3, [r7, #20]
+ 269 01ea 002B     		cmp	r3, #0
+ 270 01ec 0AD0     		beq	.L22
+ 271 01ee 7B69     		ldr	r3, [r7, #20]
+ 272 01f0 013B     		subs	r3, r3, #1
+ 273 01f2 7B61     		str	r3, [r7, #20]
+ 274 01f4 104B     		ldr	r3, .L23+4
+ 275 01f6 1B69     		ldr	r3, [r3, #16]
+ 276 01f8 03F48033 		and	r3, r3, #65536
+ 277 01fc B3F5803F 		cmp	r3, #65536
+ 278 0200 F2D0     		beq	.L21
+ 279 0202 00E0     		b	.L20
+ 280              	.L22:
+ 281 0204 00BF     		nop
+ 282              	.L20:
+ 283 0206 0C4B     		ldr	r3, .L23+4
+ 284 0208 5B69     		ldr	r3, [r3, #20]
+ 285 020a 0B4A     		ldr	r2, .L23+4
+ 286 020c 23F40033 		bic	r3, r3, #131072
+ 287 0210 5361     		str	r3, [r2, #20]
+ 288 0212 094B     		ldr	r3, .L23+4
+ 289 0214 5B69     		ldr	r3, [r3, #20]
+ 290 0216 084A     		ldr	r2, .L23+4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s 			page 6
+
+
+ 291 0218 43F00063 		orr	r3, r3, #134217728
+ 292 021c 5361     		str	r3, [r2, #20]
+ 293              	.L12:
+ 294 021e 054B     		ldr	r3, .L23
+ 295 0220 0022     		movs	r2, #0
+ 296 0222 1A70     		strb	r2, [r3]
+ 297 0224 FB7C     		ldrb	r3, [r7, #19]	@ zero_extendqisi2
+ 298              	.L11:
+ 299 0226 1846     		mov	r0, r3
+ 300 0228 1C37     		adds	r7, r7, #28
+ 301 022a BD46     		mov	sp, r7
+ 302              		@ sp needed
+ 303 022c 5DF8047B 		ldr	r7, [sp], #4
+ 304 0230 7047     		bx	lr
+ 305              	.L24:
+ 306 0232 00BF     		.align	2
+ 307              	.L23:
+ 308 0234 00000000 		.word	pFlash
+ 309 0238 00200240 		.word	1073881088
+ 310 023c 00000000 		.word	SystemCoreClock
+ 311 0240 D34D6210 		.word	274877907
+ 313              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32g4xx_hal_flash_ramfunc.c
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s:18     .RamFunc:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s:24     .RamFunc:00000000 HAL_FLASHEx_EnableRunPowerDown
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s:50     .RamFunc:00000028 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s:54     .RamFunc:00000034 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s:60     .RamFunc:00000034 HAL_FLASHEx_DisableRunPowerDown
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s:86     .RamFunc:0000005c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s:90     .RamFunc:00000068 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s:96     .RamFunc:00000068 HAL_FLASHEx_OB_DBankConfig
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccg0Dga3.s:308    .RamFunc:00000234 $d
+
+UNDEFINED SYMBOLS
+pFlash
+SystemCoreClock

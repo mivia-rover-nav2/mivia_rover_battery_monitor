@@ -1,0 +1,547 @@
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"display_update.c"
+  16              		.text
+  17              		.section	.rodata
+  18              		.align	2
+  19              	.LC0:
+  20 0000 566F6C74 		.ascii	"Voltmeter\000"
+  20      6D657465 
+  20      7200
+  21 000a 0000     		.align	2
+  22              	.LC1:
+  23 000c 4144433A 		.ascii	"ADC:%lu\000"
+  23      256C7500 
+  24              		.align	2
+  25              	.LC2:
+  26 0014 563A256C 		.ascii	"V:%ld.%03ldV\000"
+  26      642E2530 
+  26      336C6456 
+  26      00
+  27 0021 000000   		.align	2
+  28              	.LC3:
+  29 0024 423A4445 		.ascii	"B:DEAD\000"
+  29      414400
+  30 002b 00       		.align	2
+  31              	.LC4:
+  32 002c 423A4552 		.ascii	"B:ERR\000"
+  32      5200
+  33 0032 0000     		.align	2
+  34              	.LC5:
+  35 0034 423A256C 		.ascii	"B:%ld%%\000"
+  35      64252500 
+  36              		.align	2
+  37              	.LC6:
+  38 003c 43414E20 		.ascii	"CAN STATE\000"
+  38      53544154 
+  38      4500
+  39 0046 0000     		.align	2
+  40              	.LC7:
+  41 0048 20204F4B 		.ascii	"  OK    \000"
+  41      20202020 
+  41      00
+  42 0051 000000   		.align	2
+  43              	.LC8:
+  44 0054 2050454E 		.ascii	" PENDING\000"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s 			page 2
+
+
+  44      44494E47 
+  44      00
+  45 005d 000000   		.align	2
+  46              	.LC9:
+  47 0060 20204F46 		.ascii	"  OFF   \000"
+  47      46202020 
+  47      00
+  48 0069 000000   		.align	2
+  49              	.LC10:
+  50 006c 4572723A 		.ascii	"Err:ACK \000"
+  50      41434B20 
+  50      00
+  51 0075 000000   		.align	2
+  52              	.LC11:
+  53 0078 4255533A 		.ascii	"BUS:OFF \000"
+  53      4F464620 
+  53      00
+  54 0081 000000   		.align	2
+  55              	.LC12:
+  56 0084 4572723A 		.ascii	"Err:STUF\000"
+  56      53545546 
+  56      00
+  57 008d 000000   		.align	2
+  58              	.LC13:
+  59 0090 4572723A 		.ascii	"Err:FORM\000"
+  59      464F524D 
+  59      00
+  60 0099 000000   		.align	2
+  61              	.LC14:
+  62 009c 4572723A 		.ascii	"Err:BIT1\000"
+  62      42495431 
+  62      00
+  63 00a5 000000   		.align	2
+  64              	.LC15:
+  65 00a8 4572723A 		.ascii	"Err:BIT0\000"
+  65      42495430 
+  65      00
+  66 00b1 000000   		.align	2
+  67              	.LC16:
+  68 00b4 4572723A 		.ascii	"Err:CRC \000"
+  68      43524320 
+  68      00
+  69 00bd 000000   		.align	2
+  70              	.LC17:
+  71 00c0 4572723A 		.ascii	"Err:UNKW\000"
+  71      554E4B57 
+  71      00
+  72 00c9 000000   		.align	2
+  73              	.LC18:
+  74 00cc 57726E3A 		.ascii	"Wrn:TEC \000"
+  74      54454320 
+  74      00
+  75 00d5 000000   		.align	2
+  76              	.LC19:
+  77 00d8 57726E3A 		.ascii	"Wrn:REC \000"
+  77      52454320 
+  77      00
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s 			page 3
+
+
+  78 00e1 000000   		.align	2
+  79              	.LC20:
+  80 00e4 57726E3A 		.ascii	"Wrn:ACK \000"
+  80      41434B20 
+  80      00
+  81              		.section	.text.Display_Update_Render,"ax",%progbits
+  82              		.align	1
+  83              		.global	Display_Update_Render
+  84              		.syntax unified
+  85              		.thumb
+  86              		.thumb_func
+  88              	Display_Update_Render:
+  89              		@ args = 8, pretend = 0, frame = 80
+  90              		@ frame_needed = 1, uses_anonymous_args = 0
+  91 0000 80B5     		push	{r7, lr}
+  92 0002 96B0     		sub	sp, sp, #88
+  93 0004 02AF     		add	r7, sp, #8
+  94 0006 F860     		str	r0, [r7, #12]
+  95 0008 B960     		str	r1, [r7, #8]
+  96 000a 7A60     		str	r2, [r7, #4]
+  97 000c 3B60     		str	r3, [r7]
+  98 000e 97F85C30 		ldrb	r3, [r7, #92]	@ zero_extendqisi2
+  99 0012 002B     		cmp	r3, #0
+ 100 0014 00F07681 		beq	.L31
+ 101 0018 07F11403 		add	r3, r7, #20
+ 102 001c 1846     		mov	r0, r3
+ 103 001e FFF7FEFF 		bl	CAN_Exchange_Get_Status
+ 104 0022 07F11403 		add	r3, r7, #20
+ 105 0026 1946     		mov	r1, r3
+ 106 0028 F868     		ldr	r0, [r7, #12]
+ 107 002a FFF7FEFF 		bl	CAN_Debug_Display_Screen
+ 108 002e 0346     		mov	r3, r0
+ 109 0030 002B     		cmp	r3, #0
+ 110 0032 40F06981 		bne	.L32
+ 111 0036 FFF7FEFF 		bl	SSD1306_ClearBuffer
+ 112 003a 0123     		movs	r3, #1
+ 113 003c 0093     		str	r3, [sp]
+ 114 003e 0123     		movs	r3, #1
+ 115 0040 B34A     		ldr	r2, .L33
+ 116 0042 0021     		movs	r1, #0
+ 117 0044 0220     		movs	r0, #2
+ 118 0046 FFF7FEFF 		bl	SSD1306_DrawString
+ 119 004a 0023     		movs	r3, #0
+ 120 004c A7F84E30 		strh	r3, [r7, #78]	@ movhi
+ 121 0050 0DE0     		b	.L5
+ 122              	.L6:
+ 123 0052 B7F94E30 		ldrsh	r3, [r7, #78]
+ 124 0056 0122     		movs	r2, #1
+ 125 0058 0A21     		movs	r1, #10
+ 126 005a 1846     		mov	r0, r3
+ 127 005c FFF7FEFF 		bl	SSD1306_DrawPixel
+ 128 0060 B7F94E30 		ldrsh	r3, [r7, #78]
+ 129 0064 9BB2     		uxth	r3, r3
+ 130 0066 0133     		adds	r3, r3, #1
+ 131 0068 9BB2     		uxth	r3, r3
+ 132 006a A7F84E30 		strh	r3, [r7, #78]	@ movhi
+ 133              	.L5:
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s 			page 4
+
+
+ 134 006e B7F94E30 		ldrsh	r3, [r7, #78]
+ 135 0072 7F2B     		cmp	r3, #127
+ 136 0074 EDDD     		ble	.L6
+ 137 0076 07F12400 		add	r0, r7, #36
+ 138 007a 3B68     		ldr	r3, [r7]
+ 139 007c A54A     		ldr	r2, .L33+4
+ 140 007e 2021     		movs	r1, #32
+ 141 0080 FFF7FEFF 		bl	snprintf
+ 142 0084 07F12402 		add	r2, r7, #36
+ 143 0088 0123     		movs	r3, #1
+ 144 008a 0093     		str	r3, [sp]
+ 145 008c 0123     		movs	r3, #1
+ 146 008e 0021     		movs	r1, #0
+ 147 0090 4820     		movs	r0, #72
+ 148 0092 FFF7FEFF 		bl	SSD1306_DrawString
+ 149 0096 07F12400 		add	r0, r7, #36
+ 150 009a 7B68     		ldr	r3, [r7, #4]
+ 151 009c 0093     		str	r3, [sp]
+ 152 009e BB68     		ldr	r3, [r7, #8]
+ 153 00a0 9D4A     		ldr	r2, .L33+8
+ 154 00a2 2021     		movs	r1, #32
+ 155 00a4 FFF7FEFF 		bl	snprintf
+ 156 00a8 07F12402 		add	r2, r7, #36
+ 157 00ac 0123     		movs	r3, #1
+ 158 00ae 0093     		str	r3, [sp]
+ 159 00b0 0223     		movs	r3, #2
+ 160 00b2 1021     		movs	r1, #16
+ 161 00b4 0020     		movs	r0, #0
+ 162 00b6 FFF7FEFF 		bl	SSD1306_DrawString
+ 163 00ba BB6D     		ldr	r3, [r7, #88]
+ 164 00bc D3ED007A 		vldr.32	s15, [r3]
+ 165 00c0 B6EE007A 		vmov.f32	s14, #5.0e-1
+ 166 00c4 77EE877A 		vadd.f32	s15, s15, s14
+ 167 00c8 FDEEE77A 		vcvt.s32.f32	s15, s15
+ 168 00cc 17EE903A 		vmov	r3, s15	@ int
+ 169 00d0 BB64     		str	r3, [r7, #72]
+ 170 00d2 BB6C     		ldr	r3, [r7, #72]
+ 171 00d4 642B     		cmp	r3, #100
+ 172 00d6 01DD     		ble	.L7
+ 173 00d8 6423     		movs	r3, #100
+ 174 00da BB64     		str	r3, [r7, #72]
+ 175              	.L7:
+ 176 00dc BB6C     		ldr	r3, [r7, #72]
+ 177 00de 002B     		cmp	r3, #0
+ 178 00e0 01DA     		bge	.L8
+ 179 00e2 0023     		movs	r3, #0
+ 180 00e4 BB64     		str	r3, [r7, #72]
+ 181              	.L8:
+ 182 00e6 BB6D     		ldr	r3, [r7, #88]
+ 183 00e8 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
+ 184 00ea 002B     		cmp	r3, #0
+ 185 00ec 08D1     		bne	.L9
+ 186 00ee 0123     		movs	r3, #1
+ 187 00f0 0093     		str	r3, [sp]
+ 188 00f2 0223     		movs	r3, #2
+ 189 00f4 894A     		ldr	r2, .L33+12
+ 190 00f6 2421     		movs	r1, #36
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s 			page 5
+
+
+ 191 00f8 0020     		movs	r0, #0
+ 192 00fa FFF7FEFF 		bl	SSD1306_DrawString
+ 193 00fe 1CE0     		b	.L10
+ 194              	.L9:
+ 195 0100 BB6D     		ldr	r3, [r7, #88]
+ 196 0102 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
+ 197 0104 012B     		cmp	r3, #1
+ 198 0106 08D1     		bne	.L11
+ 199 0108 0123     		movs	r3, #1
+ 200 010a 0093     		str	r3, [sp]
+ 201 010c 0223     		movs	r3, #2
+ 202 010e 844A     		ldr	r2, .L33+16
+ 203 0110 2421     		movs	r1, #36
+ 204 0112 0020     		movs	r0, #0
+ 205 0114 FFF7FEFF 		bl	SSD1306_DrawString
+ 206 0118 0FE0     		b	.L10
+ 207              	.L11:
+ 208 011a 07F12400 		add	r0, r7, #36
+ 209 011e BB6C     		ldr	r3, [r7, #72]
+ 210 0120 804A     		ldr	r2, .L33+20
+ 211 0122 2021     		movs	r1, #32
+ 212 0124 FFF7FEFF 		bl	snprintf
+ 213 0128 07F12402 		add	r2, r7, #36
+ 214 012c 0123     		movs	r3, #1
+ 215 012e 0093     		str	r3, [sp]
+ 216 0130 0223     		movs	r3, #2
+ 217 0132 2421     		movs	r1, #36
+ 218 0134 0020     		movs	r0, #0
+ 219 0136 FFF7FEFF 		bl	SSD1306_DrawString
+ 220              	.L10:
+ 221 013a 0123     		movs	r3, #1
+ 222 013c 0093     		str	r3, [sp]
+ 223 013e 0723     		movs	r3, #7
+ 224 0140 7622     		movs	r2, #118
+ 225 0142 3821     		movs	r1, #56
+ 226 0144 0220     		movs	r0, #2
+ 227 0146 FFF7FEFF 		bl	SSD1306_DrawRect
+ 228 014a BB6C     		ldr	r3, [r7, #72]
+ 229 014c 07EE903A 		vmov	s15, r3	@ int
+ 230 0150 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 231 0154 9FED747A 		vldr.32	s14, .L33+24
+ 232 0158 27EE877A 		vmul.f32	s14, s15, s14
+ 233 015c DFED736A 		vldr.32	s13, .L33+28
+ 234 0160 C7EE267A 		vdiv.f32	s15, s14, s13
+ 235 0164 FDEEE77A 		vcvt.s32.f32	s15, s15
+ 236 0168 17EE903A 		vmov	r3, s15	@ int
+ 237 016c A7F84630 		strh	r3, [r7, #70]	@ movhi
+ 238 0170 B7F94630 		ldrsh	r3, [r7, #70]
+ 239 0174 002B     		cmp	r3, #0
+ 240 0176 0CDD     		ble	.L12
+ 241 0178 BB6D     		ldr	r3, [r7, #88]
+ 242 017a 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
+ 243 017c 022B     		cmp	r3, #2
+ 244 017e 08D1     		bne	.L12
+ 245 0180 B7F94620 		ldrsh	r2, [r7, #70]
+ 246 0184 0123     		movs	r3, #1
+ 247 0186 0093     		str	r3, [sp]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s 			page 6
+
+
+ 248 0188 0523     		movs	r3, #5
+ 249 018a 3921     		movs	r1, #57
+ 250 018c 0320     		movs	r0, #3
+ 251 018e FFF7FEFF 		bl	SSD1306_FillRect
+ 252              	.L12:
+ 253 0192 3B7D     		ldrb	r3, [r7, #20]
+ 254 0194 87F84530 		strb	r3, [r7, #69]
+ 255 0198 0123     		movs	r3, #1
+ 256 019a 0093     		str	r3, [sp]
+ 257 019c 0123     		movs	r3, #1
+ 258 019e 644A     		ldr	r2, .L33+32
+ 259 01a0 2421     		movs	r1, #36
+ 260 01a2 4C20     		movs	r0, #76
+ 261 01a4 FFF7FEFF 		bl	SSD1306_DrawString
+ 262 01a8 97F84530 		ldrb	r3, [r7, #69]	@ zero_extendqisi2
+ 263 01ac 092B     		cmp	r3, #9
+ 264 01ae 71D8     		bhi	.L13
+ 265 01b0 01A2     		adr	r2, .L15
+ 266 01b2 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 267 01b6 00BF     		.p2align 2
+ 268              	.L15:
+ 269 01b8 E1010000 		.word	.L24+1
+ 270 01bc 05020000 		.word	.L23+1
+ 271 01c0 17020000 		.word	.L22+1
+ 272 01c4 71020000 		.word	.L21+1
+ 273 01c8 5F020000 		.word	.L20+1
+ 274 01cc 29020000 		.word	.L19+1
+ 275 01d0 3B020000 		.word	.L18+1
+ 276 01d4 4D020000 		.word	.L17+1
+ 277 01d8 83020000 		.word	.L16+1
+ 278 01dc F3010000 		.word	.L14+1
+ 279              		.p2align 1
+ 280              	.L24:
+ 281 01e0 0123     		movs	r3, #1
+ 282 01e2 0093     		str	r3, [sp]
+ 283 01e4 0123     		movs	r3, #1
+ 284 01e6 534A     		ldr	r2, .L33+36
+ 285 01e8 2E21     		movs	r1, #46
+ 286 01ea 4E20     		movs	r0, #78
+ 287 01ec FFF7FEFF 		bl	SSD1306_DrawString
+ 288 01f0 59E0     		b	.L25
+ 289              	.L14:
+ 290 01f2 0123     		movs	r3, #1
+ 291 01f4 0093     		str	r3, [sp]
+ 292 01f6 0123     		movs	r3, #1
+ 293 01f8 4F4A     		ldr	r2, .L33+40
+ 294 01fa 2E21     		movs	r1, #46
+ 295 01fc 4E20     		movs	r0, #78
+ 296 01fe FFF7FEFF 		bl	SSD1306_DrawString
+ 297 0202 50E0     		b	.L25
+ 298              	.L23:
+ 299 0204 0123     		movs	r3, #1
+ 300 0206 0093     		str	r3, [sp]
+ 301 0208 0123     		movs	r3, #1
+ 302 020a 4C4A     		ldr	r2, .L33+44
+ 303 020c 2E21     		movs	r1, #46
+ 304 020e 4E20     		movs	r0, #78
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s 			page 7
+
+
+ 305 0210 FFF7FEFF 		bl	SSD1306_DrawString
+ 306 0214 47E0     		b	.L25
+ 307              	.L22:
+ 308 0216 0123     		movs	r3, #1
+ 309 0218 0093     		str	r3, [sp]
+ 310 021a 0123     		movs	r3, #1
+ 311 021c 484A     		ldr	r2, .L33+48
+ 312 021e 2E21     		movs	r1, #46
+ 313 0220 4E20     		movs	r0, #78
+ 314 0222 FFF7FEFF 		bl	SSD1306_DrawString
+ 315 0226 3EE0     		b	.L25
+ 316              	.L19:
+ 317 0228 0123     		movs	r3, #1
+ 318 022a 0093     		str	r3, [sp]
+ 319 022c 0123     		movs	r3, #1
+ 320 022e 454A     		ldr	r2, .L33+52
+ 321 0230 2E21     		movs	r1, #46
+ 322 0232 4E20     		movs	r0, #78
+ 323 0234 FFF7FEFF 		bl	SSD1306_DrawString
+ 324 0238 35E0     		b	.L25
+ 325              	.L18:
+ 326 023a 0123     		movs	r3, #1
+ 327 023c 0093     		str	r3, [sp]
+ 328 023e 0123     		movs	r3, #1
+ 329 0240 414A     		ldr	r2, .L33+56
+ 330 0242 2E21     		movs	r1, #46
+ 331 0244 4E20     		movs	r0, #78
+ 332 0246 FFF7FEFF 		bl	SSD1306_DrawString
+ 333 024a 2CE0     		b	.L25
+ 334              	.L17:
+ 335 024c 0123     		movs	r3, #1
+ 336 024e 0093     		str	r3, [sp]
+ 337 0250 0123     		movs	r3, #1
+ 338 0252 3E4A     		ldr	r2, .L33+60
+ 339 0254 2E21     		movs	r1, #46
+ 340 0256 4E20     		movs	r0, #78
+ 341 0258 FFF7FEFF 		bl	SSD1306_DrawString
+ 342 025c 23E0     		b	.L25
+ 343              	.L20:
+ 344 025e 0123     		movs	r3, #1
+ 345 0260 0093     		str	r3, [sp]
+ 346 0262 0123     		movs	r3, #1
+ 347 0264 3A4A     		ldr	r2, .L33+64
+ 348 0266 2E21     		movs	r1, #46
+ 349 0268 4E20     		movs	r0, #78
+ 350 026a FFF7FEFF 		bl	SSD1306_DrawString
+ 351 026e 1AE0     		b	.L25
+ 352              	.L21:
+ 353 0270 0123     		movs	r3, #1
+ 354 0272 0093     		str	r3, [sp]
+ 355 0274 0123     		movs	r3, #1
+ 356 0276 374A     		ldr	r2, .L33+68
+ 357 0278 2E21     		movs	r1, #46
+ 358 027a 4E20     		movs	r0, #78
+ 359 027c FFF7FEFF 		bl	SSD1306_DrawString
+ 360 0280 11E0     		b	.L25
+ 361              	.L16:
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s 			page 8
+
+
+ 362 0282 0123     		movs	r3, #1
+ 363 0284 0093     		str	r3, [sp]
+ 364 0286 0123     		movs	r3, #1
+ 365 0288 334A     		ldr	r2, .L33+72
+ 366 028a 2E21     		movs	r1, #46
+ 367 028c 4E20     		movs	r0, #78
+ 368 028e FFF7FEFF 		bl	SSD1306_DrawString
+ 369 0292 08E0     		b	.L25
+ 370              	.L13:
+ 371 0294 0123     		movs	r3, #1
+ 372 0296 0093     		str	r3, [sp]
+ 373 0298 0123     		movs	r3, #1
+ 374 029a 304A     		ldr	r2, .L33+76
+ 375 029c 2E21     		movs	r1, #46
+ 376 029e 4E20     		movs	r0, #78
+ 377 02a0 FFF7FEFF 		bl	SSD1306_DrawString
+ 378 02a4 00BF     		nop
+ 379              	.L25:
+ 380 02a6 97F84530 		ldrb	r3, [r7, #69]	@ zero_extendqisi2
+ 381 02aa 002B     		cmp	r3, #0
+ 382 02ac 22D1     		bne	.L26
+ 383 02ae 7B7D     		ldrb	r3, [r7, #21]	@ zero_extendqisi2
+ 384 02b0 002B     		cmp	r3, #0
+ 385 02b2 08D0     		beq	.L27
+ 386 02b4 0123     		movs	r3, #1
+ 387 02b6 0093     		str	r3, [sp]
+ 388 02b8 0123     		movs	r3, #1
+ 389 02ba 294A     		ldr	r2, .L33+80
+ 390 02bc 2E21     		movs	r1, #46
+ 391 02be 4E20     		movs	r0, #78
+ 392 02c0 FFF7FEFF 		bl	SSD1306_DrawString
+ 393 02c4 16E0     		b	.L26
+ 394              	.L27:
+ 395 02c6 BB7D     		ldrb	r3, [r7, #22]	@ zero_extendqisi2
+ 396 02c8 002B     		cmp	r3, #0
+ 397 02ca 08D0     		beq	.L28
+ 398 02cc 0123     		movs	r3, #1
+ 399 02ce 0093     		str	r3, [sp]
+ 400 02d0 0123     		movs	r3, #1
+ 401 02d2 244A     		ldr	r2, .L33+84
+ 402 02d4 2E21     		movs	r1, #46
+ 403 02d6 4E20     		movs	r0, #78
+ 404 02d8 FFF7FEFF 		bl	SSD1306_DrawString
+ 405 02dc 0AE0     		b	.L26
+ 406              	.L28:
+ 407 02de 3B7E     		ldrb	r3, [r7, #24]	@ zero_extendqisi2
+ 408 02e0 002B     		cmp	r3, #0
+ 409 02e2 07D1     		bne	.L26
+ 410 02e4 0123     		movs	r3, #1
+ 411 02e6 0093     		str	r3, [sp]
+ 412 02e8 0123     		movs	r3, #1
+ 413 02ea 1F4A     		ldr	r2, .L33+88
+ 414 02ec 2E21     		movs	r1, #46
+ 415 02ee 4E20     		movs	r0, #78
+ 416 02f0 FFF7FEFF 		bl	SSD1306_DrawString
+ 417              	.L26:
+ 418 02f4 97F85C30 		ldrb	r3, [r7, #92]	@ zero_extendqisi2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s 			page 9
+
+
+ 419 02f8 002B     		cmp	r3, #0
+ 420 02fa 06D0     		beq	.L1
+ 421 02fc F868     		ldr	r0, [r7, #12]
+ 422 02fe FFF7FEFF 		bl	SSD1306_Display
+ 423 0302 02E0     		b	.L1
+ 424              	.L31:
+ 425 0304 00BF     		nop
+ 426 0306 00E0     		b	.L1
+ 427              	.L32:
+ 428 0308 00BF     		nop
+ 429              	.L1:
+ 430 030a 5037     		adds	r7, r7, #80
+ 431 030c BD46     		mov	sp, r7
+ 432              		@ sp needed
+ 433 030e 80BD     		pop	{r7, pc}
+ 434              	.L34:
+ 435              		.align	2
+ 436              	.L33:
+ 437 0310 00000000 		.word	.LC0
+ 438 0314 0C000000 		.word	.LC1
+ 439 0318 14000000 		.word	.LC2
+ 440 031c 24000000 		.word	.LC3
+ 441 0320 2C000000 		.word	.LC4
+ 442 0324 34000000 		.word	.LC5
+ 443 0328 0000E842 		.word	1122500608
+ 444 032c 0000C842 		.word	1120403456
+ 445 0330 3C000000 		.word	.LC6
+ 446 0334 48000000 		.word	.LC7
+ 447 0338 54000000 		.word	.LC8
+ 448 033c 60000000 		.word	.LC9
+ 449 0340 6C000000 		.word	.LC10
+ 450 0344 78000000 		.word	.LC11
+ 451 0348 84000000 		.word	.LC12
+ 452 034c 90000000 		.word	.LC13
+ 453 0350 9C000000 		.word	.LC14
+ 454 0354 A8000000 		.word	.LC15
+ 455 0358 B4000000 		.word	.LC16
+ 456 035c C0000000 		.word	.LC17
+ 457 0360 CC000000 		.word	.LC18
+ 458 0364 D8000000 		.word	.LC19
+ 459 0368 E4000000 		.word	.LC20
+ 461              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 display_update.c
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s:18     .rodata:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s:82     .text.Display_Update_Render:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s:88     .text.Display_Update_Render:00000000 Display_Update_Render
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s:269    .text.Display_Update_Render:000001b8 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s:279    .text.Display_Update_Render:000001e0 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccuWagUn.s:437    .text.Display_Update_Render:00000310 $d
+
+UNDEFINED SYMBOLS
+CAN_Exchange_Get_Status
+CAN_Debug_Display_Screen
+SSD1306_ClearBuffer
+SSD1306_DrawString
+SSD1306_DrawPixel
+snprintf
+SSD1306_DrawRect
+SSD1306_FillRect
+SSD1306_Display

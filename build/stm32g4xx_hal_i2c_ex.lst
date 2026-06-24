@@ -1,0 +1,444 @@
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32g4xx_hal_i2c_ex.c"
+  16              		.text
+  17              		.section	.text.HAL_I2CEx_ConfigAnalogFilter,"ax",%progbits
+  18              		.align	1
+  19              		.global	HAL_I2CEx_ConfigAnalogFilter
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	HAL_I2CEx_ConfigAnalogFilter:
+  25              		@ args = 0, pretend = 0, frame = 8
+  26              		@ frame_needed = 1, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 80B4     		push	{r7}
+  29 0002 83B0     		sub	sp, sp, #12
+  30 0004 00AF     		add	r7, sp, #0
+  31 0006 7860     		str	r0, [r7, #4]
+  32 0008 3960     		str	r1, [r7]
+  33 000a 7B68     		ldr	r3, [r7, #4]
+  34 000c 93F84130 		ldrb	r3, [r3, #65]
+  35 0010 DBB2     		uxtb	r3, r3
+  36 0012 202B     		cmp	r3, #32
+  37 0014 38D1     		bne	.L2
+  38 0016 7B68     		ldr	r3, [r7, #4]
+  39 0018 93F84030 		ldrb	r3, [r3, #64]	@ zero_extendqisi2
+  40 001c 012B     		cmp	r3, #1
+  41 001e 01D1     		bne	.L3
+  42 0020 0223     		movs	r3, #2
+  43 0022 32E0     		b	.L4
+  44              	.L3:
+  45 0024 7B68     		ldr	r3, [r7, #4]
+  46 0026 0122     		movs	r2, #1
+  47 0028 83F84020 		strb	r2, [r3, #64]
+  48 002c 7B68     		ldr	r3, [r7, #4]
+  49 002e 2422     		movs	r2, #36
+  50 0030 83F84120 		strb	r2, [r3, #65]
+  51 0034 7B68     		ldr	r3, [r7, #4]
+  52 0036 1B68     		ldr	r3, [r3]
+  53 0038 1A68     		ldr	r2, [r3]
+  54 003a 7B68     		ldr	r3, [r7, #4]
+  55 003c 1B68     		ldr	r3, [r3]
+  56 003e 22F00102 		bic	r2, r2, #1
+  57 0042 1A60     		str	r2, [r3]
+  58 0044 7B68     		ldr	r3, [r7, #4]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 2
+
+
+  59 0046 1B68     		ldr	r3, [r3]
+  60 0048 1A68     		ldr	r2, [r3]
+  61 004a 7B68     		ldr	r3, [r7, #4]
+  62 004c 1B68     		ldr	r3, [r3]
+  63 004e 22F48052 		bic	r2, r2, #4096
+  64 0052 1A60     		str	r2, [r3]
+  65 0054 7B68     		ldr	r3, [r7, #4]
+  66 0056 1B68     		ldr	r3, [r3]
+  67 0058 1968     		ldr	r1, [r3]
+  68 005a 7B68     		ldr	r3, [r7, #4]
+  69 005c 1B68     		ldr	r3, [r3]
+  70 005e 3A68     		ldr	r2, [r7]
+  71 0060 0A43     		orrs	r2, r2, r1
+  72 0062 1A60     		str	r2, [r3]
+  73 0064 7B68     		ldr	r3, [r7, #4]
+  74 0066 1B68     		ldr	r3, [r3]
+  75 0068 1A68     		ldr	r2, [r3]
+  76 006a 7B68     		ldr	r3, [r7, #4]
+  77 006c 1B68     		ldr	r3, [r3]
+  78 006e 42F00102 		orr	r2, r2, #1
+  79 0072 1A60     		str	r2, [r3]
+  80 0074 7B68     		ldr	r3, [r7, #4]
+  81 0076 2022     		movs	r2, #32
+  82 0078 83F84120 		strb	r2, [r3, #65]
+  83 007c 7B68     		ldr	r3, [r7, #4]
+  84 007e 0022     		movs	r2, #0
+  85 0080 83F84020 		strb	r2, [r3, #64]
+  86 0084 0023     		movs	r3, #0
+  87 0086 00E0     		b	.L4
+  88              	.L2:
+  89 0088 0223     		movs	r3, #2
+  90              	.L4:
+  91 008a 1846     		mov	r0, r3
+  92 008c 0C37     		adds	r7, r7, #12
+  93 008e BD46     		mov	sp, r7
+  94              		@ sp needed
+  95 0090 5DF8047B 		ldr	r7, [sp], #4
+  96 0094 7047     		bx	lr
+  98              		.section	.text.HAL_I2CEx_ConfigDigitalFilter,"ax",%progbits
+  99              		.align	1
+ 100              		.global	HAL_I2CEx_ConfigDigitalFilter
+ 101              		.syntax unified
+ 102              		.thumb
+ 103              		.thumb_func
+ 105              	HAL_I2CEx_ConfigDigitalFilter:
+ 106              		@ args = 0, pretend = 0, frame = 16
+ 107              		@ frame_needed = 1, uses_anonymous_args = 0
+ 108              		@ link register save eliminated.
+ 109 0000 80B4     		push	{r7}
+ 110 0002 85B0     		sub	sp, sp, #20
+ 111 0004 00AF     		add	r7, sp, #0
+ 112 0006 7860     		str	r0, [r7, #4]
+ 113 0008 3960     		str	r1, [r7]
+ 114 000a 7B68     		ldr	r3, [r7, #4]
+ 115 000c 93F84130 		ldrb	r3, [r3, #65]
+ 116 0010 DBB2     		uxtb	r3, r3
+ 117 0012 202B     		cmp	r3, #32
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 3
+
+
+ 118 0014 39D1     		bne	.L6
+ 119 0016 7B68     		ldr	r3, [r7, #4]
+ 120 0018 93F84030 		ldrb	r3, [r3, #64]	@ zero_extendqisi2
+ 121 001c 012B     		cmp	r3, #1
+ 122 001e 01D1     		bne	.L7
+ 123 0020 0223     		movs	r3, #2
+ 124 0022 33E0     		b	.L8
+ 125              	.L7:
+ 126 0024 7B68     		ldr	r3, [r7, #4]
+ 127 0026 0122     		movs	r2, #1
+ 128 0028 83F84020 		strb	r2, [r3, #64]
+ 129 002c 7B68     		ldr	r3, [r7, #4]
+ 130 002e 2422     		movs	r2, #36
+ 131 0030 83F84120 		strb	r2, [r3, #65]
+ 132 0034 7B68     		ldr	r3, [r7, #4]
+ 133 0036 1B68     		ldr	r3, [r3]
+ 134 0038 1A68     		ldr	r2, [r3]
+ 135 003a 7B68     		ldr	r3, [r7, #4]
+ 136 003c 1B68     		ldr	r3, [r3]
+ 137 003e 22F00102 		bic	r2, r2, #1
+ 138 0042 1A60     		str	r2, [r3]
+ 139 0044 7B68     		ldr	r3, [r7, #4]
+ 140 0046 1B68     		ldr	r3, [r3]
+ 141 0048 1B68     		ldr	r3, [r3]
+ 142 004a FB60     		str	r3, [r7, #12]
+ 143 004c FB68     		ldr	r3, [r7, #12]
+ 144 004e 23F47063 		bic	r3, r3, #3840
+ 145 0052 FB60     		str	r3, [r7, #12]
+ 146 0054 3B68     		ldr	r3, [r7]
+ 147 0056 1B02     		lsls	r3, r3, #8
+ 148 0058 FA68     		ldr	r2, [r7, #12]
+ 149 005a 1343     		orrs	r3, r3, r2
+ 150 005c FB60     		str	r3, [r7, #12]
+ 151 005e 7B68     		ldr	r3, [r7, #4]
+ 152 0060 1B68     		ldr	r3, [r3]
+ 153 0062 FA68     		ldr	r2, [r7, #12]
+ 154 0064 1A60     		str	r2, [r3]
+ 155 0066 7B68     		ldr	r3, [r7, #4]
+ 156 0068 1B68     		ldr	r3, [r3]
+ 157 006a 1A68     		ldr	r2, [r3]
+ 158 006c 7B68     		ldr	r3, [r7, #4]
+ 159 006e 1B68     		ldr	r3, [r3]
+ 160 0070 42F00102 		orr	r2, r2, #1
+ 161 0074 1A60     		str	r2, [r3]
+ 162 0076 7B68     		ldr	r3, [r7, #4]
+ 163 0078 2022     		movs	r2, #32
+ 164 007a 83F84120 		strb	r2, [r3, #65]
+ 165 007e 7B68     		ldr	r3, [r7, #4]
+ 166 0080 0022     		movs	r2, #0
+ 167 0082 83F84020 		strb	r2, [r3, #64]
+ 168 0086 0023     		movs	r3, #0
+ 169 0088 00E0     		b	.L8
+ 170              	.L6:
+ 171 008a 0223     		movs	r3, #2
+ 172              	.L8:
+ 173 008c 1846     		mov	r0, r3
+ 174 008e 1437     		adds	r7, r7, #20
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 4
+
+
+ 175 0090 BD46     		mov	sp, r7
+ 176              		@ sp needed
+ 177 0092 5DF8047B 		ldr	r7, [sp], #4
+ 178 0096 7047     		bx	lr
+ 180              		.section	.text.HAL_I2CEx_EnableWakeUp,"ax",%progbits
+ 181              		.align	1
+ 182              		.global	HAL_I2CEx_EnableWakeUp
+ 183              		.syntax unified
+ 184              		.thumb
+ 185              		.thumb_func
+ 187              	HAL_I2CEx_EnableWakeUp:
+ 188              		@ args = 0, pretend = 0, frame = 8
+ 189              		@ frame_needed = 1, uses_anonymous_args = 0
+ 190              		@ link register save eliminated.
+ 191 0000 80B4     		push	{r7}
+ 192 0002 83B0     		sub	sp, sp, #12
+ 193 0004 00AF     		add	r7, sp, #0
+ 194 0006 7860     		str	r0, [r7, #4]
+ 195 0008 7B68     		ldr	r3, [r7, #4]
+ 196 000a 93F84130 		ldrb	r3, [r3, #65]
+ 197 000e DBB2     		uxtb	r3, r3
+ 198 0010 202B     		cmp	r3, #32
+ 199 0012 30D1     		bne	.L10
+ 200 0014 7B68     		ldr	r3, [r7, #4]
+ 201 0016 93F84030 		ldrb	r3, [r3, #64]	@ zero_extendqisi2
+ 202 001a 012B     		cmp	r3, #1
+ 203 001c 01D1     		bne	.L11
+ 204 001e 0223     		movs	r3, #2
+ 205 0020 2AE0     		b	.L12
+ 206              	.L11:
+ 207 0022 7B68     		ldr	r3, [r7, #4]
+ 208 0024 0122     		movs	r2, #1
+ 209 0026 83F84020 		strb	r2, [r3, #64]
+ 210 002a 7B68     		ldr	r3, [r7, #4]
+ 211 002c 2422     		movs	r2, #36
+ 212 002e 83F84120 		strb	r2, [r3, #65]
+ 213 0032 7B68     		ldr	r3, [r7, #4]
+ 214 0034 1B68     		ldr	r3, [r3]
+ 215 0036 1A68     		ldr	r2, [r3]
+ 216 0038 7B68     		ldr	r3, [r7, #4]
+ 217 003a 1B68     		ldr	r3, [r3]
+ 218 003c 22F00102 		bic	r2, r2, #1
+ 219 0040 1A60     		str	r2, [r3]
+ 220 0042 7B68     		ldr	r3, [r7, #4]
+ 221 0044 1B68     		ldr	r3, [r3]
+ 222 0046 1A68     		ldr	r2, [r3]
+ 223 0048 7B68     		ldr	r3, [r7, #4]
+ 224 004a 1B68     		ldr	r3, [r3]
+ 225 004c 42F48022 		orr	r2, r2, #262144
+ 226 0050 1A60     		str	r2, [r3]
+ 227 0052 7B68     		ldr	r3, [r7, #4]
+ 228 0054 1B68     		ldr	r3, [r3]
+ 229 0056 1A68     		ldr	r2, [r3]
+ 230 0058 7B68     		ldr	r3, [r7, #4]
+ 231 005a 1B68     		ldr	r3, [r3]
+ 232 005c 42F00102 		orr	r2, r2, #1
+ 233 0060 1A60     		str	r2, [r3]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 5
+
+
+ 234 0062 7B68     		ldr	r3, [r7, #4]
+ 235 0064 2022     		movs	r2, #32
+ 236 0066 83F84120 		strb	r2, [r3, #65]
+ 237 006a 7B68     		ldr	r3, [r7, #4]
+ 238 006c 0022     		movs	r2, #0
+ 239 006e 83F84020 		strb	r2, [r3, #64]
+ 240 0072 0023     		movs	r3, #0
+ 241 0074 00E0     		b	.L12
+ 242              	.L10:
+ 243 0076 0223     		movs	r3, #2
+ 244              	.L12:
+ 245 0078 1846     		mov	r0, r3
+ 246 007a 0C37     		adds	r7, r7, #12
+ 247 007c BD46     		mov	sp, r7
+ 248              		@ sp needed
+ 249 007e 5DF8047B 		ldr	r7, [sp], #4
+ 250 0082 7047     		bx	lr
+ 252              		.section	.text.HAL_I2CEx_DisableWakeUp,"ax",%progbits
+ 253              		.align	1
+ 254              		.global	HAL_I2CEx_DisableWakeUp
+ 255              		.syntax unified
+ 256              		.thumb
+ 257              		.thumb_func
+ 259              	HAL_I2CEx_DisableWakeUp:
+ 260              		@ args = 0, pretend = 0, frame = 8
+ 261              		@ frame_needed = 1, uses_anonymous_args = 0
+ 262              		@ link register save eliminated.
+ 263 0000 80B4     		push	{r7}
+ 264 0002 83B0     		sub	sp, sp, #12
+ 265 0004 00AF     		add	r7, sp, #0
+ 266 0006 7860     		str	r0, [r7, #4]
+ 267 0008 7B68     		ldr	r3, [r7, #4]
+ 268 000a 93F84130 		ldrb	r3, [r3, #65]
+ 269 000e DBB2     		uxtb	r3, r3
+ 270 0010 202B     		cmp	r3, #32
+ 271 0012 30D1     		bne	.L14
+ 272 0014 7B68     		ldr	r3, [r7, #4]
+ 273 0016 93F84030 		ldrb	r3, [r3, #64]	@ zero_extendqisi2
+ 274 001a 012B     		cmp	r3, #1
+ 275 001c 01D1     		bne	.L15
+ 276 001e 0223     		movs	r3, #2
+ 277 0020 2AE0     		b	.L16
+ 278              	.L15:
+ 279 0022 7B68     		ldr	r3, [r7, #4]
+ 280 0024 0122     		movs	r2, #1
+ 281 0026 83F84020 		strb	r2, [r3, #64]
+ 282 002a 7B68     		ldr	r3, [r7, #4]
+ 283 002c 2422     		movs	r2, #36
+ 284 002e 83F84120 		strb	r2, [r3, #65]
+ 285 0032 7B68     		ldr	r3, [r7, #4]
+ 286 0034 1B68     		ldr	r3, [r3]
+ 287 0036 1A68     		ldr	r2, [r3]
+ 288 0038 7B68     		ldr	r3, [r7, #4]
+ 289 003a 1B68     		ldr	r3, [r3]
+ 290 003c 22F00102 		bic	r2, r2, #1
+ 291 0040 1A60     		str	r2, [r3]
+ 292 0042 7B68     		ldr	r3, [r7, #4]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 6
+
+
+ 293 0044 1B68     		ldr	r3, [r3]
+ 294 0046 1A68     		ldr	r2, [r3]
+ 295 0048 7B68     		ldr	r3, [r7, #4]
+ 296 004a 1B68     		ldr	r3, [r3]
+ 297 004c 22F48022 		bic	r2, r2, #262144
+ 298 0050 1A60     		str	r2, [r3]
+ 299 0052 7B68     		ldr	r3, [r7, #4]
+ 300 0054 1B68     		ldr	r3, [r3]
+ 301 0056 1A68     		ldr	r2, [r3]
+ 302 0058 7B68     		ldr	r3, [r7, #4]
+ 303 005a 1B68     		ldr	r3, [r3]
+ 304 005c 42F00102 		orr	r2, r2, #1
+ 305 0060 1A60     		str	r2, [r3]
+ 306 0062 7B68     		ldr	r3, [r7, #4]
+ 307 0064 2022     		movs	r2, #32
+ 308 0066 83F84120 		strb	r2, [r3, #65]
+ 309 006a 7B68     		ldr	r3, [r7, #4]
+ 310 006c 0022     		movs	r2, #0
+ 311 006e 83F84020 		strb	r2, [r3, #64]
+ 312 0072 0023     		movs	r3, #0
+ 313 0074 00E0     		b	.L16
+ 314              	.L14:
+ 315 0076 0223     		movs	r3, #2
+ 316              	.L16:
+ 317 0078 1846     		mov	r0, r3
+ 318 007a 0C37     		adds	r7, r7, #12
+ 319 007c BD46     		mov	sp, r7
+ 320              		@ sp needed
+ 321 007e 5DF8047B 		ldr	r7, [sp], #4
+ 322 0082 7047     		bx	lr
+ 324              		.section	.text.HAL_I2CEx_EnableFastModePlus,"ax",%progbits
+ 325              		.align	1
+ 326              		.global	HAL_I2CEx_EnableFastModePlus
+ 327              		.syntax unified
+ 328              		.thumb
+ 329              		.thumb_func
+ 331              	HAL_I2CEx_EnableFastModePlus:
+ 332              		@ args = 0, pretend = 0, frame = 16
+ 333              		@ frame_needed = 1, uses_anonymous_args = 0
+ 334              		@ link register save eliminated.
+ 335 0000 80B4     		push	{r7}
+ 336 0002 85B0     		sub	sp, sp, #20
+ 337 0004 00AF     		add	r7, sp, #0
+ 338 0006 7860     		str	r0, [r7, #4]
+ 339 0008 0B4B     		ldr	r3, .L18
+ 340 000a 1B6E     		ldr	r3, [r3, #96]
+ 341 000c 0A4A     		ldr	r2, .L18
+ 342 000e 43F00103 		orr	r3, r3, #1
+ 343 0012 1366     		str	r3, [r2, #96]
+ 344 0014 084B     		ldr	r3, .L18
+ 345 0016 1B6E     		ldr	r3, [r3, #96]
+ 346 0018 03F00103 		and	r3, r3, #1
+ 347 001c FB60     		str	r3, [r7, #12]
+ 348 001e FB68     		ldr	r3, [r7, #12]
+ 349 0020 064B     		ldr	r3, .L18+4
+ 350 0022 5A68     		ldr	r2, [r3, #4]
+ 351 0024 0549     		ldr	r1, .L18+4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 7
+
+
+ 352 0026 7B68     		ldr	r3, [r7, #4]
+ 353 0028 1343     		orrs	r3, r3, r2
+ 354 002a 4B60     		str	r3, [r1, #4]
+ 355 002c 00BF     		nop
+ 356 002e 1437     		adds	r7, r7, #20
+ 357 0030 BD46     		mov	sp, r7
+ 358              		@ sp needed
+ 359 0032 5DF8047B 		ldr	r7, [sp], #4
+ 360 0036 7047     		bx	lr
+ 361              	.L19:
+ 362              		.align	2
+ 363              	.L18:
+ 364 0038 00100240 		.word	1073876992
+ 365 003c 00000140 		.word	1073807360
+ 367              		.section	.text.HAL_I2CEx_DisableFastModePlus,"ax",%progbits
+ 368              		.align	1
+ 369              		.global	HAL_I2CEx_DisableFastModePlus
+ 370              		.syntax unified
+ 371              		.thumb
+ 372              		.thumb_func
+ 374              	HAL_I2CEx_DisableFastModePlus:
+ 375              		@ args = 0, pretend = 0, frame = 16
+ 376              		@ frame_needed = 1, uses_anonymous_args = 0
+ 377              		@ link register save eliminated.
+ 378 0000 80B4     		push	{r7}
+ 379 0002 85B0     		sub	sp, sp, #20
+ 380 0004 00AF     		add	r7, sp, #0
+ 381 0006 7860     		str	r0, [r7, #4]
+ 382 0008 0C4B     		ldr	r3, .L21
+ 383 000a 1B6E     		ldr	r3, [r3, #96]
+ 384 000c 0B4A     		ldr	r2, .L21
+ 385 000e 43F00103 		orr	r3, r3, #1
+ 386 0012 1366     		str	r3, [r2, #96]
+ 387 0014 094B     		ldr	r3, .L21
+ 388 0016 1B6E     		ldr	r3, [r3, #96]
+ 389 0018 03F00103 		and	r3, r3, #1
+ 390 001c FB60     		str	r3, [r7, #12]
+ 391 001e FB68     		ldr	r3, [r7, #12]
+ 392 0020 074B     		ldr	r3, .L21+4
+ 393 0022 5A68     		ldr	r2, [r3, #4]
+ 394 0024 7B68     		ldr	r3, [r7, #4]
+ 395 0026 DB43     		mvns	r3, r3
+ 396 0028 0549     		ldr	r1, .L21+4
+ 397 002a 1340     		ands	r3, r3, r2
+ 398 002c 4B60     		str	r3, [r1, #4]
+ 399 002e 00BF     		nop
+ 400 0030 1437     		adds	r7, r7, #20
+ 401 0032 BD46     		mov	sp, r7
+ 402              		@ sp needed
+ 403 0034 5DF8047B 		ldr	r7, [sp], #4
+ 404 0038 7047     		bx	lr
+ 405              	.L22:
+ 406 003a 00BF     		.align	2
+ 407              	.L21:
+ 408 003c 00100240 		.word	1073876992
+ 409 0040 00000140 		.word	1073807360
+ 411              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 8
+
+
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32g4xx_hal_i2c_ex.c
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:18     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:24     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 HAL_I2CEx_ConfigAnalogFilter
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:99     .text.HAL_I2CEx_ConfigDigitalFilter:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:105    .text.HAL_I2CEx_ConfigDigitalFilter:00000000 HAL_I2CEx_ConfigDigitalFilter
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:181    .text.HAL_I2CEx_EnableWakeUp:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:187    .text.HAL_I2CEx_EnableWakeUp:00000000 HAL_I2CEx_EnableWakeUp
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:253    .text.HAL_I2CEx_DisableWakeUp:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:259    .text.HAL_I2CEx_DisableWakeUp:00000000 HAL_I2CEx_DisableWakeUp
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:325    .text.HAL_I2CEx_EnableFastModePlus:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:331    .text.HAL_I2CEx_EnableFastModePlus:00000000 HAL_I2CEx_EnableFastModePlus
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:364    .text.HAL_I2CEx_EnableFastModePlus:00000038 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:368    .text.HAL_I2CEx_DisableFastModePlus:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:374    .text.HAL_I2CEx_DisableFastModePlus:00000000 HAL_I2CEx_DisableFastModePlus
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:408    .text.HAL_I2CEx_DisableFastModePlus:0000003c $d
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,204 @@
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"system_stm32g4xx.c"
+  16              		.text
+  17              		.global	SystemCoreClock
+  18              		.section	.data.SystemCoreClock,"aw"
+  19              		.align	2
+  22              	SystemCoreClock:
+  23 0000 0024F400 		.word	16000000
+  24              		.global	AHBPrescTable
+  25              		.section	.rodata.AHBPrescTable,"a"
+  26              		.align	2
+  29              	AHBPrescTable:
+  30 0000 00000000 		.ascii	"\000\000\000\000\000\000\000\000\001\002\003\004\006"
+  30      00000000 
+  30      01020304 
+  30      06
+  31 000d 070809   		.ascii	"\007\010\011"
+  32              		.global	APBPrescTable
+  33              		.section	.rodata.APBPrescTable,"a"
+  34              		.align	2
+  37              	APBPrescTable:
+  38 0000 00000000 		.ascii	"\000\000\000\000\001\002\003\004"
+  38      01020304 
+  39              		.section	.text.SystemInit,"ax",%progbits
+  40              		.align	1
+  41              		.global	SystemInit
+  42              		.syntax unified
+  43              		.thumb
+  44              		.thumb_func
+  46              	SystemInit:
+  47              		@ args = 0, pretend = 0, frame = 0
+  48              		@ frame_needed = 1, uses_anonymous_args = 0
+  49              		@ link register save eliminated.
+  50 0000 80B4     		push	{r7}
+  51 0002 00AF     		add	r7, sp, #0
+  52 0004 064B     		ldr	r3, .L2
+  53 0006 D3F88830 		ldr	r3, [r3, #136]
+  54 000a 054A     		ldr	r2, .L2
+  55 000c 43F47003 		orr	r3, r3, #15728640
+  56 0010 C2F88830 		str	r3, [r2, #136]
+  57 0014 00BF     		nop
+  58 0016 BD46     		mov	sp, r7
+  59              		@ sp needed
+  60 0018 5DF8047B 		ldr	r7, [sp], #4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s 			page 2
+
+
+  61 001c 7047     		bx	lr
+  62              	.L3:
+  63 001e 00BF     		.align	2
+  64              	.L2:
+  65 0020 00ED00E0 		.word	-536810240
+  67              		.section	.text.SystemCoreClockUpdate,"ax",%progbits
+  68              		.align	1
+  69              		.global	SystemCoreClockUpdate
+  70              		.syntax unified
+  71              		.thumb
+  72              		.thumb_func
+  74              	SystemCoreClockUpdate:
+  75              		@ args = 0, pretend = 0, frame = 24
+  76              		@ frame_needed = 1, uses_anonymous_args = 0
+  77              		@ link register save eliminated.
+  78 0000 80B4     		push	{r7}
+  79 0002 87B0     		sub	sp, sp, #28
+  80 0004 00AF     		add	r7, sp, #0
+  81 0006 2E4B     		ldr	r3, .L13
+  82 0008 9B68     		ldr	r3, [r3, #8]
+  83 000a 03F00C03 		and	r3, r3, #12
+  84 000e 0C2B     		cmp	r3, #12
+  85 0010 0ED0     		beq	.L5
+  86 0012 0C2B     		cmp	r3, #12
+  87 0014 3ED8     		bhi	.L12
+  88 0016 042B     		cmp	r3, #4
+  89 0018 02D0     		beq	.L7
+  90 001a 082B     		cmp	r3, #8
+  91 001c 04D0     		beq	.L8
+  92 001e 39E0     		b	.L12
+  93              	.L7:
+  94 0020 284B     		ldr	r3, .L13+4
+  95 0022 294A     		ldr	r2, .L13+8
+  96 0024 1A60     		str	r2, [r3]
+  97 0026 36E0     		b	.L9
+  98              	.L8:
+  99 0028 264B     		ldr	r3, .L13+4
+ 100 002a 284A     		ldr	r2, .L13+12
+ 101 002c 1A60     		str	r2, [r3]
+ 102 002e 32E0     		b	.L9
+ 103              	.L5:
+ 104 0030 234B     		ldr	r3, .L13
+ 105 0032 DB68     		ldr	r3, [r3, #12]
+ 106 0034 03F00303 		and	r3, r3, #3
+ 107 0038 3B61     		str	r3, [r7, #16]
+ 108 003a 214B     		ldr	r3, .L13
+ 109 003c DB68     		ldr	r3, [r3, #12]
+ 110 003e 1B09     		lsrs	r3, r3, #4
+ 111 0040 03F00F03 		and	r3, r3, #15
+ 112 0044 0133     		adds	r3, r3, #1
+ 113 0046 FB60     		str	r3, [r7, #12]
+ 114 0048 3B69     		ldr	r3, [r7, #16]
+ 115 004a 022B     		cmp	r3, #2
+ 116 004c 05D1     		bne	.L10
+ 117 004e 1E4A     		ldr	r2, .L13+8
+ 118 0050 FB68     		ldr	r3, [r7, #12]
+ 119 0052 B2FBF3F3 		udiv	r3, r2, r3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s 			page 3
+
+
+ 120 0056 7B61     		str	r3, [r7, #20]
+ 121 0058 04E0     		b	.L11
+ 122              	.L10:
+ 123 005a 1C4A     		ldr	r2, .L13+12
+ 124 005c FB68     		ldr	r3, [r7, #12]
+ 125 005e B2FBF3F3 		udiv	r3, r2, r3
+ 126 0062 7B61     		str	r3, [r7, #20]
+ 127              	.L11:
+ 128 0064 164B     		ldr	r3, .L13
+ 129 0066 DB68     		ldr	r3, [r3, #12]
+ 130 0068 1B0A     		lsrs	r3, r3, #8
+ 131 006a 03F07F02 		and	r2, r3, #127
+ 132 006e 7B69     		ldr	r3, [r7, #20]
+ 133 0070 02FB03F3 		mul	r3, r2, r3
+ 134 0074 7B61     		str	r3, [r7, #20]
+ 135 0076 124B     		ldr	r3, .L13
+ 136 0078 DB68     		ldr	r3, [r3, #12]
+ 137 007a 5B0E     		lsrs	r3, r3, #25
+ 138 007c 03F00303 		and	r3, r3, #3
+ 139 0080 0133     		adds	r3, r3, #1
+ 140 0082 5B00     		lsls	r3, r3, #1
+ 141 0084 BB60     		str	r3, [r7, #8]
+ 142 0086 7A69     		ldr	r2, [r7, #20]
+ 143 0088 BB68     		ldr	r3, [r7, #8]
+ 144 008a B2FBF3F3 		udiv	r3, r2, r3
+ 145 008e 0D4A     		ldr	r2, .L13+4
+ 146 0090 1360     		str	r3, [r2]
+ 147 0092 00E0     		b	.L9
+ 148              	.L12:
+ 149 0094 00BF     		nop
+ 150              	.L9:
+ 151 0096 0A4B     		ldr	r3, .L13
+ 152 0098 9B68     		ldr	r3, [r3, #8]
+ 153 009a 1B09     		lsrs	r3, r3, #4
+ 154 009c 03F00F03 		and	r3, r3, #15
+ 155 00a0 0B4A     		ldr	r2, .L13+16
+ 156 00a2 D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
+ 157 00a4 7B60     		str	r3, [r7, #4]
+ 158 00a6 074B     		ldr	r3, .L13+4
+ 159 00a8 1A68     		ldr	r2, [r3]
+ 160 00aa 7B68     		ldr	r3, [r7, #4]
+ 161 00ac 22FA03F3 		lsr	r3, r2, r3
+ 162 00b0 044A     		ldr	r2, .L13+4
+ 163 00b2 1360     		str	r3, [r2]
+ 164 00b4 00BF     		nop
+ 165 00b6 1C37     		adds	r7, r7, #28
+ 166 00b8 BD46     		mov	sp, r7
+ 167              		@ sp needed
+ 168 00ba 5DF8047B 		ldr	r7, [sp], #4
+ 169 00be 7047     		bx	lr
+ 170              	.L14:
+ 171              		.align	2
+ 172              	.L13:
+ 173 00c0 00100240 		.word	1073876992
+ 174 00c4 00000000 		.word	SystemCoreClock
+ 175 00c8 0024F400 		.word	16000000
+ 176 00cc 00366E01 		.word	24000000
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s 			page 4
+
+
+ 177 00d0 00000000 		.word	AHBPrescTable
+ 179              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 system_stm32g4xx.c
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:22     .data.SystemCoreClock:00000000 SystemCoreClock
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:19     .data.SystemCoreClock:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:29     .rodata.AHBPrescTable:00000000 AHBPrescTable
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:26     .rodata.AHBPrescTable:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:37     .rodata.APBPrescTable:00000000 APBPrescTable
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:34     .rodata.APBPrescTable:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:40     .text.SystemInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:46     .text.SystemInit:00000000 SystemInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:65     .text.SystemInit:00000020 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:68     .text.SystemCoreClockUpdate:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:74     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:173    .text.SystemCoreClockUpdate:000000c0 $d
+
+NO UNDEFINED SYMBOLS

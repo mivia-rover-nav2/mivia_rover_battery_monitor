@@ -1,0 +1,382 @@
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32g4xx_hal_dma_ex.c"
+  16              		.text
+  17              		.section	.text.HAL_DMAEx_ConfigMuxSync,"ax",%progbits
+  18              		.align	1
+  19              		.global	HAL_DMAEx_ConfigMuxSync
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	HAL_DMAEx_ConfigMuxSync:
+  25              		@ args = 0, pretend = 0, frame = 8
+  26              		@ frame_needed = 1, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 80B4     		push	{r7}
+  29 0002 83B0     		sub	sp, sp, #12
+  30 0004 00AF     		add	r7, sp, #0
+  31 0006 7860     		str	r0, [r7, #4]
+  32 0008 3960     		str	r1, [r7]
+  33 000a 7B68     		ldr	r3, [r7, #4]
+  34 000c 93F82530 		ldrb	r3, [r3, #37]
+  35 0010 DBB2     		uxtb	r3, r3
+  36 0012 012B     		cmp	r3, #1
+  37 0014 2CD1     		bne	.L2
+  38 0016 7B68     		ldr	r3, [r7, #4]
+  39 0018 93F82430 		ldrb	r3, [r3, #36]	@ zero_extendqisi2
+  40 001c 012B     		cmp	r3, #1
+  41 001e 01D1     		bne	.L3
+  42 0020 0223     		movs	r3, #2
+  43 0022 26E0     		b	.L4
+  44              	.L3:
+  45 0024 7B68     		ldr	r3, [r7, #4]
+  46 0026 0122     		movs	r2, #1
+  47 0028 83F82420 		strb	r2, [r3, #36]
+  48 002c 7B68     		ldr	r3, [r7, #4]
+  49 002e 9B6C     		ldr	r3, [r3, #72]
+  50 0030 1B68     		ldr	r3, [r3]
+  51 0032 03F07F01 		and	r1, r3, #127
+  52 0036 3B68     		ldr	r3, [r7]
+  53 0038 1B68     		ldr	r3, [r3]
+  54 003a 1A06     		lsls	r2, r3, #24
+  55 003c 3B68     		ldr	r3, [r7]
+  56 003e DB68     		ldr	r3, [r3, #12]
+  57 0040 013B     		subs	r3, r3, #1
+  58 0042 DB04     		lsls	r3, r3, #19
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 2
+
+
+  59 0044 1A43     		orrs	r2, r2, r3
+  60 0046 3B68     		ldr	r3, [r7]
+  61 0048 5B68     		ldr	r3, [r3, #4]
+  62 004a 1A43     		orrs	r2, r2, r3
+  63 004c 3B68     		ldr	r3, [r7]
+  64 004e 1B7A     		ldrb	r3, [r3, #8]	@ zero_extendqisi2
+  65 0050 1B04     		lsls	r3, r3, #16
+  66 0052 1A43     		orrs	r2, r2, r3
+  67 0054 3B68     		ldr	r3, [r7]
+  68 0056 5B7A     		ldrb	r3, [r3, #9]	@ zero_extendqisi2
+  69 0058 5B02     		lsls	r3, r3, #9
+  70 005a 1A43     		orrs	r2, r2, r3
+  71 005c 7B68     		ldr	r3, [r7, #4]
+  72 005e 9B6C     		ldr	r3, [r3, #72]
+  73 0060 0A43     		orrs	r2, r2, r1
+  74 0062 1A60     		str	r2, [r3]
+  75 0064 7B68     		ldr	r3, [r7, #4]
+  76 0066 0022     		movs	r2, #0
+  77 0068 83F82420 		strb	r2, [r3, #36]
+  78 006c 0023     		movs	r3, #0
+  79 006e 00E0     		b	.L4
+  80              	.L2:
+  81 0070 0123     		movs	r3, #1
+  82              	.L4:
+  83 0072 1846     		mov	r0, r3
+  84 0074 0C37     		adds	r7, r7, #12
+  85 0076 BD46     		mov	sp, r7
+  86              		@ sp needed
+  87 0078 5DF8047B 		ldr	r7, [sp], #4
+  88 007c 7047     		bx	lr
+  90              		.section	.text.HAL_DMAEx_ConfigMuxRequestGenerator,"ax",%progbits
+  91              		.align	1
+  92              		.global	HAL_DMAEx_ConfigMuxRequestGenerator
+  93              		.syntax unified
+  94              		.thumb
+  95              		.thumb_func
+  97              	HAL_DMAEx_ConfigMuxRequestGenerator:
+  98              		@ args = 0, pretend = 0, frame = 24
+  99              		@ frame_needed = 1, uses_anonymous_args = 0
+ 100              		@ link register save eliminated.
+ 101 0000 80B4     		push	{r7}
+ 102 0002 87B0     		sub	sp, sp, #28
+ 103 0004 00AF     		add	r7, sp, #0
+ 104 0006 7860     		str	r0, [r7, #4]
+ 105 0008 3960     		str	r1, [r7]
+ 106 000a 7B68     		ldr	r3, [r7, #4]
+ 107 000c 93F82530 		ldrb	r3, [r3, #37]
+ 108 0010 DBB2     		uxtb	r3, r3
+ 109 0012 012B     		cmp	r3, #1
+ 110 0014 37D1     		bne	.L6
+ 111 0016 7B68     		ldr	r3, [r7, #4]
+ 112 0018 5B6D     		ldr	r3, [r3, #84]
+ 113 001a 002B     		cmp	r3, #0
+ 114 001c 33D0     		beq	.L6
+ 115 001e 7B68     		ldr	r3, [r7, #4]
+ 116 0020 93F82430 		ldrb	r3, [r3, #36]	@ zero_extendqisi2
+ 117 0024 012B     		cmp	r3, #1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 3
+
+
+ 118 0026 01D1     		bne	.L7
+ 119 0028 0223     		movs	r3, #2
+ 120 002a 2DE0     		b	.L8
+ 121              	.L7:
+ 122 002c 7B68     		ldr	r3, [r7, #4]
+ 123 002e 0122     		movs	r2, #1
+ 124 0030 83F82420 		strb	r2, [r3, #36]
+ 125 0034 3B68     		ldr	r3, [r7]
+ 126 0036 1A68     		ldr	r2, [r3]
+ 127 0038 3B68     		ldr	r3, [r7]
+ 128 003a 9B68     		ldr	r3, [r3, #8]
+ 129 003c 591E     		subs	r1, r3, #1
+ 130 003e 4FF47803 		mov	r3, #16252928
+ 131 0042 3B61     		str	r3, [r7, #16]
+ 132 0044 3B69     		ldr	r3, [r7, #16]
+ 133              		.syntax unified
+ 134              	@ 1055 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 135 0046 93FAA3F3 		rbit r3, r3
+ 136              	@ 0 "" 2
+ 137              		.thumb
+ 138              		.syntax unified
+ 139 004a FB60     		str	r3, [r7, #12]
+ 140 004c FB68     		ldr	r3, [r7, #12]
+ 141 004e 7B61     		str	r3, [r7, #20]
+ 142 0050 7B69     		ldr	r3, [r7, #20]
+ 143 0052 002B     		cmp	r3, #0
+ 144 0054 01D1     		bne	.L10
+ 145 0056 2023     		movs	r3, #32
+ 146 0058 03E0     		b	.L11
+ 147              	.L10:
+ 148 005a 7B69     		ldr	r3, [r7, #20]
+ 149 005c B3FA83F3 		clz	r3, r3
+ 150 0060 DBB2     		uxtb	r3, r3
+ 151              	.L11:
+ 152 0062 03F01F03 		and	r3, r3, #31
+ 153 0066 01FA03F3 		lsl	r3, r1, r3
+ 154 006a 42EA0301 		orr	r1, r2, r3
+ 155 006e 3B68     		ldr	r3, [r7]
+ 156 0070 5A68     		ldr	r2, [r3, #4]
+ 157 0072 7B68     		ldr	r3, [r7, #4]
+ 158 0074 5B6D     		ldr	r3, [r3, #84]
+ 159 0076 0A43     		orrs	r2, r2, r1
+ 160 0078 1A60     		str	r2, [r3]
+ 161 007a 7B68     		ldr	r3, [r7, #4]
+ 162 007c 0022     		movs	r2, #0
+ 163 007e 83F82420 		strb	r2, [r3, #36]
+ 164 0082 0023     		movs	r3, #0
+ 165 0084 00E0     		b	.L8
+ 166              	.L6:
+ 167 0086 0123     		movs	r3, #1
+ 168              	.L8:
+ 169 0088 1846     		mov	r0, r3
+ 170 008a 1C37     		adds	r7, r7, #28
+ 171 008c BD46     		mov	sp, r7
+ 172              		@ sp needed
+ 173 008e 5DF8047B 		ldr	r7, [sp], #4
+ 174 0092 7047     		bx	lr
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 4
+
+
+ 176              		.section	.text.HAL_DMAEx_EnableMuxRequestGenerator,"ax",%progbits
+ 177              		.align	1
+ 178              		.global	HAL_DMAEx_EnableMuxRequestGenerator
+ 179              		.syntax unified
+ 180              		.thumb
+ 181              		.thumb_func
+ 183              	HAL_DMAEx_EnableMuxRequestGenerator:
+ 184              		@ args = 0, pretend = 0, frame = 8
+ 185              		@ frame_needed = 1, uses_anonymous_args = 0
+ 186              		@ link register save eliminated.
+ 187 0000 80B4     		push	{r7}
+ 188 0002 83B0     		sub	sp, sp, #12
+ 189 0004 00AF     		add	r7, sp, #0
+ 190 0006 7860     		str	r0, [r7, #4]
+ 191 0008 7B68     		ldr	r3, [r7, #4]
+ 192 000a 93F82530 		ldrb	r3, [r3, #37]
+ 193 000e DBB2     		uxtb	r3, r3
+ 194 0010 002B     		cmp	r3, #0
+ 195 0012 0DD0     		beq	.L13
+ 196 0014 7B68     		ldr	r3, [r7, #4]
+ 197 0016 5B6D     		ldr	r3, [r3, #84]
+ 198 0018 002B     		cmp	r3, #0
+ 199 001a 09D0     		beq	.L13
+ 200 001c 7B68     		ldr	r3, [r7, #4]
+ 201 001e 5B6D     		ldr	r3, [r3, #84]
+ 202 0020 1A68     		ldr	r2, [r3]
+ 203 0022 7B68     		ldr	r3, [r7, #4]
+ 204 0024 5B6D     		ldr	r3, [r3, #84]
+ 205 0026 42F48032 		orr	r2, r2, #65536
+ 206 002a 1A60     		str	r2, [r3]
+ 207 002c 0023     		movs	r3, #0
+ 208 002e 00E0     		b	.L14
+ 209              	.L13:
+ 210 0030 0123     		movs	r3, #1
+ 211              	.L14:
+ 212 0032 1846     		mov	r0, r3
+ 213 0034 0C37     		adds	r7, r7, #12
+ 214 0036 BD46     		mov	sp, r7
+ 215              		@ sp needed
+ 216 0038 5DF8047B 		ldr	r7, [sp], #4
+ 217 003c 7047     		bx	lr
+ 219              		.section	.text.HAL_DMAEx_DisableMuxRequestGenerator,"ax",%progbits
+ 220              		.align	1
+ 221              		.global	HAL_DMAEx_DisableMuxRequestGenerator
+ 222              		.syntax unified
+ 223              		.thumb
+ 224              		.thumb_func
+ 226              	HAL_DMAEx_DisableMuxRequestGenerator:
+ 227              		@ args = 0, pretend = 0, frame = 8
+ 228              		@ frame_needed = 1, uses_anonymous_args = 0
+ 229              		@ link register save eliminated.
+ 230 0000 80B4     		push	{r7}
+ 231 0002 83B0     		sub	sp, sp, #12
+ 232 0004 00AF     		add	r7, sp, #0
+ 233 0006 7860     		str	r0, [r7, #4]
+ 234 0008 7B68     		ldr	r3, [r7, #4]
+ 235 000a 93F82530 		ldrb	r3, [r3, #37]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 5
+
+
+ 236 000e DBB2     		uxtb	r3, r3
+ 237 0010 002B     		cmp	r3, #0
+ 238 0012 0DD0     		beq	.L16
+ 239 0014 7B68     		ldr	r3, [r7, #4]
+ 240 0016 5B6D     		ldr	r3, [r3, #84]
+ 241 0018 002B     		cmp	r3, #0
+ 242 001a 09D0     		beq	.L16
+ 243 001c 7B68     		ldr	r3, [r7, #4]
+ 244 001e 5B6D     		ldr	r3, [r3, #84]
+ 245 0020 1A68     		ldr	r2, [r3]
+ 246 0022 7B68     		ldr	r3, [r7, #4]
+ 247 0024 5B6D     		ldr	r3, [r3, #84]
+ 248 0026 22F48032 		bic	r2, r2, #65536
+ 249 002a 1A60     		str	r2, [r3]
+ 250 002c 0023     		movs	r3, #0
+ 251 002e 00E0     		b	.L17
+ 252              	.L16:
+ 253 0030 0123     		movs	r3, #1
+ 254              	.L17:
+ 255 0032 1846     		mov	r0, r3
+ 256 0034 0C37     		adds	r7, r7, #12
+ 257 0036 BD46     		mov	sp, r7
+ 258              		@ sp needed
+ 259 0038 5DF8047B 		ldr	r7, [sp], #4
+ 260 003c 7047     		bx	lr
+ 262              		.section	.text.HAL_DMAEx_MUX_IRQHandler,"ax",%progbits
+ 263              		.align	1
+ 264              		.global	HAL_DMAEx_MUX_IRQHandler
+ 265              		.syntax unified
+ 266              		.thumb
+ 267              		.thumb_func
+ 269              	HAL_DMAEx_MUX_IRQHandler:
+ 270              		@ args = 0, pretend = 0, frame = 8
+ 271              		@ frame_needed = 1, uses_anonymous_args = 0
+ 272 0000 80B5     		push	{r7, lr}
+ 273 0002 82B0     		sub	sp, sp, #8
+ 274 0004 00AF     		add	r7, sp, #0
+ 275 0006 7860     		str	r0, [r7, #4]
+ 276 0008 7B68     		ldr	r3, [r7, #4]
+ 277 000a DB6C     		ldr	r3, [r3, #76]
+ 278 000c 1A68     		ldr	r2, [r3]
+ 279 000e 7B68     		ldr	r3, [r7, #4]
+ 280 0010 1B6D     		ldr	r3, [r3, #80]
+ 281 0012 1340     		ands	r3, r3, r2
+ 282 0014 002B     		cmp	r3, #0
+ 283 0016 1AD0     		beq	.L19
+ 284 0018 7B68     		ldr	r3, [r7, #4]
+ 285 001a 9B6C     		ldr	r3, [r3, #72]
+ 286 001c 1A68     		ldr	r2, [r3]
+ 287 001e 7B68     		ldr	r3, [r7, #4]
+ 288 0020 9B6C     		ldr	r3, [r3, #72]
+ 289 0022 22F48072 		bic	r2, r2, #256
+ 290 0026 1A60     		str	r2, [r3]
+ 291 0028 7B68     		ldr	r3, [r7, #4]
+ 292 002a DB6C     		ldr	r3, [r3, #76]
+ 293 002c 7A68     		ldr	r2, [r7, #4]
+ 294 002e 126D     		ldr	r2, [r2, #80]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 6
+
+
+ 295 0030 5A60     		str	r2, [r3, #4]
+ 296 0032 7B68     		ldr	r3, [r7, #4]
+ 297 0034 DB6B     		ldr	r3, [r3, #60]
+ 298 0036 43F40072 		orr	r2, r3, #512
+ 299 003a 7B68     		ldr	r3, [r7, #4]
+ 300 003c DA63     		str	r2, [r3, #60]
+ 301 003e 7B68     		ldr	r3, [r7, #4]
+ 302 0040 5B6B     		ldr	r3, [r3, #52]
+ 303 0042 002B     		cmp	r3, #0
+ 304 0044 03D0     		beq	.L19
+ 305 0046 7B68     		ldr	r3, [r7, #4]
+ 306 0048 5B6B     		ldr	r3, [r3, #52]
+ 307 004a 7868     		ldr	r0, [r7, #4]
+ 308 004c 9847     		blx	r3
+ 309              	.L19:
+ 310 004e 7B68     		ldr	r3, [r7, #4]
+ 311 0050 5B6D     		ldr	r3, [r3, #84]
+ 312 0052 002B     		cmp	r3, #0
+ 313 0054 22D0     		beq	.L21
+ 314 0056 7B68     		ldr	r3, [r7, #4]
+ 315 0058 9B6D     		ldr	r3, [r3, #88]
+ 316 005a 1A68     		ldr	r2, [r3]
+ 317 005c 7B68     		ldr	r3, [r7, #4]
+ 318 005e DB6D     		ldr	r3, [r3, #92]
+ 319 0060 1340     		ands	r3, r3, r2
+ 320 0062 002B     		cmp	r3, #0
+ 321 0064 1AD0     		beq	.L21
+ 322 0066 7B68     		ldr	r3, [r7, #4]
+ 323 0068 5B6D     		ldr	r3, [r3, #84]
+ 324 006a 1A68     		ldr	r2, [r3]
+ 325 006c 7B68     		ldr	r3, [r7, #4]
+ 326 006e 5B6D     		ldr	r3, [r3, #84]
+ 327 0070 22F48072 		bic	r2, r2, #256
+ 328 0074 1A60     		str	r2, [r3]
+ 329 0076 7B68     		ldr	r3, [r7, #4]
+ 330 0078 9B6D     		ldr	r3, [r3, #88]
+ 331 007a 7A68     		ldr	r2, [r7, #4]
+ 332 007c D26D     		ldr	r2, [r2, #92]
+ 333 007e 5A60     		str	r2, [r3, #4]
+ 334 0080 7B68     		ldr	r3, [r7, #4]
+ 335 0082 DB6B     		ldr	r3, [r3, #60]
+ 336 0084 43F48062 		orr	r2, r3, #1024
+ 337 0088 7B68     		ldr	r3, [r7, #4]
+ 338 008a DA63     		str	r2, [r3, #60]
+ 339 008c 7B68     		ldr	r3, [r7, #4]
+ 340 008e 5B6B     		ldr	r3, [r3, #52]
+ 341 0090 002B     		cmp	r3, #0
+ 342 0092 03D0     		beq	.L21
+ 343 0094 7B68     		ldr	r3, [r7, #4]
+ 344 0096 5B6B     		ldr	r3, [r3, #52]
+ 345 0098 7868     		ldr	r0, [r7, #4]
+ 346 009a 9847     		blx	r3
+ 347              	.L21:
+ 348 009c 00BF     		nop
+ 349 009e 0837     		adds	r7, r7, #8
+ 350 00a0 BD46     		mov	sp, r7
+ 351              		@ sp needed
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 7
+
+
+ 352 00a2 80BD     		pop	{r7, pc}
+ 354              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32g4xx_hal_dma_ex.c
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:18     .text.HAL_DMAEx_ConfigMuxSync:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:24     .text.HAL_DMAEx_ConfigMuxSync:00000000 HAL_DMAEx_ConfigMuxSync
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:91     .text.HAL_DMAEx_ConfigMuxRequestGenerator:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:97     .text.HAL_DMAEx_ConfigMuxRequestGenerator:00000000 HAL_DMAEx_ConfigMuxRequestGenerator
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:177    .text.HAL_DMAEx_EnableMuxRequestGenerator:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:183    .text.HAL_DMAEx_EnableMuxRequestGenerator:00000000 HAL_DMAEx_EnableMuxRequestGenerator
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:220    .text.HAL_DMAEx_DisableMuxRequestGenerator:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:226    .text.HAL_DMAEx_DisableMuxRequestGenerator:00000000 HAL_DMAEx_DisableMuxRequestGenerator
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:263    .text.HAL_DMAEx_MUX_IRQHandler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:269    .text.HAL_DMAEx_MUX_IRQHandler:00000000 HAL_DMAEx_MUX_IRQHandler
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,213 @@
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32g4xx_it.c"
+  16              		.text
+  17              		.section	.text.NMI_Handler,"ax",%progbits
+  18              		.align	1
+  19              		.global	NMI_Handler
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	NMI_Handler:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 1, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 80B4     		push	{r7}
+  29 0002 00AF     		add	r7, sp, #0
+  30              	.L2:
+  31 0004 00BF     		nop
+  32 0006 FDE7     		b	.L2
+  34              		.section	.text.HardFault_Handler,"ax",%progbits
+  35              		.align	1
+  36              		.global	HardFault_Handler
+  37              		.syntax unified
+  38              		.thumb
+  39              		.thumb_func
+  41              	HardFault_Handler:
+  42              		@ args = 0, pretend = 0, frame = 0
+  43              		@ frame_needed = 1, uses_anonymous_args = 0
+  44              		@ link register save eliminated.
+  45 0000 80B4     		push	{r7}
+  46 0002 00AF     		add	r7, sp, #0
+  47              	.L4:
+  48 0004 00BF     		nop
+  49 0006 FDE7     		b	.L4
+  51              		.section	.text.MemManage_Handler,"ax",%progbits
+  52              		.align	1
+  53              		.global	MemManage_Handler
+  54              		.syntax unified
+  55              		.thumb
+  56              		.thumb_func
+  58              	MemManage_Handler:
+  59              		@ args = 0, pretend = 0, frame = 0
+  60              		@ frame_needed = 1, uses_anonymous_args = 0
+  61              		@ link register save eliminated.
+  62 0000 80B4     		push	{r7}
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s 			page 2
+
+
+  63 0002 00AF     		add	r7, sp, #0
+  64              	.L6:
+  65 0004 00BF     		nop
+  66 0006 FDE7     		b	.L6
+  68              		.section	.text.BusFault_Handler,"ax",%progbits
+  69              		.align	1
+  70              		.global	BusFault_Handler
+  71              		.syntax unified
+  72              		.thumb
+  73              		.thumb_func
+  75              	BusFault_Handler:
+  76              		@ args = 0, pretend = 0, frame = 0
+  77              		@ frame_needed = 1, uses_anonymous_args = 0
+  78              		@ link register save eliminated.
+  79 0000 80B4     		push	{r7}
+  80 0002 00AF     		add	r7, sp, #0
+  81              	.L8:
+  82 0004 00BF     		nop
+  83 0006 FDE7     		b	.L8
+  85              		.section	.text.UsageFault_Handler,"ax",%progbits
+  86              		.align	1
+  87              		.global	UsageFault_Handler
+  88              		.syntax unified
+  89              		.thumb
+  90              		.thumb_func
+  92              	UsageFault_Handler:
+  93              		@ args = 0, pretend = 0, frame = 0
+  94              		@ frame_needed = 1, uses_anonymous_args = 0
+  95              		@ link register save eliminated.
+  96 0000 80B4     		push	{r7}
+  97 0002 00AF     		add	r7, sp, #0
+  98              	.L10:
+  99 0004 00BF     		nop
+ 100 0006 FDE7     		b	.L10
+ 102              		.section	.text.SVC_Handler,"ax",%progbits
+ 103              		.align	1
+ 104              		.global	SVC_Handler
+ 105              		.syntax unified
+ 106              		.thumb
+ 107              		.thumb_func
+ 109              	SVC_Handler:
+ 110              		@ args = 0, pretend = 0, frame = 0
+ 111              		@ frame_needed = 1, uses_anonymous_args = 0
+ 112              		@ link register save eliminated.
+ 113 0000 80B4     		push	{r7}
+ 114 0002 00AF     		add	r7, sp, #0
+ 115 0004 00BF     		nop
+ 116 0006 BD46     		mov	sp, r7
+ 117              		@ sp needed
+ 118 0008 5DF8047B 		ldr	r7, [sp], #4
+ 119 000c 7047     		bx	lr
+ 121              		.section	.text.DebugMon_Handler,"ax",%progbits
+ 122              		.align	1
+ 123              		.global	DebugMon_Handler
+ 124              		.syntax unified
+ 125              		.thumb
+ 126              		.thumb_func
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s 			page 3
+
+
+ 128              	DebugMon_Handler:
+ 129              		@ args = 0, pretend = 0, frame = 0
+ 130              		@ frame_needed = 1, uses_anonymous_args = 0
+ 131              		@ link register save eliminated.
+ 132 0000 80B4     		push	{r7}
+ 133 0002 00AF     		add	r7, sp, #0
+ 134 0004 00BF     		nop
+ 135 0006 BD46     		mov	sp, r7
+ 136              		@ sp needed
+ 137 0008 5DF8047B 		ldr	r7, [sp], #4
+ 138 000c 7047     		bx	lr
+ 140              		.section	.text.PendSV_Handler,"ax",%progbits
+ 141              		.align	1
+ 142              		.global	PendSV_Handler
+ 143              		.syntax unified
+ 144              		.thumb
+ 145              		.thumb_func
+ 147              	PendSV_Handler:
+ 148              		@ args = 0, pretend = 0, frame = 0
+ 149              		@ frame_needed = 1, uses_anonymous_args = 0
+ 150              		@ link register save eliminated.
+ 151 0000 80B4     		push	{r7}
+ 152 0002 00AF     		add	r7, sp, #0
+ 153 0004 00BF     		nop
+ 154 0006 BD46     		mov	sp, r7
+ 155              		@ sp needed
+ 156 0008 5DF8047B 		ldr	r7, [sp], #4
+ 157 000c 7047     		bx	lr
+ 159              		.section	.text.SysTick_Handler,"ax",%progbits
+ 160              		.align	1
+ 161              		.global	SysTick_Handler
+ 162              		.syntax unified
+ 163              		.thumb
+ 164              		.thumb_func
+ 166              	SysTick_Handler:
+ 167              		@ args = 0, pretend = 0, frame = 0
+ 168              		@ frame_needed = 1, uses_anonymous_args = 0
+ 169 0000 80B5     		push	{r7, lr}
+ 170 0002 00AF     		add	r7, sp, #0
+ 171 0004 FFF7FEFF 		bl	HAL_IncTick
+ 172 0008 00BF     		nop
+ 173 000a 80BD     		pop	{r7, pc}
+ 175              		.section	.text.EXTI15_10_IRQHandler,"ax",%progbits
+ 176              		.align	1
+ 177              		.global	EXTI15_10_IRQHandler
+ 178              		.syntax unified
+ 179              		.thumb
+ 180              		.thumb_func
+ 182              	EXTI15_10_IRQHandler:
+ 183              		@ args = 0, pretend = 0, frame = 0
+ 184              		@ frame_needed = 1, uses_anonymous_args = 0
+ 185 0000 80B5     		push	{r7, lr}
+ 186 0002 00AF     		add	r7, sp, #0
+ 187 0004 0020     		movs	r0, #0
+ 188 0006 FFF7FEFF 		bl	BSP_PB_IRQHandler
+ 189 000a 00BF     		nop
+ 190 000c 80BD     		pop	{r7, pc}
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s 			page 4
+
+
+ 192              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32g4xx_it.c
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:18     .text.NMI_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:24     .text.NMI_Handler:00000000 NMI_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:35     .text.HardFault_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:41     .text.HardFault_Handler:00000000 HardFault_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:52     .text.MemManage_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:58     .text.MemManage_Handler:00000000 MemManage_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:69     .text.BusFault_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:75     .text.BusFault_Handler:00000000 BusFault_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:86     .text.UsageFault_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:92     .text.UsageFault_Handler:00000000 UsageFault_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:103    .text.SVC_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:109    .text.SVC_Handler:00000000 SVC_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:122    .text.DebugMon_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:128    .text.DebugMon_Handler:00000000 DebugMon_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:141    .text.PendSV_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:147    .text.PendSV_Handler:00000000 PendSV_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:160    .text.SysTick_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:166    .text.SysTick_Handler:00000000 SysTick_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:176    .text.EXTI15_10_IRQHandler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:182    .text.EXTI15_10_IRQHandler:00000000 EXTI15_10_IRQHandler
+
+UNDEFINED SYMBOLS
+HAL_IncTick
+BSP_PB_IRQHandler

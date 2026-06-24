@@ -1,0 +1,2150 @@
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"CAN_exchange.c"
+  16              		.text
+  17              		.section	.bss.s_diag,"aw",%nobits
+  18              		.align	2
+  21              	s_diag:
+  22 0000 00000000 		.space	16
+  22      00000000 
+  22      00000000 
+  22      00000000 
+  23              		.section	.bss.s_tx_attempted,"aw",%nobits
+  26              	s_tx_attempted:
+  27 0000 00       		.space	1
+  28              		.section	.bss.s_ack_seen,"aw",%nobits
+  31              	s_ack_seen:
+  32 0000 00       		.space	1
+  33              		.section	.bss.s_last_ack_tick,"aw",%nobits
+  34              		.align	2
+  37              	s_last_ack_tick:
+  38 0000 00000000 		.space	4
+  39              		.section	.bss.s_prev_tx_err,"aw",%nobits
+  42              	s_prev_tx_err:
+  43 0000 00       		.space	1
+  44              		.section	.data.s_raw_status,"aw"
+  47              	s_raw_status:
+  48 0000 09       		.byte	9
+  49              		.section	.data.s_filtered_status,"aw"
+  52              	s_filtered_status:
+  53 0000 09       		.byte	9
+  54              		.section	.bss.s_stable_counter,"aw",%nobits
+  57              	s_stable_counter:
+  58 0000 00       		.space	1
+  59              		.section	.bss.s_busoff_count,"aw",%nobits
+  62              	s_busoff_count:
+  63 0000 00       		.space	1
+  64              		.section	.rodata
+  65              		.align	2
+  66              	.LC1:
+  67 0000 50454E44 		.ascii	"PENDING\000"
+  67      494E4700 
+  68              		.align	2
+  69              	.LC2:
+  70 0008 4F4B00   		.ascii	"OK\000"
+  71 000b 00       		.align	2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 2
+
+
+  72              	.LC3:
+  73 000c 41434B5F 		.ascii	"ACK_ERR\000"
+  73      45525200 
+  74              		.align	2
+  75              	.LC4:
+  76 0014 4255535F 		.ascii	"BUS_OFF\000"
+  76      4F464600 
+  77              		.align	2
+  78              	.LC5:
+  79 001c 44495341 		.ascii	"DISABLED\000"
+  79      424C4544 
+  79      00
+  80 0025 000000   		.align	2
+  81              	.LC6:
+  82 0028 53545546 		.ascii	"STUFF_ERR\000"
+  82      465F4552 
+  82      5200
+  83 0032 0000     		.align	2
+  84              	.LC7:
+  85 0034 464F524D 		.ascii	"FORM_ERR\000"
+  85      5F455252 
+  85      00
+  86 003d 000000   		.align	2
+  87              	.LC8:
+  88 0040 42495431 		.ascii	"BIT1_ERR\000"
+  88      5F455252 
+  88      00
+  89 0049 000000   		.align	2
+  90              	.LC9:
+  91 004c 42495430 		.ascii	"BIT0_ERR\000"
+  91      5F455252 
+  91      00
+  92 0055 000000   		.align	2
+  93              	.LC10:
+  94 0058 4352435F 		.ascii	"CRC_ERR\000"
+  94      45525200 
+  95              		.align	2
+  96              	.LC11:
+  97 0060 554E4B4E 		.ascii	"UNKNOWN\000"
+  97      4F574E00 
+  98              		.section	.text.CAN_StatusName,"ax",%progbits
+  99              		.align	1
+ 100              		.syntax unified
+ 101              		.thumb
+ 102              		.thumb_func
+ 104              	CAN_StatusName:
+ 105              		@ args = 0, pretend = 0, frame = 8
+ 106              		@ frame_needed = 1, uses_anonymous_args = 0
+ 107              		@ link register save eliminated.
+ 108 0000 80B4     		push	{r7}
+ 109 0002 83B0     		sub	sp, sp, #12
+ 110 0004 00AF     		add	r7, sp, #0
+ 111 0006 0346     		mov	r3, r0
+ 112 0008 FB71     		strb	r3, [r7, #7]
+ 113 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 114 000c 092B     		cmp	r3, #9
+ 115 000e 2BD8     		bhi	.L2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 3
+
+
+ 116 0010 01A2     		adr	r2, .L4
+ 117 0012 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 118 0016 00BF     		.p2align 2
+ 119              	.L4:
+ 120 0018 45000000 		.word	.L13+1
+ 121 001c 51000000 		.word	.L12+1
+ 122 0020 49000000 		.word	.L11+1
+ 123 0024 61000000 		.word	.L10+1
+ 124 0028 5D000000 		.word	.L9+1
+ 125 002c 4D000000 		.word	.L8+1
+ 126 0030 55000000 		.word	.L7+1
+ 127 0034 59000000 		.word	.L6+1
+ 128 0038 65000000 		.word	.L5+1
+ 129 003c 41000000 		.word	.L3+1
+ 130              		.p2align 1
+ 131              	.L3:
+ 132 0040 0D4B     		ldr	r3, .L15
+ 133 0042 12E0     		b	.L14
+ 134              	.L13:
+ 135 0044 0D4B     		ldr	r3, .L15+4
+ 136 0046 10E0     		b	.L14
+ 137              	.L11:
+ 138 0048 0D4B     		ldr	r3, .L15+8
+ 139 004a 0EE0     		b	.L14
+ 140              	.L8:
+ 141 004c 0D4B     		ldr	r3, .L15+12
+ 142 004e 0CE0     		b	.L14
+ 143              	.L12:
+ 144 0050 0D4B     		ldr	r3, .L15+16
+ 145 0052 0AE0     		b	.L14
+ 146              	.L7:
+ 147 0054 0D4B     		ldr	r3, .L15+20
+ 148 0056 08E0     		b	.L14
+ 149              	.L6:
+ 150 0058 0D4B     		ldr	r3, .L15+24
+ 151 005a 06E0     		b	.L14
+ 152              	.L9:
+ 153 005c 0D4B     		ldr	r3, .L15+28
+ 154 005e 04E0     		b	.L14
+ 155              	.L10:
+ 156 0060 0D4B     		ldr	r3, .L15+32
+ 157 0062 02E0     		b	.L14
+ 158              	.L5:
+ 159 0064 0D4B     		ldr	r3, .L15+36
+ 160 0066 00E0     		b	.L14
+ 161              	.L2:
+ 162 0068 0D4B     		ldr	r3, .L15+40
+ 163              	.L14:
+ 164 006a 1846     		mov	r0, r3
+ 165 006c 0C37     		adds	r7, r7, #12
+ 166 006e BD46     		mov	sp, r7
+ 167              		@ sp needed
+ 168 0070 5DF8047B 		ldr	r7, [sp], #4
+ 169 0074 7047     		bx	lr
+ 170              	.L16:
+ 171 0076 00BF     		.align	2
+ 172              	.L15:
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 4
+
+
+ 173 0078 00000000 		.word	.LC1
+ 174 007c 08000000 		.word	.LC2
+ 175 0080 0C000000 		.word	.LC3
+ 176 0084 14000000 		.word	.LC4
+ 177 0088 1C000000 		.word	.LC5
+ 178 008c 28000000 		.word	.LC6
+ 179 0090 34000000 		.word	.LC7
+ 180 0094 40000000 		.word	.LC8
+ 181 0098 4C000000 		.word	.LC9
+ 182 009c 58000000 		.word	.LC10
+ 183 00a0 60000000 		.word	.LC11
+ 185              		.section	.rodata
+ 186              		.align	2
+ 187              	.LC12:
+ 188 0068 4E4F5F45 		.ascii	"NO_ERROR\000"
+ 188      52524F52 
+ 188      00
+ 189 0071 000000   		.align	2
+ 190              	.LC13:
+ 191 0074 4E4F5F43 		.ascii	"NO_CHANGE\000"
+ 191      48414E47 
+ 191      4500
+ 192              		.section	.text.CAN_LECName,"ax",%progbits
+ 193              		.align	1
+ 194              		.syntax unified
+ 195              		.thumb
+ 196              		.thumb_func
+ 198              	CAN_LECName:
+ 199              		@ args = 0, pretend = 0, frame = 8
+ 200              		@ frame_needed = 1, uses_anonymous_args = 0
+ 201              		@ link register save eliminated.
+ 202 0000 80B4     		push	{r7}
+ 203 0002 83B0     		sub	sp, sp, #12
+ 204 0004 00AF     		add	r7, sp, #0
+ 205 0006 0346     		mov	r3, r0
+ 206 0008 FB71     		strb	r3, [r7, #7]
+ 207 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 208 000c 072B     		cmp	r3, #7
+ 209 000e 23D8     		bhi	.L18
+ 210 0010 01A2     		adr	r2, .L20
+ 211 0012 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 212 0016 00BF     		.p2align 2
+ 213              	.L20:
+ 214 0018 39000000 		.word	.L27+1
+ 215 001c 3D000000 		.word	.L26+1
+ 216 0020 41000000 		.word	.L25+1
+ 217 0024 45000000 		.word	.L24+1
+ 218 0028 49000000 		.word	.L23+1
+ 219 002c 4D000000 		.word	.L22+1
+ 220 0030 51000000 		.word	.L21+1
+ 221 0034 55000000 		.word	.L19+1
+ 222              		.p2align 1
+ 223              	.L27:
+ 224 0038 0B4B     		ldr	r3, .L29
+ 225 003a 0EE0     		b	.L28
+ 226              	.L26:
+ 227 003c 0B4B     		ldr	r3, .L29+4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 5
+
+
+ 228 003e 0CE0     		b	.L28
+ 229              	.L25:
+ 230 0040 0B4B     		ldr	r3, .L29+8
+ 231 0042 0AE0     		b	.L28
+ 232              	.L24:
+ 233 0044 0B4B     		ldr	r3, .L29+12
+ 234 0046 08E0     		b	.L28
+ 235              	.L23:
+ 236 0048 0B4B     		ldr	r3, .L29+16
+ 237 004a 06E0     		b	.L28
+ 238              	.L22:
+ 239 004c 0B4B     		ldr	r3, .L29+20
+ 240 004e 04E0     		b	.L28
+ 241              	.L21:
+ 242 0050 0B4B     		ldr	r3, .L29+24
+ 243 0052 02E0     		b	.L28
+ 244              	.L19:
+ 245 0054 0B4B     		ldr	r3, .L29+28
+ 246 0056 00E0     		b	.L28
+ 247              	.L18:
+ 248 0058 0B4B     		ldr	r3, .L29+32
+ 249              	.L28:
+ 250 005a 1846     		mov	r0, r3
+ 251 005c 0C37     		adds	r7, r7, #12
+ 252 005e BD46     		mov	sp, r7
+ 253              		@ sp needed
+ 254 0060 5DF8047B 		ldr	r7, [sp], #4
+ 255 0064 7047     		bx	lr
+ 256              	.L30:
+ 257 0066 00BF     		.align	2
+ 258              	.L29:
+ 259 0068 68000000 		.word	.LC12
+ 260 006c 28000000 		.word	.LC6
+ 261 0070 34000000 		.word	.LC7
+ 262 0074 0C000000 		.word	.LC3
+ 263 0078 40000000 		.word	.LC8
+ 264 007c 4C000000 		.word	.LC9
+ 265 0080 58000000 		.word	.LC10
+ 266 0084 74000000 		.word	.LC13
+ 267 0088 60000000 		.word	.LC11
+ 269              		.section	.rodata
+ 270 007e 0000     		.align	2
+ 271              	.LC14:
+ 272 0080 5B43414E 		.ascii	"[CAN DIAG] STUFF_ERR \342\200\224 More than 5 conse"
+ 272      20444941 
+ 272      475D2053 
+ 272      54554646 
+ 272      5F455252 
+ 273 00aa 63757469 		.ascii	"cutive identical bits detected.\012           Likel"
+ 273      76652069 
+ 273      64656E74 
+ 273      6963616C 
+ 273      20626974 
+ 274 00da 79206361 		.ascii	"y cause: bitrate mismatch, bad termination, or nois"
+ 274      7573653A 
+ 274      20626974 
+ 274      72617465 
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 6
+
+
+ 274      206D6973 
+ 275 010d 79206361 		.ascii	"y cable.\012           TEC=%lu REC=%lu\012\000"
+ 275      626C652E 
+ 275      0A202020 
+ 275      20202020 
+ 275      20202020 
+ 276 0132 0000     		.align	2
+ 277              	.LC15:
+ 278 0134 5B43414E 		.ascii	"[CAN DIAG] FORM_ERR \342\200\224 Fixed-format field"
+ 278      20444941 
+ 278      475D2046 
+ 278      4F524D5F 
+ 278      45525220 
+ 279 015e 2028454F 		.ascii	" (EOF, ACK delim, CRC delim) violated.\012         "
+ 279      462C2041 
+ 279      434B2064 
+ 279      656C696D 
+ 279      2C204352 
+ 280 018e 20204C69 		.ascii	"  Likely cause: bitrate mismatch or signal integrit"
+ 280      6B656C79 
+ 280      20636175 
+ 280      73653A20 
+ 280      62697472 
+ 281 01c1 79206973 		.ascii	"y issue.\012           TEC=%lu REC=%lu\012\000"
+ 281      7375652E 
+ 281      0A202020 
+ 281      20202020 
+ 281      20202020 
+ 282 01e6 0000     		.align	2
+ 283              	.LC16:
+ 284 01e8 5B43414E 		.ascii	"[CAN DIAG] ACK_ERR \342\200\224 No node acknowledge"
+ 284      20444941 
+ 284      475D2041 
+ 284      434B5F45 
+ 284      525220E2 
+ 285 0212 64207468 		.ascii	"d the transmitted frame.\012           Likely cause"
+ 285      65207472 
+ 285      616E736D 
+ 285      69747465 
+ 285      64206672 
+ 286 0242 3A206E6F 		.ascii	": no listener on bus, GND missing, or bitrate misma"
+ 286      206C6973 
+ 286      74656E65 
+ 286      72206F6E 
+ 286      20627573 
+ 287 0275 7463682E 		.ascii	"tch.\012           TEC=%lu REC=%lu\012\000"
+ 287      0A202020 
+ 287      20202020 
+ 287      20202020 
+ 287      5445433D 
+ 288 0296 0000     		.align	2
+ 289              	.LC17:
+ 290 0298 5B43414E 		.ascii	"[CAN DIAG] BIT1_ERR \342\200\224 Sent recessive (1)"
+ 290      20444941 
+ 290      475D2042 
+ 290      4954315F 
+ 290      45525220 
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 7
+
+
+ 291 02c2 20627574 		.ascii	" but read dominant (0) outside arbitration.\012    "
+ 291      20726561 
+ 291      6420646F 
+ 291      6D696E61 
+ 291      6E742028 
+ 292 02f2 20202020 		.ascii	"       Likely cause: short circuit on CANH/CANL, or"
+ 292      2020204C 
+ 292      696B656C 
+ 292      79206361 
+ 292      7573653A 
+ 293 0325 2074776F 		.ascii	" two nodes transmitting.\012           TEC=%lu REC="
+ 293      206E6F64 
+ 293      65732074 
+ 293      72616E73 
+ 293      6D697474 
+ 294 0355 256C750A 		.ascii	"%lu\012\000"
+ 294      00
+ 295 035a 0000     		.align	2
+ 296              	.LC18:
+ 297 035c 5B43414E 		.ascii	"[CAN DIAG] BIT0_ERR \342\200\224 Sent dominant (0) "
+ 297      20444941 
+ 297      475D2042 
+ 297      4954305F 
+ 297      45525220 
+ 298 0386 62757420 		.ascii	"but read recessive (1).\012           Likely cause:"
+ 298      72656164 
+ 298      20726563 
+ 298      65737369 
+ 298      76652028 
+ 299 03b6 206F7065 		.ascii	" open circuit, broken transceiver TX pin, or no GND"
+ 299      6E206369 
+ 299      72637569 
+ 299      742C2062 
+ 299      726F6B65 
+ 300 03e9 2E0A2020 		.ascii	".\012           TEC=%lu REC=%lu\012\000"
+ 300      20202020 
+ 300      20202020 
+ 300      20544543 
+ 300      3D256C75 
+ 301 0407 00       		.align	2
+ 302              	.LC19:
+ 303 0408 5B43414E 		.ascii	"[CAN DIAG] CRC_ERR \342\200\224 CRC mismatch betwee"
+ 303      20444941 
+ 303      475D2043 
+ 303      52435F45 
+ 303      525220E2 
+ 304 0432 6E207472 		.ascii	"n transmitter and receiver.\012           Likely ca"
+ 304      616E736D 
+ 304      69747465 
+ 304      7220616E 
+ 304      64207265 
+ 305 0462 7573653A 		.ascii	"use: bitrate mismatch, sample point mismatch, or EM"
+ 305      20626974 
+ 305      72617465 
+ 305      206D6973 
+ 305      6D617463 
+ 306 0495 492E0A20 		.ascii	"I.\012           TEC=%lu REC=%lu\012\000"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 8
+
+
+ 306      20202020 
+ 306      20202020 
+ 306      20205445 
+ 306      433D256C 
+ 307              		.align	2
+ 308              	.LC20:
+ 309 04b4 5B43414E 		.ascii	"[CAN DIAG] BUS-OFF \342\200\224 TEC exceeded 255. N"
+ 309      20444941 
+ 309      475D2042 
+ 309      55532D4F 
+ 309      464620E2 
+ 310 04de 6F646520 		.ascii	"ode is off the bus.\012           Bus will recover "
+ 310      6973206F 
+ 310      66662074 
+ 310      68652062 
+ 310      75732E0A 
+ 311 050e 61667465 		.ascii	"after 128 \303\227 11 recessive bits.\000"
+ 311      72203132 
+ 311      3820C397 
+ 311      20313120 
+ 311      72656365 
+ 312 052e 0000     		.align	2
+ 313              	.LC21:
+ 314 0530 5B43414E 		.ascii	"[CAN DIAG] ERROR-PASSIVE \342\200\224 TEC or REC >="
+ 314      20444941 
+ 314      475D2045 
+ 314      52524F52 
+ 314      2D504153 
+ 315 055a 20313238 		.ascii	" 128. TX uses passive error frames.\012           T"
+ 315      2E205458 
+ 315      20757365 
+ 315      73207061 
+ 315      73736976 
+ 316 058a 45433D25 		.ascii	"EC=%lu REC=%lu \342\200\224 reduce errors to return"
+ 316      6C752052 
+ 316      45433D25 
+ 316      6C7520E2 
+ 316      80942072 
+ 317 05b4 20746F20 		.ascii	" to ERROR-ACTIVE.\012\000"
+ 317      4552524F 
+ 317      522D4143 
+ 317      54495645 
+ 317      2E0A00
+ 318 05c7 00       		.align	2
+ 319              	.LC22:
+ 320 05c8 5B43414E 		.ascii	"[CAN DIAG] ERROR-WARNING \342\200\224 TEC or REC >="
+ 320      20444941 
+ 320      475D2045 
+ 320      52524F52 
+ 320      2D574152 
+ 321 05f2 2039362E 		.ascii	" 96. Bus health degrading.\012           TEC=%lu RE"
+ 321      20427573 
+ 321      20686561 
+ 321      6C746820 
+ 321      64656772 
+ 322 0622 433D256C 		.ascii	"C=%lu\012\000"
+ 322      750A00
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 9
+
+
+ 323              		.section	.text.CAN_PrintExtendedErrorDiag,"ax",%progbits
+ 324              		.align	1
+ 325              		.syntax unified
+ 326              		.thumb
+ 327              		.thumb_func
+ 329              	CAN_PrintExtendedErrorDiag:
+ 330              		@ args = 8, pretend = 0, frame = 16
+ 331              		@ frame_needed = 1, uses_anonymous_args = 0
+ 332 0000 80B5     		push	{r7, lr}
+ 333 0002 84B0     		sub	sp, sp, #16
+ 334 0004 00AF     		add	r7, sp, #0
+ 335 0006 B960     		str	r1, [r7, #8]
+ 336 0008 7A60     		str	r2, [r7, #4]
+ 337 000a 3B60     		str	r3, [r7]
+ 338 000c 0346     		mov	r3, r0
+ 339 000e FB73     		strb	r3, [r7, #15]
+ 340 0010 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 341 0012 013B     		subs	r3, r3, #1
+ 342 0014 052B     		cmp	r3, #5
+ 343 0016 33D8     		bhi	.L44
+ 344 0018 01A2     		adr	r2, .L34
+ 345 001a 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 346 001e 00BF     		.p2align 2
+ 347              	.L34:
+ 348 0020 39000000 		.word	.L39+1
+ 349 0024 45000000 		.word	.L38+1
+ 350 0028 51000000 		.word	.L37+1
+ 351 002c 5D000000 		.word	.L36+1
+ 352 0030 69000000 		.word	.L35+1
+ 353 0034 75000000 		.word	.L33+1
+ 354              		.p2align 1
+ 355              	.L39:
+ 356 0038 7A68     		ldr	r2, [r7, #4]
+ 357 003a B968     		ldr	r1, [r7, #8]
+ 358 003c 1F48     		ldr	r0, .L46
+ 359 003e FFF7FEFF 		bl	printf
+ 360 0042 1EE0     		b	.L40
+ 361              	.L38:
+ 362 0044 7A68     		ldr	r2, [r7, #4]
+ 363 0046 B968     		ldr	r1, [r7, #8]
+ 364 0048 1D48     		ldr	r0, .L46+4
+ 365 004a FFF7FEFF 		bl	printf
+ 366 004e 18E0     		b	.L40
+ 367              	.L37:
+ 368 0050 7A68     		ldr	r2, [r7, #4]
+ 369 0052 B968     		ldr	r1, [r7, #8]
+ 370 0054 1B48     		ldr	r0, .L46+8
+ 371 0056 FFF7FEFF 		bl	printf
+ 372 005a 12E0     		b	.L40
+ 373              	.L36:
+ 374 005c 7A68     		ldr	r2, [r7, #4]
+ 375 005e B968     		ldr	r1, [r7, #8]
+ 376 0060 1948     		ldr	r0, .L46+12
+ 377 0062 FFF7FEFF 		bl	printf
+ 378 0066 0CE0     		b	.L40
+ 379              	.L35:
+ 380 0068 7A68     		ldr	r2, [r7, #4]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 10
+
+
+ 381 006a B968     		ldr	r1, [r7, #8]
+ 382 006c 1748     		ldr	r0, .L46+16
+ 383 006e FFF7FEFF 		bl	printf
+ 384 0072 06E0     		b	.L40
+ 385              	.L33:
+ 386 0074 7A68     		ldr	r2, [r7, #4]
+ 387 0076 B968     		ldr	r1, [r7, #8]
+ 388 0078 1548     		ldr	r0, .L46+20
+ 389 007a FFF7FEFF 		bl	printf
+ 390 007e 00E0     		b	.L40
+ 391              	.L44:
+ 392 0080 00BF     		nop
+ 393              	.L40:
+ 394 0082 3B68     		ldr	r3, [r7]
+ 395 0084 002B     		cmp	r3, #0
+ 396 0086 03D0     		beq	.L41
+ 397 0088 1248     		ldr	r0, .L46+24
+ 398 008a FFF7FEFF 		bl	puts
+ 399 008e 10E0     		b	.L45
+ 400              	.L41:
+ 401 0090 BB69     		ldr	r3, [r7, #24]
+ 402 0092 002B     		cmp	r3, #0
+ 403 0094 05D0     		beq	.L43
+ 404 0096 7A68     		ldr	r2, [r7, #4]
+ 405 0098 B968     		ldr	r1, [r7, #8]
+ 406 009a 0F48     		ldr	r0, .L46+28
+ 407 009c FFF7FEFF 		bl	printf
+ 408 00a0 07E0     		b	.L45
+ 409              	.L43:
+ 410 00a2 FB69     		ldr	r3, [r7, #28]
+ 411 00a4 002B     		cmp	r3, #0
+ 412 00a6 04D0     		beq	.L45
+ 413 00a8 7A68     		ldr	r2, [r7, #4]
+ 414 00aa B968     		ldr	r1, [r7, #8]
+ 415 00ac 0B48     		ldr	r0, .L46+32
+ 416 00ae FFF7FEFF 		bl	printf
+ 417              	.L45:
+ 418 00b2 00BF     		nop
+ 419 00b4 1037     		adds	r7, r7, #16
+ 420 00b6 BD46     		mov	sp, r7
+ 421              		@ sp needed
+ 422 00b8 80BD     		pop	{r7, pc}
+ 423              	.L47:
+ 424 00ba 00BF     		.align	2
+ 425              	.L46:
+ 426 00bc 80000000 		.word	.LC14
+ 427 00c0 34010000 		.word	.LC15
+ 428 00c4 E8010000 		.word	.LC16
+ 429 00c8 98020000 		.word	.LC17
+ 430 00cc 5C030000 		.word	.LC18
+ 431 00d0 08040000 		.word	.LC19
+ 432 00d4 B4040000 		.word	.LC20
+ 433 00d8 30050000 		.word	.LC21
+ 434 00dc C8050000 		.word	.LC22
+ 436              		.section	.text.CAN_ApplyDebounce,"ax",%progbits
+ 437              		.align	1
+ 438              		.syntax unified
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 11
+
+
+ 439              		.thumb
+ 440              		.thumb_func
+ 442              	CAN_ApplyDebounce:
+ 443              		@ args = 0, pretend = 0, frame = 8
+ 444              		@ frame_needed = 1, uses_anonymous_args = 0
+ 445              		@ link register save eliminated.
+ 446 0000 80B4     		push	{r7}
+ 447 0002 83B0     		sub	sp, sp, #12
+ 448 0004 00AF     		add	r7, sp, #0
+ 449 0006 0346     		mov	r3, r0
+ 450 0008 FB71     		strb	r3, [r7, #7]
+ 451 000a 124B     		ldr	r3, .L53
+ 452 000c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 453 000e FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 454 0010 9A42     		cmp	r2, r3
+ 455 0012 0AD1     		bne	.L49
+ 456 0014 104B     		ldr	r3, .L53+4
+ 457 0016 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 458 0018 022B     		cmp	r3, #2
+ 459 001a 0CD8     		bhi	.L50
+ 460 001c 0E4B     		ldr	r3, .L53+4
+ 461 001e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 462 0020 0133     		adds	r3, r3, #1
+ 463 0022 DAB2     		uxtb	r2, r3
+ 464 0024 0C4B     		ldr	r3, .L53+4
+ 465 0026 1A70     		strb	r2, [r3]
+ 466 0028 05E0     		b	.L50
+ 467              	.L49:
+ 468 002a 0A4A     		ldr	r2, .L53
+ 469 002c FB79     		ldrb	r3, [r7, #7]
+ 470 002e 1370     		strb	r3, [r2]
+ 471 0030 094B     		ldr	r3, .L53+4
+ 472 0032 0122     		movs	r2, #1
+ 473 0034 1A70     		strb	r2, [r3]
+ 474              	.L50:
+ 475 0036 084B     		ldr	r3, .L53+4
+ 476 0038 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 477 003a 022B     		cmp	r3, #2
+ 478 003c 03D9     		bls	.L52
+ 479 003e 054B     		ldr	r3, .L53
+ 480 0040 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 481 0042 064B     		ldr	r3, .L53+8
+ 482 0044 1A70     		strb	r2, [r3]
+ 483              	.L52:
+ 484 0046 00BF     		nop
+ 485 0048 0C37     		adds	r7, r7, #12
+ 486 004a BD46     		mov	sp, r7
+ 487              		@ sp needed
+ 488 004c 5DF8047B 		ldr	r7, [sp], #4
+ 489 0050 7047     		bx	lr
+ 490              	.L54:
+ 491 0052 00BF     		.align	2
+ 492              	.L53:
+ 493 0054 00000000 		.word	s_raw_status
+ 494 0058 00000000 		.word	s_stable_counter
+ 495 005c 00000000 		.word	s_filtered_status
+ 497              		.section	.rodata
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 12
+
+
+ 498 0629 000000   		.align	2
+ 499              	.LC23:
+ 500 062c 5B43414E 		.ascii	"[CAN BUSOFF] Recovery attempt %u/3\012\000"
+ 500      20425553 
+ 500      4F46465D 
+ 500      20526563 
+ 500      6F766572 
+ 501              		.align	2
+ 502              	.LC24:
+ 503 0650 5B43414E 		.ascii	"[CAN BUSOFF] Too many retries \342\200\224 disablin"
+ 503      20425553 
+ 503      4F46465D 
+ 503      20546F6F 
+ 503      206D616E 
+ 504 067a 67204341 		.ascii	"g CAN permanently\000"
+ 504      4E207065 
+ 504      726D616E 
+ 504      656E746C 
+ 504      7900
+ 505              		.align	2
+ 506              	.LC25:
+ 507 068c 5B43414E 		.ascii	"[CAN BUSOFF] Recovery done \342\200\224 restarted\000"
+ 507      20425553 
+ 507      4F46465D 
+ 507      20526563 
+ 507      6F766572 
+ 508              		.section	.text.CAN_Recover_BusOff,"ax",%progbits
+ 509              		.align	1
+ 510              		.syntax unified
+ 511              		.thumb
+ 512              		.thumb_func
+ 514              	CAN_Recover_BusOff:
+ 515              		@ args = 0, pretend = 0, frame = 0
+ 516              		@ frame_needed = 1, uses_anonymous_args = 0
+ 517 0000 80B5     		push	{r7, lr}
+ 518 0002 00AF     		add	r7, sp, #0
+ 519 0004 194B     		ldr	r3, .L58
+ 520 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 521 0008 0133     		adds	r3, r3, #1
+ 522 000a DAB2     		uxtb	r2, r3
+ 523 000c 174B     		ldr	r3, .L58
+ 524 000e 1A70     		strb	r2, [r3]
+ 525 0010 164B     		ldr	r3, .L58
+ 526 0012 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 527 0014 1946     		mov	r1, r3
+ 528 0016 1648     		ldr	r0, .L58+4
+ 529 0018 FFF7FEFF 		bl	printf
+ 530 001c 134B     		ldr	r3, .L58
+ 531 001e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 532 0020 032B     		cmp	r3, #3
+ 533 0022 09D9     		bls	.L56
+ 534 0024 1348     		ldr	r0, .L58+8
+ 535 0026 FFF7FEFF 		bl	puts
+ 536 002a 134B     		ldr	r3, .L58+12
+ 537 002c 0522     		movs	r2, #5
+ 538 002e 1A70     		strb	r2, [r3]
+ 539 0030 1248     		ldr	r0, .L58+16
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 13
+
+
+ 540 0032 FFF7FEFF 		bl	HAL_FDCAN_Stop
+ 541 0036 17E0     		b	.L55
+ 542              	.L56:
+ 543 0038 1048     		ldr	r0, .L58+16
+ 544 003a FFF7FEFF 		bl	HAL_FDCAN_Stop
+ 545 003e 8020     		movs	r0, #128
+ 546 0040 FFF7FEFF 		bl	HAL_Delay
+ 547 0044 0D48     		ldr	r0, .L58+16
+ 548 0046 FFF7FEFF 		bl	HAL_FDCAN_Start
+ 549 004a 0D4B     		ldr	r3, .L58+20
+ 550 004c 0022     		movs	r2, #0
+ 551 004e 1A70     		strb	r2, [r3]
+ 552 0050 0C4B     		ldr	r3, .L58+24
+ 553 0052 0022     		movs	r2, #0
+ 554 0054 1A70     		strb	r2, [r3]
+ 555 0056 0C4B     		ldr	r3, .L58+28
+ 556 0058 0022     		movs	r2, #0
+ 557 005a 1A70     		strb	r2, [r3]
+ 558 005c 0B4B     		ldr	r3, .L58+32
+ 559 005e 0022     		movs	r2, #0
+ 560 0060 1A70     		strb	r2, [r3]
+ 561 0062 0B48     		ldr	r0, .L58+36
+ 562 0064 FFF7FEFF 		bl	puts
+ 563              	.L55:
+ 564 0068 80BD     		pop	{r7, pc}
+ 565              	.L59:
+ 566 006a 00BF     		.align	2
+ 567              	.L58:
+ 568 006c 00000000 		.word	s_busoff_count
+ 569 0070 2C060000 		.word	.LC23
+ 570 0074 50060000 		.word	.LC24
+ 571 0078 00000000 		.word	s_diag
+ 572 007c 00000000 		.word	hfdcan1
+ 573 0080 00000000 		.word	s_ack_seen
+ 574 0084 00000000 		.word	s_tx_attempted
+ 575 0088 00000000 		.word	s_prev_tx_err
+ 576 008c 00000000 		.word	s_stable_counter
+ 577 0090 8C060000 		.word	.LC25
+ 579              		.section	.text.CAN_LEC_To_Status,"ax",%progbits
+ 580              		.align	1
+ 581              		.syntax unified
+ 582              		.thumb
+ 583              		.thumb_func
+ 585              	CAN_LEC_To_Status:
+ 586              		@ args = 0, pretend = 0, frame = 8
+ 587              		@ frame_needed = 1, uses_anonymous_args = 0
+ 588              		@ link register save eliminated.
+ 589 0000 80B4     		push	{r7}
+ 590 0002 83B0     		sub	sp, sp, #12
+ 591 0004 00AF     		add	r7, sp, #0
+ 592 0006 0346     		mov	r3, r0
+ 593 0008 FB71     		strb	r3, [r7, #7]
+ 594 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 595 000c 072B     		cmp	r3, #7
+ 596 000e 23D8     		bhi	.L61
+ 597 0010 01A2     		adr	r2, .L63
+ 598 0012 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 14
+
+
+ 599 0016 00BF     		.p2align 2
+ 600              	.L63:
+ 601 0018 39000000 		.word	.L70+1
+ 602 001c 3D000000 		.word	.L69+1
+ 603 0020 41000000 		.word	.L68+1
+ 604 0024 45000000 		.word	.L67+1
+ 605 0028 49000000 		.word	.L66+1
+ 606 002c 4D000000 		.word	.L65+1
+ 607 0030 51000000 		.word	.L64+1
+ 608 0034 55000000 		.word	.L62+1
+ 609              		.p2align 1
+ 610              	.L70:
+ 611 0038 0023     		movs	r3, #0
+ 612 003a 0EE0     		b	.L71
+ 613              	.L69:
+ 614 003c 0623     		movs	r3, #6
+ 615 003e 0CE0     		b	.L71
+ 616              	.L68:
+ 617 0040 0723     		movs	r3, #7
+ 618 0042 0AE0     		b	.L71
+ 619              	.L67:
+ 620 0044 0223     		movs	r3, #2
+ 621 0046 08E0     		b	.L71
+ 622              	.L66:
+ 623 0048 0423     		movs	r3, #4
+ 624 004a 06E0     		b	.L71
+ 625              	.L65:
+ 626 004c 0323     		movs	r3, #3
+ 627 004e 04E0     		b	.L71
+ 628              	.L64:
+ 629 0050 0823     		movs	r3, #8
+ 630 0052 02E0     		b	.L71
+ 631              	.L62:
+ 632 0054 0923     		movs	r3, #9
+ 633 0056 00E0     		b	.L71
+ 634              	.L61:
+ 635 0058 0223     		movs	r3, #2
+ 636              	.L71:
+ 637 005a 1846     		mov	r0, r3
+ 638 005c 0C37     		adds	r7, r7, #12
+ 639 005e BD46     		mov	sp, r7
+ 640              		@ sp needed
+ 641 0060 5DF8047B 		ldr	r7, [sp], #4
+ 642 0064 7047     		bx	lr
+ 644 0066 00BF     		.section	.rodata
+ 645 06b5 000000   		.align	2
+ 646              	.LC26:
+ 647 06b8 5B43414E 		.ascii	"[CAN TX] ERROR: FDCAN in RESET state \342\200\224 c"
+ 647      2054585D 
+ 647      20455252 
+ 647      4F523A20 
+ 647      46444341 
+ 648 06e2 616E6E6F 		.ascii	"annot send\000"
+ 648      74207365 
+ 648      6E6400
+ 649 06ed 000000   		.align	2
+ 650              	.LC27:
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 15
+
+
+ 651 06f0 5B43414E 		.ascii	"[CAN TX] Queuing frame: ID=0x%03X, len=%u, data[0]="
+ 651      2054585D 
+ 651      20517565 
+ 651      75696E67 
+ 651      20667261 
+ 652 0723 30782530 		.ascii	"0x%02X\012\000"
+ 652      32580A00 
+ 653 072b 00       		.align	2
+ 654              	.LC28:
+ 655 072c 5B43414E 		.ascii	"[CAN TX] ERROR: AddMessageToTxFifoQ failed (HAL err"
+ 655      2054585D 
+ 655      20455252 
+ 655      4F523A20 
+ 655      4164644D 
+ 656 075f 6F723D30 		.ascii	"or=0x%08lX)\012\000"
+ 656      78253038 
+ 656      6C58290A 
+ 656      00
+ 657              		.align	2
+ 658              	.LC29:
+ 659 076c 5B43414E 		.ascii	"[CAN TX] Frame queued OK\000"
+ 659      2054585D 
+ 659      20467261 
+ 659      6D652071 
+ 659      75657565 
+ 660 0785 000000   		.align	2
+ 661              	.LC0:
+ 662 0788 00000000 		.word	0
+ 663 078c 01000000 		.word	1
+ 664 0790 02000000 		.word	2
+ 665 0794 03000000 		.word	3
+ 666 0798 04000000 		.word	4
+ 667 079c 05000000 		.word	5
+ 668 07a0 06000000 		.word	6
+ 669 07a4 07000000 		.word	7
+ 670 07a8 08000000 		.word	8
+ 671              		.section	.text.CAN_Queue_Frame,"ax",%progbits
+ 672              		.align	1
+ 673              		.syntax unified
+ 674              		.thumb
+ 675              		.thumb_func
+ 677              	CAN_Queue_Frame:
+ 678              		@ args = 0, pretend = 0, frame = 80
+ 679              		@ frame_needed = 1, uses_anonymous_args = 0
+ 680 0000 B0B5     		push	{r4, r5, r7, lr}
+ 681 0002 94B0     		sub	sp, sp, #80
+ 682 0004 00AF     		add	r7, sp, #0
+ 683 0006 0346     		mov	r3, r0
+ 684 0008 3960     		str	r1, [r7]
+ 685 000a FB80     		strh	r3, [r7, #6]	@ movhi
+ 686 000c 1346     		mov	r3, r2
+ 687 000e 7B71     		strb	r3, [r7, #5]
+ 688 0010 314B     		ldr	r3, .L80
+ 689 0012 93F85C30 		ldrb	r3, [r3, #92]
+ 690 0016 DBB2     		uxtb	r3, r3
+ 691 0018 002B     		cmp	r3, #0
+ 692 001a 04D1     		bne	.L73
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 16
+
+
+ 693 001c 2F48     		ldr	r0, .L80+4
+ 694 001e FFF7FEFF 		bl	puts
+ 695 0022 0123     		movs	r3, #1
+ 696 0024 54E0     		b	.L79
+ 697              	.L73:
+ 698 0026 2E4B     		ldr	r3, .L80+8
+ 699 0028 07F12C04 		add	r4, r7, #44
+ 700 002c 1D46     		mov	r5, r3
+ 701 002e 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 702 0030 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 703 0032 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 704 0034 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 705 0036 2B68     		ldr	r3, [r5]
+ 706 0038 2360     		str	r3, [r4]
+ 707 003a 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 708 003c 082B     		cmp	r3, #8
+ 709 003e 01D9     		bls	.L75
+ 710 0040 0823     		movs	r3, #8
+ 711 0042 7B71     		strb	r3, [r7, #5]
+ 712              	.L75:
+ 713 0044 07F10803 		add	r3, r7, #8
+ 714 0048 2422     		movs	r2, #36
+ 715 004a 0021     		movs	r1, #0
+ 716 004c 1846     		mov	r0, r3
+ 717 004e FFF7FEFF 		bl	memset
+ 718 0052 FB88     		ldrh	r3, [r7, #6]
+ 719 0054 BB60     		str	r3, [r7, #8]
+ 720 0056 0023     		movs	r3, #0
+ 721 0058 FB60     		str	r3, [r7, #12]
+ 722 005a 0023     		movs	r3, #0
+ 723 005c 3B61     		str	r3, [r7, #16]
+ 724 005e 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 725 0060 9B00     		lsls	r3, r3, #2
+ 726 0062 5033     		adds	r3, r3, #80
+ 727 0064 3B44     		add	r3, r3, r7
+ 728 0066 53F8243C 		ldr	r3, [r3, #-36]
+ 729 006a 7B61     		str	r3, [r7, #20]
+ 730 006c 0023     		movs	r3, #0
+ 731 006e BB61     		str	r3, [r7, #24]
+ 732 0070 0023     		movs	r3, #0
+ 733 0072 FB61     		str	r3, [r7, #28]
+ 734 0074 0023     		movs	r3, #0
+ 735 0076 3B62     		str	r3, [r7, #32]
+ 736 0078 4FF40003 		mov	r3, #8388608
+ 737 007c 7B62     		str	r3, [r7, #36]
+ 738 007e 0123     		movs	r3, #1
+ 739 0080 BB62     		str	r3, [r7, #40]
+ 740 0082 F988     		ldrh	r1, [r7, #6]
+ 741 0084 7A79     		ldrb	r2, [r7, #5]	@ zero_extendqisi2
+ 742 0086 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 743 0088 002B     		cmp	r3, #0
+ 744 008a 02D0     		beq	.L76
+ 745 008c 3B68     		ldr	r3, [r7]
+ 746 008e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 747 0090 00E0     		b	.L77
+ 748              	.L76:
+ 749 0092 0023     		movs	r3, #0
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 17
+
+
+ 750              	.L77:
+ 751 0094 1348     		ldr	r0, .L80+12
+ 752 0096 FFF7FEFF 		bl	printf
+ 753 009a 07F10803 		add	r3, r7, #8
+ 754 009e 3A68     		ldr	r2, [r7]
+ 755 00a0 1946     		mov	r1, r3
+ 756 00a2 0D48     		ldr	r0, .L80
+ 757 00a4 FFF7FEFF 		bl	HAL_FDCAN_AddMessageToTxFifoQ
+ 758 00a8 0346     		mov	r3, r0
+ 759 00aa 002B     		cmp	r3, #0
+ 760 00ac 09D0     		beq	.L78
+ 761 00ae 0A48     		ldr	r0, .L80
+ 762 00b0 FFF7FEFF 		bl	HAL_FDCAN_GetError
+ 763 00b4 0346     		mov	r3, r0
+ 764 00b6 1946     		mov	r1, r3
+ 765 00b8 0B48     		ldr	r0, .L80+16
+ 766 00ba FFF7FEFF 		bl	printf
+ 767 00be 0123     		movs	r3, #1
+ 768 00c0 06E0     		b	.L79
+ 769              	.L78:
+ 770 00c2 0A48     		ldr	r0, .L80+20
+ 771 00c4 FFF7FEFF 		bl	puts
+ 772 00c8 094B     		ldr	r3, .L80+24
+ 773 00ca 0122     		movs	r2, #1
+ 774 00cc 1A70     		strb	r2, [r3]
+ 775 00ce 0023     		movs	r3, #0
+ 776              	.L79:
+ 777 00d0 1846     		mov	r0, r3
+ 778 00d2 5037     		adds	r7, r7, #80
+ 779 00d4 BD46     		mov	sp, r7
+ 780              		@ sp needed
+ 781 00d6 B0BD     		pop	{r4, r5, r7, pc}
+ 782              	.L81:
+ 783              		.align	2
+ 784              	.L80:
+ 785 00d8 00000000 		.word	hfdcan1
+ 786 00dc B8060000 		.word	.LC26
+ 787 00e0 88070000 		.word	.LC0
+ 788 00e4 F0060000 		.word	.LC27
+ 789 00e8 2C070000 		.word	.LC28
+ 790 00ec 6C070000 		.word	.LC29
+ 791 00f0 00000000 		.word	s_tx_attempted
+ 793              		.section	.rodata
+ 794              		.align	2
+ 795              	.LC30:
+ 796 07ac 5B43414E 		.ascii	"[CAN INIT] Starting FDCAN1 init...\000"
+ 796      20494E49 
+ 796      545D2053 
+ 796      74617274 
+ 796      696E6720 
+ 797 07cf 00       		.align	2
+ 798              	.LC31:
+ 799 07d0 5B43414E 		.ascii	"[CAN INIT] ERROR: HAL_FDCAN_Init failed\000"
+ 799      20494E49 
+ 799      545D2045 
+ 799      52524F52 
+ 799      3A204841 
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 18
+
+
+ 800              		.align	2
+ 801              	.LC32:
+ 802 07f8 5B43414E 		.ascii	"[CAN INIT] HAL_FDCAN_Init OK\000"
+ 802      20494E49 
+ 802      545D2048 
+ 802      414C5F46 
+ 802      4443414E 
+ 803 0815 000000   		.align	2
+ 804              	.LC33:
+ 805 0818 5B43414E 		.ascii	"[CAN INIT] ERROR: HAL_FDCAN_ConfigFilter failed\000"
+ 805      20494E49 
+ 805      545D2045 
+ 805      52524F52 
+ 805      3A204841 
+ 806              		.align	2
+ 807              	.LC34:
+ 808 0848 5B43414E 		.ascii	"[CAN INIT] Filter: RANGE 0x000\342\200\2230x7FF \342"
+ 808      20494E49 
+ 808      545D2046 
+ 808      696C7465 
+ 808      723A2052 
+ 809 0870 86922046 		.ascii	"\206\222 FIFO0 OK\000"
+ 809      49464F30 
+ 809      204F4B00 
+ 810              		.align	2
+ 811              	.LC35:
+ 812 087c 5B43414E 		.ascii	"[CAN INIT] ERROR: HAL_FDCAN_ConfigGlobalFilter fail"
+ 812      20494E49 
+ 812      545D2045 
+ 812      52524F52 
+ 812      3A204841 
+ 813 08af 656400   		.ascii	"ed\000"
+ 814 08b2 0000     		.align	2
+ 815              	.LC36:
+ 816 08b4 5B43414E 		.ascii	"[CAN INIT] Global filter OK\000"
+ 816      20494E49 
+ 816      545D2047 
+ 816      6C6F6261 
+ 816      6C206669 
+ 817              		.align	2
+ 818              	.LC37:
+ 819 08d0 5B43414E 		.ascii	"[CAN INIT] ERROR: HAL_FDCAN_Start failed\000"
+ 819      20494E49 
+ 819      545D2045 
+ 819      52524F52 
+ 819      3A204841 
+ 820 08f9 000000   		.align	2
+ 821              	.LC38:
+ 822 08fc 5B43414E 		.ascii	"[CAN INIT] FDCAN1 started OK\000"
+ 822      20494E49 
+ 822      545D2046 
+ 822      4443414E 
+ 822      31207374 
+ 823 0919 000000   		.align	2
+ 824              	.LC39:
+ 825 091c 5B43414E 		.ascii	"[CAN INIT] Init complete \342\200\224 status=PENDIN"
+ 825      20494E49 
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 19
+
+
+ 825      545D2049 
+ 825      6E697420 
+ 825      636F6D70 
+ 826 0946 4700     		.ascii	"G\000"
+ 827              		.section	.text.CAN_Exchange_Init,"ax",%progbits
+ 828              		.align	1
+ 829              		.global	CAN_Exchange_Init
+ 830              		.syntax unified
+ 831              		.thumb
+ 832              		.thumb_func
+ 834              	CAN_Exchange_Init:
+ 835              		@ args = 0, pretend = 0, frame = 24
+ 836              		@ frame_needed = 1, uses_anonymous_args = 0
+ 837 0000 80B5     		push	{r7, lr}
+ 838 0002 88B0     		sub	sp, sp, #32
+ 839 0004 02AF     		add	r7, sp, #8
+ 840 0006 5B48     		ldr	r0, .L89
+ 841 0008 FFF7FEFF 		bl	puts
+ 842 000c 5A4B     		ldr	r3, .L89+4
+ 843 000e 5B4A     		ldr	r2, .L89+8
+ 844 0010 1A60     		str	r2, [r3]
+ 845 0012 594B     		ldr	r3, .L89+4
+ 846 0014 0022     		movs	r2, #0
+ 847 0016 9A60     		str	r2, [r3, #8]
+ 848 0018 574B     		ldr	r3, .L89+4
+ 849 001a 0022     		movs	r2, #0
+ 850 001c DA60     		str	r2, [r3, #12]
+ 851 001e 564B     		ldr	r3, .L89+4
+ 852 0020 0122     		movs	r2, #1
+ 853 0022 1A74     		strb	r2, [r3, #16]
+ 854 0024 544B     		ldr	r3, .L89+4
+ 855 0026 0022     		movs	r2, #0
+ 856 0028 5A74     		strb	r2, [r3, #17]
+ 857 002a 534B     		ldr	r3, .L89+4
+ 858 002c 0022     		movs	r2, #0
+ 859 002e 9A74     		strb	r2, [r3, #18]
+ 860 0030 514B     		ldr	r3, .L89+4
+ 861 0032 5522     		movs	r2, #85
+ 862 0034 5A61     		str	r2, [r3, #20]
+ 863 0036 504B     		ldr	r3, .L89+4
+ 864 0038 0D22     		movs	r2, #13
+ 865 003a DA61     		str	r2, [r3, #28]
+ 866 003c 4E4B     		ldr	r3, .L89+4
+ 867 003e 0222     		movs	r2, #2
+ 868 0040 1A62     		str	r2, [r3, #32]
+ 869 0042 4D4B     		ldr	r3, .L89+4
+ 870 0044 0122     		movs	r2, #1
+ 871 0046 9A61     		str	r2, [r3, #24]
+ 872 0048 4B48     		ldr	r0, .L89+4
+ 873 004a FFF7FEFF 		bl	HAL_FDCAN_Init
+ 874 004e 0346     		mov	r3, r0
+ 875 0050 002B     		cmp	r3, #0
+ 876 0052 04D0     		beq	.L83
+ 877 0054 4A48     		ldr	r0, .L89+12
+ 878 0056 FFF7FEFF 		bl	puts
+ 879 005a 0123     		movs	r3, #1
+ 880 005c 86E0     		b	.L88
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 20
+
+
+ 881              	.L83:
+ 882 005e 4948     		ldr	r0, .L89+16
+ 883 0060 FFF7FEFF 		bl	puts
+ 884 0064 3B46     		mov	r3, r7
+ 885 0066 0022     		movs	r2, #0
+ 886 0068 1A60     		str	r2, [r3]
+ 887 006a 5A60     		str	r2, [r3, #4]
+ 888 006c 9A60     		str	r2, [r3, #8]
+ 889 006e DA60     		str	r2, [r3, #12]
+ 890 0070 1A61     		str	r2, [r3, #16]
+ 891 0072 5A61     		str	r2, [r3, #20]
+ 892 0074 0023     		movs	r3, #0
+ 893 0076 3B60     		str	r3, [r7]
+ 894 0078 0023     		movs	r3, #0
+ 895 007a 7B60     		str	r3, [r7, #4]
+ 896 007c 0023     		movs	r3, #0
+ 897 007e BB60     		str	r3, [r7, #8]
+ 898 0080 0123     		movs	r3, #1
+ 899 0082 FB60     		str	r3, [r7, #12]
+ 900 0084 0023     		movs	r3, #0
+ 901 0086 3B61     		str	r3, [r7, #16]
+ 902 0088 40F2FF73 		movw	r3, #2047
+ 903 008c 7B61     		str	r3, [r7, #20]
+ 904 008e 3B46     		mov	r3, r7
+ 905 0090 1946     		mov	r1, r3
+ 906 0092 3948     		ldr	r0, .L89+4
+ 907 0094 FFF7FEFF 		bl	HAL_FDCAN_ConfigFilter
+ 908 0098 0346     		mov	r3, r0
+ 909 009a 002B     		cmp	r3, #0
+ 910 009c 04D0     		beq	.L85
+ 911 009e 3A48     		ldr	r0, .L89+20
+ 912 00a0 FFF7FEFF 		bl	puts
+ 913 00a4 0123     		movs	r3, #1
+ 914 00a6 61E0     		b	.L88
+ 915              	.L85:
+ 916 00a8 3848     		ldr	r0, .L89+24
+ 917 00aa FFF7FEFF 		bl	puts
+ 918 00ae 0023     		movs	r3, #0
+ 919 00b0 0093     		str	r3, [sp]
+ 920 00b2 0023     		movs	r3, #0
+ 921 00b4 0022     		movs	r2, #0
+ 922 00b6 0021     		movs	r1, #0
+ 923 00b8 2F48     		ldr	r0, .L89+4
+ 924 00ba FFF7FEFF 		bl	HAL_FDCAN_ConfigGlobalFilter
+ 925 00be 0346     		mov	r3, r0
+ 926 00c0 002B     		cmp	r3, #0
+ 927 00c2 04D0     		beq	.L86
+ 928 00c4 3248     		ldr	r0, .L89+28
+ 929 00c6 FFF7FEFF 		bl	puts
+ 930 00ca 0123     		movs	r3, #1
+ 931 00cc 4EE0     		b	.L88
+ 932              	.L86:
+ 933 00ce 3148     		ldr	r0, .L89+32
+ 934 00d0 FFF7FEFF 		bl	puts
+ 935 00d4 2848     		ldr	r0, .L89+4
+ 936 00d6 FFF7FEFF 		bl	HAL_FDCAN_Start
+ 937 00da 0346     		mov	r3, r0
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 21
+
+
+ 938 00dc 002B     		cmp	r3, #0
+ 939 00de 04D0     		beq	.L87
+ 940 00e0 2D48     		ldr	r0, .L89+36
+ 941 00e2 FFF7FEFF 		bl	puts
+ 942 00e6 0123     		movs	r3, #1
+ 943 00e8 40E0     		b	.L88
+ 944              	.L87:
+ 945 00ea 2C48     		ldr	r0, .L89+40
+ 946 00ec FFF7FEFF 		bl	puts
+ 947 00f0 0022     		movs	r2, #0
+ 948 00f2 4FF48061 		mov	r1, #1024
+ 949 00f6 2048     		ldr	r0, .L89+4
+ 950 00f8 FFF7FEFF 		bl	HAL_FDCAN_ActivateNotification
+ 951 00fc 0022     		movs	r2, #0
+ 952 00fe 0121     		movs	r1, #1
+ 953 0100 1D48     		ldr	r0, .L89+4
+ 954 0102 FFF7FEFF 		bl	HAL_FDCAN_ActivateNotification
+ 955 0106 264B     		ldr	r3, .L89+44
+ 956 0108 0022     		movs	r2, #0
+ 957 010a 1A70     		strb	r2, [r3]
+ 958 010c 254B     		ldr	r3, .L89+48
+ 959 010e 0022     		movs	r2, #0
+ 960 0110 1A70     		strb	r2, [r3]
+ 961 0112 254B     		ldr	r3, .L89+52
+ 962 0114 0022     		movs	r2, #0
+ 963 0116 1A60     		str	r2, [r3]
+ 964 0118 244B     		ldr	r3, .L89+56
+ 965 011a 0022     		movs	r2, #0
+ 966 011c 1A70     		strb	r2, [r3]
+ 967 011e 244B     		ldr	r3, .L89+60
+ 968 0120 0922     		movs	r2, #9
+ 969 0122 1A70     		strb	r2, [r3]
+ 970 0124 234B     		ldr	r3, .L89+64
+ 971 0126 0922     		movs	r2, #9
+ 972 0128 1A70     		strb	r2, [r3]
+ 973 012a 234B     		ldr	r3, .L89+68
+ 974 012c 0022     		movs	r2, #0
+ 975 012e 1A70     		strb	r2, [r3]
+ 976 0130 224B     		ldr	r3, .L89+72
+ 977 0132 0022     		movs	r2, #0
+ 978 0134 1A70     		strb	r2, [r3]
+ 979 0136 224B     		ldr	r3, .L89+76
+ 980 0138 0922     		movs	r2, #9
+ 981 013a 1A70     		strb	r2, [r3]
+ 982 013c 204B     		ldr	r3, .L89+76
+ 983 013e 0022     		movs	r2, #0
+ 984 0140 5A70     		strb	r2, [r3, #1]
+ 985 0142 1F4B     		ldr	r3, .L89+76
+ 986 0144 0022     		movs	r2, #0
+ 987 0146 9A70     		strb	r2, [r3, #2]
+ 988 0148 1D4B     		ldr	r3, .L89+76
+ 989 014a 0022     		movs	r2, #0
+ 990 014c DA70     		strb	r2, [r3, #3]
+ 991 014e 1C4B     		ldr	r3, .L89+76
+ 992 0150 0022     		movs	r2, #0
+ 993 0152 1A71     		strb	r2, [r3, #4]
+ 994 0154 1A4B     		ldr	r3, .L89+76
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 22
+
+
+ 995 0156 0022     		movs	r2, #0
+ 996 0158 9A60     		str	r2, [r3, #8]
+ 997 015a FFF7FEFF 		bl	HAL_GetTick
+ 998 015e 0346     		mov	r3, r0
+ 999 0160 174A     		ldr	r2, .L89+76
+ 1000 0162 D360     		str	r3, [r2, #12]
+ 1001 0164 1748     		ldr	r0, .L89+80
+ 1002 0166 FFF7FEFF 		bl	puts
+ 1003 016a 0023     		movs	r3, #0
+ 1004              	.L88:
+ 1005 016c 1846     		mov	r0, r3
+ 1006 016e 1837     		adds	r7, r7, #24
+ 1007 0170 BD46     		mov	sp, r7
+ 1008              		@ sp needed
+ 1009 0172 80BD     		pop	{r7, pc}
+ 1010              	.L90:
+ 1011              		.align	2
+ 1012              	.L89:
+ 1013 0174 AC070000 		.word	.LC30
+ 1014 0178 00000000 		.word	hfdcan1
+ 1015 017c 00640040 		.word	1073767424
+ 1016 0180 D0070000 		.word	.LC31
+ 1017 0184 F8070000 		.word	.LC32
+ 1018 0188 18080000 		.word	.LC33
+ 1019 018c 48080000 		.word	.LC34
+ 1020 0190 7C080000 		.word	.LC35
+ 1021 0194 B4080000 		.word	.LC36
+ 1022 0198 D0080000 		.word	.LC37
+ 1023 019c FC080000 		.word	.LC38
+ 1024 01a0 00000000 		.word	s_tx_attempted
+ 1025 01a4 00000000 		.word	s_ack_seen
+ 1026 01a8 00000000 		.word	s_last_ack_tick
+ 1027 01ac 00000000 		.word	s_prev_tx_err
+ 1028 01b0 00000000 		.word	s_raw_status
+ 1029 01b4 00000000 		.word	s_filtered_status
+ 1030 01b8 00000000 		.word	s_stable_counter
+ 1031 01bc 00000000 		.word	s_busoff_count
+ 1032 01c0 00000000 		.word	s_diag
+ 1033 01c4 1C090000 		.word	.LC39
+ 1035              		.section	.rodata
+ 1036              		.align	2
+ 1037              	.LC40:
+ 1038 0948 5B43414E 		.ascii	"[CAN POLL] FDCAN in RESET state\000"
+ 1038      20504F4C 
+ 1038      4C5D2046 
+ 1038      4443414E 
+ 1038      20696E20 
+ 1039              		.align	2
+ 1040              	.LC41:
+ 1041 0968 5B43414E 		.ascii	"[CAN POLL] TEC=%lu REC=%lu LEC=%u(%s) BusOff=%lu Er"
+ 1041      20504F4C 
+ 1041      4C5D2054 
+ 1041      45433D25 
+ 1041      6C752052 
+ 1042 099b 72506173 		.ascii	"rPassive=%lu ErrWarn=%lu\012\000"
+ 1042      73697665 
+ 1042      3D256C75 
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 23
+
+
+ 1042      20457272 
+ 1042      5761726E 
+ 1043 09b5 000000   		.align	2
+ 1044              	.LC42:
+ 1045 09b8 5B43414E 		.ascii	"[CAN TX ACK] Frame acknowledged by bus: ID=0x%03X m"
+ 1045      20545820 
+ 1045      41434B5D 
+ 1045      20467261 
+ 1045      6D652061 
+ 1046 09eb 61726B65 		.ascii	"arker=0x%02X\012\000"
+ 1046      723D3078 
+ 1046      25303258 
+ 1046      0A00
+ 1047 09f9 000000   		.align	2
+ 1048              	.LC43:
+ 1049 09fc 5B43414E 		.ascii	"[CAN POLL] RX FIFO0 fill level = %lu\012\000"
+ 1049      20504F4C 
+ 1049      4C5D2052 
+ 1049      58204649 
+ 1049      464F3020 
+ 1050 0a22 0000     		.align	2
+ 1051              	.LC44:
+ 1052 0a24 5B43414E 		.ascii	"[CAN RX] ID=0x%03X DLC=%lu Data:\000"
+ 1052      2052585D 
+ 1052      2049443D 
+ 1052      30782530 
+ 1052      33582044 
+ 1053 0a45 000000   		.align	2
+ 1054              	.LC45:
+ 1055 0a48 20253032 		.ascii	" %02X\000"
+ 1055      5800
+ 1056 0a4e 0000     		.align	2
+ 1057              	.LC46:
+ 1058 0a50 5B43414E 		.ascii	"[CAN POLL] ACK seen via RX \342\200\224 bus is aliv"
+ 1058      20504F4C 
+ 1058      4C5D2041 
+ 1058      434B2073 
+ 1058      65656E20 
+ 1059 0a7a 6500     		.ascii	"e\000"
+ 1060              		.align	2
+ 1061              	.LC47:
+ 1062 0a7c 5B43414E 		.ascii	"[CAN RX] GetRxMessage FAILED (result=%d, HAL err=0x"
+ 1062      2052585D 
+ 1062      20476574 
+ 1062      52784D65 
+ 1062      73736167 
+ 1063 0aaf 2530386C 		.ascii	"%08lX)\012\000"
+ 1063      58290A00 
+ 1064 0ab7 00       		.align	2
+ 1065              	.LC48:
+ 1066 0ab8 5B43414E 		.ascii	"[CAN POLL] Clearing ack_seen (lec=%s, tec_grew=%u)\012"
+ 1066      20504F4C 
+ 1066      4C5D2043 
+ 1066      6C656172 
+ 1066      696E6720 
+ 1067 0aeb 00       		.ascii	"\000"
+ 1068              		.align	2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 24
+
+
+ 1069              	.LC49:
+ 1070 0aec 5B43414E 		.ascii	"[CAN POLL] BUS-OFF detected \342\200\224 triggering"
+ 1070      20504F4C 
+ 1070      4C5D2042 
+ 1070      55532D4F 
+ 1070      46462064 
+ 1071 0b16 20726563 		.ascii	" recovery\000"
+ 1071      6F766572 
+ 1071      7900
+ 1072              		.align	2
+ 1073              	.LC50:
+ 1074 0b20 5B43414E 		.ascii	"[CAN POLL] ACK timeout (%lu ms since last ACK)\012\000"
+ 1074      20504F4C 
+ 1074      4C5D2041 
+ 1074      434B2074 
+ 1074      696D656F 
+ 1075              		.align	2
+ 1076              	.LC51:
+ 1077 0b50 5B43414E 		.ascii	"[CAN POLL] Status transition: %s \342\206\222 %s\012"
+ 1077      20504F4C 
+ 1077      4C5D2053 
+ 1077      74617475 
+ 1077      73207472 
+ 1078 0b78 00       		.ascii	"\000"
+ 1079 0b79 000000   		.align	2
+ 1080              	.LC52:
+ 1081 0b7c 5B43414E 		.ascii	"[CAN POLL] raw=%s filtered=%s debounce=%u\012\000"
+ 1081      20504F4C 
+ 1081      4C5D2072 
+ 1081      61773D25 
+ 1081      73206669 
+ 1082              		.section	.text.CAN_Exchange_Poll,"ax",%progbits
+ 1083              		.align	1
+ 1084              		.global	CAN_Exchange_Poll
+ 1085              		.syntax unified
+ 1086              		.thumb
+ 1087              		.thumb_func
+ 1089              	CAN_Exchange_Poll:
+ 1090              		@ args = 0, pretend = 0, frame = 168
+ 1091              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1092 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 1093 0002 AFB0     		sub	sp, sp, #188
+ 1094 0004 04AF     		add	r7, sp, #16
+ 1095 0006 B34B     		ldr	r3, .L122
+ 1096 0008 93F85C30 		ldrb	r3, [r3, #92]
+ 1097 000c DBB2     		uxtb	r3, r3
+ 1098 000e 002B     		cmp	r3, #0
+ 1099 0010 06D1     		bne	.L92
+ 1100 0012 B148     		ldr	r0, .L122+4
+ 1101 0014 FFF7FEFF 		bl	puts
+ 1102 0018 B04B     		ldr	r3, .L122+8
+ 1103 001a 0122     		movs	r2, #1
+ 1104 001c 1A70     		strb	r2, [r3]
+ 1105 001e F9E1     		b	.L91
+ 1106              	.L92:
+ 1107 0020 07F18403 		add	r3, r7, #132
+ 1108 0024 0022     		movs	r2, #0
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 25
+
+
+ 1109 0026 1A60     		str	r2, [r3]
+ 1110 0028 5A60     		str	r2, [r3, #4]
+ 1111 002a 9A60     		str	r2, [r3, #8]
+ 1112 002c DA60     		str	r2, [r3, #12]
+ 1113 002e 07F15803 		add	r3, r7, #88
+ 1114 0032 2C22     		movs	r2, #44
+ 1115 0034 0021     		movs	r1, #0
+ 1116 0036 1846     		mov	r0, r3
+ 1117 0038 FFF7FEFF 		bl	memset
+ 1118 003c 07F18403 		add	r3, r7, #132
+ 1119 0040 1946     		mov	r1, r3
+ 1120 0042 A448     		ldr	r0, .L122
+ 1121 0044 FFF7FEFF 		bl	HAL_FDCAN_GetErrorCounters
+ 1122 0048 07F15803 		add	r3, r7, #88
+ 1123 004c 1946     		mov	r1, r3
+ 1124 004e A148     		ldr	r0, .L122
+ 1125 0050 FFF7FEFF 		bl	HAL_FDCAN_GetProtocolStatus
+ 1126 0054 BB6D     		ldr	r3, [r7, #88]
+ 1127 0056 87F8A530 		strb	r3, [r7, #165]
+ 1128 005a D7F88430 		ldr	r3, [r7, #132]
+ 1129 005e DAB2     		uxtb	r2, r3
+ 1130 0060 9F4B     		ldr	r3, .L122+12
+ 1131 0062 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1132 0064 9A42     		cmp	r2, r3
+ 1133 0066 01D9     		bls	.L94
+ 1134 0068 0123     		movs	r3, #1
+ 1135 006a 00E0     		b	.L95
+ 1136              	.L94:
+ 1137 006c 0023     		movs	r3, #0
+ 1138              	.L95:
+ 1139 006e 87F8A430 		strb	r3, [r7, #164]
+ 1140 0072 D7F88440 		ldr	r4, [r7, #132]
+ 1141 0076 D7F88850 		ldr	r5, [r7, #136]
+ 1142 007a 97F8A560 		ldrb	r6, [r7, #165]	@ zero_extendqisi2
+ 1143 007e 97F8A530 		ldrb	r3, [r7, #165]	@ zero_extendqisi2
+ 1144 0082 1846     		mov	r0, r3
+ 1145 0084 FFF7FEFF 		bl	CAN_LECName
+ 1146 0088 FB6E     		ldr	r3, [r7, #108]
+ 1147 008a 7A6E     		ldr	r2, [r7, #100]
+ 1148 008c B96E     		ldr	r1, [r7, #104]
+ 1149 008e 0391     		str	r1, [sp, #12]
+ 1150 0090 0292     		str	r2, [sp, #8]
+ 1151 0092 0193     		str	r3, [sp, #4]
+ 1152 0094 0090     		str	r0, [sp]
+ 1153 0096 3346     		mov	r3, r6
+ 1154 0098 2A46     		mov	r2, r5
+ 1155 009a 2146     		mov	r1, r4
+ 1156 009c 9148     		ldr	r0, .L122+16
+ 1157 009e FFF7FEFF 		bl	printf
+ 1158 00a2 97F8A530 		ldrb	r3, [r7, #165]	@ zero_extendqisi2
+ 1159 00a6 002B     		cmp	r3, #0
+ 1160 00a8 13D0     		beq	.L96
+ 1161 00aa 97F8A530 		ldrb	r3, [r7, #165]	@ zero_extendqisi2
+ 1162 00ae 072B     		cmp	r3, #7
+ 1163 00b0 0FD0     		beq	.L96
+ 1164 00b2 D7F88410 		ldr	r1, [r7, #132]
+ 1165 00b6 D7F88840 		ldr	r4, [r7, #136]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 26
+
+
+ 1166 00ba FD6E     		ldr	r5, [r7, #108]
+ 1167 00bc 7B6E     		ldr	r3, [r7, #100]
+ 1168 00be BA6E     		ldr	r2, [r7, #104]
+ 1169 00c0 97F8A500 		ldrb	r0, [r7, #165]	@ zero_extendqisi2
+ 1170 00c4 0192     		str	r2, [sp, #4]
+ 1171 00c6 0093     		str	r3, [sp]
+ 1172 00c8 2B46     		mov	r3, r5
+ 1173 00ca 2246     		mov	r2, r4
+ 1174 00cc FFF7FEFF 		bl	CAN_PrintExtendedErrorDiag
+ 1175 00d0 17E0     		b	.L97
+ 1176              	.L96:
+ 1177 00d2 FB6E     		ldr	r3, [r7, #108]
+ 1178 00d4 002B     		cmp	r3, #0
+ 1179 00d6 05D1     		bne	.L98
+ 1180 00d8 7B6E     		ldr	r3, [r7, #100]
+ 1181 00da 002B     		cmp	r3, #0
+ 1182 00dc 02D1     		bne	.L98
+ 1183 00de BB6E     		ldr	r3, [r7, #104]
+ 1184 00e0 002B     		cmp	r3, #0
+ 1185 00e2 0ED0     		beq	.L97
+ 1186              	.L98:
+ 1187 00e4 D7F88410 		ldr	r1, [r7, #132]
+ 1188 00e8 D7F88840 		ldr	r4, [r7, #136]
+ 1189 00ec FD6E     		ldr	r5, [r7, #108]
+ 1190 00ee 7B6E     		ldr	r3, [r7, #100]
+ 1191 00f0 BA6E     		ldr	r2, [r7, #104]
+ 1192 00f2 97F8A500 		ldrb	r0, [r7, #165]	@ zero_extendqisi2
+ 1193 00f6 0192     		str	r2, [sp, #4]
+ 1194 00f8 0093     		str	r3, [sp]
+ 1195 00fa 2B46     		mov	r3, r5
+ 1196 00fc 2246     		mov	r2, r4
+ 1197 00fe FFF7FEFF 		bl	CAN_PrintExtendedErrorDiag
+ 1198              	.L97:
+ 1199 0102 D7F88430 		ldr	r3, [r7, #132]
+ 1200 0106 DAB2     		uxtb	r2, r3
+ 1201 0108 744B     		ldr	r3, .L122+8
+ 1202 010a 5A70     		strb	r2, [r3, #1]
+ 1203 010c D7F88830 		ldr	r3, [r7, #136]
+ 1204 0110 DAB2     		uxtb	r2, r3
+ 1205 0112 724B     		ldr	r3, .L122+8
+ 1206 0114 9A70     		strb	r2, [r3, #2]
+ 1207 0116 714A     		ldr	r2, .L122+8
+ 1208 0118 97F8A530 		ldrb	r3, [r7, #165]
+ 1209 011c D370     		strb	r3, [r2, #3]
+ 1210 011e FFF7FEFF 		bl	HAL_GetTick
+ 1211 0122 0346     		mov	r3, r0
+ 1212 0124 6D4A     		ldr	r2, .L122+8
+ 1213 0126 D360     		str	r3, [r2, #12]
+ 1214 0128 07F13003 		add	r3, r7, #48
+ 1215 012c 2822     		movs	r2, #40
+ 1216 012e 0021     		movs	r1, #0
+ 1217 0130 1846     		mov	r0, r3
+ 1218 0132 FFF7FEFF 		bl	memset
+ 1219 0136 10E0     		b	.L99
+ 1220              	.L100:
+ 1221 0138 3B6B     		ldr	r3, [r7, #48]
+ 1222 013a 3A6D     		ldr	r2, [r7, #80]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 27
+
+
+ 1223 013c 1946     		mov	r1, r3
+ 1224 013e 6A48     		ldr	r0, .L122+20
+ 1225 0140 FFF7FEFF 		bl	printf
+ 1226 0144 694B     		ldr	r3, .L122+24
+ 1227 0146 0122     		movs	r2, #1
+ 1228 0148 1A70     		strb	r2, [r3]
+ 1229 014a FFF7FEFF 		bl	HAL_GetTick
+ 1230 014e 0346     		mov	r3, r0
+ 1231 0150 674A     		ldr	r2, .L122+28
+ 1232 0152 1360     		str	r3, [r2]
+ 1233 0154 674B     		ldr	r3, .L122+32
+ 1234 0156 0022     		movs	r2, #0
+ 1235 0158 1A70     		strb	r2, [r3]
+ 1236              	.L99:
+ 1237 015a 07F13003 		add	r3, r7, #48
+ 1238 015e 1946     		mov	r1, r3
+ 1239 0160 5C48     		ldr	r0, .L122
+ 1240 0162 FFF7FEFF 		bl	HAL_FDCAN_GetTxEvent
+ 1241 0166 0346     		mov	r3, r0
+ 1242 0168 002B     		cmp	r3, #0
+ 1243 016a E5D0     		beq	.L100
+ 1244 016c 4021     		movs	r1, #64
+ 1245 016e 5948     		ldr	r0, .L122
+ 1246 0170 FFF7FEFF 		bl	HAL_FDCAN_GetRxFifoFillLevel
+ 1247 0174 C7F8A000 		str	r0, [r7, #160]
+ 1248 0178 D7F8A030 		ldr	r3, [r7, #160]
+ 1249 017c 002B     		cmp	r3, #0
+ 1250 017e 5FD0     		beq	.L102
+ 1251 0180 D7F8A010 		ldr	r1, [r7, #160]
+ 1252 0184 5C48     		ldr	r0, .L122+36
+ 1253 0186 FFF7FEFF 		bl	printf
+ 1254 018a 59E0     		b	.L102
+ 1255              	.L108:
+ 1256 018c 3B46     		mov	r3, r7
+ 1257 018e 2822     		movs	r2, #40
+ 1258 0190 0021     		movs	r1, #0
+ 1259 0192 1846     		mov	r0, r3
+ 1260 0194 FFF7FEFF 		bl	memset
+ 1261 0198 07F12803 		add	r3, r7, #40
+ 1262 019c 0022     		movs	r2, #0
+ 1263 019e 1A60     		str	r2, [r3]
+ 1264 01a0 5A60     		str	r2, [r3, #4]
+ 1265 01a2 07F12803 		add	r3, r7, #40
+ 1266 01a6 3A46     		mov	r2, r7
+ 1267 01a8 4021     		movs	r1, #64
+ 1268 01aa 4A48     		ldr	r0, .L122
+ 1269 01ac FFF7FEFF 		bl	HAL_FDCAN_GetRxMessage
+ 1270 01b0 0346     		mov	r3, r0
+ 1271 01b2 87F89F30 		strb	r3, [r7, #159]
+ 1272 01b6 97F89F30 		ldrb	r3, [r7, #159]	@ zero_extendqisi2
+ 1273 01ba 002B     		cmp	r3, #0
+ 1274 01bc 34D1     		bne	.L103
+ 1275 01be 3B68     		ldr	r3, [r7]
+ 1276 01c0 FA68     		ldr	r2, [r7, #12]
+ 1277 01c2 1946     		mov	r1, r3
+ 1278 01c4 4D48     		ldr	r0, .L122+40
+ 1279 01c6 FFF7FEFF 		bl	printf
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 28
+
+
+ 1280 01ca 0023     		movs	r3, #0
+ 1281 01cc 87F8A730 		strb	r3, [r7, #167]
+ 1282 01d0 0EE0     		b	.L104
+ 1283              	.L106:
+ 1284 01d2 97F8A730 		ldrb	r3, [r7, #167]	@ zero_extendqisi2
+ 1285 01d6 A833     		adds	r3, r3, #168
+ 1286 01d8 3B44     		add	r3, r3, r7
+ 1287 01da 13F8803C 		ldrb	r3, [r3, #-128]	@ zero_extendqisi2
+ 1288 01de 1946     		mov	r1, r3
+ 1289 01e0 4748     		ldr	r0, .L122+44
+ 1290 01e2 FFF7FEFF 		bl	printf
+ 1291 01e6 97F8A730 		ldrb	r3, [r7, #167]	@ zero_extendqisi2
+ 1292 01ea 0133     		adds	r3, r3, #1
+ 1293 01ec 87F8A730 		strb	r3, [r7, #167]
+ 1294              	.L104:
+ 1295 01f0 97F8A730 		ldrb	r3, [r7, #167]	@ zero_extendqisi2
+ 1296 01f4 072B     		cmp	r3, #7
+ 1297 01f6 05D8     		bhi	.L105
+ 1298 01f8 FB68     		ldr	r3, [r7, #12]
+ 1299 01fa DBB2     		uxtb	r3, r3
+ 1300 01fc 97F8A720 		ldrb	r2, [r7, #167]	@ zero_extendqisi2
+ 1301 0200 9A42     		cmp	r2, r3
+ 1302 0202 E6D3     		bcc	.L106
+ 1303              	.L105:
+ 1304 0204 0A20     		movs	r0, #10
+ 1305 0206 FFF7FEFF 		bl	putchar
+ 1306 020a 384B     		ldr	r3, .L122+24
+ 1307 020c 0122     		movs	r2, #1
+ 1308 020e 1A70     		strb	r2, [r3]
+ 1309 0210 FFF7FEFF 		bl	HAL_GetTick
+ 1310 0214 0346     		mov	r3, r0
+ 1311 0216 364A     		ldr	r2, .L122+28
+ 1312 0218 1360     		str	r3, [r2]
+ 1313 021a 364B     		ldr	r3, .L122+32
+ 1314 021c 0022     		movs	r2, #0
+ 1315 021e 1A70     		strb	r2, [r3]
+ 1316 0220 3848     		ldr	r0, .L122+48
+ 1317 0222 FFF7FEFF 		bl	puts
+ 1318 0226 0BE0     		b	.L102
+ 1319              	.L103:
+ 1320 0228 97F89F40 		ldrb	r4, [r7, #159]	@ zero_extendqisi2
+ 1321 022c 2948     		ldr	r0, .L122
+ 1322 022e FFF7FEFF 		bl	HAL_FDCAN_GetError
+ 1323 0232 0346     		mov	r3, r0
+ 1324 0234 1A46     		mov	r2, r3
+ 1325 0236 2146     		mov	r1, r4
+ 1326 0238 3348     		ldr	r0, .L122+52
+ 1327 023a FFF7FEFF 		bl	printf
+ 1328 023e 06E0     		b	.L107
+ 1329              	.L102:
+ 1330 0240 4021     		movs	r1, #64
+ 1331 0242 2448     		ldr	r0, .L122
+ 1332 0244 FFF7FEFF 		bl	HAL_FDCAN_GetRxFifoFillLevel
+ 1333 0248 0346     		mov	r3, r0
+ 1334 024a 002B     		cmp	r3, #0
+ 1335 024c 9ED1     		bne	.L108
+ 1336              	.L107:
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 29
+
+
+ 1337 024e D7F88430 		ldr	r3, [r7, #132]
+ 1338 0252 DAB2     		uxtb	r2, r3
+ 1339 0254 224B     		ldr	r3, .L122+12
+ 1340 0256 1A70     		strb	r2, [r3]
+ 1341 0258 244B     		ldr	r3, .L122+24
+ 1342 025a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1343 025c 002B     		cmp	r3, #0
+ 1344 025e 16D1     		bne	.L109
+ 1345 0260 97F8A530 		ldrb	r3, [r7, #165]	@ zero_extendqisi2
+ 1346 0264 032B     		cmp	r3, #3
+ 1347 0266 03D0     		beq	.L110
+ 1348 0268 97F8A430 		ldrb	r3, [r7, #164]	@ zero_extendqisi2
+ 1349 026c 002B     		cmp	r3, #0
+ 1350 026e 0ED0     		beq	.L109
+ 1351              	.L110:
+ 1352 0270 97F8A530 		ldrb	r3, [r7, #165]	@ zero_extendqisi2
+ 1353 0274 1846     		mov	r0, r3
+ 1354 0276 FFF7FEFF 		bl	CAN_LECName
+ 1355 027a 0146     		mov	r1, r0
+ 1356 027c 97F8A430 		ldrb	r3, [r7, #164]	@ zero_extendqisi2
+ 1357 0280 1A46     		mov	r2, r3
+ 1358 0282 2248     		ldr	r0, .L122+56
+ 1359 0284 FFF7FEFF 		bl	printf
+ 1360 0288 184B     		ldr	r3, .L122+24
+ 1361 028a 0022     		movs	r2, #0
+ 1362 028c 1A70     		strb	r2, [r3]
+ 1363              	.L109:
+ 1364 028e FB6E     		ldr	r3, [r7, #108]
+ 1365 0290 002B     		cmp	r3, #0
+ 1366 0292 16D0     		beq	.L111
+ 1367 0294 1E48     		ldr	r0, .L122+60
+ 1368 0296 FFF7FEFF 		bl	puts
+ 1369 029a 104B     		ldr	r3, .L122+8
+ 1370 029c 0522     		movs	r2, #5
+ 1371 029e 1A70     		strb	r2, [r3]
+ 1372 02a0 1C4B     		ldr	r3, .L122+64
+ 1373 02a2 0522     		movs	r2, #5
+ 1374 02a4 1A70     		strb	r2, [r3]
+ 1375 02a6 1C4B     		ldr	r3, .L122+68
+ 1376 02a8 0522     		movs	r2, #5
+ 1377 02aa 1A70     		strb	r2, [r3]
+ 1378 02ac FFF7FEFF 		bl	CAN_Recover_BusOff
+ 1379 02b0 0E4B     		ldr	r3, .L122+24
+ 1380 02b2 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 1381 02b4 094B     		ldr	r3, .L122+8
+ 1382 02b6 1A71     		strb	r2, [r3, #4]
+ 1383 02b8 0D4B     		ldr	r3, .L122+28
+ 1384 02ba 1B68     		ldr	r3, [r3]
+ 1385 02bc 074A     		ldr	r2, .L122+8
+ 1386 02be 9360     		str	r3, [r2, #8]
+ 1387 02c0 A8E0     		b	.L91
+ 1388              	.L111:
+ 1389 02c2 164B     		ldr	r3, .L122+72
+ 1390 02c4 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1391 02c6 002B     		cmp	r3, #0
+ 1392 02c8 2AD1     		bne	.L112
+ 1393 02ca 0923     		movs	r3, #9
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 30
+
+
+ 1394 02cc 87F8A630 		strb	r3, [r7, #166]
+ 1395 02d0 66E0     		b	.L113
+ 1396              	.L123:
+ 1397 02d2 00BF     		.align	2
+ 1398              	.L122:
+ 1399 02d4 00000000 		.word	hfdcan1
+ 1400 02d8 48090000 		.word	.LC40
+ 1401 02dc 00000000 		.word	s_diag
+ 1402 02e0 00000000 		.word	s_prev_tx_err
+ 1403 02e4 68090000 		.word	.LC41
+ 1404 02e8 B8090000 		.word	.LC42
+ 1405 02ec 00000000 		.word	s_ack_seen
+ 1406 02f0 00000000 		.word	s_last_ack_tick
+ 1407 02f4 00000000 		.word	s_busoff_count
+ 1408 02f8 FC090000 		.word	.LC43
+ 1409 02fc 240A0000 		.word	.LC44
+ 1410 0300 480A0000 		.word	.LC45
+ 1411 0304 500A0000 		.word	.LC46
+ 1412 0308 7C0A0000 		.word	.LC47
+ 1413 030c B80A0000 		.word	.LC48
+ 1414 0310 EC0A0000 		.word	.LC49
+ 1415 0314 00000000 		.word	s_filtered_status
+ 1416 0318 00000000 		.word	s_raw_status
+ 1417 031c 00000000 		.word	s_tx_attempted
+ 1418              	.L112:
+ 1419 0320 3E4B     		ldr	r3, .L124
+ 1420 0322 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1421 0324 002B     		cmp	r3, #0
+ 1422 0326 1BD1     		bne	.L114
+ 1423 0328 97F8A530 		ldrb	r3, [r7, #165]	@ zero_extendqisi2
+ 1424 032c 002B     		cmp	r3, #0
+ 1425 032e 05D0     		beq	.L115
+ 1426 0330 97F8A530 		ldrb	r3, [r7, #165]	@ zero_extendqisi2
+ 1427 0334 072B     		cmp	r3, #7
+ 1428 0336 01D0     		beq	.L115
+ 1429 0338 0123     		movs	r3, #1
+ 1430 033a 00E0     		b	.L116
+ 1431              	.L115:
+ 1432 033c 0023     		movs	r3, #0
+ 1433              	.L116:
+ 1434 033e 87F89730 		strb	r3, [r7, #151]
+ 1435 0342 97F89730 		ldrb	r3, [r7, #151]	@ zero_extendqisi2
+ 1436 0346 002B     		cmp	r3, #0
+ 1437 0348 06D0     		beq	.L117
+ 1438 034a 97F8A530 		ldrb	r3, [r7, #165]	@ zero_extendqisi2
+ 1439 034e 1846     		mov	r0, r3
+ 1440 0350 FFF7FEFF 		bl	CAN_LEC_To_Status
+ 1441 0354 0346     		mov	r3, r0
+ 1442 0356 00E0     		b	.L118
+ 1443              	.L117:
+ 1444 0358 0223     		movs	r3, #2
+ 1445              	.L118:
+ 1446 035a 87F8A630 		strb	r3, [r7, #166]
+ 1447 035e 1FE0     		b	.L113
+ 1448              	.L114:
+ 1449 0360 FFF7FEFF 		bl	HAL_GetTick
+ 1450 0364 C7F89800 		str	r0, [r7, #152]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 31
+
+
+ 1451 0368 2D4B     		ldr	r3, .L124+4
+ 1452 036a 1B68     		ldr	r3, [r3]
+ 1453 036c D7F89820 		ldr	r2, [r7, #152]
+ 1454 0370 D31A     		subs	r3, r2, r3
+ 1455 0372 40F6B832 		movw	r2, #3000
+ 1456 0376 9342     		cmp	r3, r2
+ 1457 0378 0FD9     		bls	.L119
+ 1458 037a 294B     		ldr	r3, .L124+4
+ 1459 037c 1B68     		ldr	r3, [r3]
+ 1460 037e D7F89820 		ldr	r2, [r7, #152]
+ 1461 0382 D31A     		subs	r3, r2, r3
+ 1462 0384 1946     		mov	r1, r3
+ 1463 0386 2748     		ldr	r0, .L124+8
+ 1464 0388 FFF7FEFF 		bl	printf
+ 1465 038c 234B     		ldr	r3, .L124
+ 1466 038e 0022     		movs	r2, #0
+ 1467 0390 1A70     		strb	r2, [r3]
+ 1468 0392 0223     		movs	r3, #2
+ 1469 0394 87F8A630 		strb	r3, [r7, #166]
+ 1470 0398 02E0     		b	.L113
+ 1471              	.L119:
+ 1472 039a 0023     		movs	r3, #0
+ 1473 039c 87F8A630 		strb	r3, [r7, #166]
+ 1474              	.L113:
+ 1475 03a0 214B     		ldr	r3, .L124+12
+ 1476 03a2 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1477 03a4 97F8A620 		ldrb	r2, [r7, #166]	@ zero_extendqisi2
+ 1478 03a8 9A42     		cmp	r2, r3
+ 1479 03aa 10D0     		beq	.L120
+ 1480 03ac 1E4B     		ldr	r3, .L124+12
+ 1481 03ae 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1482 03b0 1846     		mov	r0, r3
+ 1483 03b2 FFF7FEFF 		bl	CAN_StatusName
+ 1484 03b6 0446     		mov	r4, r0
+ 1485 03b8 97F8A630 		ldrb	r3, [r7, #166]	@ zero_extendqisi2
+ 1486 03bc 1846     		mov	r0, r3
+ 1487 03be FFF7FEFF 		bl	CAN_StatusName
+ 1488 03c2 0346     		mov	r3, r0
+ 1489 03c4 1A46     		mov	r2, r3
+ 1490 03c6 2146     		mov	r1, r4
+ 1491 03c8 1848     		ldr	r0, .L124+16
+ 1492 03ca FFF7FEFF 		bl	printf
+ 1493              	.L120:
+ 1494 03ce 97F8A630 		ldrb	r3, [r7, #166]	@ zero_extendqisi2
+ 1495 03d2 1846     		mov	r0, r3
+ 1496 03d4 FFF7FEFF 		bl	CAN_ApplyDebounce
+ 1497 03d8 154B     		ldr	r3, .L124+20
+ 1498 03da 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 1499 03dc 154B     		ldr	r3, .L124+24
+ 1500 03de 1A70     		strb	r2, [r3]
+ 1501 03e0 0E4B     		ldr	r3, .L124
+ 1502 03e2 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 1503 03e4 134B     		ldr	r3, .L124+24
+ 1504 03e6 1A71     		strb	r2, [r3, #4]
+ 1505 03e8 0D4B     		ldr	r3, .L124+4
+ 1506 03ea 1B68     		ldr	r3, [r3]
+ 1507 03ec 114A     		ldr	r2, .L124+24
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 32
+
+
+ 1508 03ee 9360     		str	r3, [r2, #8]
+ 1509 03f0 0D4B     		ldr	r3, .L124+12
+ 1510 03f2 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1511 03f4 1846     		mov	r0, r3
+ 1512 03f6 FFF7FEFF 		bl	CAN_StatusName
+ 1513 03fa 0446     		mov	r4, r0
+ 1514 03fc 0C4B     		ldr	r3, .L124+20
+ 1515 03fe 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1516 0400 1846     		mov	r0, r3
+ 1517 0402 FFF7FEFF 		bl	CAN_StatusName
+ 1518 0406 0246     		mov	r2, r0
+ 1519 0408 0B4B     		ldr	r3, .L124+28
+ 1520 040a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1521 040c 2146     		mov	r1, r4
+ 1522 040e 0B48     		ldr	r0, .L124+32
+ 1523 0410 FFF7FEFF 		bl	printf
+ 1524              	.L91:
+ 1525 0414 AC37     		adds	r7, r7, #172
+ 1526 0416 BD46     		mov	sp, r7
+ 1527              		@ sp needed
+ 1528 0418 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 1529              	.L125:
+ 1530 041a 00BF     		.align	2
+ 1531              	.L124:
+ 1532 041c 00000000 		.word	s_ack_seen
+ 1533 0420 00000000 		.word	s_last_ack_tick
+ 1534 0424 200B0000 		.word	.LC50
+ 1535 0428 00000000 		.word	s_raw_status
+ 1536 042c 500B0000 		.word	.LC51
+ 1537 0430 00000000 		.word	s_filtered_status
+ 1538 0434 00000000 		.word	s_diag
+ 1539 0438 00000000 		.word	s_stable_counter
+ 1540 043c 7C0B0000 		.word	.LC52
+ 1542              		.section	.text.CAN_Exchange_Transmit_Data,"ax",%progbits
+ 1543              		.align	1
+ 1544              		.global	CAN_Exchange_Transmit_Data
+ 1545              		.syntax unified
+ 1546              		.thumb
+ 1547              		.thumb_func
+ 1549              	CAN_Exchange_Transmit_Data:
+ 1550              		@ args = 0, pretend = 0, frame = 32
+ 1551              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1552 0000 80B5     		push	{r7, lr}
+ 1553 0002 88B0     		sub	sp, sp, #32
+ 1554 0004 00AF     		add	r7, sp, #0
+ 1555 0006 87ED030A 		vstr.32	s0, [r7, #12]
+ 1556 000a C7ED020A 		vstr.32	s1, [r7, #8]
+ 1557 000e 07F11403 		add	r3, r7, #20
+ 1558 0012 0021     		movs	r1, #0
+ 1559 0014 0A46     		mov	r2, r1	@ movhi
+ 1560 0016 1A80     		strh	r2, [r3]	@ movhi
+ 1561 0018 0A46     		mov	r2, r1
+ 1562 001a 9A70     		strb	r2, [r3, #2]
+ 1563 001c D7ED037A 		vldr.32	s15, [r7, #12]
+ 1564 0020 9FED247A 		vldr.32	s14, .L135
+ 1565 0024 67EE877A 		vmul.f32	s15, s15, s14
+ 1566 0028 C7ED077A 		vstr.32	s15, [r7, #28]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 33
+
+
+ 1567 002c D7ED077A 		vldr.32	s15, [r7, #28]
+ 1568 0030 9FED217A 		vldr.32	s14, .L135+4
+ 1569 0034 F4EEC77A 		vcmpe.f32	s15, s14
+ 1570 0038 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1571 003c 01DD     		ble	.L127
+ 1572 003e 1F4B     		ldr	r3, .L135+8
+ 1573 0040 FB61     		str	r3, [r7, #28]	@ float
+ 1574              	.L127:
+ 1575 0042 D7ED077A 		vldr.32	s15, [r7, #28]
+ 1576 0046 F5EEC07A 		vcmpe.f32	s15, #0
+ 1577 004a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1578 004e 02D5     		bpl	.L129
+ 1579 0050 4FF00003 		mov	r3, #0
+ 1580 0054 FB61     		str	r3, [r7, #28]	@ float
+ 1581              	.L129:
+ 1582 0056 D7ED077A 		vldr.32	s15, [r7, #28]
+ 1583 005a FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1584 005e 17EE903A 		vmov	r3, s15	@ int
+ 1585 0062 3B83     		strh	r3, [r7, #24]	@ movhi
+ 1586 0064 3B8B     		ldrh	r3, [r7, #24]	@ movhi
+ 1587 0066 DBB2     		uxtb	r3, r3
+ 1588 0068 3B75     		strb	r3, [r7, #20]
+ 1589 006a 3B8B     		ldrh	r3, [r7, #24]
+ 1590 006c 1B0A     		lsrs	r3, r3, #8
+ 1591 006e 9BB2     		uxth	r3, r3
+ 1592 0070 DBB2     		uxtb	r3, r3
+ 1593 0072 7B75     		strb	r3, [r7, #21]
+ 1594 0074 D7ED027A 		vldr.32	s15, [r7, #8]
+ 1595 0078 B6EE007A 		vmov.f32	s14, #5.0e-1
+ 1596 007c 77EE877A 		vadd.f32	s15, s15, s14
+ 1597 0080 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1598 0084 C7ED017A 		vstr.32	s15, [r7, #4]	@ int
+ 1599 0088 3B79     		ldrb	r3, [r7, #4]
+ 1600 008a FB76     		strb	r3, [r7, #27]
+ 1601 008c FB7E     		ldrb	r3, [r7, #27]	@ zero_extendqisi2
+ 1602 008e 642B     		cmp	r3, #100
+ 1603 0090 01D9     		bls	.L131
+ 1604 0092 6423     		movs	r3, #100
+ 1605 0094 FB76     		strb	r3, [r7, #27]
+ 1606              	.L131:
+ 1607 0096 FB7E     		ldrb	r3, [r7, #27]
+ 1608 0098 BB75     		strb	r3, [r7, #22]
+ 1609 009a 07F11403 		add	r3, r7, #20
+ 1610 009e 0322     		movs	r2, #3
+ 1611 00a0 1946     		mov	r1, r3
+ 1612 00a2 40F22310 		movw	r0, #291
+ 1613 00a6 FFF7FEFF 		bl	CAN_Queue_Frame
+ 1614 00aa 0346     		mov	r3, r0
+ 1615 00ac 1846     		mov	r0, r3
+ 1616 00ae 2037     		adds	r7, r7, #32
+ 1617 00b0 BD46     		mov	sp, r7
+ 1618              		@ sp needed
+ 1619 00b2 80BD     		pop	{r7, pc}
+ 1620              	.L136:
+ 1621              		.align	2
+ 1622              	.L135:
+ 1623 00b4 00007A44 		.word	1148846080
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 34
+
+
+ 1624 00b8 00FF7F47 		.word	1199570688
+ 1625 00bc 00FF7F47 		.word	1199570688
+ 1627              		.section	.rodata
+ 1628 0ba7 00       		.align	2
+ 1629              	.LC53:
+ 1630 0ba8 5B43414E 		.ascii	"[CAN TX] Sending startup probe (ID=0x7FF)\000"
+ 1630      2054585D 
+ 1630      2053656E 
+ 1630      64696E67 
+ 1630      20737461 
+ 1631              		.section	.text.CAN_Exchange_Trigger_Startup_Probe,"ax",%progbits
+ 1632              		.align	1
+ 1633              		.global	CAN_Exchange_Trigger_Startup_Probe
+ 1634              		.syntax unified
+ 1635              		.thumb
+ 1636              		.thumb_func
+ 1638              	CAN_Exchange_Trigger_Startup_Probe:
+ 1639              		@ args = 0, pretend = 0, frame = 8
+ 1640              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1641 0000 80B5     		push	{r7, lr}
+ 1642 0002 82B0     		sub	sp, sp, #8
+ 1643 0004 00AF     		add	r7, sp, #0
+ 1644 0006 0848     		ldr	r0, .L139
+ 1645 0008 FFF7FEFF 		bl	puts
+ 1646 000c 0023     		movs	r3, #0
+ 1647 000e 3B71     		strb	r3, [r7, #4]
+ 1648 0010 3B1D     		adds	r3, r7, #4
+ 1649 0012 0122     		movs	r2, #1
+ 1650 0014 1946     		mov	r1, r3
+ 1651 0016 40F2FF70 		movw	r0, #2047
+ 1652 001a FFF7FEFF 		bl	CAN_Queue_Frame
+ 1653 001e 0346     		mov	r3, r0
+ 1654 0020 1846     		mov	r0, r3
+ 1655 0022 0837     		adds	r7, r7, #8
+ 1656 0024 BD46     		mov	sp, r7
+ 1657              		@ sp needed
+ 1658 0026 80BD     		pop	{r7, pc}
+ 1659              	.L140:
+ 1660              		.align	2
+ 1661              	.L139:
+ 1662 0028 A80B0000 		.word	.LC53
+ 1664              		.section	.text.CAN_Exchange_Get_Status,"ax",%progbits
+ 1665              		.align	1
+ 1666              		.global	CAN_Exchange_Get_Status
+ 1667              		.syntax unified
+ 1668              		.thumb
+ 1669              		.thumb_func
+ 1671              	CAN_Exchange_Get_Status:
+ 1672              		@ args = 0, pretend = 0, frame = 8
+ 1673              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1674              		@ link register save eliminated.
+ 1675 0000 90B4     		push	{r4, r7}
+ 1676 0002 82B0     		sub	sp, sp, #8
+ 1677 0004 00AF     		add	r7, sp, #0
+ 1678 0006 7860     		str	r0, [r7, #4]
+ 1679 0008 7B68     		ldr	r3, [r7, #4]
+ 1680 000a 054A     		ldr	r2, .L143
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 35
+
+
+ 1681 000c 1C46     		mov	r4, r3
+ 1682 000e 1346     		mov	r3, r2
+ 1683 0010 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 1684 0012 84E80F00 		stm	r4, {r0, r1, r2, r3}
+ 1685 0016 7868     		ldr	r0, [r7, #4]
+ 1686 0018 0837     		adds	r7, r7, #8
+ 1687 001a BD46     		mov	sp, r7
+ 1688              		@ sp needed
+ 1689 001c 90BC     		pop	{r4, r7}
+ 1690 001e 7047     		bx	lr
+ 1691              	.L144:
+ 1692              		.align	2
+ 1693              	.L143:
+ 1694 0020 00000000 		.word	s_diag
+ 1696              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 36
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 CAN_exchange.c
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:18     .bss.s_diag:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:21     .bss.s_diag:00000000 s_diag
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:26     .bss.s_tx_attempted:00000000 s_tx_attempted
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:27     .bss.s_tx_attempted:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:31     .bss.s_ack_seen:00000000 s_ack_seen
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:32     .bss.s_ack_seen:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:34     .bss.s_last_ack_tick:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:37     .bss.s_last_ack_tick:00000000 s_last_ack_tick
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:42     .bss.s_prev_tx_err:00000000 s_prev_tx_err
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:43     .bss.s_prev_tx_err:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:47     .data.s_raw_status:00000000 s_raw_status
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:52     .data.s_filtered_status:00000000 s_filtered_status
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:57     .bss.s_stable_counter:00000000 s_stable_counter
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:58     .bss.s_stable_counter:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:62     .bss.s_busoff_count:00000000 s_busoff_count
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:63     .bss.s_busoff_count:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:65     .rodata:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:99     .text.CAN_StatusName:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:104    .text.CAN_StatusName:00000000 CAN_StatusName
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:120    .text.CAN_StatusName:00000018 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:130    .text.CAN_StatusName:00000040 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:173    .text.CAN_StatusName:00000078 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:193    .text.CAN_LECName:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:198    .text.CAN_LECName:00000000 CAN_LECName
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:214    .text.CAN_LECName:00000018 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:222    .text.CAN_LECName:00000038 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:259    .text.CAN_LECName:00000068 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:324    .text.CAN_PrintExtendedErrorDiag:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:329    .text.CAN_PrintExtendedErrorDiag:00000000 CAN_PrintExtendedErrorDiag
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:348    .text.CAN_PrintExtendedErrorDiag:00000020 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:354    .text.CAN_PrintExtendedErrorDiag:00000038 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:426    .text.CAN_PrintExtendedErrorDiag:000000bc $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:437    .text.CAN_ApplyDebounce:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:442    .text.CAN_ApplyDebounce:00000000 CAN_ApplyDebounce
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:493    .text.CAN_ApplyDebounce:00000054 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:509    .text.CAN_Recover_BusOff:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:514    .text.CAN_Recover_BusOff:00000000 CAN_Recover_BusOff
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:568    .text.CAN_Recover_BusOff:0000006c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:580    .text.CAN_LEC_To_Status:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:585    .text.CAN_LEC_To_Status:00000000 CAN_LEC_To_Status
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:601    .text.CAN_LEC_To_Status:00000018 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:609    .text.CAN_LEC_To_Status:00000038 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:672    .text.CAN_Queue_Frame:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:677    .text.CAN_Queue_Frame:00000000 CAN_Queue_Frame
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:785    .text.CAN_Queue_Frame:000000d8 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:828    .text.CAN_Exchange_Init:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:834    .text.CAN_Exchange_Init:00000000 CAN_Exchange_Init
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:1013   .text.CAN_Exchange_Init:00000174 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:1083   .text.CAN_Exchange_Poll:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:1089   .text.CAN_Exchange_Poll:00000000 CAN_Exchange_Poll
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:1399   .text.CAN_Exchange_Poll:000002d4 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:1419   .text.CAN_Exchange_Poll:00000320 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:1532   .text.CAN_Exchange_Poll:0000041c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:1543   .text.CAN_Exchange_Transmit_Data:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:1549   .text.CAN_Exchange_Transmit_Data:00000000 CAN_Exchange_Transmit_Data
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s 			page 37
+
+
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:1623   .text.CAN_Exchange_Transmit_Data:000000b4 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:1632   .text.CAN_Exchange_Trigger_Startup_Probe:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:1638   .text.CAN_Exchange_Trigger_Startup_Probe:00000000 CAN_Exchange_Trigger_Startup_Probe
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:1662   .text.CAN_Exchange_Trigger_Startup_Probe:00000028 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:1665   .text.CAN_Exchange_Get_Status:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:1671   .text.CAN_Exchange_Get_Status:00000000 CAN_Exchange_Get_Status
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccjt5FHV.s:1694   .text.CAN_Exchange_Get_Status:00000020 $d
+
+UNDEFINED SYMBOLS
+printf
+puts
+HAL_FDCAN_Stop
+HAL_Delay
+HAL_FDCAN_Start
+hfdcan1
+memset
+HAL_FDCAN_AddMessageToTxFifoQ
+HAL_FDCAN_GetError
+HAL_FDCAN_Init
+HAL_FDCAN_ConfigFilter
+HAL_FDCAN_ConfigGlobalFilter
+HAL_FDCAN_ActivateNotification
+HAL_GetTick
+HAL_FDCAN_GetErrorCounters
+HAL_FDCAN_GetProtocolStatus
+HAL_FDCAN_GetTxEvent
+HAL_FDCAN_GetRxFifoFillLevel
+HAL_FDCAN_GetRxMessage
+putchar

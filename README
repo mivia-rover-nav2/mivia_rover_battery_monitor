@@ -1,0 +1,87 @@
+This project is under license - see in the github repo for more informations
+
+----------------------- DESCRIPTION -------------------------------
+
+The goal of this project is to measure a LiPo battery's voltage using an STM32 NUCLEO-G474RE, calculate the estimated battery percentage, and send this information via a CAN bus.
+
+It was build using VScode based on a STM32cubeMX configurated file.
+
+--------------------- ADDITIONNAL DISPLAY -------------------------
+
+The project also provides feedback through an optional I2C screen to display the following information:
+1st screen: ADC raw value, calculated voltage, estimated battery percentage, and CAN status.
+2nd screen: CAN debug information.
+The switch between both displays occurs when the CAN status is different from OK or PENDING.
+
+// You can enable the CAN debug information by setting the "ACTIVATE_CAN_DEBUG_SCREEN" variable to 1 in CAN_exchange.h
+// You can disable the CAN debug information by setting the "ACTIVATE_CAN_DEBUG_SCREEN" variable to 0 in CAN_exchange.h
+
+----------------- LIPO BATTERY CONFIGURATION ----------------------
+
+The project supports 1S to 4S LiPo battery configurations.
+To select your battery configuration, change the value of "CURRENT_BATTERY_TYPE".
+The expected definition must be in this format: "BATTERY_TYPE_XS", where X is 1, 2, 3, or 4.
+
+As the STM32 ADC only support 0-3.3V input, the value must be downsized using a voltage divider. The value of this voltage divider must be specified in "battery_profile.h" in the "VOLTAGE_DIVIDER_RATIO   0.21259843f" where "0.21259843f" is the divider value.
+
+------------------- CAN BUS CONFIGURATION -------------------------
+
+The CAN bus is configured with a 125k baud rate and an 87.5% sample point.
+To change the CAN configuration, go to "CAN_exchange.c" and modify these values:
+
+// Nominal bit timing configuration
+hfdcan1.Init.NominalPrescaler     = 85U;
+hfdcan1.Init.NominalTimeSeg1      = 13U;
+hfdcan1.Init.NominalTimeSeg2      = 2U;
+hfdcan1.Init.NominalSyncJumpWidth = 1U;
+
+The method to calculate the bitrate and sample point can be found in the dedicated section of "CAN_exchange.c"..
+To change the configuration of the CAN go to : "CAN_exchange.c" and modify those value :
+
+          // Nominal bit timing configuration
+          hfdcan1.Init.NominalPrescaler     = 85U;
+          hfdcan1.Init.NominalTimeSeg1      = 13U;
+          hfdcan1.Init.NominalTimeSeg2      = 2U;
+          hfdcan1.Init.NominalSyncJumpWidth = 1U;
+
+The way to calculate the bitrate and sample point is in CAN_exchange, at the featured area.
+
+---------------- DBC READING CAN BUS INFORMATIONS ----------------
+
+If you want to read the raw CAN bus informations, you can use Linux "can-utils" library and the DBC file with the can-utils library along with the cantools project available here : https://github.com/cantools/cantools
+
+After installation : 
+// To launch the can connection : (make sure to change "can0" to match your can interface number)
+sudo ip link set can0 up type can bitrate 125000 sample-point 0.875
+
+// To read the sended values :
+candump can0 | cantools decode project_can.dbc
+
+// The output should looks like : 
+ can0  123   [3]  2D 00 00 ::
+Battery_Voltage_Message(
+    voltage_millivolt: 45 mV,
+    percentage: 0 %
+)
+
+------------------- PIN OUT CONFIGURATION ----------------------
+
+input : 
+
+The ADC is on CN9 A0 pin - GPIO_A_0
+
+output :
+
+// To the CAN transceiver
+The TX is on CN10 pin 12 - GPIO_A_12
+The RX in on CN10 pin 14 - GPIO_A_11
+
+// To the I2C 128x64 Oled screen
+The SCL is on CN5 D15 pin - GPIO_B_9
+The SDA is on CN5 D14 pin _ GPIO_B_8
+
+------------------- FLASHING THE PROJECT -----------------------
+
+// In the same directory as the Makefile use command :
+make clean && make && make flash
+// The generated file will be called "voltmeter", you can file it in the build folder.

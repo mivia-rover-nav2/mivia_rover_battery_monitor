@@ -1,0 +1,496 @@
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"battery_profile.c"
+  16              		.text
+  17              		.section	.rodata.batteryPercentTable,"a"
+  18              		.align	2
+  21              	batteryPercentTable:
+  22 0000 00000000 		.word	0
+  23 0004 0000A040 		.word	1084227584
+  24 0008 00002041 		.word	1092616192
+  25 000c 00007041 		.word	1097859072
+  26 0010 0000A041 		.word	1101004800
+  27 0014 0000C841 		.word	1103626240
+  28 0018 0000F041 		.word	1106247680
+  29 001c 00000C42 		.word	1108082688
+  30 0020 00002042 		.word	1109393408
+  31 0024 00003442 		.word	1110704128
+  32 0028 00004842 		.word	1112014848
+  33 002c 00005C42 		.word	1113325568
+  34 0030 00007042 		.word	1114636288
+  35 0034 00008242 		.word	1115815936
+  36 0038 00008C42 		.word	1116471296
+  37 003c 00009642 		.word	1117126656
+  38 0040 0000A042 		.word	1117782016
+  39 0044 0000AA42 		.word	1118437376
+  40 0048 0000B442 		.word	1119092736
+  41 004c 0000BE42 		.word	1119748096
+  42 0050 0000C842 		.word	1120403456
+  43              		.section	.rodata.voltageTable_1S,"a"
+  44              		.align	2
+  47              	voltageTable_1S:
+  48 0000 00004040 		.word	1077936128
+  49 0004 9A995940 		.word	1079613850
+  50 0008 00006040 		.word	1080033280
+  51 000c 66666640 		.word	1080452710
+  52 0010 9A996940 		.word	1080662426
+  53 0014 33336B40 		.word	1080767283
+  54 0018 CDCC6C40 		.word	1080872141
+  55 001c 66666E40 		.word	1080976998
+  56 0020 00007040 		.word	1081081856
+  57 0024 9A997140 		.word	1081186714
+  58 0028 33337340 		.word	1081291571
+  59 002c CDCC7440 		.word	1081396429
+  60 0030 66667640 		.word	1081501286
+  61 0034 00007840 		.word	1081606144
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 2
+
+
+  62 0038 9A997940 		.word	1081711002
+  63 003c CDCC7C40 		.word	1081920717
+  64 0040 00008040 		.word	1082130432
+  65 0044 9A998140 		.word	1082235290
+  66 0048 33338340 		.word	1082340147
+  67 004c CDCC8440 		.word	1082445005
+  68 0050 66668640 		.word	1082549862
+  69              		.section	.rodata.voltageTable_2S,"a"
+  70              		.align	2
+  73              	voltageTable_2S:
+  74 0000 0000C040 		.word	1086324736
+  75 0004 9A99D940 		.word	1088002458
+  76 0008 0000E040 		.word	1088421888
+  77 000c 6666E640 		.word	1088841318
+  78 0010 9A99E940 		.word	1089051034
+  79 0014 3333EB40 		.word	1089155891
+  80 0018 CDCCEC40 		.word	1089260749
+  81 001c 6666EE40 		.word	1089365606
+  82 0020 0000F040 		.word	1089470464
+  83 0024 9A99F140 		.word	1089575322
+  84 0028 3333F340 		.word	1089680179
+  85 002c CDCCF440 		.word	1089785037
+  86 0030 6666F640 		.word	1089889894
+  87 0034 0000F840 		.word	1089994752
+  88 0038 9A99F940 		.word	1090099610
+  89 003c CDCCFC40 		.word	1090309325
+  90 0040 00000041 		.word	1090519040
+  91 0044 9A990141 		.word	1090623898
+  92 0048 33330341 		.word	1090728755
+  93 004c CDCC0441 		.word	1090833613
+  94 0050 66660641 		.word	1090938470
+  95              		.section	.rodata.voltageTable_3S,"a"
+  96              		.align	2
+  99              	voltageTable_3S:
+ 100 0000 00001041 		.word	1091567616
+ 101 0004 33332341 		.word	1092825907
+ 102 0008 00002841 		.word	1093140480
+ 103 000c CDCC2C41 		.word	1093455053
+ 104 0010 33332F41 		.word	1093612339
+ 105 0014 66663041 		.word	1093690982
+ 106 0018 9A993141 		.word	1093769626
+ 107 001c CDCC3241 		.word	1093848269
+ 108 0020 00003441 		.word	1093926912
+ 109 0024 33333541 		.word	1094005555
+ 110 0028 66663641 		.word	1094084198
+ 111 002c 9A993741 		.word	1094162842
+ 112 0030 CDCC3841 		.word	1094241485
+ 113 0034 00003A41 		.word	1094320128
+ 114 0038 33333B41 		.word	1094398771
+ 115 003c 9A993D41 		.word	1094556058
+ 116 0040 00004041 		.word	1094713344
+ 117 0044 66664241 		.word	1094870630
+ 118 0048 CDCC4441 		.word	1095027917
+ 119 004c 33334741 		.word	1095185203
+ 120 0050 9A994941 		.word	1095342490
+ 121              		.section	.rodata.voltageTable_4S,"a"
+ 122              		.align	2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 3
+
+
+ 125              	voltageTable_4S:
+ 126 0000 00004041 		.word	1094713344
+ 127 0004 9A995941 		.word	1096391066
+ 128 0008 00006041 		.word	1096810496
+ 129 000c 66666641 		.word	1097229926
+ 130 0010 9A996941 		.word	1097439642
+ 131 0014 33336B41 		.word	1097544499
+ 132 0018 CDCC6C41 		.word	1097649357
+ 133 001c 66666E41 		.word	1097754214
+ 134 0020 00007041 		.word	1097859072
+ 135 0024 9A997141 		.word	1097963930
+ 136 0028 33337341 		.word	1098068787
+ 137 002c CDCC7441 		.word	1098173645
+ 138 0030 66667641 		.word	1098278502
+ 139 0034 00007841 		.word	1098383360
+ 140 0038 CDCC7C41 		.word	1098697933
+ 141 003c CDCC7C41 		.word	1098697933
+ 142 0040 00008041 		.word	1098907648
+ 143 0044 9A998141 		.word	1099012506
+ 144 0048 33338341 		.word	1099117363
+ 145 004c CDCC8441 		.word	1099222221
+ 146 0050 66668641 		.word	1099327078
+ 147              		.section	.text.Battery_Profile_Get_Divider_Ratio,"ax",%progbits
+ 148              		.align	1
+ 149              		.global	Battery_Profile_Get_Divider_Ratio
+ 150              		.syntax unified
+ 151              		.thumb
+ 152              		.thumb_func
+ 154              	Battery_Profile_Get_Divider_Ratio:
+ 155              		@ args = 0, pretend = 0, frame = 8
+ 156              		@ frame_needed = 1, uses_anonymous_args = 0
+ 157              		@ link register save eliminated.
+ 158 0000 80B4     		push	{r7}
+ 159 0002 83B0     		sub	sp, sp, #12
+ 160 0004 00AF     		add	r7, sp, #0
+ 161 0006 0346     		mov	r3, r0
+ 162 0008 FB71     		strb	r3, [r7, #7]
+ 163 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 164 000c 032B     		cmp	r3, #3
+ 165 000e 13D8     		bhi	.L2
+ 166 0010 01A2     		adr	r2, .L4
+ 167 0012 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 168 0016 00BF     		.p2align 2
+ 169              	.L4:
+ 170 0018 29000000 		.word	.L7+1
+ 171 001c 2D000000 		.word	.L6+1
+ 172 0020 31000000 		.word	.L5+1
+ 173 0024 35000000 		.word	.L3+1
+ 174              		.p2align 1
+ 175              	.L7:
+ 176 0028 094B     		ldr	r3, .L9
+ 177 002a 07E0     		b	.L8
+ 178              	.L6:
+ 179 002c 094B     		ldr	r3, .L9+4
+ 180 002e 05E0     		b	.L8
+ 181              	.L5:
+ 182 0030 094B     		ldr	r3, .L9+8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 4
+
+
+ 183 0032 03E0     		b	.L8
+ 184              	.L3:
+ 185 0034 094B     		ldr	r3, .L9+12
+ 186 0036 01E0     		b	.L8
+ 187              	.L2:
+ 188 0038 4FF07E53 		mov	r3, #1065353216
+ 189              	.L8:
+ 190 003c 07EE903A 		vmov	s15, r3
+ 191 0040 B0EE670A 		vmov.f32	s0, s15
+ 192 0044 0C37     		adds	r7, r7, #12
+ 193 0046 BD46     		mov	sp, r7
+ 194              		@ sp needed
+ 195 0048 5DF8047B 		ldr	r7, [sp], #4
+ 196 004c 7047     		bx	lr
+ 197              	.L10:
+ 198 004e 00BF     		.align	2
+ 199              	.L9:
+ 200 0050 9A99193F 		.word	1058642330
+ 201 0054 42F5993E 		.word	1050277186
+ 202 0058 67B3593E 		.word	1046066023
+ 203 005c DFA7383E 		.word	1043900383
+ 205              		.section	.text.Battery_Profile_Get_Info,"ax",%progbits
+ 206              		.align	1
+ 207              		.global	Battery_Profile_Get_Info
+ 208              		.syntax unified
+ 209              		.thumb
+ 210              		.thumb_func
+ 212              	Battery_Profile_Get_Info:
+ 213              		@ args = 0, pretend = 0, frame = 48
+ 214              		@ frame_needed = 1, uses_anonymous_args = 0
+ 215              		@ link register save eliminated.
+ 216 0000 80B4     		push	{r7}
+ 217 0002 8DB0     		sub	sp, sp, #52
+ 218 0004 00AF     		add	r7, sp, #0
+ 219 0006 F860     		str	r0, [r7, #12]
+ 220 0008 87ED020A 		vstr.32	s0, [r7, #8]
+ 221 000c 0B46     		mov	r3, r1
+ 222 000e FB71     		strb	r3, [r7, #7]
+ 223 0010 4FF00003 		mov	r3, #0
+ 224 0014 3B61     		str	r3, [r7, #16]	@ float
+ 225 0016 0223     		movs	r3, #2
+ 226 0018 3B75     		strb	r3, [r7, #20]
+ 227 001a 844B     		ldr	r3, .L44
+ 228 001c FB62     		str	r3, [r7, #44]
+ 229 001e 844B     		ldr	r3, .L44+4
+ 230 0020 BB62     		str	r3, [r7, #40]	@ float
+ 231 0022 844B     		ldr	r3, .L44+8
+ 232 0024 7B62     		str	r3, [r7, #36]	@ float
+ 233 0026 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 234 0028 032B     		cmp	r3, #3
+ 235 002a 27D8     		bhi	.L12
+ 236 002c 01A2     		adr	r2, .L14
+ 237 002e 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 238 0032 00BF     		.p2align 2
+ 239              	.L14:
+ 240 0034 45000000 		.word	.L17+1
+ 241 0038 53000000 		.word	.L16+1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 5
+
+
+ 242 003c 61000000 		.word	.L15+1
+ 243 0040 6F000000 		.word	.L13+1
+ 244              		.p2align 1
+ 245              	.L17:
+ 246 0044 7C4B     		ldr	r3, .L44+12
+ 247 0046 FB62     		str	r3, [r7, #44]
+ 248 0048 7C4B     		ldr	r3, .L44+16
+ 249 004a BB62     		str	r3, [r7, #40]	@ float
+ 250 004c 7C4B     		ldr	r3, .L44+20
+ 251 004e 7B62     		str	r3, [r7, #36]	@ float
+ 252 0050 14E0     		b	.L12
+ 253              	.L16:
+ 254 0052 7C4B     		ldr	r3, .L44+24
+ 255 0054 FB62     		str	r3, [r7, #44]
+ 256 0056 7C4B     		ldr	r3, .L44+28
+ 257 0058 BB62     		str	r3, [r7, #40]	@ float
+ 258 005a 7C4B     		ldr	r3, .L44+32
+ 259 005c 7B62     		str	r3, [r7, #36]	@ float
+ 260 005e 0DE0     		b	.L12
+ 261              	.L15:
+ 262 0060 724B     		ldr	r3, .L44
+ 263 0062 FB62     		str	r3, [r7, #44]
+ 264 0064 7A4B     		ldr	r3, .L44+36
+ 265 0066 BB62     		str	r3, [r7, #40]	@ float
+ 266 0068 714B     		ldr	r3, .L44+4
+ 267 006a 7B62     		str	r3, [r7, #36]	@ float
+ 268 006c 06E0     		b	.L12
+ 269              	.L13:
+ 270 006e 794B     		ldr	r3, .L44+40
+ 271 0070 FB62     		str	r3, [r7, #44]
+ 272 0072 794B     		ldr	r3, .L44+44
+ 273 0074 BB62     		str	r3, [r7, #40]	@ float
+ 274 0076 794B     		ldr	r3, .L44+48
+ 275 0078 7B62     		str	r3, [r7, #36]	@ float
+ 276 007a 00BF     		nop
+ 277              	.L12:
+ 278 007c 97ED027A 		vldr.32	s14, [r7, #8]
+ 279 0080 D7ED0A7A 		vldr.32	s15, [r7, #40]
+ 280 0084 B4EEE77A 		vcmpe.f32	s14, s15
+ 281 0088 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 282 008c 0DD5     		bpl	.L39
+ 283 008e 4FF00003 		mov	r3, #0
+ 284 0092 3B61     		str	r3, [r7, #16]	@ float
+ 285 0094 0023     		movs	r3, #0
+ 286 0096 3B75     		strb	r3, [r7, #20]
+ 287 0098 FB68     		ldr	r3, [r7, #12]
+ 288 009a 1A46     		mov	r2, r3
+ 289 009c 07F11003 		add	r3, r7, #16
+ 290 00a0 93E80300 		ldm	r3, {r0, r1}
+ 291 00a4 82E80300 		stm	r2, {r0, r1}
+ 292 00a8 BAE0     		b	.L32
+ 293              	.L39:
+ 294 00aa 97ED027A 		vldr.32	s14, [r7, #8]
+ 295 00ae D7ED097A 		vldr.32	s15, [r7, #36]
+ 296 00b2 B4EEE77A 		vcmpe.f32	s14, s15
+ 297 00b6 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 298 00ba 0DD5     		bpl	.L40
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 6
+
+
+ 299 00bc 4FF00003 		mov	r3, #0
+ 300 00c0 3B61     		str	r3, [r7, #16]	@ float
+ 301 00c2 0123     		movs	r3, #1
+ 302 00c4 3B75     		strb	r3, [r7, #20]
+ 303 00c6 FB68     		ldr	r3, [r7, #12]
+ 304 00c8 1A46     		mov	r2, r3
+ 305 00ca 07F11003 		add	r3, r7, #16
+ 306 00ce 93E80300 		ldm	r3, {r0, r1}
+ 307 00d2 82E80300 		stm	r2, {r0, r1}
+ 308 00d6 A3E0     		b	.L32
+ 309              	.L40:
+ 310 00d8 FB6A     		ldr	r3, [r7, #44]
+ 311 00da 5033     		adds	r3, r3, #80
+ 312 00dc D3ED007A 		vldr.32	s15, [r3]
+ 313 00e0 97ED027A 		vldr.32	s14, [r7, #8]
+ 314 00e4 B4EEE77A 		vcmpe.f32	s14, s15
+ 315 00e8 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 316 00ec 0CDB     		blt	.L41
+ 317 00ee 5C4B     		ldr	r3, .L44+52
+ 318 00f0 3B61     		str	r3, [r7, #16]	@ float
+ 319 00f2 0223     		movs	r3, #2
+ 320 00f4 3B75     		strb	r3, [r7, #20]
+ 321 00f6 FB68     		ldr	r3, [r7, #12]
+ 322 00f8 1A46     		mov	r2, r3
+ 323 00fa 07F11003 		add	r3, r7, #16
+ 324 00fe 93E80300 		ldm	r3, {r0, r1}
+ 325 0102 82E80300 		stm	r2, {r0, r1}
+ 326 0106 8BE0     		b	.L32
+ 327              	.L41:
+ 328 0108 0023     		movs	r3, #0
+ 329 010a 3B62     		str	r3, [r7, #32]
+ 330 010c 7CE0     		b	.L25
+ 331              	.L31:
+ 332 010e 3B6A     		ldr	r3, [r7, #32]
+ 333 0110 9B00     		lsls	r3, r3, #2
+ 334 0112 FA6A     		ldr	r2, [r7, #44]
+ 335 0114 1344     		add	r3, r3, r2
+ 336 0116 D3ED007A 		vldr.32	s15, [r3]
+ 337 011a 97ED027A 		vldr.32	s14, [r7, #8]
+ 338 011e B4EEE77A 		vcmpe.f32	s14, s15
+ 339 0122 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 340 0126 6CDB     		blt	.L26
+ 341 0128 3B6A     		ldr	r3, [r7, #32]
+ 342 012a 0133     		adds	r3, r3, #1
+ 343 012c 9B00     		lsls	r3, r3, #2
+ 344 012e FA6A     		ldr	r2, [r7, #44]
+ 345 0130 1344     		add	r3, r3, r2
+ 346 0132 D3ED007A 		vldr.32	s15, [r3]
+ 347 0136 97ED027A 		vldr.32	s14, [r7, #8]
+ 348 013a B4EEE77A 		vcmpe.f32	s14, s15
+ 349 013e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 350 0142 5ED8     		bhi	.L26
+ 351 0144 3B6A     		ldr	r3, [r7, #32]
+ 352 0146 0133     		adds	r3, r3, #1
+ 353 0148 9B00     		lsls	r3, r3, #2
+ 354 014a FA6A     		ldr	r2, [r7, #44]
+ 355 014c 1344     		add	r3, r3, r2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 7
+
+
+ 356 014e 93ED007A 		vldr.32	s14, [r3]
+ 357 0152 3B6A     		ldr	r3, [r7, #32]
+ 358 0154 9B00     		lsls	r3, r3, #2
+ 359 0156 FA6A     		ldr	r2, [r7, #44]
+ 360 0158 1344     		add	r3, r3, r2
+ 361 015a D3ED007A 		vldr.32	s15, [r3]
+ 362 015e 77EE677A 		vsub.f32	s15, s14, s15
+ 363 0162 C7ED077A 		vstr.32	s15, [r7, #28]
+ 364 0166 D7ED077A 		vldr.32	s15, [r7, #28]
+ 365 016a 9FED3E7A 		vldr.32	s14, .L44+56
+ 366 016e F4EEC77A 		vcmpe.f32	s15, s14
+ 367 0172 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 368 0176 0ED8     		bhi	.L42
+ 369 0178 3B4A     		ldr	r2, .L44+60
+ 370 017a 3B6A     		ldr	r3, [r7, #32]
+ 371 017c 9B00     		lsls	r3, r3, #2
+ 372 017e 1344     		add	r3, r3, r2
+ 373 0180 1B68     		ldr	r3, [r3]	@ float
+ 374 0182 3B61     		str	r3, [r7, #16]	@ float
+ 375 0184 FB68     		ldr	r3, [r7, #12]
+ 376 0186 1A46     		mov	r2, r3
+ 377 0188 07F11003 		add	r3, r7, #16
+ 378 018c 93E80300 		ldm	r3, {r0, r1}
+ 379 0190 82E80300 		stm	r2, {r0, r1}
+ 380 0194 44E0     		b	.L32
+ 381              	.L42:
+ 382 0196 3B6A     		ldr	r3, [r7, #32]
+ 383 0198 0133     		adds	r3, r3, #1
+ 384 019a 334A     		ldr	r2, .L44+60
+ 385 019c 9B00     		lsls	r3, r3, #2
+ 386 019e 1344     		add	r3, r3, r2
+ 387 01a0 93ED007A 		vldr.32	s14, [r3]
+ 388 01a4 304A     		ldr	r2, .L44+60
+ 389 01a6 3B6A     		ldr	r3, [r7, #32]
+ 390 01a8 9B00     		lsls	r3, r3, #2
+ 391 01aa 1344     		add	r3, r3, r2
+ 392 01ac D3ED007A 		vldr.32	s15, [r3]
+ 393 01b0 77EE676A 		vsub.f32	s13, s14, s15
+ 394 01b4 97ED077A 		vldr.32	s14, [r7, #28]
+ 395 01b8 C6EE877A 		vdiv.f32	s15, s13, s14
+ 396 01bc C7ED067A 		vstr.32	s15, [r7, #24]
+ 397 01c0 294A     		ldr	r2, .L44+60
+ 398 01c2 3B6A     		ldr	r3, [r7, #32]
+ 399 01c4 9B00     		lsls	r3, r3, #2
+ 400 01c6 1344     		add	r3, r3, r2
+ 401 01c8 93ED007A 		vldr.32	s14, [r3]
+ 402 01cc 3B6A     		ldr	r3, [r7, #32]
+ 403 01ce 9B00     		lsls	r3, r3, #2
+ 404 01d0 FA6A     		ldr	r2, [r7, #44]
+ 405 01d2 1344     		add	r3, r3, r2
+ 406 01d4 D3ED007A 		vldr.32	s15, [r3]
+ 407 01d8 D7ED026A 		vldr.32	s13, [r7, #8]
+ 408 01dc 76EEE76A 		vsub.f32	s13, s13, s15
+ 409 01e0 D7ED067A 		vldr.32	s15, [r7, #24]
+ 410 01e4 66EEA77A 		vmul.f32	s15, s13, s15
+ 411 01e8 77EE277A 		vadd.f32	s15, s14, s15
+ 412 01ec C7ED047A 		vstr.32	s15, [r7, #16]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 8
+
+
+ 413 01f0 FB68     		ldr	r3, [r7, #12]
+ 414 01f2 1A46     		mov	r2, r3
+ 415 01f4 07F11003 		add	r3, r7, #16
+ 416 01f8 93E80300 		ldm	r3, {r0, r1}
+ 417 01fc 82E80300 		stm	r2, {r0, r1}
+ 418 0200 0EE0     		b	.L32
+ 419              	.L26:
+ 420 0202 3B6A     		ldr	r3, [r7, #32]
+ 421 0204 0133     		adds	r3, r3, #1
+ 422 0206 3B62     		str	r3, [r7, #32]
+ 423              	.L25:
+ 424 0208 3B6A     		ldr	r3, [r7, #32]
+ 425 020a 132B     		cmp	r3, #19
+ 426 020c 7FF67FAF 		bls	.L31
+ 427 0210 FB68     		ldr	r3, [r7, #12]
+ 428 0212 1A46     		mov	r2, r3
+ 429 0214 07F11003 		add	r3, r7, #16
+ 430 0218 93E80300 		ldm	r3, {r0, r1}
+ 431 021c 82E80300 		stm	r2, {r0, r1}
+ 432              	.L32:
+ 433 0220 F868     		ldr	r0, [r7, #12]
+ 434 0222 3437     		adds	r7, r7, #52
+ 435 0224 BD46     		mov	sp, r7
+ 436              		@ sp needed
+ 437 0226 5DF8047B 		ldr	r7, [sp], #4
+ 438 022a 7047     		bx	lr
+ 439              	.L45:
+ 440              		.align	2
+ 441              	.L44:
+ 442 022c 00000000 		.word	voltageTable_3S
+ 443 0230 00001041 		.word	1091567616
+ 444 0234 00003041 		.word	1093664768
+ 445 0238 00000000 		.word	voltageTable_1S
+ 446 023c 00002040 		.word	1075838976
+ 447 0240 00004040 		.word	1077936128
+ 448 0244 00000000 		.word	voltageTable_2S
+ 449 0248 0000A040 		.word	1084227584
+ 450 024c 0000C040 		.word	1086324736
+ 451 0250 0000F040 		.word	1089470464
+ 452 0254 00000000 		.word	voltageTable_4S
+ 453 0258 00002041 		.word	1092616192
+ 454 025c 00004041 		.word	1094713344
+ 455 0260 0000C842 		.word	1120403456
+ 456 0264 17B7D138 		.word	953267991
+ 457 0268 00000000 		.word	batteryPercentTable
+ 459              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 battery_profile.c
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:18     .rodata.batteryPercentTable:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:21     .rodata.batteryPercentTable:00000000 batteryPercentTable
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:44     .rodata.voltageTable_1S:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:47     .rodata.voltageTable_1S:00000000 voltageTable_1S
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:70     .rodata.voltageTable_2S:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:73     .rodata.voltageTable_2S:00000000 voltageTable_2S
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:96     .rodata.voltageTable_3S:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:99     .rodata.voltageTable_3S:00000000 voltageTable_3S
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:122    .rodata.voltageTable_4S:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:125    .rodata.voltageTable_4S:00000000 voltageTable_4S
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:148    .text.Battery_Profile_Get_Divider_Ratio:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:154    .text.Battery_Profile_Get_Divider_Ratio:00000000 Battery_Profile_Get_Divider_Ratio
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:170    .text.Battery_Profile_Get_Divider_Ratio:00000018 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:174    .text.Battery_Profile_Get_Divider_Ratio:00000028 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:200    .text.Battery_Profile_Get_Divider_Ratio:00000050 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:206    .text.Battery_Profile_Get_Info:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:212    .text.Battery_Profile_Get_Info:00000000 Battery_Profile_Get_Info
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:240    .text.Battery_Profile_Get_Info:00000034 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:244    .text.Battery_Profile_Get_Info:00000044 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:442    .text.Battery_Profile_Get_Info:0000022c $d
+
+NO UNDEFINED SYMBOLS

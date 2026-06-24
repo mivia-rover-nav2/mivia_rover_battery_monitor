@@ -1,0 +1,107 @@
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc9xJMDp.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"sysmem.c"
+  16              		.text
+  17              		.section	.bss.__sbrk_heap_end,"aw",%nobits
+  18              		.align	2
+  21              	__sbrk_heap_end:
+  22 0000 00000000 		.space	4
+  23              		.section	.text._sbrk,"ax",%progbits
+  24              		.align	1
+  25              		.global	_sbrk
+  26              		.syntax unified
+  27              		.thumb
+  28              		.thumb_func
+  30              	_sbrk:
+  31              		@ args = 0, pretend = 0, frame = 24
+  32              		@ frame_needed = 1, uses_anonymous_args = 0
+  33 0000 80B5     		push	{r7, lr}
+  34 0002 86B0     		sub	sp, sp, #24
+  35 0004 00AF     		add	r7, sp, #0
+  36 0006 7860     		str	r0, [r7, #4]
+  37 0008 144A     		ldr	r2, .L5
+  38 000a 154B     		ldr	r3, .L5+4
+  39 000c D31A     		subs	r3, r2, r3
+  40 000e 7B61     		str	r3, [r7, #20]
+  41 0010 7B69     		ldr	r3, [r7, #20]
+  42 0012 3B61     		str	r3, [r7, #16]
+  43 0014 134B     		ldr	r3, .L5+8
+  44 0016 1B68     		ldr	r3, [r3]
+  45 0018 002B     		cmp	r3, #0
+  46 001a 02D1     		bne	.L2
+  47 001c 114B     		ldr	r3, .L5+8
+  48 001e 124A     		ldr	r2, .L5+12
+  49 0020 1A60     		str	r2, [r3]
+  50              	.L2:
+  51 0022 104B     		ldr	r3, .L5+8
+  52 0024 1A68     		ldr	r2, [r3]
+  53 0026 7B68     		ldr	r3, [r7, #4]
+  54 0028 1344     		add	r3, r3, r2
+  55 002a 3A69     		ldr	r2, [r7, #16]
+  56 002c 9A42     		cmp	r2, r3
+  57 002e 07D2     		bcs	.L3
+  58 0030 FFF7FEFF 		bl	__errno
+  59 0034 0346     		mov	r3, r0
+  60 0036 0C22     		movs	r2, #12
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc9xJMDp.s 			page 2
+
+
+  61 0038 1A60     		str	r2, [r3]
+  62 003a 4FF0FF33 		mov	r3, #-1
+  63 003e 09E0     		b	.L4
+  64              	.L3:
+  65 0040 084B     		ldr	r3, .L5+8
+  66 0042 1B68     		ldr	r3, [r3]
+  67 0044 FB60     		str	r3, [r7, #12]
+  68 0046 074B     		ldr	r3, .L5+8
+  69 0048 1A68     		ldr	r2, [r3]
+  70 004a 7B68     		ldr	r3, [r7, #4]
+  71 004c 1344     		add	r3, r3, r2
+  72 004e 054A     		ldr	r2, .L5+8
+  73 0050 1360     		str	r3, [r2]
+  74 0052 FB68     		ldr	r3, [r7, #12]
+  75              	.L4:
+  76 0054 1846     		mov	r0, r3
+  77 0056 1837     		adds	r7, r7, #24
+  78 0058 BD46     		mov	sp, r7
+  79              		@ sp needed
+  80 005a 80BD     		pop	{r7, pc}
+  81              	.L6:
+  82              		.align	2
+  83              	.L5:
+  84 005c 00000000 		.word	_estack
+  85 0060 00000000 		.word	_Min_Stack_Size
+  86 0064 00000000 		.word	__sbrk_heap_end
+  87 0068 00000000 		.word	_end
+  89              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc9xJMDp.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 sysmem.c
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc9xJMDp.s:18     .bss.__sbrk_heap_end:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc9xJMDp.s:21     .bss.__sbrk_heap_end:00000000 __sbrk_heap_end
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc9xJMDp.s:24     .text._sbrk:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc9xJMDp.s:30     .text._sbrk:00000000 _sbrk
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc9xJMDp.s:84     .text._sbrk:0000005c $d
+
+UNDEFINED SYMBOLS
+__errno
+_estack
+_Min_Stack_Size
+_end

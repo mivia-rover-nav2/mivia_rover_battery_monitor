@@ -1,0 +1,870 @@
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32g4xx_hal_exti.c"
+  16              		.text
+  17              		.section	.text.HAL_EXTI_SetConfigLine,"ax",%progbits
+  18              		.align	1
+  19              		.global	HAL_EXTI_SetConfigLine
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	HAL_EXTI_SetConfigLine:
+  25              		@ args = 0, pretend = 0, frame = 32
+  26              		@ frame_needed = 1, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 80B4     		push	{r7}
+  29 0002 89B0     		sub	sp, sp, #36
+  30 0004 00AF     		add	r7, sp, #0
+  31 0006 7860     		str	r0, [r7, #4]
+  32 0008 3960     		str	r1, [r7]
+  33 000a 7B68     		ldr	r3, [r7, #4]
+  34 000c 002B     		cmp	r3, #0
+  35 000e 02D0     		beq	.L2
+  36 0010 3B68     		ldr	r3, [r7]
+  37 0012 002B     		cmp	r3, #0
+  38 0014 01D1     		bne	.L3
+  39              	.L2:
+  40 0016 0123     		movs	r3, #1
+  41 0018 B3E0     		b	.L4
+  42              	.L3:
+  43 001a 3B68     		ldr	r3, [r7]
+  44 001c 1A68     		ldr	r2, [r3]
+  45 001e 7B68     		ldr	r3, [r7, #4]
+  46 0020 1A60     		str	r2, [r3]
+  47 0022 3B68     		ldr	r3, [r7]
+  48 0024 1B68     		ldr	r3, [r3]
+  49 0026 1B0C     		lsrs	r3, r3, #16
+  50 0028 03F00103 		and	r3, r3, #1
+  51 002c BB61     		str	r3, [r7, #24]
+  52 002e 3B68     		ldr	r3, [r7]
+  53 0030 1B68     		ldr	r3, [r3]
+  54 0032 03F01F03 		and	r3, r3, #31
+  55 0036 7B61     		str	r3, [r7, #20]
+  56 0038 0122     		movs	r2, #1
+  57 003a 7B69     		ldr	r3, [r7, #20]
+  58 003c 02FA03F3 		lsl	r3, r2, r3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s 			page 2
+
+
+  59 0040 3B61     		str	r3, [r7, #16]
+  60 0042 3B68     		ldr	r3, [r7]
+  61 0044 1B68     		ldr	r3, [r3]
+  62 0046 03F00073 		and	r3, r3, #33554432
+  63 004a 002B     		cmp	r3, #0
+  64 004c 60D0     		beq	.L5
+  65 004e BB69     		ldr	r3, [r7, #24]
+  66 0050 5A01     		lsls	r2, r3, #5
+  67 0052 4F4B     		ldr	r3, .L14
+  68 0054 1344     		add	r3, r3, r2
+  69 0056 FB60     		str	r3, [r7, #12]
+  70 0058 FB68     		ldr	r3, [r7, #12]
+  71 005a 1B68     		ldr	r3, [r3]
+  72 005c FB61     		str	r3, [r7, #28]
+  73 005e 3B68     		ldr	r3, [r7]
+  74 0060 9B68     		ldr	r3, [r3, #8]
+  75 0062 03F00103 		and	r3, r3, #1
+  76 0066 002B     		cmp	r3, #0
+  77 0068 04D0     		beq	.L6
+  78 006a FA69     		ldr	r2, [r7, #28]
+  79 006c 3B69     		ldr	r3, [r7, #16]
+  80 006e 1343     		orrs	r3, r3, r2
+  81 0070 FB61     		str	r3, [r7, #28]
+  82 0072 04E0     		b	.L7
+  83              	.L6:
+  84 0074 3B69     		ldr	r3, [r7, #16]
+  85 0076 DB43     		mvns	r3, r3
+  86 0078 FA69     		ldr	r2, [r7, #28]
+  87 007a 1340     		ands	r3, r3, r2
+  88 007c FB61     		str	r3, [r7, #28]
+  89              	.L7:
+  90 007e FB68     		ldr	r3, [r7, #12]
+  91 0080 FA69     		ldr	r2, [r7, #28]
+  92 0082 1A60     		str	r2, [r3]
+  93 0084 BB69     		ldr	r3, [r7, #24]
+  94 0086 5A01     		lsls	r2, r3, #5
+  95 0088 424B     		ldr	r3, .L14+4
+  96 008a 1344     		add	r3, r3, r2
+  97 008c FB60     		str	r3, [r7, #12]
+  98 008e FB68     		ldr	r3, [r7, #12]
+  99 0090 1B68     		ldr	r3, [r3]
+ 100 0092 FB61     		str	r3, [r7, #28]
+ 101 0094 3B68     		ldr	r3, [r7]
+ 102 0096 9B68     		ldr	r3, [r3, #8]
+ 103 0098 03F00203 		and	r3, r3, #2
+ 104 009c 002B     		cmp	r3, #0
+ 105 009e 04D0     		beq	.L8
+ 106 00a0 FA69     		ldr	r2, [r7, #28]
+ 107 00a2 3B69     		ldr	r3, [r7, #16]
+ 108 00a4 1343     		orrs	r3, r3, r2
+ 109 00a6 FB61     		str	r3, [r7, #28]
+ 110 00a8 04E0     		b	.L9
+ 111              	.L8:
+ 112 00aa 3B69     		ldr	r3, [r7, #16]
+ 113 00ac DB43     		mvns	r3, r3
+ 114 00ae FA69     		ldr	r2, [r7, #28]
+ 115 00b0 1340     		ands	r3, r3, r2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s 			page 3
+
+
+ 116 00b2 FB61     		str	r3, [r7, #28]
+ 117              	.L9:
+ 118 00b4 FB68     		ldr	r3, [r7, #12]
+ 119 00b6 FA69     		ldr	r2, [r7, #28]
+ 120 00b8 1A60     		str	r2, [r3]
+ 121 00ba 3B68     		ldr	r3, [r7]
+ 122 00bc 1B68     		ldr	r3, [r3]
+ 123 00be 03F0C063 		and	r3, r3, #100663296
+ 124 00c2 B3F1C06F 		cmp	r3, #100663296
+ 125 00c6 23D1     		bne	.L5
+ 126 00c8 334A     		ldr	r2, .L14+8
+ 127 00ca 7B69     		ldr	r3, [r7, #20]
+ 128 00cc 9B08     		lsrs	r3, r3, #2
+ 129 00ce 0233     		adds	r3, r3, #2
+ 130 00d0 52F82330 		ldr	r3, [r2, r3, lsl #2]
+ 131 00d4 FB61     		str	r3, [r7, #28]
+ 132 00d6 7B69     		ldr	r3, [r7, #20]
+ 133 00d8 03F00303 		and	r3, r3, #3
+ 134 00dc 9B00     		lsls	r3, r3, #2
+ 135 00de 0722     		movs	r2, #7
+ 136 00e0 02FA03F3 		lsl	r3, r2, r3
+ 137 00e4 DB43     		mvns	r3, r3
+ 138 00e6 FA69     		ldr	r2, [r7, #28]
+ 139 00e8 1340     		ands	r3, r3, r2
+ 140 00ea FB61     		str	r3, [r7, #28]
+ 141 00ec 3B68     		ldr	r3, [r7]
+ 142 00ee DA68     		ldr	r2, [r3, #12]
+ 143 00f0 7B69     		ldr	r3, [r7, #20]
+ 144 00f2 03F00303 		and	r3, r3, #3
+ 145 00f6 9B00     		lsls	r3, r3, #2
+ 146 00f8 02FA03F3 		lsl	r3, r2, r3
+ 147 00fc FA69     		ldr	r2, [r7, #28]
+ 148 00fe 1343     		orrs	r3, r3, r2
+ 149 0100 FB61     		str	r3, [r7, #28]
+ 150 0102 2549     		ldr	r1, .L14+8
+ 151 0104 7B69     		ldr	r3, [r7, #20]
+ 152 0106 9B08     		lsrs	r3, r3, #2
+ 153 0108 0233     		adds	r3, r3, #2
+ 154 010a FA69     		ldr	r2, [r7, #28]
+ 155 010c 41F82320 		str	r2, [r1, r3, lsl #2]
+ 156              	.L5:
+ 157 0110 BB69     		ldr	r3, [r7, #24]
+ 158 0112 5B01     		lsls	r3, r3, #5
+ 159 0114 03F18043 		add	r3, r3, #1073741824
+ 160 0118 03F58233 		add	r3, r3, #66560
+ 161 011c FB60     		str	r3, [r7, #12]
+ 162 011e FB68     		ldr	r3, [r7, #12]
+ 163 0120 1B68     		ldr	r3, [r3]
+ 164 0122 FB61     		str	r3, [r7, #28]
+ 165 0124 3B68     		ldr	r3, [r7]
+ 166 0126 5B68     		ldr	r3, [r3, #4]
+ 167 0128 03F00103 		and	r3, r3, #1
+ 168 012c 002B     		cmp	r3, #0
+ 169 012e 04D0     		beq	.L10
+ 170 0130 FA69     		ldr	r2, [r7, #28]
+ 171 0132 3B69     		ldr	r3, [r7, #16]
+ 172 0134 1343     		orrs	r3, r3, r2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s 			page 4
+
+
+ 173 0136 FB61     		str	r3, [r7, #28]
+ 174 0138 04E0     		b	.L11
+ 175              	.L10:
+ 176 013a 3B69     		ldr	r3, [r7, #16]
+ 177 013c DB43     		mvns	r3, r3
+ 178 013e FA69     		ldr	r2, [r7, #28]
+ 179 0140 1340     		ands	r3, r3, r2
+ 180 0142 FB61     		str	r3, [r7, #28]
+ 181              	.L11:
+ 182 0144 FB68     		ldr	r3, [r7, #12]
+ 183 0146 FA69     		ldr	r2, [r7, #28]
+ 184 0148 1A60     		str	r2, [r3]
+ 185 014a BB69     		ldr	r3, [r7, #24]
+ 186 014c 5A01     		lsls	r2, r3, #5
+ 187 014e 134B     		ldr	r3, .L14+12
+ 188 0150 1344     		add	r3, r3, r2
+ 189 0152 FB60     		str	r3, [r7, #12]
+ 190 0154 FB68     		ldr	r3, [r7, #12]
+ 191 0156 1B68     		ldr	r3, [r3]
+ 192 0158 FB61     		str	r3, [r7, #28]
+ 193 015a 3B68     		ldr	r3, [r7]
+ 194 015c 5B68     		ldr	r3, [r3, #4]
+ 195 015e 03F00203 		and	r3, r3, #2
+ 196 0162 002B     		cmp	r3, #0
+ 197 0164 04D0     		beq	.L12
+ 198 0166 FA69     		ldr	r2, [r7, #28]
+ 199 0168 3B69     		ldr	r3, [r7, #16]
+ 200 016a 1343     		orrs	r3, r3, r2
+ 201 016c FB61     		str	r3, [r7, #28]
+ 202 016e 04E0     		b	.L13
+ 203              	.L12:
+ 204 0170 3B69     		ldr	r3, [r7, #16]
+ 205 0172 DB43     		mvns	r3, r3
+ 206 0174 FA69     		ldr	r2, [r7, #28]
+ 207 0176 1340     		ands	r3, r3, r2
+ 208 0178 FB61     		str	r3, [r7, #28]
+ 209              	.L13:
+ 210 017a FB68     		ldr	r3, [r7, #12]
+ 211 017c FA69     		ldr	r2, [r7, #28]
+ 212 017e 1A60     		str	r2, [r3]
+ 213 0180 0023     		movs	r3, #0
+ 214              	.L4:
+ 215 0182 1846     		mov	r0, r3
+ 216 0184 2437     		adds	r7, r7, #36
+ 217 0186 BD46     		mov	sp, r7
+ 218              		@ sp needed
+ 219 0188 5DF8047B 		ldr	r7, [sp], #4
+ 220 018c 7047     		bx	lr
+ 221              	.L15:
+ 222 018e 00BF     		.align	2
+ 223              	.L14:
+ 224 0190 08040140 		.word	1073808392
+ 225 0194 0C040140 		.word	1073808396
+ 226 0198 00000140 		.word	1073807360
+ 227 019c 04040140 		.word	1073808388
+ 229              		.section	.text.HAL_EXTI_GetConfigLine,"ax",%progbits
+ 230              		.align	1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s 			page 5
+
+
+ 231              		.global	HAL_EXTI_GetConfigLine
+ 232              		.syntax unified
+ 233              		.thumb
+ 234              		.thumb_func
+ 236              	HAL_EXTI_GetConfigLine:
+ 237              		@ args = 0, pretend = 0, frame = 32
+ 238              		@ frame_needed = 1, uses_anonymous_args = 0
+ 239              		@ link register save eliminated.
+ 240 0000 80B4     		push	{r7}
+ 241 0002 89B0     		sub	sp, sp, #36
+ 242 0004 00AF     		add	r7, sp, #0
+ 243 0006 7860     		str	r0, [r7, #4]
+ 244 0008 3960     		str	r1, [r7]
+ 245 000a 7B68     		ldr	r3, [r7, #4]
+ 246 000c 002B     		cmp	r3, #0
+ 247 000e 02D0     		beq	.L17
+ 248 0010 3B68     		ldr	r3, [r7]
+ 249 0012 002B     		cmp	r3, #0
+ 250 0014 01D1     		bne	.L18
+ 251              	.L17:
+ 252 0016 0123     		movs	r3, #1
+ 253 0018 85E0     		b	.L19
+ 254              	.L18:
+ 255 001a 7B68     		ldr	r3, [r7, #4]
+ 256 001c 1A68     		ldr	r2, [r3]
+ 257 001e 3B68     		ldr	r3, [r7]
+ 258 0020 1A60     		str	r2, [r3]
+ 259 0022 3B68     		ldr	r3, [r7]
+ 260 0024 1B68     		ldr	r3, [r3]
+ 261 0026 1B0C     		lsrs	r3, r3, #16
+ 262 0028 03F00103 		and	r3, r3, #1
+ 263 002c FB61     		str	r3, [r7, #28]
+ 264 002e 3B68     		ldr	r3, [r7]
+ 265 0030 1B68     		ldr	r3, [r3]
+ 266 0032 03F01F03 		and	r3, r3, #31
+ 267 0036 BB61     		str	r3, [r7, #24]
+ 268 0038 0122     		movs	r2, #1
+ 269 003a BB69     		ldr	r3, [r7, #24]
+ 270 003c 02FA03F3 		lsl	r3, r2, r3
+ 271 0040 7B61     		str	r3, [r7, #20]
+ 272 0042 FB69     		ldr	r3, [r7, #28]
+ 273 0044 5B01     		lsls	r3, r3, #5
+ 274 0046 03F18043 		add	r3, r3, #1073741824
+ 275 004a 03F58233 		add	r3, r3, #66560
+ 276 004e 3B61     		str	r3, [r7, #16]
+ 277 0050 3B69     		ldr	r3, [r7, #16]
+ 278 0052 1B68     		ldr	r3, [r3]
+ 279 0054 FB60     		str	r3, [r7, #12]
+ 280 0056 FA68     		ldr	r2, [r7, #12]
+ 281 0058 7B69     		ldr	r3, [r7, #20]
+ 282 005a 1340     		ands	r3, r3, r2
+ 283 005c 002B     		cmp	r3, #0
+ 284 005e 03D0     		beq	.L20
+ 285 0060 3B68     		ldr	r3, [r7]
+ 286 0062 0122     		movs	r2, #1
+ 287 0064 5A60     		str	r2, [r3, #4]
+ 288 0066 02E0     		b	.L21
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s 			page 6
+
+
+ 289              	.L20:
+ 290 0068 3B68     		ldr	r3, [r7]
+ 291 006a 0022     		movs	r2, #0
+ 292 006c 5A60     		str	r2, [r3, #4]
+ 293              	.L21:
+ 294 006e FB69     		ldr	r3, [r7, #28]
+ 295 0070 5A01     		lsls	r2, r3, #5
+ 296 0072 304B     		ldr	r3, .L26
+ 297 0074 1344     		add	r3, r3, r2
+ 298 0076 3B61     		str	r3, [r7, #16]
+ 299 0078 3B69     		ldr	r3, [r7, #16]
+ 300 007a 1B68     		ldr	r3, [r3]
+ 301 007c FB60     		str	r3, [r7, #12]
+ 302 007e FA68     		ldr	r2, [r7, #12]
+ 303 0080 7B69     		ldr	r3, [r7, #20]
+ 304 0082 1340     		ands	r3, r3, r2
+ 305 0084 002B     		cmp	r3, #0
+ 306 0086 05D0     		beq	.L22
+ 307 0088 3B68     		ldr	r3, [r7]
+ 308 008a 5B68     		ldr	r3, [r3, #4]
+ 309 008c 43F00202 		orr	r2, r3, #2
+ 310 0090 3B68     		ldr	r3, [r7]
+ 311 0092 5A60     		str	r2, [r3, #4]
+ 312              	.L22:
+ 313 0094 3B68     		ldr	r3, [r7]
+ 314 0096 0022     		movs	r2, #0
+ 315 0098 9A60     		str	r2, [r3, #8]
+ 316 009a 3B68     		ldr	r3, [r7]
+ 317 009c 0022     		movs	r2, #0
+ 318 009e DA60     		str	r2, [r3, #12]
+ 319 00a0 3B68     		ldr	r3, [r7]
+ 320 00a2 1B68     		ldr	r3, [r3]
+ 321 00a4 03F00073 		and	r3, r3, #33554432
+ 322 00a8 002B     		cmp	r3, #0
+ 323 00aa 3BD0     		beq	.L23
+ 324 00ac FB69     		ldr	r3, [r7, #28]
+ 325 00ae 5A01     		lsls	r2, r3, #5
+ 326 00b0 214B     		ldr	r3, .L26+4
+ 327 00b2 1344     		add	r3, r3, r2
+ 328 00b4 3B61     		str	r3, [r7, #16]
+ 329 00b6 3B69     		ldr	r3, [r7, #16]
+ 330 00b8 1B68     		ldr	r3, [r3]
+ 331 00ba FB60     		str	r3, [r7, #12]
+ 332 00bc FA68     		ldr	r2, [r7, #12]
+ 333 00be 7B69     		ldr	r3, [r7, #20]
+ 334 00c0 1340     		ands	r3, r3, r2
+ 335 00c2 002B     		cmp	r3, #0
+ 336 00c4 02D0     		beq	.L24
+ 337 00c6 3B68     		ldr	r3, [r7]
+ 338 00c8 0122     		movs	r2, #1
+ 339 00ca 9A60     		str	r2, [r3, #8]
+ 340              	.L24:
+ 341 00cc FB69     		ldr	r3, [r7, #28]
+ 342 00ce 5A01     		lsls	r2, r3, #5
+ 343 00d0 1A4B     		ldr	r3, .L26+8
+ 344 00d2 1344     		add	r3, r3, r2
+ 345 00d4 3B61     		str	r3, [r7, #16]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s 			page 7
+
+
+ 346 00d6 3B69     		ldr	r3, [r7, #16]
+ 347 00d8 1B68     		ldr	r3, [r3]
+ 348 00da FB60     		str	r3, [r7, #12]
+ 349 00dc FA68     		ldr	r2, [r7, #12]
+ 350 00de 7B69     		ldr	r3, [r7, #20]
+ 351 00e0 1340     		ands	r3, r3, r2
+ 352 00e2 002B     		cmp	r3, #0
+ 353 00e4 05D0     		beq	.L25
+ 354 00e6 3B68     		ldr	r3, [r7]
+ 355 00e8 9B68     		ldr	r3, [r3, #8]
+ 356 00ea 43F00202 		orr	r2, r3, #2
+ 357 00ee 3B68     		ldr	r3, [r7]
+ 358 00f0 9A60     		str	r2, [r3, #8]
+ 359              	.L25:
+ 360 00f2 3B68     		ldr	r3, [r7]
+ 361 00f4 1B68     		ldr	r3, [r3]
+ 362 00f6 03F0C063 		and	r3, r3, #100663296
+ 363 00fa B3F1C06F 		cmp	r3, #100663296
+ 364 00fe 11D1     		bne	.L23
+ 365 0100 0F4A     		ldr	r2, .L26+12
+ 366 0102 BB69     		ldr	r3, [r7, #24]
+ 367 0104 9B08     		lsrs	r3, r3, #2
+ 368 0106 0233     		adds	r3, r3, #2
+ 369 0108 52F82330 		ldr	r3, [r2, r3, lsl #2]
+ 370 010c FB60     		str	r3, [r7, #12]
+ 371 010e BB69     		ldr	r3, [r7, #24]
+ 372 0110 03F00303 		and	r3, r3, #3
+ 373 0114 9B00     		lsls	r3, r3, #2
+ 374 0116 FA68     		ldr	r2, [r7, #12]
+ 375 0118 22FA03F3 		lsr	r3, r2, r3
+ 376 011c 03F00702 		and	r2, r3, #7
+ 377 0120 3B68     		ldr	r3, [r7]
+ 378 0122 DA60     		str	r2, [r3, #12]
+ 379              	.L23:
+ 380 0124 0023     		movs	r3, #0
+ 381              	.L19:
+ 382 0126 1846     		mov	r0, r3
+ 383 0128 2437     		adds	r7, r7, #36
+ 384 012a BD46     		mov	sp, r7
+ 385              		@ sp needed
+ 386 012c 5DF8047B 		ldr	r7, [sp], #4
+ 387 0130 7047     		bx	lr
+ 388              	.L27:
+ 389 0132 00BF     		.align	2
+ 390              	.L26:
+ 391 0134 04040140 		.word	1073808388
+ 392 0138 08040140 		.word	1073808392
+ 393 013c 0C040140 		.word	1073808396
+ 394 0140 00000140 		.word	1073807360
+ 396              		.section	.text.HAL_EXTI_ClearConfigLine,"ax",%progbits
+ 397              		.align	1
+ 398              		.global	HAL_EXTI_ClearConfigLine
+ 399              		.syntax unified
+ 400              		.thumb
+ 401              		.thumb_func
+ 403              	HAL_EXTI_ClearConfigLine:
+ 404              		@ args = 0, pretend = 0, frame = 32
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s 			page 8
+
+
+ 405              		@ frame_needed = 1, uses_anonymous_args = 0
+ 406              		@ link register save eliminated.
+ 407 0000 80B4     		push	{r7}
+ 408 0002 89B0     		sub	sp, sp, #36
+ 409 0004 00AF     		add	r7, sp, #0
+ 410 0006 7860     		str	r0, [r7, #4]
+ 411 0008 7B68     		ldr	r3, [r7, #4]
+ 412 000a 002B     		cmp	r3, #0
+ 413 000c 01D1     		bne	.L29
+ 414 000e 0123     		movs	r3, #1
+ 415 0010 70E0     		b	.L30
+ 416              	.L29:
+ 417 0012 7B68     		ldr	r3, [r7, #4]
+ 418 0014 1B68     		ldr	r3, [r3]
+ 419 0016 1B0C     		lsrs	r3, r3, #16
+ 420 0018 03F00103 		and	r3, r3, #1
+ 421 001c FB61     		str	r3, [r7, #28]
+ 422 001e 7B68     		ldr	r3, [r7, #4]
+ 423 0020 1B68     		ldr	r3, [r3]
+ 424 0022 03F01F03 		and	r3, r3, #31
+ 425 0026 BB61     		str	r3, [r7, #24]
+ 426 0028 0122     		movs	r2, #1
+ 427 002a BB69     		ldr	r3, [r7, #24]
+ 428 002c 02FA03F3 		lsl	r3, r2, r3
+ 429 0030 7B61     		str	r3, [r7, #20]
+ 430 0032 FB69     		ldr	r3, [r7, #28]
+ 431 0034 5B01     		lsls	r3, r3, #5
+ 432 0036 03F18043 		add	r3, r3, #1073741824
+ 433 003a 03F58233 		add	r3, r3, #66560
+ 434 003e 3B61     		str	r3, [r7, #16]
+ 435 0040 3B69     		ldr	r3, [r7, #16]
+ 436 0042 1A68     		ldr	r2, [r3]
+ 437 0044 7B69     		ldr	r3, [r7, #20]
+ 438 0046 DB43     		mvns	r3, r3
+ 439 0048 1340     		ands	r3, r3, r2
+ 440 004a FB60     		str	r3, [r7, #12]
+ 441 004c 3B69     		ldr	r3, [r7, #16]
+ 442 004e FA68     		ldr	r2, [r7, #12]
+ 443 0050 1A60     		str	r2, [r3]
+ 444 0052 FB69     		ldr	r3, [r7, #28]
+ 445 0054 5A01     		lsls	r2, r3, #5
+ 446 0056 2A4B     		ldr	r3, .L32
+ 447 0058 1344     		add	r3, r3, r2
+ 448 005a 3B61     		str	r3, [r7, #16]
+ 449 005c 3B69     		ldr	r3, [r7, #16]
+ 450 005e 1A68     		ldr	r2, [r3]
+ 451 0060 7B69     		ldr	r3, [r7, #20]
+ 452 0062 DB43     		mvns	r3, r3
+ 453 0064 1340     		ands	r3, r3, r2
+ 454 0066 FB60     		str	r3, [r7, #12]
+ 455 0068 3B69     		ldr	r3, [r7, #16]
+ 456 006a FA68     		ldr	r2, [r7, #12]
+ 457 006c 1A60     		str	r2, [r3]
+ 458 006e 7B68     		ldr	r3, [r7, #4]
+ 459 0070 1B68     		ldr	r3, [r3]
+ 460 0072 03F00073 		and	r3, r3, #33554432
+ 461 0076 002B     		cmp	r3, #0
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s 			page 9
+
+
+ 462 0078 3BD0     		beq	.L31
+ 463 007a FB69     		ldr	r3, [r7, #28]
+ 464 007c 5A01     		lsls	r2, r3, #5
+ 465 007e 214B     		ldr	r3, .L32+4
+ 466 0080 1344     		add	r3, r3, r2
+ 467 0082 3B61     		str	r3, [r7, #16]
+ 468 0084 3B69     		ldr	r3, [r7, #16]
+ 469 0086 1A68     		ldr	r2, [r3]
+ 470 0088 7B69     		ldr	r3, [r7, #20]
+ 471 008a DB43     		mvns	r3, r3
+ 472 008c 1340     		ands	r3, r3, r2
+ 473 008e FB60     		str	r3, [r7, #12]
+ 474 0090 3B69     		ldr	r3, [r7, #16]
+ 475 0092 FA68     		ldr	r2, [r7, #12]
+ 476 0094 1A60     		str	r2, [r3]
+ 477 0096 FB69     		ldr	r3, [r7, #28]
+ 478 0098 5A01     		lsls	r2, r3, #5
+ 479 009a 1B4B     		ldr	r3, .L32+8
+ 480 009c 1344     		add	r3, r3, r2
+ 481 009e 3B61     		str	r3, [r7, #16]
+ 482 00a0 3B69     		ldr	r3, [r7, #16]
+ 483 00a2 1A68     		ldr	r2, [r3]
+ 484 00a4 7B69     		ldr	r3, [r7, #20]
+ 485 00a6 DB43     		mvns	r3, r3
+ 486 00a8 1340     		ands	r3, r3, r2
+ 487 00aa FB60     		str	r3, [r7, #12]
+ 488 00ac 3B69     		ldr	r3, [r7, #16]
+ 489 00ae FA68     		ldr	r2, [r7, #12]
+ 490 00b0 1A60     		str	r2, [r3]
+ 491 00b2 7B68     		ldr	r3, [r7, #4]
+ 492 00b4 1B68     		ldr	r3, [r3]
+ 493 00b6 03F0C063 		and	r3, r3, #100663296
+ 494 00ba B3F1C06F 		cmp	r3, #100663296
+ 495 00be 18D1     		bne	.L31
+ 496 00c0 124A     		ldr	r2, .L32+12
+ 497 00c2 BB69     		ldr	r3, [r7, #24]
+ 498 00c4 9B08     		lsrs	r3, r3, #2
+ 499 00c6 0233     		adds	r3, r3, #2
+ 500 00c8 52F82330 		ldr	r3, [r2, r3, lsl #2]
+ 501 00cc FB60     		str	r3, [r7, #12]
+ 502 00ce BB69     		ldr	r3, [r7, #24]
+ 503 00d0 03F00303 		and	r3, r3, #3
+ 504 00d4 9B00     		lsls	r3, r3, #2
+ 505 00d6 0722     		movs	r2, #7
+ 506 00d8 02FA03F3 		lsl	r3, r2, r3
+ 507 00dc DB43     		mvns	r3, r3
+ 508 00de FA68     		ldr	r2, [r7, #12]
+ 509 00e0 1340     		ands	r3, r3, r2
+ 510 00e2 FB60     		str	r3, [r7, #12]
+ 511 00e4 0949     		ldr	r1, .L32+12
+ 512 00e6 BB69     		ldr	r3, [r7, #24]
+ 513 00e8 9B08     		lsrs	r3, r3, #2
+ 514 00ea 0233     		adds	r3, r3, #2
+ 515 00ec FA68     		ldr	r2, [r7, #12]
+ 516 00ee 41F82320 		str	r2, [r1, r3, lsl #2]
+ 517              	.L31:
+ 518 00f2 0023     		movs	r3, #0
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s 			page 10
+
+
+ 519              	.L30:
+ 520 00f4 1846     		mov	r0, r3
+ 521 00f6 2437     		adds	r7, r7, #36
+ 522 00f8 BD46     		mov	sp, r7
+ 523              		@ sp needed
+ 524 00fa 5DF8047B 		ldr	r7, [sp], #4
+ 525 00fe 7047     		bx	lr
+ 526              	.L33:
+ 527              		.align	2
+ 528              	.L32:
+ 529 0100 04040140 		.word	1073808388
+ 530 0104 08040140 		.word	1073808392
+ 531 0108 0C040140 		.word	1073808396
+ 532 010c 00000140 		.word	1073807360
+ 534              		.section	.text.HAL_EXTI_RegisterCallback,"ax",%progbits
+ 535              		.align	1
+ 536              		.global	HAL_EXTI_RegisterCallback
+ 537              		.syntax unified
+ 538              		.thumb
+ 539              		.thumb_func
+ 541              	HAL_EXTI_RegisterCallback:
+ 542              		@ args = 0, pretend = 0, frame = 24
+ 543              		@ frame_needed = 1, uses_anonymous_args = 0
+ 544              		@ link register save eliminated.
+ 545 0000 80B4     		push	{r7}
+ 546 0002 87B0     		sub	sp, sp, #28
+ 547 0004 00AF     		add	r7, sp, #0
+ 548 0006 F860     		str	r0, [r7, #12]
+ 549 0008 0B46     		mov	r3, r1
+ 550 000a 7A60     		str	r2, [r7, #4]
+ 551 000c FB72     		strb	r3, [r7, #11]
+ 552 000e 0023     		movs	r3, #0
+ 553 0010 FB75     		strb	r3, [r7, #23]
+ 554 0012 FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 555 0014 002B     		cmp	r3, #0
+ 556 0016 03D1     		bne	.L35
+ 557 0018 FB68     		ldr	r3, [r7, #12]
+ 558 001a 7A68     		ldr	r2, [r7, #4]
+ 559 001c 5A60     		str	r2, [r3, #4]
+ 560 001e 05E0     		b	.L36
+ 561              	.L35:
+ 562 0020 FB68     		ldr	r3, [r7, #12]
+ 563 0022 0022     		movs	r2, #0
+ 564 0024 5A60     		str	r2, [r3, #4]
+ 565 0026 0123     		movs	r3, #1
+ 566 0028 FB75     		strb	r3, [r7, #23]
+ 567 002a 00BF     		nop
+ 568              	.L36:
+ 569 002c FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
+ 570 002e 1846     		mov	r0, r3
+ 571 0030 1C37     		adds	r7, r7, #28
+ 572 0032 BD46     		mov	sp, r7
+ 573              		@ sp needed
+ 574 0034 5DF8047B 		ldr	r7, [sp], #4
+ 575 0038 7047     		bx	lr
+ 577              		.section	.text.HAL_EXTI_GetHandle,"ax",%progbits
+ 578              		.align	1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s 			page 11
+
+
+ 579              		.global	HAL_EXTI_GetHandle
+ 580              		.syntax unified
+ 581              		.thumb
+ 582              		.thumb_func
+ 584              	HAL_EXTI_GetHandle:
+ 585              		@ args = 0, pretend = 0, frame = 8
+ 586              		@ frame_needed = 1, uses_anonymous_args = 0
+ 587              		@ link register save eliminated.
+ 588 0000 80B4     		push	{r7}
+ 589 0002 83B0     		sub	sp, sp, #12
+ 590 0004 00AF     		add	r7, sp, #0
+ 591 0006 7860     		str	r0, [r7, #4]
+ 592 0008 3960     		str	r1, [r7]
+ 593 000a 7B68     		ldr	r3, [r7, #4]
+ 594 000c 002B     		cmp	r3, #0
+ 595 000e 01D1     		bne	.L39
+ 596 0010 0123     		movs	r3, #1
+ 597 0012 03E0     		b	.L40
+ 598              	.L39:
+ 599 0014 7B68     		ldr	r3, [r7, #4]
+ 600 0016 3A68     		ldr	r2, [r7]
+ 601 0018 1A60     		str	r2, [r3]
+ 602 001a 0023     		movs	r3, #0
+ 603              	.L40:
+ 604 001c 1846     		mov	r0, r3
+ 605 001e 0C37     		adds	r7, r7, #12
+ 606 0020 BD46     		mov	sp, r7
+ 607              		@ sp needed
+ 608 0022 5DF8047B 		ldr	r7, [sp], #4
+ 609 0026 7047     		bx	lr
+ 611              		.section	.text.HAL_EXTI_IRQHandler,"ax",%progbits
+ 612              		.align	1
+ 613              		.global	HAL_EXTI_IRQHandler
+ 614              		.syntax unified
+ 615              		.thumb
+ 616              		.thumb_func
+ 618              	HAL_EXTI_IRQHandler:
+ 619              		@ args = 0, pretend = 0, frame = 24
+ 620              		@ frame_needed = 1, uses_anonymous_args = 0
+ 621 0000 80B5     		push	{r7, lr}
+ 622 0002 86B0     		sub	sp, sp, #24
+ 623 0004 00AF     		add	r7, sp, #0
+ 624 0006 7860     		str	r0, [r7, #4]
+ 625 0008 7B68     		ldr	r3, [r7, #4]
+ 626 000a 1B68     		ldr	r3, [r3]
+ 627 000c 1B0C     		lsrs	r3, r3, #16
+ 628 000e 03F00103 		and	r3, r3, #1
+ 629 0012 7B61     		str	r3, [r7, #20]
+ 630 0014 7B68     		ldr	r3, [r7, #4]
+ 631 0016 1B68     		ldr	r3, [r3]
+ 632 0018 03F01F03 		and	r3, r3, #31
+ 633 001c 0122     		movs	r2, #1
+ 634 001e 02FA03F3 		lsl	r3, r2, r3
+ 635 0022 3B61     		str	r3, [r7, #16]
+ 636 0024 7B69     		ldr	r3, [r7, #20]
+ 637 0026 5A01     		lsls	r2, r3, #5
+ 638 0028 0C4B     		ldr	r3, .L44
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s 			page 12
+
+
+ 639 002a 1344     		add	r3, r3, r2
+ 640 002c FB60     		str	r3, [r7, #12]
+ 641 002e FB68     		ldr	r3, [r7, #12]
+ 642 0030 1B68     		ldr	r3, [r3]
+ 643 0032 3A69     		ldr	r2, [r7, #16]
+ 644 0034 1340     		ands	r3, r3, r2
+ 645 0036 BB60     		str	r3, [r7, #8]
+ 646 0038 BB68     		ldr	r3, [r7, #8]
+ 647 003a 002B     		cmp	r3, #0
+ 648 003c 09D0     		beq	.L43
+ 649 003e FB68     		ldr	r3, [r7, #12]
+ 650 0040 3A69     		ldr	r2, [r7, #16]
+ 651 0042 1A60     		str	r2, [r3]
+ 652 0044 7B68     		ldr	r3, [r7, #4]
+ 653 0046 5B68     		ldr	r3, [r3, #4]
+ 654 0048 002B     		cmp	r3, #0
+ 655 004a 02D0     		beq	.L43
+ 656 004c 7B68     		ldr	r3, [r7, #4]
+ 657 004e 5B68     		ldr	r3, [r3, #4]
+ 658 0050 9847     		blx	r3
+ 659              	.L43:
+ 660 0052 00BF     		nop
+ 661 0054 1837     		adds	r7, r7, #24
+ 662 0056 BD46     		mov	sp, r7
+ 663              		@ sp needed
+ 664 0058 80BD     		pop	{r7, pc}
+ 665              	.L45:
+ 666 005a 00BF     		.align	2
+ 667              	.L44:
+ 668 005c 14040140 		.word	1073808404
+ 670              		.section	.text.HAL_EXTI_GetPending,"ax",%progbits
+ 671              		.align	1
+ 672              		.global	HAL_EXTI_GetPending
+ 673              		.syntax unified
+ 674              		.thumb
+ 675              		.thumb_func
+ 677              	HAL_EXTI_GetPending:
+ 678              		@ args = 0, pretend = 0, frame = 32
+ 679              		@ frame_needed = 1, uses_anonymous_args = 0
+ 680              		@ link register save eliminated.
+ 681 0000 80B4     		push	{r7}
+ 682 0002 89B0     		sub	sp, sp, #36
+ 683 0004 00AF     		add	r7, sp, #0
+ 684 0006 7860     		str	r0, [r7, #4]
+ 685 0008 3960     		str	r1, [r7]
+ 686 000a 7B68     		ldr	r3, [r7, #4]
+ 687 000c 1B68     		ldr	r3, [r3]
+ 688 000e 1B0C     		lsrs	r3, r3, #16
+ 689 0010 03F00103 		and	r3, r3, #1
+ 690 0014 FB61     		str	r3, [r7, #28]
+ 691 0016 7B68     		ldr	r3, [r7, #4]
+ 692 0018 1B68     		ldr	r3, [r3]
+ 693 001a 03F01F03 		and	r3, r3, #31
+ 694 001e BB61     		str	r3, [r7, #24]
+ 695 0020 0122     		movs	r2, #1
+ 696 0022 BB69     		ldr	r3, [r7, #24]
+ 697 0024 02FA03F3 		lsl	r3, r2, r3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s 			page 13
+
+
+ 698 0028 7B61     		str	r3, [r7, #20]
+ 699 002a FB69     		ldr	r3, [r7, #28]
+ 700 002c 5A01     		lsls	r2, r3, #5
+ 701 002e 094B     		ldr	r3, .L48
+ 702 0030 1344     		add	r3, r3, r2
+ 703 0032 3B61     		str	r3, [r7, #16]
+ 704 0034 3B69     		ldr	r3, [r7, #16]
+ 705 0036 1A68     		ldr	r2, [r3]
+ 706 0038 7B69     		ldr	r3, [r7, #20]
+ 707 003a 1A40     		ands	r2, r2, r3
+ 708 003c BB69     		ldr	r3, [r7, #24]
+ 709 003e 22FA03F3 		lsr	r3, r2, r3
+ 710 0042 FB60     		str	r3, [r7, #12]
+ 711 0044 FB68     		ldr	r3, [r7, #12]
+ 712 0046 1846     		mov	r0, r3
+ 713 0048 2437     		adds	r7, r7, #36
+ 714 004a BD46     		mov	sp, r7
+ 715              		@ sp needed
+ 716 004c 5DF8047B 		ldr	r7, [sp], #4
+ 717 0050 7047     		bx	lr
+ 718              	.L49:
+ 719 0052 00BF     		.align	2
+ 720              	.L48:
+ 721 0054 14040140 		.word	1073808404
+ 723              		.section	.text.HAL_EXTI_ClearPending,"ax",%progbits
+ 724              		.align	1
+ 725              		.global	HAL_EXTI_ClearPending
+ 726              		.syntax unified
+ 727              		.thumb
+ 728              		.thumb_func
+ 730              	HAL_EXTI_ClearPending:
+ 731              		@ args = 0, pretend = 0, frame = 24
+ 732              		@ frame_needed = 1, uses_anonymous_args = 0
+ 733              		@ link register save eliminated.
+ 734 0000 80B4     		push	{r7}
+ 735 0002 87B0     		sub	sp, sp, #28
+ 736 0004 00AF     		add	r7, sp, #0
+ 737 0006 7860     		str	r0, [r7, #4]
+ 738 0008 3960     		str	r1, [r7]
+ 739 000a 7B68     		ldr	r3, [r7, #4]
+ 740 000c 1B68     		ldr	r3, [r3]
+ 741 000e 1B0C     		lsrs	r3, r3, #16
+ 742 0010 03F00103 		and	r3, r3, #1
+ 743 0014 7B61     		str	r3, [r7, #20]
+ 744 0016 7B68     		ldr	r3, [r7, #4]
+ 745 0018 1B68     		ldr	r3, [r3]
+ 746 001a 03F01F03 		and	r3, r3, #31
+ 747 001e 0122     		movs	r2, #1
+ 748 0020 02FA03F3 		lsl	r3, r2, r3
+ 749 0024 3B61     		str	r3, [r7, #16]
+ 750 0026 7B69     		ldr	r3, [r7, #20]
+ 751 0028 5A01     		lsls	r2, r3, #5
+ 752 002a 064B     		ldr	r3, .L51
+ 753 002c 1344     		add	r3, r3, r2
+ 754 002e FB60     		str	r3, [r7, #12]
+ 755 0030 FB68     		ldr	r3, [r7, #12]
+ 756 0032 3A69     		ldr	r2, [r7, #16]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s 			page 14
+
+
+ 757 0034 1A60     		str	r2, [r3]
+ 758 0036 00BF     		nop
+ 759 0038 1C37     		adds	r7, r7, #28
+ 760 003a BD46     		mov	sp, r7
+ 761              		@ sp needed
+ 762 003c 5DF8047B 		ldr	r7, [sp], #4
+ 763 0040 7047     		bx	lr
+ 764              	.L52:
+ 765 0042 00BF     		.align	2
+ 766              	.L51:
+ 767 0044 14040140 		.word	1073808404
+ 769              		.section	.text.HAL_EXTI_GenerateSWI,"ax",%progbits
+ 770              		.align	1
+ 771              		.global	HAL_EXTI_GenerateSWI
+ 772              		.syntax unified
+ 773              		.thumb
+ 774              		.thumb_func
+ 776              	HAL_EXTI_GenerateSWI:
+ 777              		@ args = 0, pretend = 0, frame = 24
+ 778              		@ frame_needed = 1, uses_anonymous_args = 0
+ 779              		@ link register save eliminated.
+ 780 0000 80B4     		push	{r7}
+ 781 0002 87B0     		sub	sp, sp, #28
+ 782 0004 00AF     		add	r7, sp, #0
+ 783 0006 7860     		str	r0, [r7, #4]
+ 784 0008 7B68     		ldr	r3, [r7, #4]
+ 785 000a 1B68     		ldr	r3, [r3]
+ 786 000c 1B0C     		lsrs	r3, r3, #16
+ 787 000e 03F00103 		and	r3, r3, #1
+ 788 0012 7B61     		str	r3, [r7, #20]
+ 789 0014 7B68     		ldr	r3, [r7, #4]
+ 790 0016 1B68     		ldr	r3, [r3]
+ 791 0018 03F01F03 		and	r3, r3, #31
+ 792 001c 0122     		movs	r2, #1
+ 793 001e 02FA03F3 		lsl	r3, r2, r3
+ 794 0022 3B61     		str	r3, [r7, #16]
+ 795 0024 7B69     		ldr	r3, [r7, #20]
+ 796 0026 5A01     		lsls	r2, r3, #5
+ 797 0028 054B     		ldr	r3, .L54
+ 798 002a 1344     		add	r3, r3, r2
+ 799 002c FB60     		str	r3, [r7, #12]
+ 800 002e FB68     		ldr	r3, [r7, #12]
+ 801 0030 3A69     		ldr	r2, [r7, #16]
+ 802 0032 1A60     		str	r2, [r3]
+ 803 0034 00BF     		nop
+ 804 0036 1C37     		adds	r7, r7, #28
+ 805 0038 BD46     		mov	sp, r7
+ 806              		@ sp needed
+ 807 003a 5DF8047B 		ldr	r7, [sp], #4
+ 808 003e 7047     		bx	lr
+ 809              	.L55:
+ 810              		.align	2
+ 811              	.L54:
+ 812 0040 10040140 		.word	1073808400
+ 814              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s 			page 15
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32g4xx_hal_exti.c
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:18     .text.HAL_EXTI_SetConfigLine:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:24     .text.HAL_EXTI_SetConfigLine:00000000 HAL_EXTI_SetConfigLine
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:224    .text.HAL_EXTI_SetConfigLine:00000190 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:230    .text.HAL_EXTI_GetConfigLine:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:236    .text.HAL_EXTI_GetConfigLine:00000000 HAL_EXTI_GetConfigLine
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:391    .text.HAL_EXTI_GetConfigLine:00000134 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:397    .text.HAL_EXTI_ClearConfigLine:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:403    .text.HAL_EXTI_ClearConfigLine:00000000 HAL_EXTI_ClearConfigLine
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:529    .text.HAL_EXTI_ClearConfigLine:00000100 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:535    .text.HAL_EXTI_RegisterCallback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:541    .text.HAL_EXTI_RegisterCallback:00000000 HAL_EXTI_RegisterCallback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:578    .text.HAL_EXTI_GetHandle:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:584    .text.HAL_EXTI_GetHandle:00000000 HAL_EXTI_GetHandle
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:612    .text.HAL_EXTI_IRQHandler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:618    .text.HAL_EXTI_IRQHandler:00000000 HAL_EXTI_IRQHandler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:668    .text.HAL_EXTI_IRQHandler:0000005c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:671    .text.HAL_EXTI_GetPending:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:677    .text.HAL_EXTI_GetPending:00000000 HAL_EXTI_GetPending
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:721    .text.HAL_EXTI_GetPending:00000054 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:724    .text.HAL_EXTI_ClearPending:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:730    .text.HAL_EXTI_ClearPending:00000000 HAL_EXTI_ClearPending
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:767    .text.HAL_EXTI_ClearPending:00000044 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:770    .text.HAL_EXTI_GenerateSWI:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:776    .text.HAL_EXTI_GenerateSWI:00000000 HAL_EXTI_GenerateSWI
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cczsFs6Y.s:812    .text.HAL_EXTI_GenerateSWI:00000040 $d
+
+NO UNDEFINED SYMBOLS

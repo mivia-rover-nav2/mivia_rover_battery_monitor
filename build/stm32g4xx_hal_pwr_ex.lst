@@ -1,0 +1,2237 @@
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32g4xx_hal_pwr_ex.c"
+  16              		.text
+  17              		.section	.text.HAL_PWREx_GetVoltageRange,"ax",%progbits
+  18              		.align	1
+  19              		.global	HAL_PWREx_GetVoltageRange
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	HAL_PWREx_GetVoltageRange:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 1, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 80B4     		push	{r7}
+  29 0002 00AF     		add	r7, sp, #0
+  30 0004 0D4B     		ldr	r3, .L5
+  31 0006 1B68     		ldr	r3, [r3]
+  32 0008 03F4C063 		and	r3, r3, #1536
+  33 000c B3F5806F 		cmp	r3, #1024
+  34 0010 02D1     		bne	.L2
+  35 0012 4FF48063 		mov	r3, #1024
+  36 0016 0BE0     		b	.L3
+  37              	.L2:
+  38 0018 084B     		ldr	r3, .L5
+  39 001a D3F88030 		ldr	r3, [r3, #128]
+  40 001e 03F48073 		and	r3, r3, #256
+  41 0022 B3F5807F 		cmp	r3, #256
+  42 0026 02D1     		bne	.L4
+  43 0028 4FF40073 		mov	r3, #512
+  44 002c 00E0     		b	.L3
+  45              	.L4:
+  46 002e 0023     		movs	r3, #0
+  47              	.L3:
+  48 0030 1846     		mov	r0, r3
+  49 0032 BD46     		mov	sp, r7
+  50              		@ sp needed
+  51 0034 5DF8047B 		ldr	r7, [sp], #4
+  52 0038 7047     		bx	lr
+  53              	.L6:
+  54 003a 00BF     		.align	2
+  55              	.L5:
+  56 003c 00700040 		.word	1073770496
+  58              		.section	.text.HAL_PWREx_ControlVoltageScaling,"ax",%progbits
+  59              		.align	1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 2
+
+
+  60              		.global	HAL_PWREx_ControlVoltageScaling
+  61              		.syntax unified
+  62              		.thumb
+  63              		.thumb_func
+  65              	HAL_PWREx_ControlVoltageScaling:
+  66              		@ args = 0, pretend = 0, frame = 16
+  67              		@ frame_needed = 1, uses_anonymous_args = 0
+  68              		@ link register save eliminated.
+  69 0000 80B4     		push	{r7}
+  70 0002 85B0     		sub	sp, sp, #20
+  71 0004 00AF     		add	r7, sp, #0
+  72 0006 7860     		str	r0, [r7, #4]
+  73 0008 7B68     		ldr	r3, [r7, #4]
+  74 000a 002B     		cmp	r3, #0
+  75 000c 41D1     		bne	.L8
+  76 000e 4B4B     		ldr	r3, .L20
+  77 0010 1B68     		ldr	r3, [r3]
+  78 0012 03F4C063 		and	r3, r3, #1536
+  79 0016 B3F5806F 		cmp	r3, #1024
+  80 001a 31D1     		bne	.L9
+  81 001c 474B     		ldr	r3, .L20
+  82 001e D3F88030 		ldr	r3, [r3, #128]
+  83 0022 464A     		ldr	r2, .L20
+  84 0024 23F48073 		bic	r3, r3, #256
+  85 0028 C2F88030 		str	r3, [r2, #128]
+  86 002c 434B     		ldr	r3, .L20
+  87 002e 1B68     		ldr	r3, [r3]
+  88 0030 23F4C063 		bic	r3, r3, #1536
+  89 0034 414A     		ldr	r2, .L20
+  90 0036 43F40073 		orr	r3, r3, #512
+  91 003a 1360     		str	r3, [r2]
+  92 003c 404B     		ldr	r3, .L20+4
+  93 003e 1B68     		ldr	r3, [r3]
+  94 0040 3222     		movs	r2, #50
+  95 0042 02FB03F3 		mul	r3, r2, r3
+  96 0046 3F4A     		ldr	r2, .L20+8
+  97 0048 A2FB0323 		umull	r2, r3, r2, r3
+  98 004c 9B0C     		lsrs	r3, r3, #18
+  99 004e 0133     		adds	r3, r3, #1
+ 100 0050 FB60     		str	r3, [r7, #12]
+ 101 0052 02E0     		b	.L10
+ 102              	.L12:
+ 103 0054 FB68     		ldr	r3, [r7, #12]
+ 104 0056 013B     		subs	r3, r3, #1
+ 105 0058 FB60     		str	r3, [r7, #12]
+ 106              	.L10:
+ 107 005a 384B     		ldr	r3, .L20
+ 108 005c 5B69     		ldr	r3, [r3, #20]
+ 109 005e 03F48063 		and	r3, r3, #1024
+ 110 0062 B3F5806F 		cmp	r3, #1024
+ 111 0066 02D1     		bne	.L11
+ 112 0068 FB68     		ldr	r3, [r7, #12]
+ 113 006a 002B     		cmp	r3, #0
+ 114 006c F2D1     		bne	.L12
+ 115              	.L11:
+ 116 006e 334B     		ldr	r3, .L20
+ 117 0070 5B69     		ldr	r3, [r3, #20]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 3
+
+
+ 118 0072 03F48063 		and	r3, r3, #1024
+ 119 0076 B3F5806F 		cmp	r3, #1024
+ 120 007a 58D1     		bne	.L13
+ 121 007c 0323     		movs	r3, #3
+ 122 007e 57E0     		b	.L14
+ 123              	.L9:
+ 124 0080 2E4B     		ldr	r3, .L20
+ 125 0082 D3F88030 		ldr	r3, [r3, #128]
+ 126 0086 2D4A     		ldr	r2, .L20
+ 127 0088 23F48073 		bic	r3, r3, #256
+ 128 008c C2F88030 		str	r3, [r2, #128]
+ 129 0090 4DE0     		b	.L13
+ 130              	.L8:
+ 131 0092 7B68     		ldr	r3, [r7, #4]
+ 132 0094 B3F5007F 		cmp	r3, #512
+ 133 0098 41D1     		bne	.L15
+ 134 009a 284B     		ldr	r3, .L20
+ 135 009c 1B68     		ldr	r3, [r3]
+ 136 009e 03F4C063 		and	r3, r3, #1536
+ 137 00a2 B3F5806F 		cmp	r3, #1024
+ 138 00a6 31D1     		bne	.L16
+ 139 00a8 244B     		ldr	r3, .L20
+ 140 00aa D3F88030 		ldr	r3, [r3, #128]
+ 141 00ae 234A     		ldr	r2, .L20
+ 142 00b0 43F48073 		orr	r3, r3, #256
+ 143 00b4 C2F88030 		str	r3, [r2, #128]
+ 144 00b8 204B     		ldr	r3, .L20
+ 145 00ba 1B68     		ldr	r3, [r3]
+ 146 00bc 23F4C063 		bic	r3, r3, #1536
+ 147 00c0 1E4A     		ldr	r2, .L20
+ 148 00c2 43F40073 		orr	r3, r3, #512
+ 149 00c6 1360     		str	r3, [r2]
+ 150 00c8 1D4B     		ldr	r3, .L20+4
+ 151 00ca 1B68     		ldr	r3, [r3]
+ 152 00cc 3222     		movs	r2, #50
+ 153 00ce 02FB03F3 		mul	r3, r2, r3
+ 154 00d2 1C4A     		ldr	r2, .L20+8
+ 155 00d4 A2FB0323 		umull	r2, r3, r2, r3
+ 156 00d8 9B0C     		lsrs	r3, r3, #18
+ 157 00da 0133     		adds	r3, r3, #1
+ 158 00dc FB60     		str	r3, [r7, #12]
+ 159 00de 02E0     		b	.L17
+ 160              	.L19:
+ 161 00e0 FB68     		ldr	r3, [r7, #12]
+ 162 00e2 013B     		subs	r3, r3, #1
+ 163 00e4 FB60     		str	r3, [r7, #12]
+ 164              	.L17:
+ 165 00e6 154B     		ldr	r3, .L20
+ 166 00e8 5B69     		ldr	r3, [r3, #20]
+ 167 00ea 03F48063 		and	r3, r3, #1024
+ 168 00ee B3F5806F 		cmp	r3, #1024
+ 169 00f2 02D1     		bne	.L18
+ 170 00f4 FB68     		ldr	r3, [r7, #12]
+ 171 00f6 002B     		cmp	r3, #0
+ 172 00f8 F2D1     		bne	.L19
+ 173              	.L18:
+ 174 00fa 104B     		ldr	r3, .L20
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 4
+
+
+ 175 00fc 5B69     		ldr	r3, [r3, #20]
+ 176 00fe 03F48063 		and	r3, r3, #1024
+ 177 0102 B3F5806F 		cmp	r3, #1024
+ 178 0106 12D1     		bne	.L13
+ 179 0108 0323     		movs	r3, #3
+ 180 010a 11E0     		b	.L14
+ 181              	.L16:
+ 182 010c 0B4B     		ldr	r3, .L20
+ 183 010e D3F88030 		ldr	r3, [r3, #128]
+ 184 0112 0A4A     		ldr	r2, .L20
+ 185 0114 43F48073 		orr	r3, r3, #256
+ 186 0118 C2F88030 		str	r3, [r2, #128]
+ 187 011c 07E0     		b	.L13
+ 188              	.L15:
+ 189 011e 074B     		ldr	r3, .L20
+ 190 0120 1B68     		ldr	r3, [r3]
+ 191 0122 23F4C063 		bic	r3, r3, #1536
+ 192 0126 054A     		ldr	r2, .L20
+ 193 0128 43F48063 		orr	r3, r3, #1024
+ 194 012c 1360     		str	r3, [r2]
+ 195              	.L13:
+ 196 012e 0023     		movs	r3, #0
+ 197              	.L14:
+ 198 0130 1846     		mov	r0, r3
+ 199 0132 1437     		adds	r7, r7, #20
+ 200 0134 BD46     		mov	sp, r7
+ 201              		@ sp needed
+ 202 0136 5DF8047B 		ldr	r7, [sp], #4
+ 203 013a 7047     		bx	lr
+ 204              	.L21:
+ 205              		.align	2
+ 206              	.L20:
+ 207 013c 00700040 		.word	1073770496
+ 208 0140 00000000 		.word	SystemCoreClock
+ 209 0144 83DE1B43 		.word	1125899907
+ 211              		.section	.text.HAL_PWREx_EnableBatteryCharging,"ax",%progbits
+ 212              		.align	1
+ 213              		.global	HAL_PWREx_EnableBatteryCharging
+ 214              		.syntax unified
+ 215              		.thumb
+ 216              		.thumb_func
+ 218              	HAL_PWREx_EnableBatteryCharging:
+ 219              		@ args = 0, pretend = 0, frame = 8
+ 220              		@ frame_needed = 1, uses_anonymous_args = 0
+ 221              		@ link register save eliminated.
+ 222 0000 80B4     		push	{r7}
+ 223 0002 83B0     		sub	sp, sp, #12
+ 224 0004 00AF     		add	r7, sp, #0
+ 225 0006 7860     		str	r0, [r7, #4]
+ 226 0008 094B     		ldr	r3, .L23
+ 227 000a DB68     		ldr	r3, [r3, #12]
+ 228 000c 23F40072 		bic	r2, r3, #512
+ 229 0010 0749     		ldr	r1, .L23
+ 230 0012 7B68     		ldr	r3, [r7, #4]
+ 231 0014 1343     		orrs	r3, r3, r2
+ 232 0016 CB60     		str	r3, [r1, #12]
+ 233 0018 054B     		ldr	r3, .L23
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 5
+
+
+ 234 001a DB68     		ldr	r3, [r3, #12]
+ 235 001c 044A     		ldr	r2, .L23
+ 236 001e 43F48073 		orr	r3, r3, #256
+ 237 0022 D360     		str	r3, [r2, #12]
+ 238 0024 00BF     		nop
+ 239 0026 0C37     		adds	r7, r7, #12
+ 240 0028 BD46     		mov	sp, r7
+ 241              		@ sp needed
+ 242 002a 5DF8047B 		ldr	r7, [sp], #4
+ 243 002e 7047     		bx	lr
+ 244              	.L24:
+ 245              		.align	2
+ 246              	.L23:
+ 247 0030 00700040 		.word	1073770496
+ 249              		.section	.text.HAL_PWREx_DisableBatteryCharging,"ax",%progbits
+ 250              		.align	1
+ 251              		.global	HAL_PWREx_DisableBatteryCharging
+ 252              		.syntax unified
+ 253              		.thumb
+ 254              		.thumb_func
+ 256              	HAL_PWREx_DisableBatteryCharging:
+ 257              		@ args = 0, pretend = 0, frame = 0
+ 258              		@ frame_needed = 1, uses_anonymous_args = 0
+ 259              		@ link register save eliminated.
+ 260 0000 80B4     		push	{r7}
+ 261 0002 00AF     		add	r7, sp, #0
+ 262 0004 054B     		ldr	r3, .L26
+ 263 0006 DB68     		ldr	r3, [r3, #12]
+ 264 0008 044A     		ldr	r2, .L26
+ 265 000a 23F48073 		bic	r3, r3, #256
+ 266 000e D360     		str	r3, [r2, #12]
+ 267 0010 00BF     		nop
+ 268 0012 BD46     		mov	sp, r7
+ 269              		@ sp needed
+ 270 0014 5DF8047B 		ldr	r7, [sp], #4
+ 271 0018 7047     		bx	lr
+ 272              	.L27:
+ 273 001a 00BF     		.align	2
+ 274              	.L26:
+ 275 001c 00700040 		.word	1073770496
+ 277              		.section	.text.HAL_PWREx_EnableInternalWakeUpLine,"ax",%progbits
+ 278              		.align	1
+ 279              		.global	HAL_PWREx_EnableInternalWakeUpLine
+ 280              		.syntax unified
+ 281              		.thumb
+ 282              		.thumb_func
+ 284              	HAL_PWREx_EnableInternalWakeUpLine:
+ 285              		@ args = 0, pretend = 0, frame = 0
+ 286              		@ frame_needed = 1, uses_anonymous_args = 0
+ 287              		@ link register save eliminated.
+ 288 0000 80B4     		push	{r7}
+ 289 0002 00AF     		add	r7, sp, #0
+ 290 0004 054B     		ldr	r3, .L29
+ 291 0006 9B68     		ldr	r3, [r3, #8]
+ 292 0008 044A     		ldr	r2, .L29
+ 293 000a 43F40043 		orr	r3, r3, #32768
+ 294 000e 9360     		str	r3, [r2, #8]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 6
+
+
+ 295 0010 00BF     		nop
+ 296 0012 BD46     		mov	sp, r7
+ 297              		@ sp needed
+ 298 0014 5DF8047B 		ldr	r7, [sp], #4
+ 299 0018 7047     		bx	lr
+ 300              	.L30:
+ 301 001a 00BF     		.align	2
+ 302              	.L29:
+ 303 001c 00700040 		.word	1073770496
+ 305              		.section	.text.HAL_PWREx_DisableInternalWakeUpLine,"ax",%progbits
+ 306              		.align	1
+ 307              		.global	HAL_PWREx_DisableInternalWakeUpLine
+ 308              		.syntax unified
+ 309              		.thumb
+ 310              		.thumb_func
+ 312              	HAL_PWREx_DisableInternalWakeUpLine:
+ 313              		@ args = 0, pretend = 0, frame = 0
+ 314              		@ frame_needed = 1, uses_anonymous_args = 0
+ 315              		@ link register save eliminated.
+ 316 0000 80B4     		push	{r7}
+ 317 0002 00AF     		add	r7, sp, #0
+ 318 0004 054B     		ldr	r3, .L32
+ 319 0006 9B68     		ldr	r3, [r3, #8]
+ 320 0008 044A     		ldr	r2, .L32
+ 321 000a 23F40043 		bic	r3, r3, #32768
+ 322 000e 9360     		str	r3, [r2, #8]
+ 323 0010 00BF     		nop
+ 324 0012 BD46     		mov	sp, r7
+ 325              		@ sp needed
+ 326 0014 5DF8047B 		ldr	r7, [sp], #4
+ 327 0018 7047     		bx	lr
+ 328              	.L33:
+ 329 001a 00BF     		.align	2
+ 330              	.L32:
+ 331 001c 00700040 		.word	1073770496
+ 333              		.section	.text.HAL_PWREx_EnableGPIOPullUp,"ax",%progbits
+ 334              		.align	1
+ 335              		.global	HAL_PWREx_EnableGPIOPullUp
+ 336              		.syntax unified
+ 337              		.thumb
+ 338              		.thumb_func
+ 340              	HAL_PWREx_EnableGPIOPullUp:
+ 341              		@ args = 0, pretend = 0, frame = 16
+ 342              		@ frame_needed = 1, uses_anonymous_args = 0
+ 343              		@ link register save eliminated.
+ 344 0000 80B4     		push	{r7}
+ 345 0002 85B0     		sub	sp, sp, #20
+ 346 0004 00AF     		add	r7, sp, #0
+ 347 0006 7860     		str	r0, [r7, #4]
+ 348 0008 3960     		str	r1, [r7]
+ 349 000a 0023     		movs	r3, #0
+ 350 000c FB73     		strb	r3, [r7, #15]
+ 351 000e 7B68     		ldr	r3, [r7, #4]
+ 352 0010 062B     		cmp	r3, #6
+ 353 0012 7FD8     		bhi	.L35
+ 354 0014 01A2     		adr	r2, .L37
+ 355 0016 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 7
+
+
+ 356 001a 00BF     		.p2align 2
+ 357              	.L37:
+ 358 001c 39000000 		.word	.L43+1
+ 359 0020 5D000000 		.word	.L42+1
+ 360 0024 7D000000 		.word	.L41+1
+ 361 0028 99000000 		.word	.L40+1
+ 362 002c B5000000 		.word	.L39+1
+ 363 0030 D1000000 		.word	.L38+1
+ 364 0034 F1000000 		.word	.L36+1
+ 365              		.p2align 1
+ 366              	.L43:
+ 367 0038 3B4B     		ldr	r3, .L46
+ 368 003a 1A6A     		ldr	r2, [r3, #32]
+ 369 003c 3B68     		ldr	r3, [r7]
+ 370 003e 23F48043 		bic	r3, r3, #16384
+ 371 0042 3949     		ldr	r1, .L46
+ 372 0044 1343     		orrs	r3, r3, r2
+ 373 0046 0B62     		str	r3, [r1, #32]
+ 374 0048 374B     		ldr	r3, .L46
+ 375 004a 5A6A     		ldr	r2, [r3, #36]
+ 376 004c 3B68     		ldr	r3, [r7]
+ 377 004e 23F42043 		bic	r3, r3, #40960
+ 378 0052 DB43     		mvns	r3, r3
+ 379 0054 3449     		ldr	r1, .L46
+ 380 0056 1340     		ands	r3, r3, r2
+ 381 0058 4B62     		str	r3, [r1, #36]
+ 382 005a 5EE0     		b	.L44
+ 383              	.L42:
+ 384 005c 324B     		ldr	r3, .L46
+ 385 005e 9A6A     		ldr	r2, [r3, #40]
+ 386 0060 3149     		ldr	r1, .L46
+ 387 0062 3B68     		ldr	r3, [r7]
+ 388 0064 1343     		orrs	r3, r3, r2
+ 389 0066 8B62     		str	r3, [r1, #40]
+ 390 0068 2F4B     		ldr	r3, .L46
+ 391 006a DA6A     		ldr	r2, [r3, #44]
+ 392 006c 3B68     		ldr	r3, [r7]
+ 393 006e 23F01003 		bic	r3, r3, #16
+ 394 0072 DB43     		mvns	r3, r3
+ 395 0074 2C49     		ldr	r1, .L46
+ 396 0076 1340     		ands	r3, r3, r2
+ 397 0078 CB62     		str	r3, [r1, #44]
+ 398 007a 4EE0     		b	.L44
+ 399              	.L41:
+ 400 007c 2A4B     		ldr	r3, .L46
+ 401 007e 1A6B     		ldr	r2, [r3, #48]
+ 402 0080 2949     		ldr	r1, .L46
+ 403 0082 3B68     		ldr	r3, [r7]
+ 404 0084 1343     		orrs	r3, r3, r2
+ 405 0086 0B63     		str	r3, [r1, #48]
+ 406 0088 274B     		ldr	r3, .L46
+ 407 008a 5A6B     		ldr	r2, [r3, #52]
+ 408 008c 3B68     		ldr	r3, [r7]
+ 409 008e DB43     		mvns	r3, r3
+ 410 0090 2549     		ldr	r1, .L46
+ 411 0092 1340     		ands	r3, r3, r2
+ 412 0094 4B63     		str	r3, [r1, #52]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 8
+
+
+ 413 0096 40E0     		b	.L44
+ 414              	.L40:
+ 415 0098 234B     		ldr	r3, .L46
+ 416 009a 9A6B     		ldr	r2, [r3, #56]
+ 417 009c 2249     		ldr	r1, .L46
+ 418 009e 3B68     		ldr	r3, [r7]
+ 419 00a0 1343     		orrs	r3, r3, r2
+ 420 00a2 8B63     		str	r3, [r1, #56]
+ 421 00a4 204B     		ldr	r3, .L46
+ 422 00a6 DA6B     		ldr	r2, [r3, #60]
+ 423 00a8 3B68     		ldr	r3, [r7]
+ 424 00aa DB43     		mvns	r3, r3
+ 425 00ac 1E49     		ldr	r1, .L46
+ 426 00ae 1340     		ands	r3, r3, r2
+ 427 00b0 CB63     		str	r3, [r1, #60]
+ 428 00b2 32E0     		b	.L44
+ 429              	.L39:
+ 430 00b4 1C4B     		ldr	r3, .L46
+ 431 00b6 1A6C     		ldr	r2, [r3, #64]
+ 432 00b8 1B49     		ldr	r1, .L46
+ 433 00ba 3B68     		ldr	r3, [r7]
+ 434 00bc 1343     		orrs	r3, r3, r2
+ 435 00be 0B64     		str	r3, [r1, #64]
+ 436 00c0 194B     		ldr	r3, .L46
+ 437 00c2 5A6C     		ldr	r2, [r3, #68]
+ 438 00c4 3B68     		ldr	r3, [r7]
+ 439 00c6 DB43     		mvns	r3, r3
+ 440 00c8 1749     		ldr	r1, .L46
+ 441 00ca 1340     		ands	r3, r3, r2
+ 442 00cc 4B64     		str	r3, [r1, #68]
+ 443 00ce 24E0     		b	.L44
+ 444              	.L38:
+ 445 00d0 154B     		ldr	r3, .L46
+ 446 00d2 9A6C     		ldr	r2, [r3, #72]
+ 447 00d4 3B68     		ldr	r3, [r7]
+ 448 00d6 9BB2     		uxth	r3, r3
+ 449 00d8 1349     		ldr	r1, .L46
+ 450 00da 1343     		orrs	r3, r3, r2
+ 451 00dc 8B64     		str	r3, [r1, #72]
+ 452 00de 124B     		ldr	r3, .L46
+ 453 00e0 DA6C     		ldr	r2, [r3, #76]
+ 454 00e2 3B68     		ldr	r3, [r7]
+ 455 00e4 9BB2     		uxth	r3, r3
+ 456 00e6 DB43     		mvns	r3, r3
+ 457 00e8 0F49     		ldr	r1, .L46
+ 458 00ea 1340     		ands	r3, r3, r2
+ 459 00ec CB64     		str	r3, [r1, #76]
+ 460 00ee 14E0     		b	.L44
+ 461              	.L36:
+ 462 00f0 0D4B     		ldr	r3, .L46
+ 463 00f2 1A6D     		ldr	r2, [r3, #80]
+ 464 00f4 3B68     		ldr	r3, [r7]
+ 465 00f6 C3F30A03 		ubfx	r3, r3, #0, #11
+ 466 00fa 0B49     		ldr	r1, .L46
+ 467 00fc 1343     		orrs	r3, r3, r2
+ 468 00fe 0B65     		str	r3, [r1, #80]
+ 469 0100 094B     		ldr	r3, .L46
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 9
+
+
+ 470 0102 5A6D     		ldr	r2, [r3, #84]
+ 471 0104 3B68     		ldr	r3, [r7]
+ 472 0106 C3F30903 		ubfx	r3, r3, #0, #10
+ 473 010a DB43     		mvns	r3, r3
+ 474 010c 0649     		ldr	r1, .L46
+ 475 010e 1340     		ands	r3, r3, r2
+ 476 0110 4B65     		str	r3, [r1, #84]
+ 477 0112 02E0     		b	.L44
+ 478              	.L35:
+ 479 0114 0123     		movs	r3, #1
+ 480 0116 FB73     		strb	r3, [r7, #15]
+ 481 0118 00BF     		nop
+ 482              	.L44:
+ 483 011a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 484 011c 1846     		mov	r0, r3
+ 485 011e 1437     		adds	r7, r7, #20
+ 486 0120 BD46     		mov	sp, r7
+ 487              		@ sp needed
+ 488 0122 5DF8047B 		ldr	r7, [sp], #4
+ 489 0126 7047     		bx	lr
+ 490              	.L47:
+ 491              		.align	2
+ 492              	.L46:
+ 493 0128 00700040 		.word	1073770496
+ 495              		.section	.text.HAL_PWREx_DisableGPIOPullUp,"ax",%progbits
+ 496              		.align	1
+ 497              		.global	HAL_PWREx_DisableGPIOPullUp
+ 498              		.syntax unified
+ 499              		.thumb
+ 500              		.thumb_func
+ 502              	HAL_PWREx_DisableGPIOPullUp:
+ 503              		@ args = 0, pretend = 0, frame = 16
+ 504              		@ frame_needed = 1, uses_anonymous_args = 0
+ 505              		@ link register save eliminated.
+ 506 0000 80B4     		push	{r7}
+ 507 0002 85B0     		sub	sp, sp, #20
+ 508 0004 00AF     		add	r7, sp, #0
+ 509 0006 7860     		str	r0, [r7, #4]
+ 510 0008 3960     		str	r1, [r7]
+ 511 000a 0023     		movs	r3, #0
+ 512 000c FB73     		strb	r3, [r7, #15]
+ 513 000e 7B68     		ldr	r3, [r7, #4]
+ 514 0010 062B     		cmp	r3, #6
+ 515 0012 4ED8     		bhi	.L49
+ 516 0014 01A2     		adr	r2, .L51
+ 517 0016 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 518 001a 00BF     		.p2align 2
+ 519              	.L51:
+ 520 001c 39000000 		.word	.L57+1
+ 521 0020 4D000000 		.word	.L56+1
+ 522 0024 5D000000 		.word	.L55+1
+ 523 0028 6D000000 		.word	.L54+1
+ 524 002c 7D000000 		.word	.L53+1
+ 525 0030 8D000000 		.word	.L52+1
+ 526 0034 9F000000 		.word	.L50+1
+ 527              		.p2align 1
+ 528              	.L57:
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 10
+
+
+ 529 0038 234B     		ldr	r3, .L60
+ 530 003a 1A6A     		ldr	r2, [r3, #32]
+ 531 003c 3B68     		ldr	r3, [r7]
+ 532 003e 23F48043 		bic	r3, r3, #16384
+ 533 0042 DB43     		mvns	r3, r3
+ 534 0044 2049     		ldr	r1, .L60
+ 535 0046 1340     		ands	r3, r3, r2
+ 536 0048 0B62     		str	r3, [r1, #32]
+ 537 004a 35E0     		b	.L58
+ 538              	.L56:
+ 539 004c 1E4B     		ldr	r3, .L60
+ 540 004e 9A6A     		ldr	r2, [r3, #40]
+ 541 0050 3B68     		ldr	r3, [r7]
+ 542 0052 DB43     		mvns	r3, r3
+ 543 0054 1C49     		ldr	r1, .L60
+ 544 0056 1340     		ands	r3, r3, r2
+ 545 0058 8B62     		str	r3, [r1, #40]
+ 546 005a 2DE0     		b	.L58
+ 547              	.L55:
+ 548 005c 1A4B     		ldr	r3, .L60
+ 549 005e 1A6B     		ldr	r2, [r3, #48]
+ 550 0060 3B68     		ldr	r3, [r7]
+ 551 0062 DB43     		mvns	r3, r3
+ 552 0064 1849     		ldr	r1, .L60
+ 553 0066 1340     		ands	r3, r3, r2
+ 554 0068 0B63     		str	r3, [r1, #48]
+ 555 006a 25E0     		b	.L58
+ 556              	.L54:
+ 557 006c 164B     		ldr	r3, .L60
+ 558 006e 9A6B     		ldr	r2, [r3, #56]
+ 559 0070 3B68     		ldr	r3, [r7]
+ 560 0072 DB43     		mvns	r3, r3
+ 561 0074 1449     		ldr	r1, .L60
+ 562 0076 1340     		ands	r3, r3, r2
+ 563 0078 8B63     		str	r3, [r1, #56]
+ 564 007a 1DE0     		b	.L58
+ 565              	.L53:
+ 566 007c 124B     		ldr	r3, .L60
+ 567 007e 1A6C     		ldr	r2, [r3, #64]
+ 568 0080 3B68     		ldr	r3, [r7]
+ 569 0082 DB43     		mvns	r3, r3
+ 570 0084 1049     		ldr	r1, .L60
+ 571 0086 1340     		ands	r3, r3, r2
+ 572 0088 0B64     		str	r3, [r1, #64]
+ 573 008a 15E0     		b	.L58
+ 574              	.L52:
+ 575 008c 0E4B     		ldr	r3, .L60
+ 576 008e 9A6C     		ldr	r2, [r3, #72]
+ 577 0090 3B68     		ldr	r3, [r7]
+ 578 0092 9BB2     		uxth	r3, r3
+ 579 0094 DB43     		mvns	r3, r3
+ 580 0096 0C49     		ldr	r1, .L60
+ 581 0098 1340     		ands	r3, r3, r2
+ 582 009a 8B64     		str	r3, [r1, #72]
+ 583 009c 0CE0     		b	.L58
+ 584              	.L50:
+ 585 009e 0A4B     		ldr	r3, .L60
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 11
+
+
+ 586 00a0 1A6D     		ldr	r2, [r3, #80]
+ 587 00a2 3B68     		ldr	r3, [r7]
+ 588 00a4 C3F30A03 		ubfx	r3, r3, #0, #11
+ 589 00a8 DB43     		mvns	r3, r3
+ 590 00aa 0749     		ldr	r1, .L60
+ 591 00ac 1340     		ands	r3, r3, r2
+ 592 00ae 0B65     		str	r3, [r1, #80]
+ 593 00b0 02E0     		b	.L58
+ 594              	.L49:
+ 595 00b2 0123     		movs	r3, #1
+ 596 00b4 FB73     		strb	r3, [r7, #15]
+ 597 00b6 00BF     		nop
+ 598              	.L58:
+ 599 00b8 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 600 00ba 1846     		mov	r0, r3
+ 601 00bc 1437     		adds	r7, r7, #20
+ 602 00be BD46     		mov	sp, r7
+ 603              		@ sp needed
+ 604 00c0 5DF8047B 		ldr	r7, [sp], #4
+ 605 00c4 7047     		bx	lr
+ 606              	.L61:
+ 607 00c6 00BF     		.align	2
+ 608              	.L60:
+ 609 00c8 00700040 		.word	1073770496
+ 611              		.section	.text.HAL_PWREx_EnableGPIOPullDown,"ax",%progbits
+ 612              		.align	1
+ 613              		.global	HAL_PWREx_EnableGPIOPullDown
+ 614              		.syntax unified
+ 615              		.thumb
+ 616              		.thumb_func
+ 618              	HAL_PWREx_EnableGPIOPullDown:
+ 619              		@ args = 0, pretend = 0, frame = 16
+ 620              		@ frame_needed = 1, uses_anonymous_args = 0
+ 621              		@ link register save eliminated.
+ 622 0000 80B4     		push	{r7}
+ 623 0002 85B0     		sub	sp, sp, #20
+ 624 0004 00AF     		add	r7, sp, #0
+ 625 0006 7860     		str	r0, [r7, #4]
+ 626 0008 3960     		str	r1, [r7]
+ 627 000a 0023     		movs	r3, #0
+ 628 000c FB73     		strb	r3, [r7, #15]
+ 629 000e 7B68     		ldr	r3, [r7, #4]
+ 630 0010 062B     		cmp	r3, #6
+ 631 0012 7FD8     		bhi	.L63
+ 632 0014 01A2     		adr	r2, .L65
+ 633 0016 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 634 001a 00BF     		.p2align 2
+ 635              	.L65:
+ 636 001c 39000000 		.word	.L71+1
+ 637 0020 5D000000 		.word	.L70+1
+ 638 0024 7D000000 		.word	.L69+1
+ 639 0028 99000000 		.word	.L68+1
+ 640 002c B5000000 		.word	.L67+1
+ 641 0030 D1000000 		.word	.L66+1
+ 642 0034 F1000000 		.word	.L64+1
+ 643              		.p2align 1
+ 644              	.L71:
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 12
+
+
+ 645 0038 3B4B     		ldr	r3, .L74
+ 646 003a 5A6A     		ldr	r2, [r3, #36]
+ 647 003c 3B68     		ldr	r3, [r7]
+ 648 003e 23F42043 		bic	r3, r3, #40960
+ 649 0042 3949     		ldr	r1, .L74
+ 650 0044 1343     		orrs	r3, r3, r2
+ 651 0046 4B62     		str	r3, [r1, #36]
+ 652 0048 374B     		ldr	r3, .L74
+ 653 004a 1A6A     		ldr	r2, [r3, #32]
+ 654 004c 3B68     		ldr	r3, [r7]
+ 655 004e 23F48043 		bic	r3, r3, #16384
+ 656 0052 DB43     		mvns	r3, r3
+ 657 0054 3449     		ldr	r1, .L74
+ 658 0056 1340     		ands	r3, r3, r2
+ 659 0058 0B62     		str	r3, [r1, #32]
+ 660 005a 5EE0     		b	.L72
+ 661              	.L70:
+ 662 005c 324B     		ldr	r3, .L74
+ 663 005e DA6A     		ldr	r2, [r3, #44]
+ 664 0060 3B68     		ldr	r3, [r7]
+ 665 0062 23F01003 		bic	r3, r3, #16
+ 666 0066 3049     		ldr	r1, .L74
+ 667 0068 1343     		orrs	r3, r3, r2
+ 668 006a CB62     		str	r3, [r1, #44]
+ 669 006c 2E4B     		ldr	r3, .L74
+ 670 006e 9A6A     		ldr	r2, [r3, #40]
+ 671 0070 3B68     		ldr	r3, [r7]
+ 672 0072 DB43     		mvns	r3, r3
+ 673 0074 2C49     		ldr	r1, .L74
+ 674 0076 1340     		ands	r3, r3, r2
+ 675 0078 8B62     		str	r3, [r1, #40]
+ 676 007a 4EE0     		b	.L72
+ 677              	.L69:
+ 678 007c 2A4B     		ldr	r3, .L74
+ 679 007e 5A6B     		ldr	r2, [r3, #52]
+ 680 0080 2949     		ldr	r1, .L74
+ 681 0082 3B68     		ldr	r3, [r7]
+ 682 0084 1343     		orrs	r3, r3, r2
+ 683 0086 4B63     		str	r3, [r1, #52]
+ 684 0088 274B     		ldr	r3, .L74
+ 685 008a 1A6B     		ldr	r2, [r3, #48]
+ 686 008c 3B68     		ldr	r3, [r7]
+ 687 008e DB43     		mvns	r3, r3
+ 688 0090 2549     		ldr	r1, .L74
+ 689 0092 1340     		ands	r3, r3, r2
+ 690 0094 0B63     		str	r3, [r1, #48]
+ 691 0096 40E0     		b	.L72
+ 692              	.L68:
+ 693 0098 234B     		ldr	r3, .L74
+ 694 009a DA6B     		ldr	r2, [r3, #60]
+ 695 009c 2249     		ldr	r1, .L74
+ 696 009e 3B68     		ldr	r3, [r7]
+ 697 00a0 1343     		orrs	r3, r3, r2
+ 698 00a2 CB63     		str	r3, [r1, #60]
+ 699 00a4 204B     		ldr	r3, .L74
+ 700 00a6 9A6B     		ldr	r2, [r3, #56]
+ 701 00a8 3B68     		ldr	r3, [r7]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 13
+
+
+ 702 00aa DB43     		mvns	r3, r3
+ 703 00ac 1E49     		ldr	r1, .L74
+ 704 00ae 1340     		ands	r3, r3, r2
+ 705 00b0 8B63     		str	r3, [r1, #56]
+ 706 00b2 32E0     		b	.L72
+ 707              	.L67:
+ 708 00b4 1C4B     		ldr	r3, .L74
+ 709 00b6 5A6C     		ldr	r2, [r3, #68]
+ 710 00b8 1B49     		ldr	r1, .L74
+ 711 00ba 3B68     		ldr	r3, [r7]
+ 712 00bc 1343     		orrs	r3, r3, r2
+ 713 00be 4B64     		str	r3, [r1, #68]
+ 714 00c0 194B     		ldr	r3, .L74
+ 715 00c2 1A6C     		ldr	r2, [r3, #64]
+ 716 00c4 3B68     		ldr	r3, [r7]
+ 717 00c6 DB43     		mvns	r3, r3
+ 718 00c8 1749     		ldr	r1, .L74
+ 719 00ca 1340     		ands	r3, r3, r2
+ 720 00cc 0B64     		str	r3, [r1, #64]
+ 721 00ce 24E0     		b	.L72
+ 722              	.L66:
+ 723 00d0 154B     		ldr	r3, .L74
+ 724 00d2 DA6C     		ldr	r2, [r3, #76]
+ 725 00d4 3B68     		ldr	r3, [r7]
+ 726 00d6 9BB2     		uxth	r3, r3
+ 727 00d8 1349     		ldr	r1, .L74
+ 728 00da 1343     		orrs	r3, r3, r2
+ 729 00dc CB64     		str	r3, [r1, #76]
+ 730 00de 124B     		ldr	r3, .L74
+ 731 00e0 9A6C     		ldr	r2, [r3, #72]
+ 732 00e2 3B68     		ldr	r3, [r7]
+ 733 00e4 9BB2     		uxth	r3, r3
+ 734 00e6 DB43     		mvns	r3, r3
+ 735 00e8 0F49     		ldr	r1, .L74
+ 736 00ea 1340     		ands	r3, r3, r2
+ 737 00ec 8B64     		str	r3, [r1, #72]
+ 738 00ee 14E0     		b	.L72
+ 739              	.L64:
+ 740 00f0 0D4B     		ldr	r3, .L74
+ 741 00f2 5A6D     		ldr	r2, [r3, #84]
+ 742 00f4 3B68     		ldr	r3, [r7]
+ 743 00f6 C3F30903 		ubfx	r3, r3, #0, #10
+ 744 00fa 0B49     		ldr	r1, .L74
+ 745 00fc 1343     		orrs	r3, r3, r2
+ 746 00fe 4B65     		str	r3, [r1, #84]
+ 747 0100 094B     		ldr	r3, .L74
+ 748 0102 1A6D     		ldr	r2, [r3, #80]
+ 749 0104 3B68     		ldr	r3, [r7]
+ 750 0106 C3F30A03 		ubfx	r3, r3, #0, #11
+ 751 010a DB43     		mvns	r3, r3
+ 752 010c 0649     		ldr	r1, .L74
+ 753 010e 1340     		ands	r3, r3, r2
+ 754 0110 0B65     		str	r3, [r1, #80]
+ 755 0112 02E0     		b	.L72
+ 756              	.L63:
+ 757 0114 0123     		movs	r3, #1
+ 758 0116 FB73     		strb	r3, [r7, #15]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 14
+
+
+ 759 0118 00BF     		nop
+ 760              	.L72:
+ 761 011a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 762 011c 1846     		mov	r0, r3
+ 763 011e 1437     		adds	r7, r7, #20
+ 764 0120 BD46     		mov	sp, r7
+ 765              		@ sp needed
+ 766 0122 5DF8047B 		ldr	r7, [sp], #4
+ 767 0126 7047     		bx	lr
+ 768              	.L75:
+ 769              		.align	2
+ 770              	.L74:
+ 771 0128 00700040 		.word	1073770496
+ 773              		.section	.text.HAL_PWREx_DisableGPIOPullDown,"ax",%progbits
+ 774              		.align	1
+ 775              		.global	HAL_PWREx_DisableGPIOPullDown
+ 776              		.syntax unified
+ 777              		.thumb
+ 778              		.thumb_func
+ 780              	HAL_PWREx_DisableGPIOPullDown:
+ 781              		@ args = 0, pretend = 0, frame = 16
+ 782              		@ frame_needed = 1, uses_anonymous_args = 0
+ 783              		@ link register save eliminated.
+ 784 0000 80B4     		push	{r7}
+ 785 0002 85B0     		sub	sp, sp, #20
+ 786 0004 00AF     		add	r7, sp, #0
+ 787 0006 7860     		str	r0, [r7, #4]
+ 788 0008 3960     		str	r1, [r7]
+ 789 000a 0023     		movs	r3, #0
+ 790 000c FB73     		strb	r3, [r7, #15]
+ 791 000e 7B68     		ldr	r3, [r7, #4]
+ 792 0010 062B     		cmp	r3, #6
+ 793 0012 50D8     		bhi	.L77
+ 794 0014 01A2     		adr	r2, .L79
+ 795 0016 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 796 001a 00BF     		.p2align 2
+ 797              	.L79:
+ 798 001c 39000000 		.word	.L85+1
+ 799 0020 4D000000 		.word	.L84+1
+ 800 0024 61000000 		.word	.L83+1
+ 801 0028 71000000 		.word	.L82+1
+ 802 002c 81000000 		.word	.L81+1
+ 803 0030 91000000 		.word	.L80+1
+ 804 0034 A3000000 		.word	.L78+1
+ 805              		.p2align 1
+ 806              	.L85:
+ 807 0038 244B     		ldr	r3, .L88
+ 808 003a 5A6A     		ldr	r2, [r3, #36]
+ 809 003c 3B68     		ldr	r3, [r7]
+ 810 003e 23F42043 		bic	r3, r3, #40960
+ 811 0042 DB43     		mvns	r3, r3
+ 812 0044 2149     		ldr	r1, .L88
+ 813 0046 1340     		ands	r3, r3, r2
+ 814 0048 4B62     		str	r3, [r1, #36]
+ 815 004a 37E0     		b	.L86
+ 816              	.L84:
+ 817 004c 1F4B     		ldr	r3, .L88
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 15
+
+
+ 818 004e DA6A     		ldr	r2, [r3, #44]
+ 819 0050 3B68     		ldr	r3, [r7]
+ 820 0052 23F01003 		bic	r3, r3, #16
+ 821 0056 DB43     		mvns	r3, r3
+ 822 0058 1C49     		ldr	r1, .L88
+ 823 005a 1340     		ands	r3, r3, r2
+ 824 005c CB62     		str	r3, [r1, #44]
+ 825 005e 2DE0     		b	.L86
+ 826              	.L83:
+ 827 0060 1A4B     		ldr	r3, .L88
+ 828 0062 5A6B     		ldr	r2, [r3, #52]
+ 829 0064 3B68     		ldr	r3, [r7]
+ 830 0066 DB43     		mvns	r3, r3
+ 831 0068 1849     		ldr	r1, .L88
+ 832 006a 1340     		ands	r3, r3, r2
+ 833 006c 4B63     		str	r3, [r1, #52]
+ 834 006e 25E0     		b	.L86
+ 835              	.L82:
+ 836 0070 164B     		ldr	r3, .L88
+ 837 0072 DA6B     		ldr	r2, [r3, #60]
+ 838 0074 3B68     		ldr	r3, [r7]
+ 839 0076 DB43     		mvns	r3, r3
+ 840 0078 1449     		ldr	r1, .L88
+ 841 007a 1340     		ands	r3, r3, r2
+ 842 007c CB63     		str	r3, [r1, #60]
+ 843 007e 1DE0     		b	.L86
+ 844              	.L81:
+ 845 0080 124B     		ldr	r3, .L88
+ 846 0082 5A6C     		ldr	r2, [r3, #68]
+ 847 0084 3B68     		ldr	r3, [r7]
+ 848 0086 DB43     		mvns	r3, r3
+ 849 0088 1049     		ldr	r1, .L88
+ 850 008a 1340     		ands	r3, r3, r2
+ 851 008c 4B64     		str	r3, [r1, #68]
+ 852 008e 15E0     		b	.L86
+ 853              	.L80:
+ 854 0090 0E4B     		ldr	r3, .L88
+ 855 0092 DA6C     		ldr	r2, [r3, #76]
+ 856 0094 3B68     		ldr	r3, [r7]
+ 857 0096 9BB2     		uxth	r3, r3
+ 858 0098 DB43     		mvns	r3, r3
+ 859 009a 0C49     		ldr	r1, .L88
+ 860 009c 1340     		ands	r3, r3, r2
+ 861 009e CB64     		str	r3, [r1, #76]
+ 862 00a0 0CE0     		b	.L86
+ 863              	.L78:
+ 864 00a2 0A4B     		ldr	r3, .L88
+ 865 00a4 5A6D     		ldr	r2, [r3, #84]
+ 866 00a6 3B68     		ldr	r3, [r7]
+ 867 00a8 C3F30903 		ubfx	r3, r3, #0, #10
+ 868 00ac DB43     		mvns	r3, r3
+ 869 00ae 0749     		ldr	r1, .L88
+ 870 00b0 1340     		ands	r3, r3, r2
+ 871 00b2 4B65     		str	r3, [r1, #84]
+ 872 00b4 02E0     		b	.L86
+ 873              	.L77:
+ 874 00b6 0123     		movs	r3, #1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 16
+
+
+ 875 00b8 FB73     		strb	r3, [r7, #15]
+ 876 00ba 00BF     		nop
+ 877              	.L86:
+ 878 00bc FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 879 00be 1846     		mov	r0, r3
+ 880 00c0 1437     		adds	r7, r7, #20
+ 881 00c2 BD46     		mov	sp, r7
+ 882              		@ sp needed
+ 883 00c4 5DF8047B 		ldr	r7, [sp], #4
+ 884 00c8 7047     		bx	lr
+ 885              	.L89:
+ 886 00ca 00BF     		.align	2
+ 887              	.L88:
+ 888 00cc 00700040 		.word	1073770496
+ 890              		.section	.text.HAL_PWREx_EnablePullUpPullDownConfig,"ax",%progbits
+ 891              		.align	1
+ 892              		.global	HAL_PWREx_EnablePullUpPullDownConfig
+ 893              		.syntax unified
+ 894              		.thumb
+ 895              		.thumb_func
+ 897              	HAL_PWREx_EnablePullUpPullDownConfig:
+ 898              		@ args = 0, pretend = 0, frame = 0
+ 899              		@ frame_needed = 1, uses_anonymous_args = 0
+ 900              		@ link register save eliminated.
+ 901 0000 80B4     		push	{r7}
+ 902 0002 00AF     		add	r7, sp, #0
+ 903 0004 054B     		ldr	r3, .L91
+ 904 0006 9B68     		ldr	r3, [r3, #8]
+ 905 0008 044A     		ldr	r2, .L91
+ 906 000a 43F48063 		orr	r3, r3, #1024
+ 907 000e 9360     		str	r3, [r2, #8]
+ 908 0010 00BF     		nop
+ 909 0012 BD46     		mov	sp, r7
+ 910              		@ sp needed
+ 911 0014 5DF8047B 		ldr	r7, [sp], #4
+ 912 0018 7047     		bx	lr
+ 913              	.L92:
+ 914 001a 00BF     		.align	2
+ 915              	.L91:
+ 916 001c 00700040 		.word	1073770496
+ 918              		.section	.text.HAL_PWREx_DisablePullUpPullDownConfig,"ax",%progbits
+ 919              		.align	1
+ 920              		.global	HAL_PWREx_DisablePullUpPullDownConfig
+ 921              		.syntax unified
+ 922              		.thumb
+ 923              		.thumb_func
+ 925              	HAL_PWREx_DisablePullUpPullDownConfig:
+ 926              		@ args = 0, pretend = 0, frame = 0
+ 927              		@ frame_needed = 1, uses_anonymous_args = 0
+ 928              		@ link register save eliminated.
+ 929 0000 80B4     		push	{r7}
+ 930 0002 00AF     		add	r7, sp, #0
+ 931 0004 054B     		ldr	r3, .L94
+ 932 0006 9B68     		ldr	r3, [r3, #8]
+ 933 0008 044A     		ldr	r2, .L94
+ 934 000a 23F48063 		bic	r3, r3, #1024
+ 935 000e 9360     		str	r3, [r2, #8]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 17
+
+
+ 936 0010 00BF     		nop
+ 937 0012 BD46     		mov	sp, r7
+ 938              		@ sp needed
+ 939 0014 5DF8047B 		ldr	r7, [sp], #4
+ 940 0018 7047     		bx	lr
+ 941              	.L95:
+ 942 001a 00BF     		.align	2
+ 943              	.L94:
+ 944 001c 00700040 		.word	1073770496
+ 946              		.section	.text.HAL_PWREx_EnableSRAM2ContentRetention,"ax",%progbits
+ 947              		.align	1
+ 948              		.global	HAL_PWREx_EnableSRAM2ContentRetention
+ 949              		.syntax unified
+ 950              		.thumb
+ 951              		.thumb_func
+ 953              	HAL_PWREx_EnableSRAM2ContentRetention:
+ 954              		@ args = 0, pretend = 0, frame = 0
+ 955              		@ frame_needed = 1, uses_anonymous_args = 0
+ 956              		@ link register save eliminated.
+ 957 0000 80B4     		push	{r7}
+ 958 0002 00AF     		add	r7, sp, #0
+ 959 0004 054B     		ldr	r3, .L97
+ 960 0006 9B68     		ldr	r3, [r3, #8]
+ 961 0008 044A     		ldr	r2, .L97
+ 962 000a 43F48073 		orr	r3, r3, #256
+ 963 000e 9360     		str	r3, [r2, #8]
+ 964 0010 00BF     		nop
+ 965 0012 BD46     		mov	sp, r7
+ 966              		@ sp needed
+ 967 0014 5DF8047B 		ldr	r7, [sp], #4
+ 968 0018 7047     		bx	lr
+ 969              	.L98:
+ 970 001a 00BF     		.align	2
+ 971              	.L97:
+ 972 001c 00700040 		.word	1073770496
+ 974              		.section	.text.HAL_PWREx_DisableSRAM2ContentRetention,"ax",%progbits
+ 975              		.align	1
+ 976              		.global	HAL_PWREx_DisableSRAM2ContentRetention
+ 977              		.syntax unified
+ 978              		.thumb
+ 979              		.thumb_func
+ 981              	HAL_PWREx_DisableSRAM2ContentRetention:
+ 982              		@ args = 0, pretend = 0, frame = 0
+ 983              		@ frame_needed = 1, uses_anonymous_args = 0
+ 984              		@ link register save eliminated.
+ 985 0000 80B4     		push	{r7}
+ 986 0002 00AF     		add	r7, sp, #0
+ 987 0004 054B     		ldr	r3, .L100
+ 988 0006 9B68     		ldr	r3, [r3, #8]
+ 989 0008 044A     		ldr	r2, .L100
+ 990 000a 23F48073 		bic	r3, r3, #256
+ 991 000e 9360     		str	r3, [r2, #8]
+ 992 0010 00BF     		nop
+ 993 0012 BD46     		mov	sp, r7
+ 994              		@ sp needed
+ 995 0014 5DF8047B 		ldr	r7, [sp], #4
+ 996 0018 7047     		bx	lr
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 18
+
+
+ 997              	.L101:
+ 998 001a 00BF     		.align	2
+ 999              	.L100:
+ 1000 001c 00700040 		.word	1073770496
+ 1002              		.section	.text.HAL_PWREx_EnablePVM1,"ax",%progbits
+ 1003              		.align	1
+ 1004              		.global	HAL_PWREx_EnablePVM1
+ 1005              		.syntax unified
+ 1006              		.thumb
+ 1007              		.thumb_func
+ 1009              	HAL_PWREx_EnablePVM1:
+ 1010              		@ args = 0, pretend = 0, frame = 0
+ 1011              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1012              		@ link register save eliminated.
+ 1013 0000 80B4     		push	{r7}
+ 1014 0002 00AF     		add	r7, sp, #0
+ 1015 0004 054B     		ldr	r3, .L103
+ 1016 0006 5B68     		ldr	r3, [r3, #4]
+ 1017 0008 044A     		ldr	r2, .L103
+ 1018 000a 43F01003 		orr	r3, r3, #16
+ 1019 000e 5360     		str	r3, [r2, #4]
+ 1020 0010 00BF     		nop
+ 1021 0012 BD46     		mov	sp, r7
+ 1022              		@ sp needed
+ 1023 0014 5DF8047B 		ldr	r7, [sp], #4
+ 1024 0018 7047     		bx	lr
+ 1025              	.L104:
+ 1026 001a 00BF     		.align	2
+ 1027              	.L103:
+ 1028 001c 00700040 		.word	1073770496
+ 1030              		.section	.text.HAL_PWREx_DisablePVM1,"ax",%progbits
+ 1031              		.align	1
+ 1032              		.global	HAL_PWREx_DisablePVM1
+ 1033              		.syntax unified
+ 1034              		.thumb
+ 1035              		.thumb_func
+ 1037              	HAL_PWREx_DisablePVM1:
+ 1038              		@ args = 0, pretend = 0, frame = 0
+ 1039              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1040              		@ link register save eliminated.
+ 1041 0000 80B4     		push	{r7}
+ 1042 0002 00AF     		add	r7, sp, #0
+ 1043 0004 054B     		ldr	r3, .L106
+ 1044 0006 5B68     		ldr	r3, [r3, #4]
+ 1045 0008 044A     		ldr	r2, .L106
+ 1046 000a 23F01003 		bic	r3, r3, #16
+ 1047 000e 5360     		str	r3, [r2, #4]
+ 1048 0010 00BF     		nop
+ 1049 0012 BD46     		mov	sp, r7
+ 1050              		@ sp needed
+ 1051 0014 5DF8047B 		ldr	r7, [sp], #4
+ 1052 0018 7047     		bx	lr
+ 1053              	.L107:
+ 1054 001a 00BF     		.align	2
+ 1055              	.L106:
+ 1056 001c 00700040 		.word	1073770496
+ 1058              		.section	.text.HAL_PWREx_EnablePVM2,"ax",%progbits
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 19
+
+
+ 1059              		.align	1
+ 1060              		.global	HAL_PWREx_EnablePVM2
+ 1061              		.syntax unified
+ 1062              		.thumb
+ 1063              		.thumb_func
+ 1065              	HAL_PWREx_EnablePVM2:
+ 1066              		@ args = 0, pretend = 0, frame = 0
+ 1067              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1068              		@ link register save eliminated.
+ 1069 0000 80B4     		push	{r7}
+ 1070 0002 00AF     		add	r7, sp, #0
+ 1071 0004 054B     		ldr	r3, .L109
+ 1072 0006 5B68     		ldr	r3, [r3, #4]
+ 1073 0008 044A     		ldr	r2, .L109
+ 1074 000a 43F02003 		orr	r3, r3, #32
+ 1075 000e 5360     		str	r3, [r2, #4]
+ 1076 0010 00BF     		nop
+ 1077 0012 BD46     		mov	sp, r7
+ 1078              		@ sp needed
+ 1079 0014 5DF8047B 		ldr	r7, [sp], #4
+ 1080 0018 7047     		bx	lr
+ 1081              	.L110:
+ 1082 001a 00BF     		.align	2
+ 1083              	.L109:
+ 1084 001c 00700040 		.word	1073770496
+ 1086              		.section	.text.HAL_PWREx_DisablePVM2,"ax",%progbits
+ 1087              		.align	1
+ 1088              		.global	HAL_PWREx_DisablePVM2
+ 1089              		.syntax unified
+ 1090              		.thumb
+ 1091              		.thumb_func
+ 1093              	HAL_PWREx_DisablePVM2:
+ 1094              		@ args = 0, pretend = 0, frame = 0
+ 1095              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1096              		@ link register save eliminated.
+ 1097 0000 80B4     		push	{r7}
+ 1098 0002 00AF     		add	r7, sp, #0
+ 1099 0004 054B     		ldr	r3, .L112
+ 1100 0006 5B68     		ldr	r3, [r3, #4]
+ 1101 0008 044A     		ldr	r2, .L112
+ 1102 000a 23F02003 		bic	r3, r3, #32
+ 1103 000e 5360     		str	r3, [r2, #4]
+ 1104 0010 00BF     		nop
+ 1105 0012 BD46     		mov	sp, r7
+ 1106              		@ sp needed
+ 1107 0014 5DF8047B 		ldr	r7, [sp], #4
+ 1108 0018 7047     		bx	lr
+ 1109              	.L113:
+ 1110 001a 00BF     		.align	2
+ 1111              	.L112:
+ 1112 001c 00700040 		.word	1073770496
+ 1114              		.section	.text.HAL_PWREx_EnablePVM3,"ax",%progbits
+ 1115              		.align	1
+ 1116              		.global	HAL_PWREx_EnablePVM3
+ 1117              		.syntax unified
+ 1118              		.thumb
+ 1119              		.thumb_func
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 20
+
+
+ 1121              	HAL_PWREx_EnablePVM3:
+ 1122              		@ args = 0, pretend = 0, frame = 0
+ 1123              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1124              		@ link register save eliminated.
+ 1125 0000 80B4     		push	{r7}
+ 1126 0002 00AF     		add	r7, sp, #0
+ 1127 0004 054B     		ldr	r3, .L115
+ 1128 0006 5B68     		ldr	r3, [r3, #4]
+ 1129 0008 044A     		ldr	r2, .L115
+ 1130 000a 43F04003 		orr	r3, r3, #64
+ 1131 000e 5360     		str	r3, [r2, #4]
+ 1132 0010 00BF     		nop
+ 1133 0012 BD46     		mov	sp, r7
+ 1134              		@ sp needed
+ 1135 0014 5DF8047B 		ldr	r7, [sp], #4
+ 1136 0018 7047     		bx	lr
+ 1137              	.L116:
+ 1138 001a 00BF     		.align	2
+ 1139              	.L115:
+ 1140 001c 00700040 		.word	1073770496
+ 1142              		.section	.text.HAL_PWREx_DisablePVM3,"ax",%progbits
+ 1143              		.align	1
+ 1144              		.global	HAL_PWREx_DisablePVM3
+ 1145              		.syntax unified
+ 1146              		.thumb
+ 1147              		.thumb_func
+ 1149              	HAL_PWREx_DisablePVM3:
+ 1150              		@ args = 0, pretend = 0, frame = 0
+ 1151              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1152              		@ link register save eliminated.
+ 1153 0000 80B4     		push	{r7}
+ 1154 0002 00AF     		add	r7, sp, #0
+ 1155 0004 054B     		ldr	r3, .L118
+ 1156 0006 5B68     		ldr	r3, [r3, #4]
+ 1157 0008 044A     		ldr	r2, .L118
+ 1158 000a 23F04003 		bic	r3, r3, #64
+ 1159 000e 5360     		str	r3, [r2, #4]
+ 1160 0010 00BF     		nop
+ 1161 0012 BD46     		mov	sp, r7
+ 1162              		@ sp needed
+ 1163 0014 5DF8047B 		ldr	r7, [sp], #4
+ 1164 0018 7047     		bx	lr
+ 1165              	.L119:
+ 1166 001a 00BF     		.align	2
+ 1167              	.L118:
+ 1168 001c 00700040 		.word	1073770496
+ 1170              		.section	.text.HAL_PWREx_EnablePVM4,"ax",%progbits
+ 1171              		.align	1
+ 1172              		.global	HAL_PWREx_EnablePVM4
+ 1173              		.syntax unified
+ 1174              		.thumb
+ 1175              		.thumb_func
+ 1177              	HAL_PWREx_EnablePVM4:
+ 1178              		@ args = 0, pretend = 0, frame = 0
+ 1179              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1180              		@ link register save eliminated.
+ 1181 0000 80B4     		push	{r7}
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 21
+
+
+ 1182 0002 00AF     		add	r7, sp, #0
+ 1183 0004 054B     		ldr	r3, .L121
+ 1184 0006 5B68     		ldr	r3, [r3, #4]
+ 1185 0008 044A     		ldr	r2, .L121
+ 1186 000a 43F08003 		orr	r3, r3, #128
+ 1187 000e 5360     		str	r3, [r2, #4]
+ 1188 0010 00BF     		nop
+ 1189 0012 BD46     		mov	sp, r7
+ 1190              		@ sp needed
+ 1191 0014 5DF8047B 		ldr	r7, [sp], #4
+ 1192 0018 7047     		bx	lr
+ 1193              	.L122:
+ 1194 001a 00BF     		.align	2
+ 1195              	.L121:
+ 1196 001c 00700040 		.word	1073770496
+ 1198              		.section	.text.HAL_PWREx_DisablePVM4,"ax",%progbits
+ 1199              		.align	1
+ 1200              		.global	HAL_PWREx_DisablePVM4
+ 1201              		.syntax unified
+ 1202              		.thumb
+ 1203              		.thumb_func
+ 1205              	HAL_PWREx_DisablePVM4:
+ 1206              		@ args = 0, pretend = 0, frame = 0
+ 1207              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1208              		@ link register save eliminated.
+ 1209 0000 80B4     		push	{r7}
+ 1210 0002 00AF     		add	r7, sp, #0
+ 1211 0004 054B     		ldr	r3, .L124
+ 1212 0006 5B68     		ldr	r3, [r3, #4]
+ 1213 0008 044A     		ldr	r2, .L124
+ 1214 000a 23F08003 		bic	r3, r3, #128
+ 1215 000e 5360     		str	r3, [r2, #4]
+ 1216 0010 00BF     		nop
+ 1217 0012 BD46     		mov	sp, r7
+ 1218              		@ sp needed
+ 1219 0014 5DF8047B 		ldr	r7, [sp], #4
+ 1220 0018 7047     		bx	lr
+ 1221              	.L125:
+ 1222 001a 00BF     		.align	2
+ 1223              	.L124:
+ 1224 001c 00700040 		.word	1073770496
+ 1226              		.section	.text.HAL_PWREx_ConfigPVM,"ax",%progbits
+ 1227              		.align	1
+ 1228              		.global	HAL_PWREx_ConfigPVM
+ 1229              		.syntax unified
+ 1230              		.thumb
+ 1231              		.thumb_func
+ 1233              	HAL_PWREx_ConfigPVM:
+ 1234              		@ args = 0, pretend = 0, frame = 16
+ 1235              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1236              		@ link register save eliminated.
+ 1237 0000 80B4     		push	{r7}
+ 1238 0002 85B0     		sub	sp, sp, #20
+ 1239 0004 00AF     		add	r7, sp, #0
+ 1240 0006 7860     		str	r0, [r7, #4]
+ 1241 0008 0023     		movs	r3, #0
+ 1242 000a FB73     		strb	r3, [r7, #15]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 22
+
+
+ 1243 000c 7B68     		ldr	r3, [r7, #4]
+ 1244 000e 1B68     		ldr	r3, [r3]
+ 1245 0010 802B     		cmp	r3, #128
+ 1246 0012 00F0EB80 		beq	.L127
+ 1247 0016 802B     		cmp	r3, #128
+ 1248 0018 00F23181 		bhi	.L128
+ 1249 001c 402B     		cmp	r3, #64
+ 1250 001e 00F09C80 		beq	.L129
+ 1251 0022 402B     		cmp	r3, #64
+ 1252 0024 00F22B81 		bhi	.L128
+ 1253 0028 102B     		cmp	r3, #16
+ 1254 002a 02D0     		beq	.L130
+ 1255 002c 202B     		cmp	r3, #32
+ 1256 002e 4AD0     		beq	.L131
+ 1257 0030 25E1     		b	.L128
+ 1258              	.L130:
+ 1259 0032 974B     		ldr	r3, .L154
+ 1260 0034 5B6A     		ldr	r3, [r3, #36]
+ 1261 0036 964A     		ldr	r2, .L154
+ 1262 0038 23F00803 		bic	r3, r3, #8
+ 1263 003c 5362     		str	r3, [r2, #36]
+ 1264 003e 944B     		ldr	r3, .L154
+ 1265 0040 1B6A     		ldr	r3, [r3, #32]
+ 1266 0042 934A     		ldr	r2, .L154
+ 1267 0044 23F00803 		bic	r3, r3, #8
+ 1268 0048 1362     		str	r3, [r2, #32]
+ 1269 004a 914B     		ldr	r3, .L154
+ 1270 004c DB6A     		ldr	r3, [r3, #44]
+ 1271 004e 904A     		ldr	r2, .L154
+ 1272 0050 23F00803 		bic	r3, r3, #8
+ 1273 0054 D362     		str	r3, [r2, #44]
+ 1274 0056 8E4B     		ldr	r3, .L154
+ 1275 0058 9B6A     		ldr	r3, [r3, #40]
+ 1276 005a 8D4A     		ldr	r2, .L154
+ 1277 005c 23F00803 		bic	r3, r3, #8
+ 1278 0060 9362     		str	r3, [r2, #40]
+ 1279 0062 7B68     		ldr	r3, [r7, #4]
+ 1280 0064 5B68     		ldr	r3, [r3, #4]
+ 1281 0066 03F48033 		and	r3, r3, #65536
+ 1282 006a 002B     		cmp	r3, #0
+ 1283 006c 05D0     		beq	.L132
+ 1284 006e 884B     		ldr	r3, .L154
+ 1285 0070 1B6A     		ldr	r3, [r3, #32]
+ 1286 0072 874A     		ldr	r2, .L154
+ 1287 0074 43F00803 		orr	r3, r3, #8
+ 1288 0078 1362     		str	r3, [r2, #32]
+ 1289              	.L132:
+ 1290 007a 7B68     		ldr	r3, [r7, #4]
+ 1291 007c 5B68     		ldr	r3, [r3, #4]
+ 1292 007e 03F40033 		and	r3, r3, #131072
+ 1293 0082 002B     		cmp	r3, #0
+ 1294 0084 05D0     		beq	.L133
+ 1295 0086 824B     		ldr	r3, .L154
+ 1296 0088 5B6A     		ldr	r3, [r3, #36]
+ 1297 008a 814A     		ldr	r2, .L154
+ 1298 008c 43F00803 		orr	r3, r3, #8
+ 1299 0090 5362     		str	r3, [r2, #36]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 23
+
+
+ 1300              	.L133:
+ 1301 0092 7B68     		ldr	r3, [r7, #4]
+ 1302 0094 5B68     		ldr	r3, [r3, #4]
+ 1303 0096 03F00103 		and	r3, r3, #1
+ 1304 009a 002B     		cmp	r3, #0
+ 1305 009c 05D0     		beq	.L134
+ 1306 009e 7C4B     		ldr	r3, .L154
+ 1307 00a0 9B6A     		ldr	r3, [r3, #40]
+ 1308 00a2 7B4A     		ldr	r2, .L154
+ 1309 00a4 43F00803 		orr	r3, r3, #8
+ 1310 00a8 9362     		str	r3, [r2, #40]
+ 1311              	.L134:
+ 1312 00aa 7B68     		ldr	r3, [r7, #4]
+ 1313 00ac 5B68     		ldr	r3, [r3, #4]
+ 1314 00ae 03F00203 		and	r3, r3, #2
+ 1315 00b2 002B     		cmp	r3, #0
+ 1316 00b4 00F0E680 		beq	.L150
+ 1317 00b8 754B     		ldr	r3, .L154
+ 1318 00ba DB6A     		ldr	r3, [r3, #44]
+ 1319 00bc 744A     		ldr	r2, .L154
+ 1320 00be 43F00803 		orr	r3, r3, #8
+ 1321 00c2 D362     		str	r3, [r2, #44]
+ 1322 00c4 DEE0     		b	.L150
+ 1323              	.L131:
+ 1324 00c6 724B     		ldr	r3, .L154
+ 1325 00c8 5B6A     		ldr	r3, [r3, #36]
+ 1326 00ca 714A     		ldr	r2, .L154
+ 1327 00cc 23F01003 		bic	r3, r3, #16
+ 1328 00d0 5362     		str	r3, [r2, #36]
+ 1329 00d2 6F4B     		ldr	r3, .L154
+ 1330 00d4 1B6A     		ldr	r3, [r3, #32]
+ 1331 00d6 6E4A     		ldr	r2, .L154
+ 1332 00d8 23F01003 		bic	r3, r3, #16
+ 1333 00dc 1362     		str	r3, [r2, #32]
+ 1334 00de 6C4B     		ldr	r3, .L154
+ 1335 00e0 DB6A     		ldr	r3, [r3, #44]
+ 1336 00e2 6B4A     		ldr	r2, .L154
+ 1337 00e4 23F01003 		bic	r3, r3, #16
+ 1338 00e8 D362     		str	r3, [r2, #44]
+ 1339 00ea 694B     		ldr	r3, .L154
+ 1340 00ec 9B6A     		ldr	r3, [r3, #40]
+ 1341 00ee 684A     		ldr	r2, .L154
+ 1342 00f0 23F01003 		bic	r3, r3, #16
+ 1343 00f4 9362     		str	r3, [r2, #40]
+ 1344 00f6 7B68     		ldr	r3, [r7, #4]
+ 1345 00f8 5B68     		ldr	r3, [r3, #4]
+ 1346 00fa 03F48033 		and	r3, r3, #65536
+ 1347 00fe 002B     		cmp	r3, #0
+ 1348 0100 05D0     		beq	.L137
+ 1349 0102 634B     		ldr	r3, .L154
+ 1350 0104 1B6A     		ldr	r3, [r3, #32]
+ 1351 0106 624A     		ldr	r2, .L154
+ 1352 0108 43F01003 		orr	r3, r3, #16
+ 1353 010c 1362     		str	r3, [r2, #32]
+ 1354              	.L137:
+ 1355 010e 7B68     		ldr	r3, [r7, #4]
+ 1356 0110 5B68     		ldr	r3, [r3, #4]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 24
+
+
+ 1357 0112 03F40033 		and	r3, r3, #131072
+ 1358 0116 002B     		cmp	r3, #0
+ 1359 0118 05D0     		beq	.L138
+ 1360 011a 5D4B     		ldr	r3, .L154
+ 1361 011c 5B6A     		ldr	r3, [r3, #36]
+ 1362 011e 5C4A     		ldr	r2, .L154
+ 1363 0120 43F01003 		orr	r3, r3, #16
+ 1364 0124 5362     		str	r3, [r2, #36]
+ 1365              	.L138:
+ 1366 0126 7B68     		ldr	r3, [r7, #4]
+ 1367 0128 5B68     		ldr	r3, [r3, #4]
+ 1368 012a 03F00103 		and	r3, r3, #1
+ 1369 012e 002B     		cmp	r3, #0
+ 1370 0130 05D0     		beq	.L139
+ 1371 0132 574B     		ldr	r3, .L154
+ 1372 0134 9B6A     		ldr	r3, [r3, #40]
+ 1373 0136 564A     		ldr	r2, .L154
+ 1374 0138 43F01003 		orr	r3, r3, #16
+ 1375 013c 9362     		str	r3, [r2, #40]
+ 1376              	.L139:
+ 1377 013e 7B68     		ldr	r3, [r7, #4]
+ 1378 0140 5B68     		ldr	r3, [r3, #4]
+ 1379 0142 03F00203 		and	r3, r3, #2
+ 1380 0146 002B     		cmp	r3, #0
+ 1381 0148 00F09E80 		beq	.L151
+ 1382 014c 504B     		ldr	r3, .L154
+ 1383 014e DB6A     		ldr	r3, [r3, #44]
+ 1384 0150 4F4A     		ldr	r2, .L154
+ 1385 0152 43F01003 		orr	r3, r3, #16
+ 1386 0156 D362     		str	r3, [r2, #44]
+ 1387 0158 96E0     		b	.L151
+ 1388              	.L129:
+ 1389 015a 4D4B     		ldr	r3, .L154
+ 1390 015c 5B6A     		ldr	r3, [r3, #36]
+ 1391 015e 4C4A     		ldr	r2, .L154
+ 1392 0160 23F02003 		bic	r3, r3, #32
+ 1393 0164 5362     		str	r3, [r2, #36]
+ 1394 0166 4A4B     		ldr	r3, .L154
+ 1395 0168 1B6A     		ldr	r3, [r3, #32]
+ 1396 016a 494A     		ldr	r2, .L154
+ 1397 016c 23F02003 		bic	r3, r3, #32
+ 1398 0170 1362     		str	r3, [r2, #32]
+ 1399 0172 474B     		ldr	r3, .L154
+ 1400 0174 DB6A     		ldr	r3, [r3, #44]
+ 1401 0176 464A     		ldr	r2, .L154
+ 1402 0178 23F02003 		bic	r3, r3, #32
+ 1403 017c D362     		str	r3, [r2, #44]
+ 1404 017e 444B     		ldr	r3, .L154
+ 1405 0180 9B6A     		ldr	r3, [r3, #40]
+ 1406 0182 434A     		ldr	r2, .L154
+ 1407 0184 23F02003 		bic	r3, r3, #32
+ 1408 0188 9362     		str	r3, [r2, #40]
+ 1409 018a 7B68     		ldr	r3, [r7, #4]
+ 1410 018c 5B68     		ldr	r3, [r3, #4]
+ 1411 018e 03F48033 		and	r3, r3, #65536
+ 1412 0192 002B     		cmp	r3, #0
+ 1413 0194 05D0     		beq	.L141
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 25
+
+
+ 1414 0196 3E4B     		ldr	r3, .L154
+ 1415 0198 1B6A     		ldr	r3, [r3, #32]
+ 1416 019a 3D4A     		ldr	r2, .L154
+ 1417 019c 43F02003 		orr	r3, r3, #32
+ 1418 01a0 1362     		str	r3, [r2, #32]
+ 1419              	.L141:
+ 1420 01a2 7B68     		ldr	r3, [r7, #4]
+ 1421 01a4 5B68     		ldr	r3, [r3, #4]
+ 1422 01a6 03F40033 		and	r3, r3, #131072
+ 1423 01aa 002B     		cmp	r3, #0
+ 1424 01ac 05D0     		beq	.L142
+ 1425 01ae 384B     		ldr	r3, .L154
+ 1426 01b0 5B6A     		ldr	r3, [r3, #36]
+ 1427 01b2 374A     		ldr	r2, .L154
+ 1428 01b4 43F02003 		orr	r3, r3, #32
+ 1429 01b8 5362     		str	r3, [r2, #36]
+ 1430              	.L142:
+ 1431 01ba 7B68     		ldr	r3, [r7, #4]
+ 1432 01bc 5B68     		ldr	r3, [r3, #4]
+ 1433 01be 03F00103 		and	r3, r3, #1
+ 1434 01c2 002B     		cmp	r3, #0
+ 1435 01c4 05D0     		beq	.L143
+ 1436 01c6 324B     		ldr	r3, .L154
+ 1437 01c8 9B6A     		ldr	r3, [r3, #40]
+ 1438 01ca 314A     		ldr	r2, .L154
+ 1439 01cc 43F02003 		orr	r3, r3, #32
+ 1440 01d0 9362     		str	r3, [r2, #40]
+ 1441              	.L143:
+ 1442 01d2 7B68     		ldr	r3, [r7, #4]
+ 1443 01d4 5B68     		ldr	r3, [r3, #4]
+ 1444 01d6 03F00203 		and	r3, r3, #2
+ 1445 01da 002B     		cmp	r3, #0
+ 1446 01dc 56D0     		beq	.L152
+ 1447 01de 2C4B     		ldr	r3, .L154
+ 1448 01e0 DB6A     		ldr	r3, [r3, #44]
+ 1449 01e2 2B4A     		ldr	r2, .L154
+ 1450 01e4 43F02003 		orr	r3, r3, #32
+ 1451 01e8 D362     		str	r3, [r2, #44]
+ 1452 01ea 4FE0     		b	.L152
+ 1453              	.L127:
+ 1454 01ec 284B     		ldr	r3, .L154
+ 1455 01ee 5B6A     		ldr	r3, [r3, #36]
+ 1456 01f0 274A     		ldr	r2, .L154
+ 1457 01f2 23F04003 		bic	r3, r3, #64
+ 1458 01f6 5362     		str	r3, [r2, #36]
+ 1459 01f8 254B     		ldr	r3, .L154
+ 1460 01fa 1B6A     		ldr	r3, [r3, #32]
+ 1461 01fc 244A     		ldr	r2, .L154
+ 1462 01fe 23F04003 		bic	r3, r3, #64
+ 1463 0202 1362     		str	r3, [r2, #32]
+ 1464 0204 224B     		ldr	r3, .L154
+ 1465 0206 DB6A     		ldr	r3, [r3, #44]
+ 1466 0208 214A     		ldr	r2, .L154
+ 1467 020a 23F04003 		bic	r3, r3, #64
+ 1468 020e D362     		str	r3, [r2, #44]
+ 1469 0210 1F4B     		ldr	r3, .L154
+ 1470 0212 9B6A     		ldr	r3, [r3, #40]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 26
+
+
+ 1471 0214 1E4A     		ldr	r2, .L154
+ 1472 0216 23F04003 		bic	r3, r3, #64
+ 1473 021a 9362     		str	r3, [r2, #40]
+ 1474 021c 7B68     		ldr	r3, [r7, #4]
+ 1475 021e 5B68     		ldr	r3, [r3, #4]
+ 1476 0220 03F48033 		and	r3, r3, #65536
+ 1477 0224 002B     		cmp	r3, #0
+ 1478 0226 05D0     		beq	.L145
+ 1479 0228 194B     		ldr	r3, .L154
+ 1480 022a 1B6A     		ldr	r3, [r3, #32]
+ 1481 022c 184A     		ldr	r2, .L154
+ 1482 022e 43F04003 		orr	r3, r3, #64
+ 1483 0232 1362     		str	r3, [r2, #32]
+ 1484              	.L145:
+ 1485 0234 7B68     		ldr	r3, [r7, #4]
+ 1486 0236 5B68     		ldr	r3, [r3, #4]
+ 1487 0238 03F40033 		and	r3, r3, #131072
+ 1488 023c 002B     		cmp	r3, #0
+ 1489 023e 05D0     		beq	.L146
+ 1490 0240 134B     		ldr	r3, .L154
+ 1491 0242 5B6A     		ldr	r3, [r3, #36]
+ 1492 0244 124A     		ldr	r2, .L154
+ 1493 0246 43F04003 		orr	r3, r3, #64
+ 1494 024a 5362     		str	r3, [r2, #36]
+ 1495              	.L146:
+ 1496 024c 7B68     		ldr	r3, [r7, #4]
+ 1497 024e 5B68     		ldr	r3, [r3, #4]
+ 1498 0250 03F00103 		and	r3, r3, #1
+ 1499 0254 002B     		cmp	r3, #0
+ 1500 0256 05D0     		beq	.L147
+ 1501 0258 0D4B     		ldr	r3, .L154
+ 1502 025a 9B6A     		ldr	r3, [r3, #40]
+ 1503 025c 0C4A     		ldr	r2, .L154
+ 1504 025e 43F04003 		orr	r3, r3, #64
+ 1505 0262 9362     		str	r3, [r2, #40]
+ 1506              	.L147:
+ 1507 0264 7B68     		ldr	r3, [r7, #4]
+ 1508 0266 5B68     		ldr	r3, [r3, #4]
+ 1509 0268 03F00203 		and	r3, r3, #2
+ 1510 026c 002B     		cmp	r3, #0
+ 1511 026e 11D0     		beq	.L153
+ 1512 0270 074B     		ldr	r3, .L154
+ 1513 0272 DB6A     		ldr	r3, [r3, #44]
+ 1514 0274 064A     		ldr	r2, .L154
+ 1515 0276 43F04003 		orr	r3, r3, #64
+ 1516 027a D362     		str	r3, [r2, #44]
+ 1517 027c 0AE0     		b	.L153
+ 1518              	.L128:
+ 1519 027e 0123     		movs	r3, #1
+ 1520 0280 FB73     		strb	r3, [r7, #15]
+ 1521 0282 08E0     		b	.L136
+ 1522              	.L150:
+ 1523 0284 00BF     		nop
+ 1524 0286 06E0     		b	.L136
+ 1525              	.L151:
+ 1526 0288 00BF     		nop
+ 1527 028a 04E0     		b	.L136
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 27
+
+
+ 1528              	.L152:
+ 1529 028c 00BF     		nop
+ 1530 028e 02E0     		b	.L136
+ 1531              	.L155:
+ 1532              		.align	2
+ 1533              	.L154:
+ 1534 0290 00040140 		.word	1073808384
+ 1535              	.L153:
+ 1536 0294 00BF     		nop
+ 1537              	.L136:
+ 1538 0296 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 1539 0298 1846     		mov	r0, r3
+ 1540 029a 1437     		adds	r7, r7, #20
+ 1541 029c BD46     		mov	sp, r7
+ 1542              		@ sp needed
+ 1543 029e 5DF8047B 		ldr	r7, [sp], #4
+ 1544 02a2 7047     		bx	lr
+ 1546              		.section	.text.HAL_PWREx_EnableLowPowerRunMode,"ax",%progbits
+ 1547              		.align	1
+ 1548              		.global	HAL_PWREx_EnableLowPowerRunMode
+ 1549              		.syntax unified
+ 1550              		.thumb
+ 1551              		.thumb_func
+ 1553              	HAL_PWREx_EnableLowPowerRunMode:
+ 1554              		@ args = 0, pretend = 0, frame = 0
+ 1555              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1556              		@ link register save eliminated.
+ 1557 0000 80B4     		push	{r7}
+ 1558 0002 00AF     		add	r7, sp, #0
+ 1559 0004 054B     		ldr	r3, .L157
+ 1560 0006 1B68     		ldr	r3, [r3]
+ 1561 0008 044A     		ldr	r2, .L157
+ 1562 000a 43F48043 		orr	r3, r3, #16384
+ 1563 000e 1360     		str	r3, [r2]
+ 1564 0010 00BF     		nop
+ 1565 0012 BD46     		mov	sp, r7
+ 1566              		@ sp needed
+ 1567 0014 5DF8047B 		ldr	r7, [sp], #4
+ 1568 0018 7047     		bx	lr
+ 1569              	.L158:
+ 1570 001a 00BF     		.align	2
+ 1571              	.L157:
+ 1572 001c 00700040 		.word	1073770496
+ 1574              		.section	.text.HAL_PWREx_DisableLowPowerRunMode,"ax",%progbits
+ 1575              		.align	1
+ 1576              		.global	HAL_PWREx_DisableLowPowerRunMode
+ 1577              		.syntax unified
+ 1578              		.thumb
+ 1579              		.thumb_func
+ 1581              	HAL_PWREx_DisableLowPowerRunMode:
+ 1582              		@ args = 0, pretend = 0, frame = 8
+ 1583              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1584              		@ link register save eliminated.
+ 1585 0000 80B4     		push	{r7}
+ 1586 0002 83B0     		sub	sp, sp, #12
+ 1587 0004 00AF     		add	r7, sp, #0
+ 1588 0006 174B     		ldr	r3, .L165
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 28
+
+
+ 1589 0008 1B68     		ldr	r3, [r3]
+ 1590 000a 164A     		ldr	r2, .L165
+ 1591 000c 23F48043 		bic	r3, r3, #16384
+ 1592 0010 1360     		str	r3, [r2]
+ 1593 0012 154B     		ldr	r3, .L165+4
+ 1594 0014 1B68     		ldr	r3, [r3]
+ 1595 0016 154A     		ldr	r2, .L165+8
+ 1596 0018 A2FB0323 		umull	r2, r3, r2, r3
+ 1597 001c 9B0C     		lsrs	r3, r3, #18
+ 1598 001e 3222     		movs	r2, #50
+ 1599 0020 02FB03F3 		mul	r3, r2, r3
+ 1600 0024 7B60     		str	r3, [r7, #4]
+ 1601 0026 02E0     		b	.L160
+ 1602              	.L162:
+ 1603 0028 7B68     		ldr	r3, [r7, #4]
+ 1604 002a 013B     		subs	r3, r3, #1
+ 1605 002c 7B60     		str	r3, [r7, #4]
+ 1606              	.L160:
+ 1607 002e 0D4B     		ldr	r3, .L165
+ 1608 0030 5B69     		ldr	r3, [r3, #20]
+ 1609 0032 03F40073 		and	r3, r3, #512
+ 1610 0036 B3F5007F 		cmp	r3, #512
+ 1611 003a 02D1     		bne	.L161
+ 1612 003c 7B68     		ldr	r3, [r7, #4]
+ 1613 003e 002B     		cmp	r3, #0
+ 1614 0040 F2D1     		bne	.L162
+ 1615              	.L161:
+ 1616 0042 084B     		ldr	r3, .L165
+ 1617 0044 5B69     		ldr	r3, [r3, #20]
+ 1618 0046 03F40073 		and	r3, r3, #512
+ 1619 004a B3F5007F 		cmp	r3, #512
+ 1620 004e 01D1     		bne	.L163
+ 1621 0050 0323     		movs	r3, #3
+ 1622 0052 00E0     		b	.L164
+ 1623              	.L163:
+ 1624 0054 0023     		movs	r3, #0
+ 1625              	.L164:
+ 1626 0056 1846     		mov	r0, r3
+ 1627 0058 0C37     		adds	r7, r7, #12
+ 1628 005a BD46     		mov	sp, r7
+ 1629              		@ sp needed
+ 1630 005c 5DF8047B 		ldr	r7, [sp], #4
+ 1631 0060 7047     		bx	lr
+ 1632              	.L166:
+ 1633 0062 00BF     		.align	2
+ 1634              	.L165:
+ 1635 0064 00700040 		.word	1073770496
+ 1636 0068 00000000 		.word	SystemCoreClock
+ 1637 006c 83DE1B43 		.word	1125899907
+ 1639              		.section	.text.HAL_PWREx_EnterSTOP0Mode,"ax",%progbits
+ 1640              		.align	1
+ 1641              		.global	HAL_PWREx_EnterSTOP0Mode
+ 1642              		.syntax unified
+ 1643              		.thumb
+ 1644              		.thumb_func
+ 1646              	HAL_PWREx_EnterSTOP0Mode:
+ 1647              		@ args = 0, pretend = 0, frame = 8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 29
+
+
+ 1648              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1649              		@ link register save eliminated.
+ 1650 0000 80B4     		push	{r7}
+ 1651 0002 83B0     		sub	sp, sp, #12
+ 1652 0004 00AF     		add	r7, sp, #0
+ 1653 0006 0346     		mov	r3, r0
+ 1654 0008 FB71     		strb	r3, [r7, #7]
+ 1655 000a 104B     		ldr	r3, .L170
+ 1656 000c 1B68     		ldr	r3, [r3]
+ 1657 000e 0F4A     		ldr	r2, .L170
+ 1658 0010 23F00703 		bic	r3, r3, #7
+ 1659 0014 1360     		str	r3, [r2]
+ 1660 0016 0E4B     		ldr	r3, .L170+4
+ 1661 0018 1B69     		ldr	r3, [r3, #16]
+ 1662 001a 0D4A     		ldr	r2, .L170+4
+ 1663 001c 43F00403 		orr	r3, r3, #4
+ 1664 0020 1361     		str	r3, [r2, #16]
+ 1665 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 1666 0024 012B     		cmp	r3, #1
+ 1667 0026 01D1     		bne	.L168
+ 1668              		.syntax unified
+ 1669              	@ 909 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c" 1
+ 1670 0028 30BF     		wfi
+ 1671              	@ 0 "" 2
+ 1672              		.thumb
+ 1673              		.syntax unified
+ 1674 002a 02E0     		b	.L169
+ 1675              	.L168:
+ 1676              		.syntax unified
+ 1677              	@ 914 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c" 1
+ 1678 002c 40BF     		sev
+ 1679              	@ 0 "" 2
+ 1680              	@ 915 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c" 1
+ 1681 002e 20BF     		wfe
+ 1682              	@ 0 "" 2
+ 1683              	@ 916 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c" 1
+ 1684 0030 20BF     		wfe
+ 1685              	@ 0 "" 2
+ 1686              		.thumb
+ 1687              		.syntax unified
+ 1688              	.L169:
+ 1689 0032 074B     		ldr	r3, .L170+4
+ 1690 0034 1B69     		ldr	r3, [r3, #16]
+ 1691 0036 064A     		ldr	r2, .L170+4
+ 1692 0038 23F00403 		bic	r3, r3, #4
+ 1693 003c 1361     		str	r3, [r2, #16]
+ 1694 003e 00BF     		nop
+ 1695 0040 0C37     		adds	r7, r7, #12
+ 1696 0042 BD46     		mov	sp, r7
+ 1697              		@ sp needed
+ 1698 0044 5DF8047B 		ldr	r7, [sp], #4
+ 1699 0048 7047     		bx	lr
+ 1700              	.L171:
+ 1701 004a 00BF     		.align	2
+ 1702              	.L170:
+ 1703 004c 00700040 		.word	1073770496
+ 1704 0050 00ED00E0 		.word	-536810240
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 30
+
+
+ 1706              		.section	.text.HAL_PWREx_EnterSTOP1Mode,"ax",%progbits
+ 1707              		.align	1
+ 1708              		.global	HAL_PWREx_EnterSTOP1Mode
+ 1709              		.syntax unified
+ 1710              		.thumb
+ 1711              		.thumb_func
+ 1713              	HAL_PWREx_EnterSTOP1Mode:
+ 1714              		@ args = 0, pretend = 0, frame = 8
+ 1715              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1716              		@ link register save eliminated.
+ 1717 0000 80B4     		push	{r7}
+ 1718 0002 83B0     		sub	sp, sp, #12
+ 1719 0004 00AF     		add	r7, sp, #0
+ 1720 0006 0346     		mov	r3, r0
+ 1721 0008 FB71     		strb	r3, [r7, #7]
+ 1722 000a 114B     		ldr	r3, .L175
+ 1723 000c 1B68     		ldr	r3, [r3]
+ 1724 000e 23F00703 		bic	r3, r3, #7
+ 1725 0012 0F4A     		ldr	r2, .L175
+ 1726 0014 43F00103 		orr	r3, r3, #1
+ 1727 0018 1360     		str	r3, [r2]
+ 1728 001a 0E4B     		ldr	r3, .L175+4
+ 1729 001c 1B69     		ldr	r3, [r3, #16]
+ 1730 001e 0D4A     		ldr	r2, .L175+4
+ 1731 0020 43F00403 		orr	r3, r3, #4
+ 1732 0024 1361     		str	r3, [r2, #16]
+ 1733 0026 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 1734 0028 012B     		cmp	r3, #1
+ 1735 002a 01D1     		bne	.L173
+ 1736              		.syntax unified
+ 1737              	@ 960 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c" 1
+ 1738 002c 30BF     		wfi
+ 1739              	@ 0 "" 2
+ 1740              		.thumb
+ 1741              		.syntax unified
+ 1742 002e 02E0     		b	.L174
+ 1743              	.L173:
+ 1744              		.syntax unified
+ 1745              	@ 965 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c" 1
+ 1746 0030 40BF     		sev
+ 1747              	@ 0 "" 2
+ 1748              	@ 966 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c" 1
+ 1749 0032 20BF     		wfe
+ 1750              	@ 0 "" 2
+ 1751              	@ 967 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c" 1
+ 1752 0034 20BF     		wfe
+ 1753              	@ 0 "" 2
+ 1754              		.thumb
+ 1755              		.syntax unified
+ 1756              	.L174:
+ 1757 0036 074B     		ldr	r3, .L175+4
+ 1758 0038 1B69     		ldr	r3, [r3, #16]
+ 1759 003a 064A     		ldr	r2, .L175+4
+ 1760 003c 23F00403 		bic	r3, r3, #4
+ 1761 0040 1361     		str	r3, [r2, #16]
+ 1762 0042 00BF     		nop
+ 1763 0044 0C37     		adds	r7, r7, #12
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 31
+
+
+ 1764 0046 BD46     		mov	sp, r7
+ 1765              		@ sp needed
+ 1766 0048 5DF8047B 		ldr	r7, [sp], #4
+ 1767 004c 7047     		bx	lr
+ 1768              	.L176:
+ 1769 004e 00BF     		.align	2
+ 1770              	.L175:
+ 1771 0050 00700040 		.word	1073770496
+ 1772 0054 00ED00E0 		.word	-536810240
+ 1774              		.section	.text.HAL_PWREx_EnterSHUTDOWNMode,"ax",%progbits
+ 1775              		.align	1
+ 1776              		.global	HAL_PWREx_EnterSHUTDOWNMode
+ 1777              		.syntax unified
+ 1778              		.thumb
+ 1779              		.thumb_func
+ 1781              	HAL_PWREx_EnterSHUTDOWNMode:
+ 1782              		@ args = 0, pretend = 0, frame = 0
+ 1783              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1784              		@ link register save eliminated.
+ 1785 0000 80B4     		push	{r7}
+ 1786 0002 00AF     		add	r7, sp, #0
+ 1787 0004 094B     		ldr	r3, .L178
+ 1788 0006 1B68     		ldr	r3, [r3]
+ 1789 0008 23F00703 		bic	r3, r3, #7
+ 1790 000c 074A     		ldr	r2, .L178
+ 1791 000e 43F00403 		orr	r3, r3, #4
+ 1792 0012 1360     		str	r3, [r2]
+ 1793 0014 064B     		ldr	r3, .L178+4
+ 1794 0016 1B69     		ldr	r3, [r3, #16]
+ 1795 0018 054A     		ldr	r2, .L178+4
+ 1796 001a 43F00403 		orr	r3, r3, #4
+ 1797 001e 1361     		str	r3, [r2, #16]
+ 1798              		.syntax unified
+ 1799              	@ 1000 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c" 1
+ 1800 0020 30BF     		wfi
+ 1801              	@ 0 "" 2
+ 1802              		.thumb
+ 1803              		.syntax unified
+ 1804 0022 00BF     		nop
+ 1805 0024 BD46     		mov	sp, r7
+ 1806              		@ sp needed
+ 1807 0026 5DF8047B 		ldr	r7, [sp], #4
+ 1808 002a 7047     		bx	lr
+ 1809              	.L179:
+ 1810              		.align	2
+ 1811              	.L178:
+ 1812 002c 00700040 		.word	1073770496
+ 1813 0030 00ED00E0 		.word	-536810240
+ 1815              		.section	.text.HAL_PWREx_PVD_PVM_IRQHandler,"ax",%progbits
+ 1816              		.align	1
+ 1817              		.global	HAL_PWREx_PVD_PVM_IRQHandler
+ 1818              		.syntax unified
+ 1819              		.thumb
+ 1820              		.thumb_func
+ 1822              	HAL_PWREx_PVD_PVM_IRQHandler:
+ 1823              		@ args = 0, pretend = 0, frame = 0
+ 1824              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 32
+
+
+ 1825 0000 80B5     		push	{r7, lr}
+ 1826 0002 00AF     		add	r7, sp, #0
+ 1827 0004 1C4B     		ldr	r3, .L187
+ 1828 0006 5B69     		ldr	r3, [r3, #20]
+ 1829 0008 03F48033 		and	r3, r3, #65536
+ 1830 000c 002B     		cmp	r3, #0
+ 1831 000e 05D0     		beq	.L181
+ 1832 0010 FFF7FEFF 		bl	HAL_PWR_PVDCallback
+ 1833 0014 184B     		ldr	r3, .L187
+ 1834 0016 4FF48032 		mov	r2, #65536
+ 1835 001a 5A61     		str	r2, [r3, #20]
+ 1836              	.L181:
+ 1837 001c 164B     		ldr	r3, .L187
+ 1838 001e 5B6B     		ldr	r3, [r3, #52]
+ 1839 0020 03F00803 		and	r3, r3, #8
+ 1840 0024 002B     		cmp	r3, #0
+ 1841 0026 04D0     		beq	.L182
+ 1842 0028 FFF7FEFF 		bl	HAL_PWREx_PVM1Callback
+ 1843 002c 124B     		ldr	r3, .L187
+ 1844 002e 0822     		movs	r2, #8
+ 1845 0030 5A63     		str	r2, [r3, #52]
+ 1846              	.L182:
+ 1847 0032 114B     		ldr	r3, .L187
+ 1848 0034 5B6B     		ldr	r3, [r3, #52]
+ 1849 0036 03F01003 		and	r3, r3, #16
+ 1850 003a 002B     		cmp	r3, #0
+ 1851 003c 04D0     		beq	.L183
+ 1852 003e FFF7FEFF 		bl	HAL_PWREx_PVM2Callback
+ 1853 0042 0D4B     		ldr	r3, .L187
+ 1854 0044 1022     		movs	r2, #16
+ 1855 0046 5A63     		str	r2, [r3, #52]
+ 1856              	.L183:
+ 1857 0048 0B4B     		ldr	r3, .L187
+ 1858 004a 5B6B     		ldr	r3, [r3, #52]
+ 1859 004c 03F02003 		and	r3, r3, #32
+ 1860 0050 002B     		cmp	r3, #0
+ 1861 0052 04D0     		beq	.L184
+ 1862 0054 FFF7FEFF 		bl	HAL_PWREx_PVM3Callback
+ 1863 0058 074B     		ldr	r3, .L187
+ 1864 005a 2022     		movs	r2, #32
+ 1865 005c 5A63     		str	r2, [r3, #52]
+ 1866              	.L184:
+ 1867 005e 064B     		ldr	r3, .L187
+ 1868 0060 5B6B     		ldr	r3, [r3, #52]
+ 1869 0062 03F04003 		and	r3, r3, #64
+ 1870 0066 002B     		cmp	r3, #0
+ 1871 0068 04D0     		beq	.L186
+ 1872 006a FFF7FEFF 		bl	HAL_PWREx_PVM4Callback
+ 1873 006e 024B     		ldr	r3, .L187
+ 1874 0070 4022     		movs	r2, #64
+ 1875 0072 5A63     		str	r2, [r3, #52]
+ 1876              	.L186:
+ 1877 0074 00BF     		nop
+ 1878 0076 80BD     		pop	{r7, pc}
+ 1879              	.L188:
+ 1880              		.align	2
+ 1881              	.L187:
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 33
+
+
+ 1882 0078 00040140 		.word	1073808384
+ 1884              		.section	.text.HAL_PWREx_PVM1Callback,"ax",%progbits
+ 1885              		.align	1
+ 1886              		.weak	HAL_PWREx_PVM1Callback
+ 1887              		.syntax unified
+ 1888              		.thumb
+ 1889              		.thumb_func
+ 1891              	HAL_PWREx_PVM1Callback:
+ 1892              		@ args = 0, pretend = 0, frame = 0
+ 1893              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1894              		@ link register save eliminated.
+ 1895 0000 80B4     		push	{r7}
+ 1896 0002 00AF     		add	r7, sp, #0
+ 1897 0004 00BF     		nop
+ 1898 0006 BD46     		mov	sp, r7
+ 1899              		@ sp needed
+ 1900 0008 5DF8047B 		ldr	r7, [sp], #4
+ 1901 000c 7047     		bx	lr
+ 1903              		.section	.text.HAL_PWREx_PVM2Callback,"ax",%progbits
+ 1904              		.align	1
+ 1905              		.weak	HAL_PWREx_PVM2Callback
+ 1906              		.syntax unified
+ 1907              		.thumb
+ 1908              		.thumb_func
+ 1910              	HAL_PWREx_PVM2Callback:
+ 1911              		@ args = 0, pretend = 0, frame = 0
+ 1912              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1913              		@ link register save eliminated.
+ 1914 0000 80B4     		push	{r7}
+ 1915 0002 00AF     		add	r7, sp, #0
+ 1916 0004 00BF     		nop
+ 1917 0006 BD46     		mov	sp, r7
+ 1918              		@ sp needed
+ 1919 0008 5DF8047B 		ldr	r7, [sp], #4
+ 1920 000c 7047     		bx	lr
+ 1922              		.section	.text.HAL_PWREx_PVM3Callback,"ax",%progbits
+ 1923              		.align	1
+ 1924              		.weak	HAL_PWREx_PVM3Callback
+ 1925              		.syntax unified
+ 1926              		.thumb
+ 1927              		.thumb_func
+ 1929              	HAL_PWREx_PVM3Callback:
+ 1930              		@ args = 0, pretend = 0, frame = 0
+ 1931              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1932              		@ link register save eliminated.
+ 1933 0000 80B4     		push	{r7}
+ 1934 0002 00AF     		add	r7, sp, #0
+ 1935 0004 00BF     		nop
+ 1936 0006 BD46     		mov	sp, r7
+ 1937              		@ sp needed
+ 1938 0008 5DF8047B 		ldr	r7, [sp], #4
+ 1939 000c 7047     		bx	lr
+ 1941              		.section	.text.HAL_PWREx_PVM4Callback,"ax",%progbits
+ 1942              		.align	1
+ 1943              		.weak	HAL_PWREx_PVM4Callback
+ 1944              		.syntax unified
+ 1945              		.thumb
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 34
+
+
+ 1946              		.thumb_func
+ 1948              	HAL_PWREx_PVM4Callback:
+ 1949              		@ args = 0, pretend = 0, frame = 0
+ 1950              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1951              		@ link register save eliminated.
+ 1952 0000 80B4     		push	{r7}
+ 1953 0002 00AF     		add	r7, sp, #0
+ 1954 0004 00BF     		nop
+ 1955 0006 BD46     		mov	sp, r7
+ 1956              		@ sp needed
+ 1957 0008 5DF8047B 		ldr	r7, [sp], #4
+ 1958 000c 7047     		bx	lr
+ 1960              		.section	.text.HAL_PWREx_EnableUCPDStandbyMode,"ax",%progbits
+ 1961              		.align	1
+ 1962              		.global	HAL_PWREx_EnableUCPDStandbyMode
+ 1963              		.syntax unified
+ 1964              		.thumb
+ 1965              		.thumb_func
+ 1967              	HAL_PWREx_EnableUCPDStandbyMode:
+ 1968              		@ args = 0, pretend = 0, frame = 0
+ 1969              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1970              		@ link register save eliminated.
+ 1971 0000 80B4     		push	{r7}
+ 1972 0002 00AF     		add	r7, sp, #0
+ 1973 0004 054B     		ldr	r3, .L194
+ 1974 0006 9B68     		ldr	r3, [r3, #8]
+ 1975 0008 044A     		ldr	r2, .L194
+ 1976 000a 43F40053 		orr	r3, r3, #8192
+ 1977 000e 9360     		str	r3, [r2, #8]
+ 1978 0010 00BF     		nop
+ 1979 0012 BD46     		mov	sp, r7
+ 1980              		@ sp needed
+ 1981 0014 5DF8047B 		ldr	r7, [sp], #4
+ 1982 0018 7047     		bx	lr
+ 1983              	.L195:
+ 1984 001a 00BF     		.align	2
+ 1985              	.L194:
+ 1986 001c 00700040 		.word	1073770496
+ 1988              		.section	.text.HAL_PWREx_DisableUCPDStandbyMode,"ax",%progbits
+ 1989              		.align	1
+ 1990              		.global	HAL_PWREx_DisableUCPDStandbyMode
+ 1991              		.syntax unified
+ 1992              		.thumb
+ 1993              		.thumb_func
+ 1995              	HAL_PWREx_DisableUCPDStandbyMode:
+ 1996              		@ args = 0, pretend = 0, frame = 0
+ 1997              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1998              		@ link register save eliminated.
+ 1999 0000 80B4     		push	{r7}
+ 2000 0002 00AF     		add	r7, sp, #0
+ 2001 0004 054B     		ldr	r3, .L197
+ 2002 0006 9B68     		ldr	r3, [r3, #8]
+ 2003 0008 044A     		ldr	r2, .L197
+ 2004 000a 23F40053 		bic	r3, r3, #8192
+ 2005 000e 9360     		str	r3, [r2, #8]
+ 2006 0010 00BF     		nop
+ 2007 0012 BD46     		mov	sp, r7
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 35
+
+
+ 2008              		@ sp needed
+ 2009 0014 5DF8047B 		ldr	r7, [sp], #4
+ 2010 0018 7047     		bx	lr
+ 2011              	.L198:
+ 2012 001a 00BF     		.align	2
+ 2013              	.L197:
+ 2014 001c 00700040 		.word	1073770496
+ 2016              		.section	.text.HAL_PWREx_EnableUCPDDeadBattery,"ax",%progbits
+ 2017              		.align	1
+ 2018              		.global	HAL_PWREx_EnableUCPDDeadBattery
+ 2019              		.syntax unified
+ 2020              		.thumb
+ 2021              		.thumb_func
+ 2023              	HAL_PWREx_EnableUCPDDeadBattery:
+ 2024              		@ args = 0, pretend = 0, frame = 0
+ 2025              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2026              		@ link register save eliminated.
+ 2027 0000 80B4     		push	{r7}
+ 2028 0002 00AF     		add	r7, sp, #0
+ 2029 0004 054B     		ldr	r3, .L200
+ 2030 0006 9B68     		ldr	r3, [r3, #8]
+ 2031 0008 044A     		ldr	r2, .L200
+ 2032 000a 23F48043 		bic	r3, r3, #16384
+ 2033 000e 9360     		str	r3, [r2, #8]
+ 2034 0010 00BF     		nop
+ 2035 0012 BD46     		mov	sp, r7
+ 2036              		@ sp needed
+ 2037 0014 5DF8047B 		ldr	r7, [sp], #4
+ 2038 0018 7047     		bx	lr
+ 2039              	.L201:
+ 2040 001a 00BF     		.align	2
+ 2041              	.L200:
+ 2042 001c 00700040 		.word	1073770496
+ 2044              		.section	.text.HAL_PWREx_DisableUCPDDeadBattery,"ax",%progbits
+ 2045              		.align	1
+ 2046              		.global	HAL_PWREx_DisableUCPDDeadBattery
+ 2047              		.syntax unified
+ 2048              		.thumb
+ 2049              		.thumb_func
+ 2051              	HAL_PWREx_DisableUCPDDeadBattery:
+ 2052              		@ args = 0, pretend = 0, frame = 0
+ 2053              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2054              		@ link register save eliminated.
+ 2055 0000 80B4     		push	{r7}
+ 2056 0002 00AF     		add	r7, sp, #0
+ 2057 0004 054B     		ldr	r3, .L203
+ 2058 0006 9B68     		ldr	r3, [r3, #8]
+ 2059 0008 044A     		ldr	r2, .L203
+ 2060 000a 43F48043 		orr	r3, r3, #16384
+ 2061 000e 9360     		str	r3, [r2, #8]
+ 2062 0010 00BF     		nop
+ 2063 0012 BD46     		mov	sp, r7
+ 2064              		@ sp needed
+ 2065 0014 5DF8047B 		ldr	r7, [sp], #4
+ 2066 0018 7047     		bx	lr
+ 2067              	.L204:
+ 2068 001a 00BF     		.align	2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 36
+
+
+ 2069              	.L203:
+ 2070 001c 00700040 		.word	1073770496
+ 2072              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 37
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32g4xx_hal_pwr_ex.c
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:18     .text.HAL_PWREx_GetVoltageRange:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:24     .text.HAL_PWREx_GetVoltageRange:00000000 HAL_PWREx_GetVoltageRange
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:56     .text.HAL_PWREx_GetVoltageRange:0000003c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:59     .text.HAL_PWREx_ControlVoltageScaling:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:65     .text.HAL_PWREx_ControlVoltageScaling:00000000 HAL_PWREx_ControlVoltageScaling
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:207    .text.HAL_PWREx_ControlVoltageScaling:0000013c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:212    .text.HAL_PWREx_EnableBatteryCharging:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:218    .text.HAL_PWREx_EnableBatteryCharging:00000000 HAL_PWREx_EnableBatteryCharging
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:247    .text.HAL_PWREx_EnableBatteryCharging:00000030 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:250    .text.HAL_PWREx_DisableBatteryCharging:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:256    .text.HAL_PWREx_DisableBatteryCharging:00000000 HAL_PWREx_DisableBatteryCharging
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:275    .text.HAL_PWREx_DisableBatteryCharging:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:278    .text.HAL_PWREx_EnableInternalWakeUpLine:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:284    .text.HAL_PWREx_EnableInternalWakeUpLine:00000000 HAL_PWREx_EnableInternalWakeUpLine
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:303    .text.HAL_PWREx_EnableInternalWakeUpLine:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:306    .text.HAL_PWREx_DisableInternalWakeUpLine:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:312    .text.HAL_PWREx_DisableInternalWakeUpLine:00000000 HAL_PWREx_DisableInternalWakeUpLine
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:331    .text.HAL_PWREx_DisableInternalWakeUpLine:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:334    .text.HAL_PWREx_EnableGPIOPullUp:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:340    .text.HAL_PWREx_EnableGPIOPullUp:00000000 HAL_PWREx_EnableGPIOPullUp
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:358    .text.HAL_PWREx_EnableGPIOPullUp:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:365    .text.HAL_PWREx_EnableGPIOPullUp:00000038 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:493    .text.HAL_PWREx_EnableGPIOPullUp:00000128 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:496    .text.HAL_PWREx_DisableGPIOPullUp:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:502    .text.HAL_PWREx_DisableGPIOPullUp:00000000 HAL_PWREx_DisableGPIOPullUp
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:520    .text.HAL_PWREx_DisableGPIOPullUp:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:527    .text.HAL_PWREx_DisableGPIOPullUp:00000038 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:609    .text.HAL_PWREx_DisableGPIOPullUp:000000c8 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:612    .text.HAL_PWREx_EnableGPIOPullDown:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:618    .text.HAL_PWREx_EnableGPIOPullDown:00000000 HAL_PWREx_EnableGPIOPullDown
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:636    .text.HAL_PWREx_EnableGPIOPullDown:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:643    .text.HAL_PWREx_EnableGPIOPullDown:00000038 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:771    .text.HAL_PWREx_EnableGPIOPullDown:00000128 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:774    .text.HAL_PWREx_DisableGPIOPullDown:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:780    .text.HAL_PWREx_DisableGPIOPullDown:00000000 HAL_PWREx_DisableGPIOPullDown
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:798    .text.HAL_PWREx_DisableGPIOPullDown:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:805    .text.HAL_PWREx_DisableGPIOPullDown:00000038 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:888    .text.HAL_PWREx_DisableGPIOPullDown:000000cc $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:891    .text.HAL_PWREx_EnablePullUpPullDownConfig:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:897    .text.HAL_PWREx_EnablePullUpPullDownConfig:00000000 HAL_PWREx_EnablePullUpPullDownConfig
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:916    .text.HAL_PWREx_EnablePullUpPullDownConfig:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:919    .text.HAL_PWREx_DisablePullUpPullDownConfig:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:925    .text.HAL_PWREx_DisablePullUpPullDownConfig:00000000 HAL_PWREx_DisablePullUpPullDownConfig
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:944    .text.HAL_PWREx_DisablePullUpPullDownConfig:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:947    .text.HAL_PWREx_EnableSRAM2ContentRetention:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:953    .text.HAL_PWREx_EnableSRAM2ContentRetention:00000000 HAL_PWREx_EnableSRAM2ContentRetention
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:972    .text.HAL_PWREx_EnableSRAM2ContentRetention:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:975    .text.HAL_PWREx_DisableSRAM2ContentRetention:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:981    .text.HAL_PWREx_DisableSRAM2ContentRetention:00000000 HAL_PWREx_DisableSRAM2ContentRetention
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1000   .text.HAL_PWREx_DisableSRAM2ContentRetention:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1003   .text.HAL_PWREx_EnablePVM1:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1009   .text.HAL_PWREx_EnablePVM1:00000000 HAL_PWREx_EnablePVM1
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1028   .text.HAL_PWREx_EnablePVM1:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1031   .text.HAL_PWREx_DisablePVM1:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1037   .text.HAL_PWREx_DisablePVM1:00000000 HAL_PWREx_DisablePVM1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 38
+
+
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1056   .text.HAL_PWREx_DisablePVM1:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1059   .text.HAL_PWREx_EnablePVM2:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1065   .text.HAL_PWREx_EnablePVM2:00000000 HAL_PWREx_EnablePVM2
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1084   .text.HAL_PWREx_EnablePVM2:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1087   .text.HAL_PWREx_DisablePVM2:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1093   .text.HAL_PWREx_DisablePVM2:00000000 HAL_PWREx_DisablePVM2
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1112   .text.HAL_PWREx_DisablePVM2:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1115   .text.HAL_PWREx_EnablePVM3:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1121   .text.HAL_PWREx_EnablePVM3:00000000 HAL_PWREx_EnablePVM3
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1140   .text.HAL_PWREx_EnablePVM3:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1143   .text.HAL_PWREx_DisablePVM3:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1149   .text.HAL_PWREx_DisablePVM3:00000000 HAL_PWREx_DisablePVM3
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1168   .text.HAL_PWREx_DisablePVM3:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1171   .text.HAL_PWREx_EnablePVM4:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1177   .text.HAL_PWREx_EnablePVM4:00000000 HAL_PWREx_EnablePVM4
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1196   .text.HAL_PWREx_EnablePVM4:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1199   .text.HAL_PWREx_DisablePVM4:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1205   .text.HAL_PWREx_DisablePVM4:00000000 HAL_PWREx_DisablePVM4
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1224   .text.HAL_PWREx_DisablePVM4:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1227   .text.HAL_PWREx_ConfigPVM:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1233   .text.HAL_PWREx_ConfigPVM:00000000 HAL_PWREx_ConfigPVM
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1534   .text.HAL_PWREx_ConfigPVM:00000290 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1536   .text.HAL_PWREx_ConfigPVM:00000294 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1547   .text.HAL_PWREx_EnableLowPowerRunMode:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1553   .text.HAL_PWREx_EnableLowPowerRunMode:00000000 HAL_PWREx_EnableLowPowerRunMode
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1572   .text.HAL_PWREx_EnableLowPowerRunMode:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1575   .text.HAL_PWREx_DisableLowPowerRunMode:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1581   .text.HAL_PWREx_DisableLowPowerRunMode:00000000 HAL_PWREx_DisableLowPowerRunMode
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1635   .text.HAL_PWREx_DisableLowPowerRunMode:00000064 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1640   .text.HAL_PWREx_EnterSTOP0Mode:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1646   .text.HAL_PWREx_EnterSTOP0Mode:00000000 HAL_PWREx_EnterSTOP0Mode
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1703   .text.HAL_PWREx_EnterSTOP0Mode:0000004c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1707   .text.HAL_PWREx_EnterSTOP1Mode:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1713   .text.HAL_PWREx_EnterSTOP1Mode:00000000 HAL_PWREx_EnterSTOP1Mode
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1771   .text.HAL_PWREx_EnterSTOP1Mode:00000050 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1775   .text.HAL_PWREx_EnterSHUTDOWNMode:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1781   .text.HAL_PWREx_EnterSHUTDOWNMode:00000000 HAL_PWREx_EnterSHUTDOWNMode
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1812   .text.HAL_PWREx_EnterSHUTDOWNMode:0000002c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1816   .text.HAL_PWREx_PVD_PVM_IRQHandler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1822   .text.HAL_PWREx_PVD_PVM_IRQHandler:00000000 HAL_PWREx_PVD_PVM_IRQHandler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1891   .text.HAL_PWREx_PVM1Callback:00000000 HAL_PWREx_PVM1Callback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1910   .text.HAL_PWREx_PVM2Callback:00000000 HAL_PWREx_PVM2Callback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1929   .text.HAL_PWREx_PVM3Callback:00000000 HAL_PWREx_PVM3Callback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1948   .text.HAL_PWREx_PVM4Callback:00000000 HAL_PWREx_PVM4Callback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1882   .text.HAL_PWREx_PVD_PVM_IRQHandler:00000078 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1885   .text.HAL_PWREx_PVM1Callback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1904   .text.HAL_PWREx_PVM2Callback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1923   .text.HAL_PWREx_PVM3Callback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1942   .text.HAL_PWREx_PVM4Callback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1961   .text.HAL_PWREx_EnableUCPDStandbyMode:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1967   .text.HAL_PWREx_EnableUCPDStandbyMode:00000000 HAL_PWREx_EnableUCPDStandbyMode
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1986   .text.HAL_PWREx_EnableUCPDStandbyMode:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1989   .text.HAL_PWREx_DisableUCPDStandbyMode:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:1995   .text.HAL_PWREx_DisableUCPDStandbyMode:00000000 HAL_PWREx_DisableUCPDStandbyMode
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:2014   .text.HAL_PWREx_DisableUCPDStandbyMode:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:2017   .text.HAL_PWREx_EnableUCPDDeadBattery:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:2023   .text.HAL_PWREx_EnableUCPDDeadBattery:00000000 HAL_PWREx_EnableUCPDDeadBattery
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s 			page 39
+
+
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:2042   .text.HAL_PWREx_EnableUCPDDeadBattery:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:2045   .text.HAL_PWREx_DisableUCPDDeadBattery:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:2051   .text.HAL_PWREx_DisableUCPDDeadBattery:00000000 HAL_PWREx_DisableUCPDDeadBattery
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc5AyCAs.s:2070   .text.HAL_PWREx_DisableUCPDDeadBattery:0000001c $d
+
+UNDEFINED SYMBOLS
+SystemCoreClock
+HAL_PWR_PVDCallback

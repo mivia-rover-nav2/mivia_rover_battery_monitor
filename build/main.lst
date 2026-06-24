@@ -1,0 +1,1153 @@
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"main.c"
+  16              		.text
+  17              		.section	.text.ITM_SendChar,"ax",%progbits
+  18              		.align	1
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  23              	ITM_SendChar:
+  24              		@ args = 0, pretend = 0, frame = 8
+  25              		@ frame_needed = 1, uses_anonymous_args = 0
+  26              		@ link register save eliminated.
+  27 0000 80B4     		push	{r7}
+  28 0002 83B0     		sub	sp, sp, #12
+  29 0004 00AF     		add	r7, sp, #0
+  30 0006 7860     		str	r0, [r7, #4]
+  31 0008 4FF06043 		mov	r3, #-536870912
+  32 000c D3F8803E 		ldr	r3, [r3, #3712]
+  33 0010 03F00103 		and	r3, r3, #1
+  34 0014 002B     		cmp	r3, #0
+  35 0016 13D0     		beq	.L2
+  36 0018 4FF06043 		mov	r3, #-536870912
+  37 001c D3F8003E 		ldr	r3, [r3, #3584]
+  38 0020 03F00103 		and	r3, r3, #1
+  39 0024 002B     		cmp	r3, #0
+  40 0026 0BD0     		beq	.L2
+  41 0028 00E0     		b	.L3
+  42              	.L4:
+  43              		.syntax unified
+  44              	@ 2066 "Drivers/CMSIS/Include/core_cm4.h" 1
+  45 002a 00BF     		nop
+  46              	@ 0 "" 2
+  47              		.thumb
+  48              		.syntax unified
+  49              	.L3:
+  50 002c 4FF06043 		mov	r3, #-536870912
+  51 0030 1B68     		ldr	r3, [r3]
+  52 0032 002B     		cmp	r3, #0
+  53 0034 F9D0     		beq	.L4
+  54 0036 4FF06043 		mov	r3, #-536870912
+  55 003a 7A68     		ldr	r2, [r7, #4]
+  56 003c D2B2     		uxtb	r2, r2
+  57 003e 1A70     		strb	r2, [r3]
+  58              	.L2:
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 2
+
+
+  59 0040 7B68     		ldr	r3, [r7, #4]
+  60 0042 1846     		mov	r0, r3
+  61 0044 0C37     		adds	r7, r7, #12
+  62 0046 BD46     		mov	sp, r7
+  63              		@ sp needed
+  64 0048 5DF8047B 		ldr	r7, [sp], #4
+  65 004c 7047     		bx	lr
+  67              		.section	.text._write,"ax",%progbits
+  68              		.align	1
+  69              		.global	_write
+  70              		.syntax unified
+  71              		.thumb
+  72              		.thumb_func
+  74              	_write:
+  75              		@ args = 0, pretend = 0, frame = 24
+  76              		@ frame_needed = 1, uses_anonymous_args = 0
+  77 0000 80B5     		push	{r7, lr}
+  78 0002 86B0     		sub	sp, sp, #24
+  79 0004 00AF     		add	r7, sp, #0
+  80 0006 F860     		str	r0, [r7, #12]
+  81 0008 B960     		str	r1, [r7, #8]
+  82 000a 7A60     		str	r2, [r7, #4]
+  83 000c 0023     		movs	r3, #0
+  84 000e 7B61     		str	r3, [r7, #20]
+  85 0010 09E0     		b	.L7
+  86              	.L8:
+  87 0012 BB68     		ldr	r3, [r7, #8]
+  88 0014 5A1C     		adds	r2, r3, #1
+  89 0016 BA60     		str	r2, [r7, #8]
+  90 0018 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  91 001a 1846     		mov	r0, r3
+  92 001c FFF7FEFF 		bl	ITM_SendChar
+  93 0020 7B69     		ldr	r3, [r7, #20]
+  94 0022 0133     		adds	r3, r3, #1
+  95 0024 7B61     		str	r3, [r7, #20]
+  96              	.L7:
+  97 0026 7A69     		ldr	r2, [r7, #20]
+  98 0028 7B68     		ldr	r3, [r7, #4]
+  99 002a 9A42     		cmp	r2, r3
+ 100 002c F1DB     		blt	.L8
+ 101 002e 7B68     		ldr	r3, [r7, #4]
+ 102 0030 1846     		mov	r0, r3
+ 103 0032 1837     		adds	r7, r7, #24
+ 104 0034 BD46     		mov	sp, r7
+ 105              		@ sp needed
+ 106 0036 80BD     		pop	{r7, pc}
+ 108              		.global	hadc1
+ 109              		.section	.bss.hadc1,"aw",%nobits
+ 110              		.align	2
+ 113              	hadc1:
+ 114 0000 00000000 		.space	108
+ 114      00000000 
+ 114      00000000 
+ 114      00000000 
+ 114      00000000 
+ 115              		.global	hi2c1
+ 116              		.section	.bss.hi2c1,"aw",%nobits
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 3
+
+
+ 117              		.align	2
+ 120              	hi2c1:
+ 121 0000 00000000 		.space	84
+ 121      00000000 
+ 121      00000000 
+ 121      00000000 
+ 121      00000000 
+ 122              		.global	hfdcan1
+ 123              		.section	.bss.hfdcan1,"aw",%nobits
+ 124              		.align	2
+ 127              	hfdcan1:
+ 128 0000 00000000 		.space	100
+ 128      00000000 
+ 128      00000000 
+ 128      00000000 
+ 128      00000000 
+ 129              		.section	.bss.currentVoltage,"aw",%nobits
+ 130              		.align	2
+ 133              	currentVoltage:
+ 134 0000 00000000 		.space	4
+ 135              		.section	.bss.rawAdcValue,"aw",%nobits
+ 136              		.align	2
+ 139              	rawAdcValue:
+ 140 0000 00000000 		.space	4
+ 141              		.section	.data.batteryInfo,"aw"
+ 142              		.align	2
+ 145              	batteryInfo:
+ 146 0000 00000000 		.word	0
+ 147 0004 02       		.byte	2
+ 148 0005 000000   		.space	3
+ 149              		.section	.bss.displayWholeVolt,"aw",%nobits
+ 150              		.align	2
+ 153              	displayWholeVolt:
+ 154 0000 00000000 		.space	4
+ 155              		.section	.bss.displayFracVolt,"aw",%nobits
+ 156              		.align	2
+ 159              	displayFracVolt:
+ 160 0000 00000000 		.space	4
+ 161              		.section	.bss.adcHistory,"aw",%nobits
+ 162              		.align	2
+ 165              	adcHistory:
+ 166 0000 00000000 		.space	128
+ 166      00000000 
+ 166      00000000 
+ 166      00000000 
+ 166      00000000 
+ 167              		.section	.bss.adcHistoryIndex,"aw",%nobits
+ 168              		.align	2
+ 171              	adcHistoryIndex:
+ 172 0000 00000000 		.space	4
+ 173              		.section	.bss.lastAdcTime,"aw",%nobits
+ 174              		.align	2
+ 177              	lastAdcTime:
+ 178 0000 00000000 		.space	4
+ 179              		.section	.bss.lastCanTxTime,"aw",%nobits
+ 180              		.align	2
+ 183              	lastCanTxTime:
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 4
+
+
+ 184 0000 00000000 		.space	4
+ 185              		.section	.bss.lastCanPollTime,"aw",%nobits
+ 186              		.align	2
+ 189              	lastCanPollTime:
+ 190 0000 00000000 		.space	4
+ 191              		.section	.bss.lastDisplayTime,"aw",%nobits
+ 192              		.align	2
+ 195              	lastDisplayTime:
+ 196 0000 00000000 		.space	4
+ 197              		.section	.data.is_screen_connected,"aw"
+ 200              	is_screen_connected:
+ 201 0000 01       		.byte	1
+ 202              		.section	.text.main,"ax",%progbits
+ 203              		.align	1
+ 204              		.global	main
+ 205              		.syntax unified
+ 206              		.thumb
+ 207              		.thumb_func
+ 209              	main:
+ 210              		@ args = 0, pretend = 0, frame = 40
+ 211              		@ frame_needed = 1, uses_anonymous_args = 0
+ 212 0000 90B5     		push	{r4, r7, lr}
+ 213 0002 8DB0     		sub	sp, sp, #52
+ 214 0004 02AF     		add	r7, sp, #8
+ 215 0006 FFF7FEFF 		bl	HAL_Init
+ 216 000a FFF7FEFF 		bl	SystemClock_Config
+ 217 000e FFF7FEFF 		bl	MX_GPIO_Init
+ 218 0012 FFF7FEFF 		bl	MX_ADC1_Init
+ 219 0016 FFF7FEFF 		bl	MX_I2C1_Init
+ 220 001a FFF7FEFF 		bl	CAN_Exchange_Init
+ 221 001e 0346     		mov	r3, r0
+ 222 0020 002B     		cmp	r3, #0
+ 223 0022 07D0     		beq	.L11
+ 224 0024 0122     		movs	r2, #1
+ 225 0026 2021     		movs	r1, #32
+ 226 0028 4FF09040 		mov	r0, #1207959552
+ 227 002c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 228 0030 FFF7FEFF 		bl	Error_Handler
+ 229              	.L11:
+ 230 0034 0022     		movs	r2, #0
+ 231 0036 0121     		movs	r1, #1
+ 232 0038 9148     		ldr	r0, .L23
+ 233 003a FFF7FEFF 		bl	HAL_FDCAN_ActivateNotification
+ 234 003e FFF7FEFF 		bl	CAN_Exchange_Trigger_Startup_Probe
+ 235 0042 FFF7FEFF 		bl	CAN_Exchange_Poll
+ 236 0046 0220     		movs	r0, #2
+ 237 0048 FFF7FEFF 		bl	Battery_Profile_Get_Divider_Ratio
+ 238 004c 87ED080A 		vstr.32	s0, [r7, #32]
+ 239 0050 7F21     		movs	r1, #127
+ 240 0052 8C48     		ldr	r0, .L23+4
+ 241 0054 FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
+ 242 0058 0346     		mov	r3, r0
+ 243 005a 002B     		cmp	r3, #0
+ 244 005c 07D0     		beq	.L12
+ 245 005e 0122     		movs	r2, #1
+ 246 0060 2021     		movs	r1, #32
+ 247 0062 4FF09040 		mov	r0, #1207959552
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 5
+
+
+ 248 0066 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 249 006a FFF7FEFF 		bl	Error_Handler
+ 250              	.L12:
+ 251 006e 8648     		ldr	r0, .L23+8
+ 252 0070 FFF7FEFF 		bl	SSD1306_Init
+ 253 0074 0346     		mov	r3, r0
+ 254 0076 002B     		cmp	r3, #0
+ 255 0078 02D0     		beq	.L13
+ 256 007a 844B     		ldr	r3, .L23+12
+ 257 007c 0022     		movs	r2, #0
+ 258 007e 1A70     		strb	r2, [r3]
+ 259              	.L13:
+ 260 0080 8048     		ldr	r0, .L23+4
+ 261 0082 FFF7FEFF 		bl	HAL_ADC_Start
+ 262 0086 6421     		movs	r1, #100
+ 263 0088 7E48     		ldr	r0, .L23+4
+ 264 008a FFF7FEFF 		bl	HAL_ADC_PollForConversion
+ 265 008e 0346     		mov	r3, r0
+ 266 0090 002B     		cmp	r3, #0
+ 267 0092 45D1     		bne	.L14
+ 268 0094 7B48     		ldr	r0, .L23+4
+ 269 0096 FFF7FEFF 		bl	HAL_ADC_GetValue
+ 270 009a F861     		str	r0, [r7, #28]
+ 271 009c 0023     		movs	r3, #0
+ 272 009e 7B62     		str	r3, [r7, #36]
+ 273 00a0 07E0     		b	.L15
+ 274              	.L16:
+ 275 00a2 7B49     		ldr	r1, .L23+16
+ 276 00a4 7B6A     		ldr	r3, [r7, #36]
+ 277 00a6 FA69     		ldr	r2, [r7, #28]
+ 278 00a8 41F82320 		str	r2, [r1, r3, lsl #2]
+ 279 00ac 7B6A     		ldr	r3, [r7, #36]
+ 280 00ae 0133     		adds	r3, r3, #1
+ 281 00b0 7B62     		str	r3, [r7, #36]
+ 282              	.L15:
+ 283 00b2 7B6A     		ldr	r3, [r7, #36]
+ 284 00b4 1F2B     		cmp	r3, #31
+ 285 00b6 F4D9     		bls	.L16
+ 286 00b8 764A     		ldr	r2, .L23+20
+ 287 00ba FB69     		ldr	r3, [r7, #28]
+ 288 00bc 1360     		str	r3, [r2]
+ 289 00be 754B     		ldr	r3, .L23+20
+ 290 00c0 1B68     		ldr	r3, [r3]
+ 291 00c2 07EE903A 		vmov	s15, r3	@ int
+ 292 00c6 B8EE677A 		vcvt.f32.u32	s14, s15
+ 293 00ca DFED736A 		vldr.32	s13, .L23+24
+ 294 00ce C7EE267A 		vdiv.f32	s15, s14, s13
+ 295 00d2 9FED727A 		vldr.32	s14, .L23+28
+ 296 00d6 67EE877A 		vmul.f32	s15, s15, s14
+ 297 00da C7ED067A 		vstr.32	s15, [r7, #24]
+ 298 00de D7ED066A 		vldr.32	s13, [r7, #24]
+ 299 00e2 97ED087A 		vldr.32	s14, [r7, #32]
+ 300 00e6 C6EE877A 		vdiv.f32	s15, s13, s14
+ 301 00ea 6D4B     		ldr	r3, .L23+32
+ 302 00ec C3ED007A 		vstr.32	s15, [r3]
+ 303 00f0 6B4B     		ldr	r3, .L23+32
+ 304 00f2 D3ED007A 		vldr.32	s15, [r3]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 6
+
+
+ 305 00f6 6B4C     		ldr	r4, .L23+36
+ 306 00f8 3B46     		mov	r3, r7
+ 307 00fa 0221     		movs	r1, #2
+ 308 00fc B0EE670A 		vmov.f32	s0, s15
+ 309 0100 1846     		mov	r0, r3
+ 310 0102 FFF7FEFF 		bl	Battery_Profile_Get_Info
+ 311 0106 2246     		mov	r2, r4
+ 312 0108 3B46     		mov	r3, r7
+ 313 010a 93E80300 		ldm	r3, {r0, r1}
+ 314 010e 82E80300 		stm	r2, {r0, r1}
+ 315 0112 634B     		ldr	r3, .L23+32
+ 316 0114 D3ED007A 		vldr.32	s15, [r3]
+ 317 0118 B0EE670A 		vmov.f32	s0, s15
+ 318 011c FFF7FEFF 		bl	Calculate_Display_Voltage_Parts
+ 319              	.L14:
+ 320 0120 5848     		ldr	r0, .L23+4
+ 321 0122 FFF7FEFF 		bl	HAL_ADC_Stop
+ 322 0126 FFF7FEFF 		bl	HAL_GetTick
+ 323 012a 7861     		str	r0, [r7, #20]
+ 324 012c 5E4A     		ldr	r2, .L23+40
+ 325 012e 7B69     		ldr	r3, [r7, #20]
+ 326 0130 1360     		str	r3, [r2]
+ 327 0132 5E4A     		ldr	r2, .L23+44
+ 328 0134 7B69     		ldr	r3, [r7, #20]
+ 329 0136 1360     		str	r3, [r2]
+ 330 0138 5D4A     		ldr	r2, .L23+48
+ 331 013a 7B69     		ldr	r3, [r7, #20]
+ 332 013c 1360     		str	r3, [r2]
+ 333 013e 5D4A     		ldr	r2, .L23+52
+ 334 0140 7B69     		ldr	r3, [r7, #20]
+ 335 0142 1360     		str	r3, [r2]
+ 336 0144 5C4B     		ldr	r3, .L23+56
+ 337 0146 1968     		ldr	r1, [r3]
+ 338 0148 5C4B     		ldr	r3, .L23+60
+ 339 014a 1A68     		ldr	r2, [r3]
+ 340 014c 514B     		ldr	r3, .L23+20
+ 341 014e 1868     		ldr	r0, [r3]
+ 342 0150 4E4B     		ldr	r3, .L23+12
+ 343 0152 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 344 0154 0193     		str	r3, [sp, #4]
+ 345 0156 534B     		ldr	r3, .L23+36
+ 346 0158 0093     		str	r3, [sp]
+ 347 015a 0346     		mov	r3, r0
+ 348 015c 4A48     		ldr	r0, .L23+8
+ 349 015e FFF7FEFF 		bl	Display_Update_Render
+ 350              	.L22:
+ 351 0162 FFF7FEFF 		bl	HAL_GetTick
+ 352 0166 3861     		str	r0, [r7, #16]
+ 353 0168 4F4B     		ldr	r3, .L23+40
+ 354 016a 1B68     		ldr	r3, [r3]
+ 355 016c 3A69     		ldr	r2, [r7, #16]
+ 356 016e D31A     		subs	r3, r2, r3
+ 357 0170 312B     		cmp	r3, #49
+ 358 0172 4AD9     		bls	.L17
+ 359 0174 4C4A     		ldr	r2, .L23+40
+ 360 0176 3B69     		ldr	r3, [r7, #16]
+ 361 0178 1360     		str	r3, [r2]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 7
+
+
+ 362 017a 4248     		ldr	r0, .L23+4
+ 363 017c FFF7FEFF 		bl	HAL_ADC_Start
+ 364 0180 0A21     		movs	r1, #10
+ 365 0182 4048     		ldr	r0, .L23+4
+ 366 0184 FFF7FEFF 		bl	HAL_ADC_PollForConversion
+ 367 0188 0346     		mov	r3, r0
+ 368 018a 002B     		cmp	r3, #0
+ 369 018c 3AD1     		bne	.L18
+ 370 018e 3D48     		ldr	r0, .L23+4
+ 371 0190 FFF7FEFF 		bl	HAL_ADC_GetValue
+ 372 0194 F860     		str	r0, [r7, #12]
+ 373 0196 F868     		ldr	r0, [r7, #12]
+ 374 0198 FFF7FEFF 		bl	Filter_GetAverage
+ 375 019c 0346     		mov	r3, r0
+ 376 019e 3D4A     		ldr	r2, .L23+20
+ 377 01a0 1360     		str	r3, [r2]
+ 378 01a2 3C4B     		ldr	r3, .L23+20
+ 379 01a4 1B68     		ldr	r3, [r3]
+ 380 01a6 07EE903A 		vmov	s15, r3	@ int
+ 381 01aa B8EE677A 		vcvt.f32.u32	s14, s15
+ 382 01ae DFED3A6A 		vldr.32	s13, .L23+24
+ 383 01b2 C7EE267A 		vdiv.f32	s15, s14, s13
+ 384 01b6 9FED397A 		vldr.32	s14, .L23+28
+ 385 01ba 67EE877A 		vmul.f32	s15, s15, s14
+ 386 01be C7ED027A 		vstr.32	s15, [r7, #8]
+ 387 01c2 D7ED026A 		vldr.32	s13, [r7, #8]
+ 388 01c6 97ED087A 		vldr.32	s14, [r7, #32]
+ 389 01ca C6EE877A 		vdiv.f32	s15, s13, s14
+ 390 01ce 344B     		ldr	r3, .L23+32
+ 391 01d0 C3ED007A 		vstr.32	s15, [r3]
+ 392 01d4 324B     		ldr	r3, .L23+32
+ 393 01d6 D3ED007A 		vldr.32	s15, [r3]
+ 394 01da 324C     		ldr	r4, .L23+36
+ 395 01dc 3B46     		mov	r3, r7
+ 396 01de 0221     		movs	r1, #2
+ 397 01e0 B0EE670A 		vmov.f32	s0, s15
+ 398 01e4 1846     		mov	r0, r3
+ 399 01e6 FFF7FEFF 		bl	Battery_Profile_Get_Info
+ 400 01ea 2246     		mov	r2, r4
+ 401 01ec 3B46     		mov	r3, r7
+ 402 01ee 93E80300 		ldm	r3, {r0, r1}
+ 403 01f2 82E80300 		stm	r2, {r0, r1}
+ 404 01f6 2A4B     		ldr	r3, .L23+32
+ 405 01f8 D3ED007A 		vldr.32	s15, [r3]
+ 406 01fc B0EE670A 		vmov.f32	s0, s15
+ 407 0200 FFF7FEFF 		bl	Calculate_Display_Voltage_Parts
+ 408              	.L18:
+ 409 0204 1F48     		ldr	r0, .L23+4
+ 410 0206 FFF7FEFF 		bl	HAL_ADC_Stop
+ 411              	.L17:
+ 412 020a 294B     		ldr	r3, .L23+48
+ 413 020c 1B68     		ldr	r3, [r3]
+ 414 020e 3A69     		ldr	r2, [r7, #16]
+ 415 0210 D31A     		subs	r3, r2, r3
+ 416 0212 632B     		cmp	r3, #99
+ 417 0214 04D9     		bls	.L19
+ 418 0216 264A     		ldr	r2, .L23+48
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 8
+
+
+ 419 0218 3B69     		ldr	r3, [r7, #16]
+ 420 021a 1360     		str	r3, [r2]
+ 421 021c FFF7FEFF 		bl	CAN_Exchange_Poll
+ 422              	.L19:
+ 423 0220 224B     		ldr	r3, .L23+44
+ 424 0222 1B68     		ldr	r3, [r3]
+ 425 0224 3A69     		ldr	r2, [r7, #16]
+ 426 0226 D31A     		subs	r3, r2, r3
+ 427 0228 B3F57A7F 		cmp	r3, #1000
+ 428 022c 0ED3     		bcc	.L20
+ 429 022e 1F4A     		ldr	r2, .L23+44
+ 430 0230 3B69     		ldr	r3, [r7, #16]
+ 431 0232 1360     		str	r3, [r2]
+ 432 0234 1A4B     		ldr	r3, .L23+32
+ 433 0236 D3ED007A 		vldr.32	s15, [r3]
+ 434 023a 1A4B     		ldr	r3, .L23+36
+ 435 023c 93ED007A 		vldr.32	s14, [r3]
+ 436 0240 F0EE470A 		vmov.f32	s1, s14
+ 437 0244 B0EE670A 		vmov.f32	s0, s15
+ 438 0248 FFF7FEFF 		bl	CAN_Exchange_Transmit_Data
+ 439              	.L20:
+ 440 024c 194B     		ldr	r3, .L23+52
+ 441 024e 1B68     		ldr	r3, [r3]
+ 442 0250 3A69     		ldr	r2, [r7, #16]
+ 443 0252 D31A     		subs	r3, r2, r3
+ 444 0254 F92B     		cmp	r3, #249
+ 445 0256 84D9     		bls	.L22
+ 446 0258 164A     		ldr	r2, .L23+52
+ 447 025a 3B69     		ldr	r3, [r7, #16]
+ 448 025c 1360     		str	r3, [r2]
+ 449 025e 164B     		ldr	r3, .L23+56
+ 450 0260 1968     		ldr	r1, [r3]
+ 451 0262 164B     		ldr	r3, .L23+60
+ 452 0264 1A68     		ldr	r2, [r3]
+ 453 0266 0B4B     		ldr	r3, .L23+20
+ 454 0268 1868     		ldr	r0, [r3]
+ 455 026a 084B     		ldr	r3, .L23+12
+ 456 026c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 457 026e 0193     		str	r3, [sp, #4]
+ 458 0270 0C4B     		ldr	r3, .L23+36
+ 459 0272 0093     		str	r3, [sp]
+ 460 0274 0346     		mov	r3, r0
+ 461 0276 0448     		ldr	r0, .L23+8
+ 462 0278 FFF7FEFF 		bl	Display_Update_Render
+ 463 027c 71E7     		b	.L22
+ 464              	.L24:
+ 465 027e 00BF     		.align	2
+ 466              	.L23:
+ 467 0280 00000000 		.word	hfdcan1
+ 468 0284 00000000 		.word	hadc1
+ 469 0288 00000000 		.word	hi2c1
+ 470 028c 00000000 		.word	is_screen_connected
+ 471 0290 00000000 		.word	adcHistory
+ 472 0294 00000000 		.word	rawAdcValue
+ 473 0298 00F07F45 		.word	1166012416
+ 474 029c 33335340 		.word	1079194419
+ 475 02a0 00000000 		.word	currentVoltage
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 9
+
+
+ 476 02a4 00000000 		.word	batteryInfo
+ 477 02a8 00000000 		.word	lastAdcTime
+ 478 02ac 00000000 		.word	lastCanTxTime
+ 479 02b0 00000000 		.word	lastCanPollTime
+ 480 02b4 00000000 		.word	lastDisplayTime
+ 481 02b8 00000000 		.word	displayWholeVolt
+ 482 02bc 00000000 		.word	displayFracVolt
+ 484              		.section	.text.Calculate_Display_Voltage_Parts,"ax",%progbits
+ 485              		.align	1
+ 486              		.syntax unified
+ 487              		.thumb
+ 488              		.thumb_func
+ 490              	Calculate_Display_Voltage_Parts:
+ 491              		@ args = 0, pretend = 0, frame = 8
+ 492              		@ frame_needed = 1, uses_anonymous_args = 0
+ 493              		@ link register save eliminated.
+ 494 0000 80B4     		push	{r7}
+ 495 0002 83B0     		sub	sp, sp, #12
+ 496 0004 00AF     		add	r7, sp, #0
+ 497 0006 87ED010A 		vstr.32	s0, [r7, #4]
+ 498 000a D7ED017A 		vldr.32	s15, [r7, #4]
+ 499 000e FDEEE77A 		vcvt.s32.f32	s15, s15
+ 500 0012 17EE902A 		vmov	r2, s15	@ int
+ 501 0016 1B4B     		ldr	r3, .L29
+ 502 0018 1A60     		str	r2, [r3]
+ 503 001a 1A4B     		ldr	r3, .L29
+ 504 001c 1B68     		ldr	r3, [r3]
+ 505 001e 07EE903A 		vmov	s15, r3	@ int
+ 506 0022 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 507 0026 97ED017A 		vldr.32	s14, [r7, #4]
+ 508 002a 77EE677A 		vsub.f32	s15, s14, s15
+ 509 002e 9FED167A 		vldr.32	s14, .L29+4
+ 510 0032 67EE877A 		vmul.f32	s15, s15, s14
+ 511 0036 9FED157A 		vldr.32	s14, .L29+8
+ 512 003a 77EE877A 		vadd.f32	s15, s15, s14
+ 513 003e FDEEE77A 		vcvt.s32.f32	s15, s15
+ 514 0042 17EE902A 		vmov	r2, s15	@ int
+ 515 0046 124B     		ldr	r3, .L29+12
+ 516 0048 1A60     		str	r2, [r3]
+ 517 004a 114B     		ldr	r3, .L29+12
+ 518 004c 1B68     		ldr	r3, [r3]
+ 519 004e B3F57A7F 		cmp	r3, #1000
+ 520 0052 07DB     		blt	.L26
+ 521 0054 0B4B     		ldr	r3, .L29
+ 522 0056 1B68     		ldr	r3, [r3]
+ 523 0058 0133     		adds	r3, r3, #1
+ 524 005a 0A4A     		ldr	r2, .L29
+ 525 005c 1360     		str	r3, [r2]
+ 526 005e 0C4B     		ldr	r3, .L29+12
+ 527 0060 0022     		movs	r2, #0
+ 528 0062 1A60     		str	r2, [r3]
+ 529              	.L26:
+ 530 0064 0A4B     		ldr	r3, .L29+12
+ 531 0066 1B68     		ldr	r3, [r3]
+ 532 0068 002B     		cmp	r3, #0
+ 533 006a 04DA     		bge	.L28
+ 534 006c 084B     		ldr	r3, .L29+12
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 10
+
+
+ 535 006e 1B68     		ldr	r3, [r3]
+ 536 0070 5B42     		rsbs	r3, r3, #0
+ 537 0072 074A     		ldr	r2, .L29+12
+ 538 0074 1360     		str	r3, [r2]
+ 539              	.L28:
+ 540 0076 00BF     		nop
+ 541 0078 0C37     		adds	r7, r7, #12
+ 542 007a BD46     		mov	sp, r7
+ 543              		@ sp needed
+ 544 007c 5DF8047B 		ldr	r7, [sp], #4
+ 545 0080 7047     		bx	lr
+ 546              	.L30:
+ 547 0082 00BF     		.align	2
+ 548              	.L29:
+ 549 0084 00000000 		.word	displayWholeVolt
+ 550 0088 00007A44 		.word	1148846080
+ 551 008c 5C8F023F 		.word	1057132380
+ 552 0090 00000000 		.word	displayFracVolt
+ 554              		.section	.text.Filter_GetAverage,"ax",%progbits
+ 555              		.align	1
+ 556              		.syntax unified
+ 557              		.thumb
+ 558              		.thumb_func
+ 560              	Filter_GetAverage:
+ 561              		@ args = 0, pretend = 0, frame = 16
+ 562              		@ frame_needed = 1, uses_anonymous_args = 0
+ 563              		@ link register save eliminated.
+ 564 0000 80B4     		push	{r7}
+ 565 0002 85B0     		sub	sp, sp, #20
+ 566 0004 00AF     		add	r7, sp, #0
+ 567 0006 7860     		str	r0, [r7, #4]
+ 568 0008 134B     		ldr	r3, .L35
+ 569 000a 1B68     		ldr	r3, [r3]
+ 570 000c 1349     		ldr	r1, .L35+4
+ 571 000e 7A68     		ldr	r2, [r7, #4]
+ 572 0010 41F82320 		str	r2, [r1, r3, lsl #2]
+ 573 0014 104B     		ldr	r3, .L35
+ 574 0016 1B68     		ldr	r3, [r3]
+ 575 0018 0133     		adds	r3, r3, #1
+ 576 001a 03F01F03 		and	r3, r3, #31
+ 577 001e 0E4A     		ldr	r2, .L35
+ 578 0020 1360     		str	r3, [r2]
+ 579 0022 0023     		movs	r3, #0
+ 580 0024 FB60     		str	r3, [r7, #12]
+ 581 0026 0023     		movs	r3, #0
+ 582 0028 BB60     		str	r3, [r7, #8]
+ 583 002a 09E0     		b	.L32
+ 584              	.L33:
+ 585 002c 0B4A     		ldr	r2, .L35+4
+ 586 002e BB68     		ldr	r3, [r7, #8]
+ 587 0030 52F82330 		ldr	r3, [r2, r3, lsl #2]
+ 588 0034 FA68     		ldr	r2, [r7, #12]
+ 589 0036 1344     		add	r3, r3, r2
+ 590 0038 FB60     		str	r3, [r7, #12]
+ 591 003a BB68     		ldr	r3, [r7, #8]
+ 592 003c 0133     		adds	r3, r3, #1
+ 593 003e BB60     		str	r3, [r7, #8]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 11
+
+
+ 594              	.L32:
+ 595 0040 BB68     		ldr	r3, [r7, #8]
+ 596 0042 1F2B     		cmp	r3, #31
+ 597 0044 F2D9     		bls	.L33
+ 598 0046 FB68     		ldr	r3, [r7, #12]
+ 599 0048 5B09     		lsrs	r3, r3, #5
+ 600 004a 1846     		mov	r0, r3
+ 601 004c 1437     		adds	r7, r7, #20
+ 602 004e BD46     		mov	sp, r7
+ 603              		@ sp needed
+ 604 0050 5DF8047B 		ldr	r7, [sp], #4
+ 605 0054 7047     		bx	lr
+ 606              	.L36:
+ 607 0056 00BF     		.align	2
+ 608              	.L35:
+ 609 0058 00000000 		.word	adcHistoryIndex
+ 610 005c 00000000 		.word	adcHistory
+ 612              		.section	.text.MX_ADC1_Init,"ax",%progbits
+ 613              		.align	1
+ 614              		.syntax unified
+ 615              		.thumb
+ 616              		.thumb_func
+ 618              	MX_ADC1_Init:
+ 619              		@ args = 0, pretend = 0, frame = 48
+ 620              		@ frame_needed = 1, uses_anonymous_args = 0
+ 621 0000 80B5     		push	{r7, lr}
+ 622 0002 8CB0     		sub	sp, sp, #48
+ 623 0004 00AF     		add	r7, sp, #0
+ 624 0006 07F12403 		add	r3, r7, #36
+ 625 000a 0022     		movs	r2, #0
+ 626 000c 1A60     		str	r2, [r3]
+ 627 000e 5A60     		str	r2, [r3, #4]
+ 628 0010 9A60     		str	r2, [r3, #8]
+ 629 0012 3B1D     		adds	r3, r7, #4
+ 630 0014 2022     		movs	r2, #32
+ 631 0016 0021     		movs	r1, #0
+ 632 0018 1846     		mov	r0, r3
+ 633 001a FFF7FEFF 		bl	memset
+ 634 001e 354B     		ldr	r3, .L42
+ 635 0020 4FF0A042 		mov	r2, #1342177280
+ 636 0024 1A60     		str	r2, [r3]
+ 637 0026 334B     		ldr	r3, .L42
+ 638 0028 4FF40022 		mov	r2, #524288
+ 639 002c 5A60     		str	r2, [r3, #4]
+ 640 002e 314B     		ldr	r3, .L42
+ 641 0030 0022     		movs	r2, #0
+ 642 0032 9A60     		str	r2, [r3, #8]
+ 643 0034 2F4B     		ldr	r3, .L42
+ 644 0036 0022     		movs	r2, #0
+ 645 0038 DA60     		str	r2, [r3, #12]
+ 646 003a 2E4B     		ldr	r3, .L42
+ 647 003c 0022     		movs	r2, #0
+ 648 003e 5A61     		str	r2, [r3, #20]
+ 649 0040 2C4B     		ldr	r3, .L42
+ 650 0042 0422     		movs	r2, #4
+ 651 0044 9A61     		str	r2, [r3, #24]
+ 652 0046 2B4B     		ldr	r3, .L42
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 12
+
+
+ 653 0048 0022     		movs	r2, #0
+ 654 004a 1A77     		strb	r2, [r3, #28]
+ 655 004c 294B     		ldr	r3, .L42
+ 656 004e 0022     		movs	r2, #0
+ 657 0050 5A77     		strb	r2, [r3, #29]
+ 658 0052 284B     		ldr	r3, .L42
+ 659 0054 0122     		movs	r2, #1
+ 660 0056 1A62     		str	r2, [r3, #32]
+ 661 0058 264B     		ldr	r3, .L42
+ 662 005a 0022     		movs	r2, #0
+ 663 005c DA62     		str	r2, [r3, #44]
+ 664 005e 254B     		ldr	r3, .L42
+ 665 0060 0022     		movs	r2, #0
+ 666 0062 1A63     		str	r2, [r3, #48]
+ 667 0064 234B     		ldr	r3, .L42
+ 668 0066 0022     		movs	r2, #0
+ 669 0068 83F83820 		strb	r2, [r3, #56]
+ 670 006c 214B     		ldr	r3, .L42
+ 671 006e 0022     		movs	r2, #0
+ 672 0070 DA63     		str	r2, [r3, #60]
+ 673 0072 2048     		ldr	r0, .L42
+ 674 0074 FFF7FEFF 		bl	HAL_ADC_Init
+ 675 0078 0346     		mov	r3, r0
+ 676 007a 002B     		cmp	r3, #0
+ 677 007c 07D0     		beq	.L38
+ 678 007e 0122     		movs	r2, #1
+ 679 0080 2021     		movs	r1, #32
+ 680 0082 4FF09040 		mov	r0, #1207959552
+ 681 0086 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 682 008a FFF7FEFF 		bl	Error_Handler
+ 683              	.L38:
+ 684 008e 0023     		movs	r3, #0
+ 685 0090 7B62     		str	r3, [r7, #36]
+ 686 0092 07F12403 		add	r3, r7, #36
+ 687 0096 1946     		mov	r1, r3
+ 688 0098 1648     		ldr	r0, .L42
+ 689 009a FFF7FEFF 		bl	HAL_ADCEx_MultiModeConfigChannel
+ 690 009e 0346     		mov	r3, r0
+ 691 00a0 002B     		cmp	r3, #0
+ 692 00a2 07D0     		beq	.L39
+ 693 00a4 0122     		movs	r2, #1
+ 694 00a6 2021     		movs	r1, #32
+ 695 00a8 4FF09040 		mov	r0, #1207959552
+ 696 00ac FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 697 00b0 FFF7FEFF 		bl	Error_Handler
+ 698              	.L39:
+ 699 00b4 104B     		ldr	r3, .L42+4
+ 700 00b6 7B60     		str	r3, [r7, #4]
+ 701 00b8 0623     		movs	r3, #6
+ 702 00ba BB60     		str	r3, [r7, #8]
+ 703 00bc 0723     		movs	r3, #7
+ 704 00be FB60     		str	r3, [r7, #12]
+ 705 00c0 7F23     		movs	r3, #127
+ 706 00c2 3B61     		str	r3, [r7, #16]
+ 707 00c4 0423     		movs	r3, #4
+ 708 00c6 7B61     		str	r3, [r7, #20]
+ 709 00c8 0023     		movs	r3, #0
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 13
+
+
+ 710 00ca BB61     		str	r3, [r7, #24]
+ 711 00cc 3B1D     		adds	r3, r7, #4
+ 712 00ce 1946     		mov	r1, r3
+ 713 00d0 0848     		ldr	r0, .L42
+ 714 00d2 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 715 00d6 0346     		mov	r3, r0
+ 716 00d8 002B     		cmp	r3, #0
+ 717 00da 07D0     		beq	.L41
+ 718 00dc 0122     		movs	r2, #1
+ 719 00de 2021     		movs	r1, #32
+ 720 00e0 4FF09040 		mov	r0, #1207959552
+ 721 00e4 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 722 00e8 FFF7FEFF 		bl	Error_Handler
+ 723              	.L41:
+ 724 00ec 00BF     		nop
+ 725 00ee 3037     		adds	r7, r7, #48
+ 726 00f0 BD46     		mov	sp, r7
+ 727              		@ sp needed
+ 728 00f2 80BD     		pop	{r7, pc}
+ 729              	.L43:
+ 730              		.align	2
+ 731              	.L42:
+ 732 00f4 00000000 		.word	hadc1
+ 733 00f8 02003004 		.word	70254594
+ 735              		.section	.text.MX_I2C1_Init,"ax",%progbits
+ 736              		.align	1
+ 737              		.syntax unified
+ 738              		.thumb
+ 739              		.thumb_func
+ 741              	MX_I2C1_Init:
+ 742              		@ args = 0, pretend = 0, frame = 0
+ 743              		@ frame_needed = 1, uses_anonymous_args = 0
+ 744 0000 80B5     		push	{r7, lr}
+ 745 0002 00AF     		add	r7, sp, #0
+ 746 0004 124B     		ldr	r3, .L47
+ 747 0006 134A     		ldr	r2, .L47+4
+ 748 0008 1A60     		str	r2, [r3]
+ 749 000a 114B     		ldr	r3, .L47
+ 750 000c 124A     		ldr	r2, .L47+8
+ 751 000e 5A60     		str	r2, [r3, #4]
+ 752 0010 0F4B     		ldr	r3, .L47
+ 753 0012 0122     		movs	r2, #1
+ 754 0014 DA60     		str	r2, [r3, #12]
+ 755 0016 0E4B     		ldr	r3, .L47
+ 756 0018 0022     		movs	r2, #0
+ 757 001a 1A61     		str	r2, [r3, #16]
+ 758 001c 0C4B     		ldr	r3, .L47
+ 759 001e 0022     		movs	r2, #0
+ 760 0020 9A60     		str	r2, [r3, #8]
+ 761 0022 0B4B     		ldr	r3, .L47
+ 762 0024 0022     		movs	r2, #0
+ 763 0026 DA61     		str	r2, [r3, #28]
+ 764 0028 094B     		ldr	r3, .L47
+ 765 002a 0022     		movs	r2, #0
+ 766 002c 1A62     		str	r2, [r3, #32]
+ 767 002e 0848     		ldr	r0, .L47
+ 768 0030 FFF7FEFF 		bl	HAL_I2C_Init
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 14
+
+
+ 769 0034 0346     		mov	r3, r0
+ 770 0036 002B     		cmp	r3, #0
+ 771 0038 07D0     		beq	.L46
+ 772 003a 0122     		movs	r2, #1
+ 773 003c 2021     		movs	r1, #32
+ 774 003e 4FF09040 		mov	r0, #1207959552
+ 775 0042 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 776 0046 FFF7FEFF 		bl	Error_Handler
+ 777              	.L46:
+ 778 004a 00BF     		nop
+ 779 004c 80BD     		pop	{r7, pc}
+ 780              	.L48:
+ 781 004e 00BF     		.align	2
+ 782              	.L47:
+ 783 0050 00000000 		.word	hi2c1
+ 784 0054 00540040 		.word	1073763328
+ 785 0058 C285B240 		.word	1085441474
+ 787              		.section	.text.MX_GPIO_Init,"ax",%progbits
+ 788              		.align	1
+ 789              		.syntax unified
+ 790              		.thumb
+ 791              		.thumb_func
+ 793              	MX_GPIO_Init:
+ 794              		@ args = 0, pretend = 0, frame = 32
+ 795              		@ frame_needed = 1, uses_anonymous_args = 0
+ 796 0000 80B5     		push	{r7, lr}
+ 797 0002 88B0     		sub	sp, sp, #32
+ 798 0004 00AF     		add	r7, sp, #0
+ 799 0006 07F10C03 		add	r3, r7, #12
+ 800 000a 0022     		movs	r2, #0
+ 801 000c 1A60     		str	r2, [r3]
+ 802 000e 5A60     		str	r2, [r3, #4]
+ 803 0010 9A60     		str	r2, [r3, #8]
+ 804 0012 DA60     		str	r2, [r3, #12]
+ 805 0014 1A61     		str	r2, [r3, #16]
+ 806 0016 224B     		ldr	r3, .L50
+ 807 0018 DB6C     		ldr	r3, [r3, #76]
+ 808 001a 214A     		ldr	r2, .L50
+ 809 001c 43F00103 		orr	r3, r3, #1
+ 810 0020 D364     		str	r3, [r2, #76]
+ 811 0022 1F4B     		ldr	r3, .L50
+ 812 0024 DB6C     		ldr	r3, [r3, #76]
+ 813 0026 03F00103 		and	r3, r3, #1
+ 814 002a BB60     		str	r3, [r7, #8]
+ 815 002c BB68     		ldr	r3, [r7, #8]
+ 816 002e 1C4B     		ldr	r3, .L50
+ 817 0030 DB6C     		ldr	r3, [r3, #76]
+ 818 0032 1B4A     		ldr	r2, .L50
+ 819 0034 43F00203 		orr	r3, r3, #2
+ 820 0038 D364     		str	r3, [r2, #76]
+ 821 003a 194B     		ldr	r3, .L50
+ 822 003c DB6C     		ldr	r3, [r3, #76]
+ 823 003e 03F00203 		and	r3, r3, #2
+ 824 0042 7B60     		str	r3, [r7, #4]
+ 825 0044 7B68     		ldr	r3, [r7, #4]
+ 826 0046 164B     		ldr	r3, .L50
+ 827 0048 DB6C     		ldr	r3, [r3, #76]
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 15
+
+
+ 828 004a 154A     		ldr	r2, .L50
+ 829 004c 43F00403 		orr	r3, r3, #4
+ 830 0050 D364     		str	r3, [r2, #76]
+ 831 0052 134B     		ldr	r3, .L50
+ 832 0054 DB6C     		ldr	r3, [r3, #76]
+ 833 0056 03F00403 		and	r3, r3, #4
+ 834 005a 3B60     		str	r3, [r7]
+ 835 005c 3B68     		ldr	r3, [r7]
+ 836 005e 2023     		movs	r3, #32
+ 837 0060 FB60     		str	r3, [r7, #12]
+ 838 0062 0123     		movs	r3, #1
+ 839 0064 3B61     		str	r3, [r7, #16]
+ 840 0066 0023     		movs	r3, #0
+ 841 0068 7B61     		str	r3, [r7, #20]
+ 842 006a 0023     		movs	r3, #0
+ 843 006c BB61     		str	r3, [r7, #24]
+ 844 006e 07F10C03 		add	r3, r7, #12
+ 845 0072 1946     		mov	r1, r3
+ 846 0074 4FF09040 		mov	r0, #1207959552
+ 847 0078 FFF7FEFF 		bl	HAL_GPIO_Init
+ 848 007c 4FF40053 		mov	r3, #8192
+ 849 0080 FB60     		str	r3, [r7, #12]
+ 850 0082 4FF40413 		mov	r3, #2162688
+ 851 0086 3B61     		str	r3, [r7, #16]
+ 852 0088 0123     		movs	r3, #1
+ 853 008a 7B61     		str	r3, [r7, #20]
+ 854 008c 07F10C03 		add	r3, r7, #12
+ 855 0090 1946     		mov	r1, r3
+ 856 0092 0448     		ldr	r0, .L50+4
+ 857 0094 FFF7FEFF 		bl	HAL_GPIO_Init
+ 858 0098 00BF     		nop
+ 859 009a 2037     		adds	r7, r7, #32
+ 860 009c BD46     		mov	sp, r7
+ 861              		@ sp needed
+ 862 009e 80BD     		pop	{r7, pc}
+ 863              	.L51:
+ 864              		.align	2
+ 865              	.L50:
+ 866 00a0 00100240 		.word	1073876992
+ 867 00a4 00080048 		.word	1207961600
+ 869              		.section	.text.SystemClock_Config,"ax",%progbits
+ 870              		.align	1
+ 871              		.global	SystemClock_Config
+ 872              		.syntax unified
+ 873              		.thumb
+ 874              		.thumb_func
+ 876              	SystemClock_Config:
+ 877              		@ args = 0, pretend = 0, frame = 184
+ 878              		@ frame_needed = 1, uses_anonymous_args = 0
+ 879 0000 80B5     		push	{r7, lr}
+ 880 0002 AEB0     		sub	sp, sp, #184
+ 881 0004 00AF     		add	r7, sp, #0
+ 882 0006 07F18003 		add	r3, r7, #128
+ 883 000a 3822     		movs	r2, #56
+ 884 000c 0021     		movs	r1, #0
+ 885 000e 1846     		mov	r0, r3
+ 886 0010 FFF7FEFF 		bl	memset
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 16
+
+
+ 887 0014 07F16C03 		add	r3, r7, #108
+ 888 0018 0022     		movs	r2, #0
+ 889 001a 1A60     		str	r2, [r3]
+ 890 001c 5A60     		str	r2, [r3, #4]
+ 891 001e 9A60     		str	r2, [r3, #8]
+ 892 0020 DA60     		str	r2, [r3, #12]
+ 893 0022 1A61     		str	r2, [r3, #16]
+ 894 0024 07F11803 		add	r3, r7, #24
+ 895 0028 5422     		movs	r2, #84
+ 896 002a 0021     		movs	r1, #0
+ 897 002c 1846     		mov	r0, r3
+ 898 002e FFF7FEFF 		bl	memset
+ 899 0032 0020     		movs	r0, #0
+ 900 0034 FFF7FEFF 		bl	HAL_PWREx_ControlVoltageScaling
+ 901 0038 0346     		mov	r3, r0
+ 902 003a 002B     		cmp	r3, #0
+ 903 003c 07D0     		beq	.L53
+ 904 003e 0122     		movs	r2, #1
+ 905 0040 2021     		movs	r1, #32
+ 906 0042 4FF09040 		mov	r0, #1207959552
+ 907 0046 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 908 004a FFF7FEFF 		bl	Error_Handler
+ 909              	.L53:
+ 910 004e 0223     		movs	r3, #2
+ 911 0050 C7F88030 		str	r3, [r7, #128]
+ 912 0054 4FF48073 		mov	r3, #256
+ 913 0058 C7F88C30 		str	r3, [r7, #140]
+ 914 005c 4023     		movs	r3, #64
+ 915 005e C7F89030 		str	r3, [r7, #144]
+ 916 0062 0223     		movs	r3, #2
+ 917 0064 C7F89C30 		str	r3, [r7, #156]
+ 918 0068 0223     		movs	r3, #2
+ 919 006a C7F8A030 		str	r3, [r7, #160]
+ 920 006e 0423     		movs	r3, #4
+ 921 0070 C7F8A430 		str	r3, [r7, #164]
+ 922 0074 5523     		movs	r3, #85
+ 923 0076 C7F8A830 		str	r3, [r7, #168]
+ 924 007a 0223     		movs	r3, #2
+ 925 007c C7F8AC30 		str	r3, [r7, #172]
+ 926 0080 0223     		movs	r3, #2
+ 927 0082 C7F8B030 		str	r3, [r7, #176]
+ 928 0086 0223     		movs	r3, #2
+ 929 0088 C7F8B430 		str	r3, [r7, #180]
+ 930 008c 07F18003 		add	r3, r7, #128
+ 931 0090 1846     		mov	r0, r3
+ 932 0092 FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 933 0096 0346     		mov	r3, r0
+ 934 0098 002B     		cmp	r3, #0
+ 935 009a 24D0     		beq	.L54
+ 936 009c 2C4B     		ldr	r3, .L58
+ 937 009e DB6C     		ldr	r3, [r3, #76]
+ 938 00a0 2B4A     		ldr	r2, .L58
+ 939 00a2 43F00103 		orr	r3, r3, #1
+ 940 00a6 D364     		str	r3, [r2, #76]
+ 941 00a8 294B     		ldr	r3, .L58
+ 942 00aa DB6C     		ldr	r3, [r3, #76]
+ 943 00ac 03F00103 		and	r3, r3, #1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 17
+
+
+ 944 00b0 3B60     		str	r3, [r7]
+ 945 00b2 3B68     		ldr	r3, [r7]
+ 946 00b4 3B1D     		adds	r3, r7, #4
+ 947 00b6 0022     		movs	r2, #0
+ 948 00b8 1A60     		str	r2, [r3]
+ 949 00ba 5A60     		str	r2, [r3, #4]
+ 950 00bc 9A60     		str	r2, [r3, #8]
+ 951 00be DA60     		str	r2, [r3, #12]
+ 952 00c0 1A61     		str	r2, [r3, #16]
+ 953 00c2 2023     		movs	r3, #32
+ 954 00c4 7B60     		str	r3, [r7, #4]
+ 955 00c6 0123     		movs	r3, #1
+ 956 00c8 BB60     		str	r3, [r7, #8]
+ 957 00ca 3B1D     		adds	r3, r7, #4
+ 958 00cc 1946     		mov	r1, r3
+ 959 00ce 4FF09040 		mov	r0, #1207959552
+ 960 00d2 FFF7FEFF 		bl	HAL_GPIO_Init
+ 961 00d6 0122     		movs	r2, #1
+ 962 00d8 2021     		movs	r1, #32
+ 963 00da 4FF09040 		mov	r0, #1207959552
+ 964 00de FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 965 00e2 FFF7FEFF 		bl	Error_Handler
+ 966              	.L54:
+ 967 00e6 0F23     		movs	r3, #15
+ 968 00e8 FB66     		str	r3, [r7, #108]
+ 969 00ea 0323     		movs	r3, #3
+ 970 00ec 3B67     		str	r3, [r7, #112]
+ 971 00ee 0023     		movs	r3, #0
+ 972 00f0 7B67     		str	r3, [r7, #116]
+ 973 00f2 0023     		movs	r3, #0
+ 974 00f4 BB67     		str	r3, [r7, #120]
+ 975 00f6 0023     		movs	r3, #0
+ 976 00f8 FB67     		str	r3, [r7, #124]
+ 977 00fa 07F16C03 		add	r3, r7, #108
+ 978 00fe 0421     		movs	r1, #4
+ 979 0100 1846     		mov	r0, r3
+ 980 0102 FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 981 0106 0346     		mov	r3, r0
+ 982 0108 002B     		cmp	r3, #0
+ 983 010a 07D0     		beq	.L55
+ 984 010c 0122     		movs	r2, #1
+ 985 010e 2021     		movs	r1, #32
+ 986 0110 4FF09040 		mov	r0, #1207959552
+ 987 0114 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 988 0118 FFF7FEFF 		bl	Error_Handler
+ 989              	.L55:
+ 990 011c 4FF48053 		mov	r3, #4096
+ 991 0120 BB61     		str	r3, [r7, #24]
+ 992 0122 4FF00073 		mov	r3, #33554432
+ 993 0126 3B65     		str	r3, [r7, #80]
+ 994 0128 07F11803 		add	r3, r7, #24
+ 995 012c 1846     		mov	r0, r3
+ 996 012e FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 997 0132 0346     		mov	r3, r0
+ 998 0134 002B     		cmp	r3, #0
+ 999 0136 07D0     		beq	.L57
+ 1000 0138 0122     		movs	r2, #1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 18
+
+
+ 1001 013a 2021     		movs	r1, #32
+ 1002 013c 4FF09040 		mov	r0, #1207959552
+ 1003 0140 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1004 0144 FFF7FEFF 		bl	Error_Handler
+ 1005              	.L57:
+ 1006 0148 00BF     		nop
+ 1007 014a B837     		adds	r7, r7, #184
+ 1008 014c BD46     		mov	sp, r7
+ 1009              		@ sp needed
+ 1010 014e 80BD     		pop	{r7, pc}
+ 1011              	.L59:
+ 1012              		.align	2
+ 1013              	.L58:
+ 1014 0150 00100240 		.word	1073876992
+ 1016              		.section	.text.Error_Handler,"ax",%progbits
+ 1017              		.align	1
+ 1018              		.global	Error_Handler
+ 1019              		.syntax unified
+ 1020              		.thumb
+ 1021              		.thumb_func
+ 1023              	Error_Handler:
+ 1024              		@ args = 0, pretend = 0, frame = 0
+ 1025              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1026              		@ link register save eliminated.
+ 1027 0000 80B4     		push	{r7}
+ 1028 0002 00AF     		add	r7, sp, #0
+ 1029              		.syntax unified
+ 1030              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 1031 0004 72B6     		cpsid i
+ 1032              	@ 0 "" 2
+ 1033              		.thumb
+ 1034              		.syntax unified
+ 1035 0006 00BF     		nop
+ 1036              	.L61:
+ 1037 0008 00BF     		nop
+ 1038 000a FDE7     		b	.L61
+ 1040              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 19
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:18     .text.ITM_SendChar:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:23     .text.ITM_SendChar:00000000 ITM_SendChar
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:68     .text._write:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:74     .text._write:00000000 _write
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:113    .bss.hadc1:00000000 hadc1
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:110    .bss.hadc1:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:120    .bss.hi2c1:00000000 hi2c1
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:117    .bss.hi2c1:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:127    .bss.hfdcan1:00000000 hfdcan1
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:124    .bss.hfdcan1:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:130    .bss.currentVoltage:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:133    .bss.currentVoltage:00000000 currentVoltage
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:136    .bss.rawAdcValue:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:139    .bss.rawAdcValue:00000000 rawAdcValue
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:142    .data.batteryInfo:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:145    .data.batteryInfo:00000000 batteryInfo
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:150    .bss.displayWholeVolt:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:153    .bss.displayWholeVolt:00000000 displayWholeVolt
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:156    .bss.displayFracVolt:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:159    .bss.displayFracVolt:00000000 displayFracVolt
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:162    .bss.adcHistory:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:165    .bss.adcHistory:00000000 adcHistory
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:168    .bss.adcHistoryIndex:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:171    .bss.adcHistoryIndex:00000000 adcHistoryIndex
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:174    .bss.lastAdcTime:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:177    .bss.lastAdcTime:00000000 lastAdcTime
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:180    .bss.lastCanTxTime:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:183    .bss.lastCanTxTime:00000000 lastCanTxTime
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:186    .bss.lastCanPollTime:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:189    .bss.lastCanPollTime:00000000 lastCanPollTime
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:192    .bss.lastDisplayTime:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:195    .bss.lastDisplayTime:00000000 lastDisplayTime
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:200    .data.is_screen_connected:00000000 is_screen_connected
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:203    .text.main:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:209    .text.main:00000000 main
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:876    .text.SystemClock_Config:00000000 SystemClock_Config
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:793    .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:618    .text.MX_ADC1_Init:00000000 MX_ADC1_Init
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:741    .text.MX_I2C1_Init:00000000 MX_I2C1_Init
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:1023   .text.Error_Handler:00000000 Error_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:490    .text.Calculate_Display_Voltage_Parts:00000000 Calculate_Display_Voltage_Parts
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:560    .text.Filter_GetAverage:00000000 Filter_GetAverage
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:467    .text.main:00000280 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:485    .text.Calculate_Display_Voltage_Parts:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:549    .text.Calculate_Display_Voltage_Parts:00000084 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:555    .text.Filter_GetAverage:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:609    .text.Filter_GetAverage:00000058 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:613    .text.MX_ADC1_Init:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:732    .text.MX_ADC1_Init:000000f4 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:736    .text.MX_I2C1_Init:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:783    .text.MX_I2C1_Init:00000050 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:788    .text.MX_GPIO_Init:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:866    .text.MX_GPIO_Init:000000a0 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:870    .text.SystemClock_Config:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:1014   .text.SystemClock_Config:00000150 $d
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 20
+
+
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:1017   .text.Error_Handler:00000000 $t
+
+UNDEFINED SYMBOLS
+HAL_Init
+CAN_Exchange_Init
+HAL_GPIO_WritePin
+HAL_FDCAN_ActivateNotification
+CAN_Exchange_Trigger_Startup_Probe
+CAN_Exchange_Poll
+Battery_Profile_Get_Divider_Ratio
+HAL_ADCEx_Calibration_Start
+SSD1306_Init
+HAL_ADC_Start
+HAL_ADC_PollForConversion
+HAL_ADC_GetValue
+Battery_Profile_Get_Info
+HAL_ADC_Stop
+HAL_GetTick
+Display_Update_Render
+CAN_Exchange_Transmit_Data
+memset
+HAL_ADC_Init
+HAL_ADCEx_MultiModeConfigChannel
+HAL_ADC_ConfigChannel
+HAL_I2C_Init
+HAL_GPIO_Init
+HAL_PWREx_ControlVoltageScaling
+HAL_RCC_OscConfig
+HAL_RCC_ClockConfig
+HAL_RCCEx_PeriphCLKConfig
