@@ -6,6 +6,10 @@ The goal of this project is to measure a LiPo battery's voltage using an STM32 N
 
 It was build using VScode based on a STM32cubeMX configurated file.
 
+---------------------- PCB PROJECT LINK ---------------------------
+
+ https://oshwlab.com/ewen.coubel-etes/project_nwfmnrfi
+
 --------------------- ADDITIONNAL DISPLAY -------------------------
 
 The project also provides feedback through an optional I2C screen to display the following information:
