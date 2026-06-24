@@ -1,0 +1,20 @@
+VERSION ""
+
+NS_ :
+
+BS_:
+
+BU_:
+
+BO_ 291 Battery_Voltage_Message: 3 Vector__XXX
+ SG_ voltage_millivolt : 0|16@1- (1,0) [0|65535] "mV" Vector__XXX
+ SG_ percentage : 16|8@1- (1,0) [0|100] "%" Vector__XXX
+
+BO_ 2047 Status_Heartbeat: 1 Vector__XXX
+ SG_ heartbeat : 0|8@1- (1,0) [0|255] "" Vector__XXX
+
+CM_ SG_ 291 voltage_millivolt "Battery voltage in millivolts";
+CM_ SG_ 291 percentage "Battery charge percentage 0-100%";
+CM_ SG_ 2047 heartbeat "Heartbeat / alive signal";
+CM_ BO_ 291 "Battery voltage and percentage message";
+CM_ BO_ 2047 "Status heartbeat message";
