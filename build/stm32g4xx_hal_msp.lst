@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 1
   56 0040 7047     		bx	lr
   57              	.L3:
   58 0042 00BF     		.align	2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s 			page 2
 
 
   59              	.L2:
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 1
  115 006a DB6C     		ldr	r3, [r3, #76]
  116 006c 0D4A     		ldr	r2, .L8
  117 006e 43F00103 		orr	r3, r3, #1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s 			page 3
 
 
  118 0072 D364     		str	r3, [r2, #76]
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 1
  174 002c BD46     		mov	sp, r7
  175              		@ sp needed
  176 002e 80BD     		pop	{r7, pc}
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s 			page 4
 
 
  177              	.L14:
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 1
  233 005e 9B6D     		ldr	r3, [r3, #88]
  234 0060 074A     		ldr	r2, .L18+4
  235 0062 43F40013 		orr	r3, r3, #2097152
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 5
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s 			page 5
 
 
  236 0066 9365     		str	r3, [r2, #88]
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 1
  292 0034 00100240 		.word	1073876992
  293 0038 00040048 		.word	1207960576
  295              		.section	.text.HAL_FDCAN_MspInit,"ax",%progbits
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 6
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s 			page 6
 
 
  296              		.align	1
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 1
  351 0068 07F11403 		add	r3, r7, #20
  352 006c 1946     		mov	r1, r3
  353 006e 4FF09040 		mov	r0, #1207959552
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 7
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s 			page 7
 
 
  354 0072 FFF7FEFF 		bl	HAL_GPIO_Init
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 1
  410 002c 0837     		adds	r7, r7, #8
  411 002e BD46     		mov	sp, r7
  412              		@ sp needed
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s 			page 8
 
 
  413 0030 80BD     		pop	{r7, pc}
@@ -428,32 +428,32 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 1
  417 0034 00640040 		.word	1073767424
  418 0038 00100240 		.word	1073876992
  420              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s 			page 9
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_hal_msp.c
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:18     .text.HAL_MspInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:24     .text.HAL_MspInit:00000000 HAL_MspInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:60     .text.HAL_MspInit:00000044 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:63     .text.HAL_ADC_MspInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:69     .text.HAL_ADC_MspInit:00000000 HAL_ADC_MspInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:143    .text.HAL_ADC_MspInit:000000a4 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:146    .text.HAL_ADC_MspDeInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:152    .text.HAL_ADC_MspDeInit:00000000 HAL_ADC_MspDeInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:180    .text.HAL_ADC_MspDeInit:00000030 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:183    .text.HAL_I2C_MspInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:189    .text.HAL_I2C_MspInit:00000000 HAL_I2C_MspInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:251    .text.HAL_I2C_MspInit:0000007c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:256    .text.HAL_I2C_MspDeInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:262    .text.HAL_I2C_MspDeInit:00000000 HAL_I2C_MspDeInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:291    .text.HAL_I2C_MspDeInit:00000030 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:296    .text.HAL_FDCAN_MspInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:302    .text.HAL_FDCAN_MspInit:00000000 HAL_FDCAN_MspInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:378    .text.HAL_FDCAN_MspInit:000000a4 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:382    .text.HAL_FDCAN_MspDeInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:388    .text.HAL_FDCAN_MspDeInit:00000000 HAL_FDCAN_MspDeInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0yai43.s:417    .text.HAL_FDCAN_MspDeInit:00000034 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:18     .text.HAL_MspInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:24     .text.HAL_MspInit:00000000 HAL_MspInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:60     .text.HAL_MspInit:00000044 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:63     .text.HAL_ADC_MspInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:69     .text.HAL_ADC_MspInit:00000000 HAL_ADC_MspInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:143    .text.HAL_ADC_MspInit:000000a4 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:146    .text.HAL_ADC_MspDeInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:152    .text.HAL_ADC_MspDeInit:00000000 HAL_ADC_MspDeInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:180    .text.HAL_ADC_MspDeInit:00000030 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:183    .text.HAL_I2C_MspInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:189    .text.HAL_I2C_MspInit:00000000 HAL_I2C_MspInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:251    .text.HAL_I2C_MspInit:0000007c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:256    .text.HAL_I2C_MspDeInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:262    .text.HAL_I2C_MspDeInit:00000000 HAL_I2C_MspDeInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:291    .text.HAL_I2C_MspDeInit:00000030 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:296    .text.HAL_FDCAN_MspInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:302    .text.HAL_FDCAN_MspInit:00000000 HAL_FDCAN_MspInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:378    .text.HAL_FDCAN_MspInit:000000a4 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:382    .text.HAL_FDCAN_MspDeInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:388    .text.HAL_FDCAN_MspDeInit:00000000 HAL_FDCAN_MspDeInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccR8AWZl.s:417    .text.HAL_FDCAN_MspDeInit:00000034 $d
 
 UNDEFINED SYMBOLS
 memset

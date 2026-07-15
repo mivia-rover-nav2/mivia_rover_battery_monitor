@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
   56 003e 30D1     		bne	.L5
   57              	.L4:
   58 0040 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 2
 
 
   59 0042 9B68     		ldr	r3, [r3, #8]
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
  113 00ba 3B68     		ldr	r3, [r7]
  114 00bc 9B68     		ldr	r3, [r3, #8]
  115 00be 012B     		cmp	r3, #1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 3
 
 
  116 00c0 17D0     		beq	.L7
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
  170 0138 7B69     		ldr	r3, [r7, #20]
  171 013a DA08     		lsrs	r2, r3, #3
  172 013c 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 4
 
 
  173 013e 0832     		adds	r2, r2, #8
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
  227 01be 3A69     		ldr	r2, [r7, #16]
  228 01c0 1340     		ands	r3, r3, r2
  229 01c2 3B61     		str	r3, [r7, #16]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 5
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 5
 
 
  230 01c4 7B68     		ldr	r3, [r7, #4]
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
  284 0226 3A69     		ldr	r2, [r7, #16]
  285 0228 41F82320 		str	r2, [r1, r3, lsl #2]
  286 022c 394B     		ldr	r3, .L26+28
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 6
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 6
 
 
  287 022e 9B68     		ldr	r3, [r3, #8]
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
  341 029c 3A69     		ldr	r2, [r7, #16]
  342 029e FB68     		ldr	r3, [r7, #12]
  343 02a0 1343     		orrs	r3, r3, r2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 7
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 7
 
 
  344 02a2 3B61     		str	r3, [r7, #16]
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
  398 0314 00040140 		.word	1073808384
  400              		.section	.text.HAL_GPIO_DeInit,"ax",%progbits
  401              		.align	1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 8
 
 
  402              		.global	HAL_GPIO_DeInit
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
  457 0066 0DD0     		beq	.L34
  458 0068 7B68     		ldr	r3, [r7, #4]
  459 006a 534A     		ldr	r2, .L45+16
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 9
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 9
 
 
  460 006c 9342     		cmp	r3, r2
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
  514 00cc 3C4B     		ldr	r3, .L45+24
  515 00ce 9A68     		ldr	r2, [r3, #8]
  516 00d0 3B69     		ldr	r3, [r7, #16]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 10
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 10
 
 
  517 00d2 DB43     		mvns	r3, r3
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
  571 014e 0321     		movs	r1, #3
  572 0150 01FA03F3 		lsl	r3, r1, r3
  573 0154 DB43     		mvns	r3, r3
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 11
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 11
 
 
  574 0156 1A40     		ands	r2, r2, r3
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
  629              		.thumb_func
  631              	HAL_GPIO_ReadPin:
  632              		@ args = 0, pretend = 0, frame = 16
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 12
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 12
 
 
  633              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
  689 001e 7A88     		ldrh	r2, [r7, #2]
  690 0020 7B68     		ldr	r3, [r7, #4]
  691 0022 9A62     		str	r2, [r3, #40]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 13
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 13
 
 
  692              	.L54:
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
  750 0002 85B0     		sub	sp, sp, #20
  751 0004 00AF     		add	r7, sp, #0
  752 0006 7860     		str	r0, [r7, #4]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 14
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 14
 
 
  753 0008 0B46     		mov	r3, r1
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
  809 0012 002B     		cmp	r3, #0
  810 0014 06D0     		beq	.L61
  811 0016 054A     		ldr	r2, .L62
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 15
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 15
 
 
  812 0018 FB88     		ldrh	r3, [r7, #6]
@@ -878,29 +878,29 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 1
  848 0010 5DF8047B 		ldr	r7, [sp], #4
  849 0014 7047     		bx	lr
  851              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s 			page 16
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_hal_gpio.c
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:18     .text.HAL_GPIO_Init:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:24     .text.HAL_GPIO_Init:00000000 HAL_GPIO_Init
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:391    .text.HAL_GPIO_Init:000002f8 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:401    .text.HAL_GPIO_DeInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:407    .text.HAL_GPIO_DeInit:00000000 HAL_GPIO_DeInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:616    .text.HAL_GPIO_DeInit:000001a8 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:625    .text.HAL_GPIO_ReadPin:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:631    .text.HAL_GPIO_ReadPin:00000000 HAL_GPIO_ReadPin
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:663    .text.HAL_GPIO_WritePin:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:669    .text.HAL_GPIO_WritePin:00000000 HAL_GPIO_WritePin
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:701    .text.HAL_GPIO_TogglePin:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:707    .text.HAL_GPIO_TogglePin:00000000 HAL_GPIO_TogglePin
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:739    .text.HAL_GPIO_LockPin:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:745    .text.HAL_GPIO_LockPin:00000000 HAL_GPIO_LockPin
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:791    .text.HAL_GPIO_EXTI_IRQHandler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:797    .text.HAL_GPIO_EXTI_IRQHandler:00000000 HAL_GPIO_EXTI_IRQHandler
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:835    .text.HAL_GPIO_EXTI_Callback:00000000 HAL_GPIO_EXTI_Callback
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:826    .text.HAL_GPIO_EXTI_IRQHandler:0000002c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccA0HmdF.s:829    .text.HAL_GPIO_EXTI_Callback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:18     .text.HAL_GPIO_Init:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:24     .text.HAL_GPIO_Init:00000000 HAL_GPIO_Init
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:391    .text.HAL_GPIO_Init:000002f8 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:401    .text.HAL_GPIO_DeInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:407    .text.HAL_GPIO_DeInit:00000000 HAL_GPIO_DeInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:616    .text.HAL_GPIO_DeInit:000001a8 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:625    .text.HAL_GPIO_ReadPin:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:631    .text.HAL_GPIO_ReadPin:00000000 HAL_GPIO_ReadPin
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:663    .text.HAL_GPIO_WritePin:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:669    .text.HAL_GPIO_WritePin:00000000 HAL_GPIO_WritePin
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:701    .text.HAL_GPIO_TogglePin:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:707    .text.HAL_GPIO_TogglePin:00000000 HAL_GPIO_TogglePin
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:739    .text.HAL_GPIO_LockPin:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:745    .text.HAL_GPIO_LockPin:00000000 HAL_GPIO_LockPin
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:791    .text.HAL_GPIO_EXTI_IRQHandler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:797    .text.HAL_GPIO_EXTI_IRQHandler:00000000 HAL_GPIO_EXTI_IRQHandler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:835    .text.HAL_GPIO_EXTI_Callback:00000000 HAL_GPIO_EXTI_Callback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:826    .text.HAL_GPIO_EXTI_IRQHandler:0000002c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccUGYB6N.s:829    .text.HAL_GPIO_EXTI_Callback:00000000 $t
 
 NO UNDEFINED SYMBOLS

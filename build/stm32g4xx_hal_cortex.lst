@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
   56 0042 7047     		bx	lr
   57              	.L3:
   58              		.align	2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 2
 
 
   59              	.L2:
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  117 002e BD46     		mov	sp, r7
  118              		@ sp needed
  119 0030 5DF8047B 		ldr	r7, [sp], #4
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 3
 
 
  120 0034 7047     		bx	lr
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  176              	.L16:
  177 0044 00E100E0 		.word	-536813312
  179              		.section	.text.__NVIC_GetPendingIRQ,"ax",%progbits
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 4
 
 
  180              		.align	1
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  237 000e 002B     		cmp	r3, #0
  238 0010 0CDB     		blt	.L25
  239 0012 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 5
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 5
 
 
  240 0014 03F01F02 		and	r2, r3, #31
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  296              	.L31:
  297 0038 00E100E0 		.word	-536813312
  299              		.section	.text.__NVIC_GetActive,"ax",%progbits
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 6
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 6
 
 
  300              		.align	1
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  357 000c 97F90730 		ldrsb	r3, [r7, #7]
  358 0010 002B     		cmp	r3, #0
  359 0012 0ADB     		blt	.L39
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 7
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 7
 
 
  360 0014 3B68     		ldr	r3, [r7]
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  416 0020 1B09     		lsrs	r3, r3, #4
  417 0022 DBB2     		uxtb	r3, r3
  418 0024 09E0     		b	.L46
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 8
 
 
  419              	.L45:
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  475 0030 0023     		movs	r3, #0
  476              	.L51:
  477 0032 7B61     		str	r3, [r7, #20]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 9
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 9
 
 
  478 0034 4FF0FF32 		mov	r2, #-1
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  534 0032 0023     		movs	r3, #0
  535              	.L55:
  536 0034 7B61     		str	r3, [r7, #20]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 10
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 10
 
 
  537 0036 FA68     		ldr	r2, [r7, #12]
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  593              		.syntax unified
  594 001e 00BF     		nop
  595              	.L57:
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 11
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 11
 
 
  596              		.syntax unified
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  652 0040 10E000E0 		.word	-536813552
  654              		.section	.text.HAL_NVIC_SetPriorityGrouping,"ax",%progbits
  655              		.align	1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 12
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 12
 
 
  656              		.global	HAL_NVIC_SetPriorityGrouping
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  714              		.thumb
  715              		.thumb_func
  717              	HAL_NVIC_EnableIRQ:
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 13
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 13
 
 
  718              		@ args = 0, pretend = 0, frame = 8
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  777              		.thumb_func
  779              	HAL_SYSTICK_Config:
  780              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 14
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 14
 
 
  781              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  839 0028 BD46     		mov	sp, r7
  840              		@ sp needed
  841 002a 80BD     		pop	{r7, pc}
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 15
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 15
 
 
  843              		.section	.text.HAL_NVIC_SetPendingIRQ,"ax",%progbits
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  902 0000 80B5     		push	{r7, lr}
  903 0002 82B0     		sub	sp, sp, #8
  904 0004 00AF     		add	r7, sp, #0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 16
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 16
 
 
  905 0006 0346     		mov	r3, r0
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  963 0018 1360     		str	r3, [r2]
  964 001a 05E0     		b	.L84
  965              	.L82:
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 17
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 17
 
 
  966 001c 054B     		ldr	r3, .L85
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  1026              		@ args = 0, pretend = 0, frame = 8
  1027              		@ frame_needed = 1, uses_anonymous_args = 0
  1028              		@ link register save eliminated.
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 18
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 18
 
 
  1029 0000 80B4     		push	{r7}
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  1085 0010 00BF     		nop
  1086 0012 BD46     		mov	sp, r7
  1087              		@ sp needed
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 19
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 19
 
 
  1088 0014 5DF8047B 		ldr	r7, [sp], #4
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  1146 000c 9360     		str	r3, [r2, #8]
  1147 000e 064B     		ldr	r3, .L99
  1148 0010 1B69     		ldr	r3, [r3, #16]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 20
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 20
 
 
  1149 0012 054A     		ldr	r2, .L99
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  1205 0040 1A43     		orrs	r2, r2, r3
  1206 0042 7B68     		ldr	r3, [r7, #4]
  1207 0044 9B7B     		ldrb	r3, [r3, #14]	@ zero_extendqisi2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 21
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 21
 
 
  1208 0046 5B04     		lsls	r3, r3, #17
@@ -1232,99 +1232,99 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 1
  1236              	.L102:
  1237 007c 90ED00E0 		.word	-536810096
  1239              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 22
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 22
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_hal_cortex.c
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:18     .text.__NVIC_SetPriorityGrouping:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:23     .text.__NVIC_SetPriorityGrouping:00000000 __NVIC_SetPriorityGrouping
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:60     .text.__NVIC_SetPriorityGrouping:00000044 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:63     .text.__NVIC_GetPriorityGrouping:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:68     .text.__NVIC_GetPriorityGrouping:00000000 __NVIC_GetPriorityGrouping
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:86     .text.__NVIC_GetPriorityGrouping:00000018 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:89     .text.__NVIC_EnableIRQ:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:94     .text.__NVIC_EnableIRQ:00000000 __NVIC_EnableIRQ
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:124    .text.__NVIC_EnableIRQ:00000038 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:127    .text.__NVIC_DisableIRQ:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:132    .text.__NVIC_DisableIRQ:00000000 __NVIC_DisableIRQ
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:177    .text.__NVIC_DisableIRQ:00000044 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:180    .text.__NVIC_GetPendingIRQ:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:185    .text.__NVIC_GetPendingIRQ:00000000 __NVIC_GetPendingIRQ
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:219    .text.__NVIC_GetPendingIRQ:00000040 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:222    .text.__NVIC_SetPendingIRQ:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:227    .text.__NVIC_SetPendingIRQ:00000000 __NVIC_SetPendingIRQ
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:258    .text.__NVIC_SetPendingIRQ:00000038 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:261    .text.__NVIC_ClearPendingIRQ:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:266    .text.__NVIC_ClearPendingIRQ:00000000 __NVIC_ClearPendingIRQ
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:297    .text.__NVIC_ClearPendingIRQ:00000038 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:300    .text.__NVIC_GetActive:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:305    .text.__NVIC_GetActive:00000000 __NVIC_GetActive
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:339    .text.__NVIC_GetActive:00000040 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:342    .text.__NVIC_SetPriority:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:347    .text.__NVIC_SetPriority:00000000 __NVIC_SetPriority
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:390    .text.__NVIC_SetPriority:0000004c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:394    .text.__NVIC_GetPriority:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:399    .text.__NVIC_GetPriority:00000000 __NVIC_GetPriority
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:439    .text.__NVIC_GetPriority:00000048 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:443    .text.NVIC_EncodePriority:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:448    .text.NVIC_EncodePriority:00000000 NVIC_EncodePriority
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:501    .text.NVIC_DecodePriority:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:506    .text.NVIC_DecodePriority:00000000 NVIC_DecodePriority
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:563    .text.__NVIC_SystemReset:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:568    .text.__NVIC_SystemReset:00000000 __NVIC_SystemReset
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:606    .text.__NVIC_SystemReset:00000024 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:610    .text.SysTick_Config:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:615    .text.SysTick_Config:00000000 SysTick_Config
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:652    .text.SysTick_Config:00000040 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:655    .text.HAL_NVIC_SetPriorityGrouping:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:661    .text.HAL_NVIC_SetPriorityGrouping:00000000 HAL_NVIC_SetPriorityGrouping
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:677    .text.HAL_NVIC_SetPriority:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:683    .text.HAL_NVIC_SetPriority:00000000 HAL_NVIC_SetPriority
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:711    .text.HAL_NVIC_EnableIRQ:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:717    .text.HAL_NVIC_EnableIRQ:00000000 HAL_NVIC_EnableIRQ
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:735    .text.HAL_NVIC_DisableIRQ:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:741    .text.HAL_NVIC_DisableIRQ:00000000 HAL_NVIC_DisableIRQ
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:759    .text.HAL_NVIC_SystemReset:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:765    .text.HAL_NVIC_SystemReset:00000000 HAL_NVIC_SystemReset
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:773    .text.HAL_SYSTICK_Config:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:779    .text.HAL_SYSTICK_Config:00000000 HAL_SYSTICK_Config
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:796    .text.HAL_NVIC_GetPriorityGrouping:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:802    .text.HAL_NVIC_GetPriorityGrouping:00000000 HAL_NVIC_GetPriorityGrouping
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:813    .text.HAL_NVIC_GetPriority:00000000 $t
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s 			page 23
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:18     .text.__NVIC_SetPriorityGrouping:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:23     .text.__NVIC_SetPriorityGrouping:00000000 __NVIC_SetPriorityGrouping
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:60     .text.__NVIC_SetPriorityGrouping:00000044 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:63     .text.__NVIC_GetPriorityGrouping:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:68     .text.__NVIC_GetPriorityGrouping:00000000 __NVIC_GetPriorityGrouping
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:86     .text.__NVIC_GetPriorityGrouping:00000018 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:89     .text.__NVIC_EnableIRQ:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:94     .text.__NVIC_EnableIRQ:00000000 __NVIC_EnableIRQ
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:124    .text.__NVIC_EnableIRQ:00000038 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:127    .text.__NVIC_DisableIRQ:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:132    .text.__NVIC_DisableIRQ:00000000 __NVIC_DisableIRQ
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:177    .text.__NVIC_DisableIRQ:00000044 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:180    .text.__NVIC_GetPendingIRQ:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:185    .text.__NVIC_GetPendingIRQ:00000000 __NVIC_GetPendingIRQ
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:219    .text.__NVIC_GetPendingIRQ:00000040 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:222    .text.__NVIC_SetPendingIRQ:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:227    .text.__NVIC_SetPendingIRQ:00000000 __NVIC_SetPendingIRQ
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:258    .text.__NVIC_SetPendingIRQ:00000038 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:261    .text.__NVIC_ClearPendingIRQ:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:266    .text.__NVIC_ClearPendingIRQ:00000000 __NVIC_ClearPendingIRQ
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:297    .text.__NVIC_ClearPendingIRQ:00000038 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:300    .text.__NVIC_GetActive:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:305    .text.__NVIC_GetActive:00000000 __NVIC_GetActive
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:339    .text.__NVIC_GetActive:00000040 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:342    .text.__NVIC_SetPriority:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:347    .text.__NVIC_SetPriority:00000000 __NVIC_SetPriority
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:390    .text.__NVIC_SetPriority:0000004c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:394    .text.__NVIC_GetPriority:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:399    .text.__NVIC_GetPriority:00000000 __NVIC_GetPriority
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:439    .text.__NVIC_GetPriority:00000048 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:443    .text.NVIC_EncodePriority:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:448    .text.NVIC_EncodePriority:00000000 NVIC_EncodePriority
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:501    .text.NVIC_DecodePriority:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:506    .text.NVIC_DecodePriority:00000000 NVIC_DecodePriority
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:563    .text.__NVIC_SystemReset:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:568    .text.__NVIC_SystemReset:00000000 __NVIC_SystemReset
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:606    .text.__NVIC_SystemReset:00000024 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:610    .text.SysTick_Config:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:615    .text.SysTick_Config:00000000 SysTick_Config
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:652    .text.SysTick_Config:00000040 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:655    .text.HAL_NVIC_SetPriorityGrouping:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:661    .text.HAL_NVIC_SetPriorityGrouping:00000000 HAL_NVIC_SetPriorityGrouping
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:677    .text.HAL_NVIC_SetPriority:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:683    .text.HAL_NVIC_SetPriority:00000000 HAL_NVIC_SetPriority
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:711    .text.HAL_NVIC_EnableIRQ:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:717    .text.HAL_NVIC_EnableIRQ:00000000 HAL_NVIC_EnableIRQ
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:735    .text.HAL_NVIC_DisableIRQ:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:741    .text.HAL_NVIC_DisableIRQ:00000000 HAL_NVIC_DisableIRQ
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:759    .text.HAL_NVIC_SystemReset:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:765    .text.HAL_NVIC_SystemReset:00000000 HAL_NVIC_SystemReset
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:773    .text.HAL_SYSTICK_Config:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:779    .text.HAL_SYSTICK_Config:00000000 HAL_SYSTICK_Config
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:796    .text.HAL_NVIC_GetPriorityGrouping:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:802    .text.HAL_NVIC_GetPriorityGrouping:00000000 HAL_NVIC_GetPriorityGrouping
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:813    .text.HAL_NVIC_GetPriority:00000000 $t
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s 			page 23
 
 
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:819    .text.HAL_NVIC_GetPriority:00000000 HAL_NVIC_GetPriority
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:844    .text.HAL_NVIC_SetPendingIRQ:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:850    .text.HAL_NVIC_SetPendingIRQ:00000000 HAL_NVIC_SetPendingIRQ
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:868    .text.HAL_NVIC_GetPendingIRQ:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:874    .text.HAL_NVIC_GetPendingIRQ:00000000 HAL_NVIC_GetPendingIRQ
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:893    .text.HAL_NVIC_ClearPendingIRQ:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:899    .text.HAL_NVIC_ClearPendingIRQ:00000000 HAL_NVIC_ClearPendingIRQ
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:917    .text.HAL_NVIC_GetActive:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:923    .text.HAL_NVIC_GetActive:00000000 HAL_NVIC_GetActive
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:942    .text.HAL_SYSTICK_CLKSourceConfig:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:948    .text.HAL_SYSTICK_CLKSourceConfig:00000000 HAL_SYSTICK_CLKSourceConfig
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:981    .text.HAL_SYSTICK_CLKSourceConfig:00000034 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:984    .text.HAL_SYSTICK_IRQHandler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:990    .text.HAL_SYSTICK_IRQHandler:00000000 HAL_SYSTICK_IRQHandler
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1006   .text.HAL_SYSTICK_Callback:00000000 HAL_SYSTICK_Callback
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1000   .text.HAL_SYSTICK_Callback:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1019   .text.HAL_MPU_Enable:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1025   .text.HAL_MPU_Enable:00000000 HAL_MPU_Enable
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1060   .text.HAL_MPU_Enable:0000002c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1063   .text.HAL_MPU_Disable:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1069   .text.HAL_MPU_Disable:00000000 HAL_MPU_Disable
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1093   .text.HAL_MPU_Disable:0000001c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1096   .text.HAL_MPU_EnableRegion:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1102   .text.HAL_MPU_EnableRegion:00000000 HAL_MPU_EnableRegion
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1127   .text.HAL_MPU_EnableRegion:00000028 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1130   .text.HAL_MPU_DisableRegion:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1136   .text.HAL_MPU_DisableRegion:00000000 HAL_MPU_DisableRegion
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1161   .text.HAL_MPU_DisableRegion:00000028 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1164   .text.HAL_MPU_ConfigRegion:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1170   .text.HAL_MPU_ConfigRegion:00000000 HAL_MPU_ConfigRegion
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2Qk9wD.s:1237   .text.HAL_MPU_ConfigRegion:0000007c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:819    .text.HAL_NVIC_GetPriority:00000000 HAL_NVIC_GetPriority
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:844    .text.HAL_NVIC_SetPendingIRQ:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:850    .text.HAL_NVIC_SetPendingIRQ:00000000 HAL_NVIC_SetPendingIRQ
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:868    .text.HAL_NVIC_GetPendingIRQ:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:874    .text.HAL_NVIC_GetPendingIRQ:00000000 HAL_NVIC_GetPendingIRQ
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:893    .text.HAL_NVIC_ClearPendingIRQ:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:899    .text.HAL_NVIC_ClearPendingIRQ:00000000 HAL_NVIC_ClearPendingIRQ
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:917    .text.HAL_NVIC_GetActive:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:923    .text.HAL_NVIC_GetActive:00000000 HAL_NVIC_GetActive
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:942    .text.HAL_SYSTICK_CLKSourceConfig:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:948    .text.HAL_SYSTICK_CLKSourceConfig:00000000 HAL_SYSTICK_CLKSourceConfig
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:981    .text.HAL_SYSTICK_CLKSourceConfig:00000034 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:984    .text.HAL_SYSTICK_IRQHandler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:990    .text.HAL_SYSTICK_IRQHandler:00000000 HAL_SYSTICK_IRQHandler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1006   .text.HAL_SYSTICK_Callback:00000000 HAL_SYSTICK_Callback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1000   .text.HAL_SYSTICK_Callback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1019   .text.HAL_MPU_Enable:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1025   .text.HAL_MPU_Enable:00000000 HAL_MPU_Enable
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1060   .text.HAL_MPU_Enable:0000002c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1063   .text.HAL_MPU_Disable:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1069   .text.HAL_MPU_Disable:00000000 HAL_MPU_Disable
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1093   .text.HAL_MPU_Disable:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1096   .text.HAL_MPU_EnableRegion:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1102   .text.HAL_MPU_EnableRegion:00000000 HAL_MPU_EnableRegion
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1127   .text.HAL_MPU_EnableRegion:00000028 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1130   .text.HAL_MPU_DisableRegion:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1136   .text.HAL_MPU_DisableRegion:00000000 HAL_MPU_DisableRegion
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1161   .text.HAL_MPU_DisableRegion:00000028 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1164   .text.HAL_MPU_ConfigRegion:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1170   .text.HAL_MPU_ConfigRegion:00000000 HAL_MPU_ConfigRegion
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccP37BYL.s:1237   .text.HAL_MPU_ConfigRegion:0000007c $d
 
 NO UNDEFINED SYMBOLS

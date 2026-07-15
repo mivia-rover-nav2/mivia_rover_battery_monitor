@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
   56 0044 BB68     		ldr	r3, [r7, #8]
   57 0046 0123     		movs	r3, #1
   58 0048 7B74     		strb	r3, [r7, #17]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 2
 
 
   59              	.L3:
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  113 00c8 C2F89030 		str	r3, [r2, #144]
  114 00cc 184A     		ldr	r2, .L34
  115 00ce 7B69     		ldr	r3, [r7, #20]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 3
 
 
  116 00d0 C2F89030 		str	r3, [r2, #144]
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  170 0140 05D1     		bne	.L2
  171 0142 A74B     		ldr	r3, .L36
  172 0144 9B6D     		ldr	r3, [r3, #88]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 4
 
 
  173 0146 A64A     		ldr	r2, .L36
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  227 01ca 7B68     		ldr	r3, [r7, #4]
  228 01cc 1B69     		ldr	r3, [r3, #16]
  229 01ce 8449     		ldr	r1, .L36
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 5
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 5
 
 
  230 01d0 1343     		orrs	r3, r3, r2
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  284 0254 1B6A     		ldr	r3, [r3, #32]
  285 0256 6249     		ldr	r1, .L36
  286 0258 1343     		orrs	r3, r3, r2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 6
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 6
 
 
  287 025a C1F88830 		str	r3, [r1, #136]
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  341 02de 4049     		ldr	r1, .L36
  342 02e0 1343     		orrs	r3, r3, r2
  343 02e2 C1F88830 		str	r3, [r1, #136]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 7
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 7
 
 
  344 02e6 7B68     		ldr	r3, [r7, #4]
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  398 036a D360     		str	r3, [r2, #12]
  399              	.L27:
  400 036c 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 8
 
 
  401 036e 1B68     		ldr	r3, [r3]
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  455 03ec 002B     		cmp	r3, #0
  456 03ee 15D0     		beq	.L30
  457 03f0 294B     		ldr	r3, .L39
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 9
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 9
 
 
  458 03f2 D3F88830 		ldr	r3, [r3, #136]
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  512 0478 DB6C     		ldr	r3, [r3, #76]
  513 047a B3F5001F 		cmp	r3, #2097152
  514 047e 05D1     		bne	.L32
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 10
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 10
 
 
  515 0480 054B     		ldr	r3, .L39
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  571 0048 D3F88830 		ldr	r3, [r3, #136]
  572 004c 03F44072 		and	r2, r3, #768
  573 0050 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 11
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 11
 
 
  574 0052 5A61     		str	r2, [r3, #20]
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  628 00ea 7B68     		ldr	r3, [r7, #4]
  629 00ec 1A64     		str	r2, [r3, #64]
  630 00ee 124B     		ldr	r3, .L42+4
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 12
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 12
 
 
  631 00f0 D3F88830 		ldr	r3, [r3, #136]
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  687 0026 03F00203 		and	r3, r3, #2
  688 002a 022B     		cmp	r3, #2
  689 002c 08D1     		bne	.L46
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 13
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 13
 
 
  690 002e 3B69     		ldr	r3, [r7, #16]
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  744 00b4 894B     		ldr	r3, .L165
  745 00b6 1B68     		ldr	r3, [r3]
  746 00b8 03F40033 		and	r3, r3, #131072
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 14
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 14
 
 
  747 00bc B3F5003F 		cmp	r3, #131072
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  801 0154 7B68     		ldr	r3, [r7, #4]
  802 0156 B3F5005F 		cmp	r3, #8192
  803 015a 00F25C84 		bhi	.L144
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 15
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 15
 
 
  804 015e 7B68     		ldr	r3, [r7, #4]
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  858 0200 170A0000 		.word	.L144+1
  859 0204 170A0000 		.word	.L144+1
  860 0208 170A0000 		.word	.L144+1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 16
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 16
 
 
  861 020c B1030000 		.word	.L72+1
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  915 02ae 05D1     		bne	.L80
  916 02b0 3B69     		ldr	r3, [r7, #16]
  917 02b2 022B     		cmp	r3, #2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 17
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 17
 
 
  918 02b4 02D1     		bne	.L80
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  972 032e 924B     		ldr	r3, .L167
  973 0330 D3F89030 		ldr	r3, [r3, #144]
  974 0334 03F00203 		and	r3, r3, #2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 18
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 18
 
 
  975 0338 022B     		cmp	r3, #2
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1029 03ba 3B61     		str	r3, [r7, #16]
  1030 03bc 3B69     		ldr	r3, [r7, #16]
  1031 03be 002B     		cmp	r3, #0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 19
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 19
 
 
  1032 03c0 03D1     		bne	.L89
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1086 043c 4E4B     		ldr	r3, .L167
  1087 043e 1B68     		ldr	r3, [r3]
  1088 0440 03F48063 		and	r3, r3, #1024
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 20
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 20
 
 
  1089 0444 B3F5806F 		cmp	r3, #1024
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1143 04ca 022B     		cmp	r3, #2
  1144 04cc 40F0AF82 		bne	.L150
  1145 04d0 3B69     		ldr	r3, [r7, #16]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 21
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 21
 
 
  1146 04d2 B3F5406F 		cmp	r3, #3072
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1200 0556 084B     		ldr	r3, .L167
  1201 0558 1B68     		ldr	r3, [r3]
  1202 055a 03F48063 		and	r3, r3, #1024
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 22
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 22
 
 
  1203 055e B3F5806F 		cmp	r3, #1024
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1257              	.L110:
  1258 05e4 3B69     		ldr	r3, [r7, #16]
  1259 05e6 012B     		cmp	r3, #1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 23
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 23
 
 
  1260 05e8 03D1     		bne	.L112
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1314 066a 03F00203 		and	r3, r3, #2
  1315 066e 022B     		cmp	r3, #2
  1316 0670 40F0E781 		bne	.L155
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 24
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 24
 
 
  1317 0674 3B69     		ldr	r3, [r7, #16]
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1371 06f2 1B68     		ldr	r3, [r3]
  1372 06f4 03F48063 		and	r3, r3, #1024
  1373 06f8 B3F5806F 		cmp	r3, #1024
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 25
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 25
 
 
  1374 06fc 40F0A381 		bne	.L156
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1428 077c 03F48063 		and	r3, r3, #1024
  1429 0780 B3F5806F 		cmp	r3, #1024
  1430 0784 40F06181 		bne	.L157
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 26
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 26
 
 
  1431 0788 3B69     		ldr	r3, [r7, #16]
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1485 0808 0024F400 		.word	16000000
  1486 080c 0080BB00 		.word	12288000
  1487 0810 00366E01 		.word	24000000
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 27
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 27
 
 
  1488              	.L61:
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1542 089a DB68     		ldr	r3, [r3, #12]
  1543 089c 5B0D     		lsrs	r3, r3, #21
  1544 089e 03F00303 		and	r3, r3, #3
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 28
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 28
 
 
  1545 08a2 0133     		adds	r3, r3, #1
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1599              	.L134:
  1600 0922 BB69     		ldr	r3, [r7, #24]
  1601 0924 FA68     		ldr	r2, [r7, #12]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 29
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 29
 
 
  1602 0926 03FB02F2 		mul	r2, r3, r2
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1656 09a4 B2FBF3F3 		udiv	r3, r2, r3
  1657 09a8 FB61     		str	r3, [r7, #28]
  1658 09aa 58E0     		b	.L162
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 30
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 30
 
 
  1659              	.L136:
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1713 0a20 20E0     		b	.L49
  1714              	.L147:
  1715 0a22 00BF     		nop
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 31
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 31
 
 
  1716 0a24 1EE0     		b	.L49
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1770 0a6c 80BD     		pop	{r7, pc}
  1771              	.L172:
  1772 0a6e 00BF     		.align	2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 32
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 32
 
 
  1773              	.L171:
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1831              		@ sp needed
  1832 0024 5DF8047B 		ldr	r7, [sp], #4
  1833 0028 7047     		bx	lr
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 33
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 33
 
 
  1834              	.L178:
@@ -1978,7 +1978,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1892              		@ frame_needed = 1, uses_anonymous_args = 0
  1893 0000 80B5     		push	{r7, lr}
  1894 0002 00AF     		add	r7, sp, #0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 34
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 34
 
 
  1895 0004 074B     		ldr	r3, .L185
@@ -2038,7 +2038,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  1953 001a 87F82730 		strb	r3, [r7, #39]
  1954 001e 0023     		movs	r3, #0
  1955 0020 87F82630 		strb	r3, [r7, #38]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 35
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 35
 
 
  1956 0024 2D4B     		ldr	r3, .L194
@@ -2098,7 +2098,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  2010 00a8 0C4A     		ldr	r2, .L194
  2011 00aa 43F08073 		orr	r3, r3, #16777216
  2012 00ae C2F89030 		str	r3, [r2, #144]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 36
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 36
 
 
  2013 00b2 97F82630 		ldrb	r3, [r7, #38]	@ zero_extendqisi2
@@ -2158,7 +2158,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  2069 0030 3B68     		ldr	r3, [r7]
  2070 0032 0123     		movs	r3, #1
  2071 0034 FB71     		strb	r3, [r7, #7]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 37
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 37
 
 
  2072              	.L197:
@@ -2218,7 +2218,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  2128 000a 9B6B     		ldr	r3, [r3, #56]
  2129 000c 1B4A     		ldr	r2, .L205
  2130 000e 43F48073 		orr	r3, r3, #256
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 38
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 38
 
 
  2131 0012 9363     		str	r3, [r2, #56]
@@ -2278,7 +2278,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  2186              		.section	.text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate,"ax",%progbits
  2187              		.align	1
  2188              		.global	HAL_RCCEx_CRSSoftwareSynchronizationGenerate
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 39
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 39
 
 
  2189              		.syntax unified
@@ -2338,7 +2338,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  2246 002c 054B     		ldr	r3, .L211
  2247 002e 9B68     		ldr	r3, [r3, #8]
  2248 0030 03F40042 		and	r2, r3, #32768
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 40
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 40
 
 
  2249 0034 7B68     		ldr	r3, [r7, #4]
@@ -2398,7 +2398,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  2305 0046 FB60     		str	r3, [r7, #12]
  2306 0048 254B     		ldr	r3, .L224
  2307 004a 0122     		movs	r2, #1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 41
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 41
 
 
  2308 004c DA60     		str	r2, [r3, #12]
@@ -2458,7 +2458,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  2362 00c6 02D1     		bne	.L221
  2363 00c8 054B     		ldr	r3, .L224
  2364 00ca 0822     		movs	r2, #8
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 42
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 42
 
 
  2365 00cc DA60     		str	r2, [r3, #12]
@@ -2518,7 +2518,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  2421 0042 03F00203 		and	r3, r3, #2
  2422 0046 002B     		cmp	r3, #0
  2423 0048 05D0     		beq	.L229
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 43
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 43
 
 
  2424 004a 234B     		ldr	r3, .L235
@@ -2578,7 +2578,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  2478 00c4 DA60     		str	r2, [r3, #12]
  2479 00c6 F868     		ldr	r0, [r7, #12]
  2480 00c8 FFF7FEFF 		bl	HAL_RCCEx_CRS_ErrorCallback
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 44
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 44
 
 
  2481 00cc FFE7     		b	.L234
@@ -2638,7 +2638,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  2541              		@ frame_needed = 1, uses_anonymous_args = 0
  2542              		@ link register save eliminated.
  2543 0000 80B4     		push	{r7}
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 45
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 45
 
 
  2544 0002 00AF     		add	r7, sp, #0
@@ -2668,78 +2668,78 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 1
  2570 000e 5DF8047B 		ldr	r7, [sp], #4
  2571 0012 7047     		bx	lr
  2573              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 46
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 46
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_hal_rcc_ex.c
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:18     .text.HAL_RCCEx_PeriphCLKConfig:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:24     .text.HAL_RCCEx_PeriphCLKConfig:00000000 HAL_RCCEx_PeriphCLKConfig
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:162    .text.HAL_RCCEx_PeriphCLKConfig:00000130 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:165    .text.HAL_RCCEx_PeriphCLKConfig:00000138 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:449    .text.HAL_RCCEx_PeriphCLKConfig:000003e0 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:452    .text.HAL_RCCEx_PeriphCLKConfig:000003e4 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:530    .text.HAL_RCCEx_PeriphCLKConfig:00000498 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:533    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:539    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 HAL_RCCEx_GetPeriphCLKConfig
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:659    .text.HAL_RCCEx_GetPeriphCLKConfig:00000134 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:663    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:669    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 HAL_RCCEx_GetPeriphCLKFreq
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:854    .text.HAL_RCCEx_GetPeriphCLKFreq:000001f0 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:886    .text.HAL_RCCEx_GetPeriphCLKFreq:00000270 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:937    .text.HAL_RCCEx_GetPeriphCLKFreq:000002dc $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:942    .text.HAL_RCCEx_GetPeriphCLKFreq:000002ec $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1214   .text.HAL_RCCEx_GetPeriphCLKFreq:00000578 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1217   .text.HAL_RCCEx_GetPeriphCLKFreq:00000580 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1484   .text.HAL_RCCEx_GetPeriphCLKFreq:00000804 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1489   .text.HAL_RCCEx_GetPeriphCLKFreq:00000814 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1774   .text.HAL_RCCEx_GetPeriphCLKFreq:00000a70 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1779   .text.HAL_RCCEx_EnableLSECSS:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1785   .text.HAL_RCCEx_EnableLSECSS:00000000 HAL_RCCEx_EnableLSECSS
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1804   .text.HAL_RCCEx_EnableLSECSS:00000020 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1807   .text.HAL_RCCEx_DisableLSECSS:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1813   .text.HAL_RCCEx_DisableLSECSS:00000000 HAL_RCCEx_DisableLSECSS
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1837   .text.HAL_RCCEx_DisableLSECSS:0000002c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1840   .text.HAL_RCCEx_EnableLSECSS_IT:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1846   .text.HAL_RCCEx_EnableLSECSS_IT:00000000 HAL_RCCEx_EnableLSECSS_IT
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1880   .text.HAL_RCCEx_EnableLSECSS_IT:00000044 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1884   .text.HAL_RCCEx_LSECSS_IRQHandler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1890   .text.HAL_RCCEx_LSECSS_IRQHandler:00000000 HAL_RCCEx_LSECSS_IRQHandler
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1919   .text.HAL_RCCEx_LSECSS_Callback:00000000 HAL_RCCEx_LSECSS_Callback
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1910   .text.HAL_RCCEx_LSECSS_IRQHandler:00000024 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1913   .text.HAL_RCCEx_LSECSS_Callback:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1932   .text.HAL_RCCEx_EnableLSCO:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:1938   .text.HAL_RCCEx_EnableLSCO:00000000 HAL_RCCEx_EnableLSCO
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2035   .text.HAL_RCCEx_EnableLSCO:000000dc $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2039   .text.HAL_RCCEx_DisableLSCO:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2045   .text.HAL_RCCEx_DisableLSCO:00000000 HAL_RCCEx_DisableLSCO
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2109   .text.HAL_RCCEx_DisableLSCO:00000080 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2113   .text.HAL_RCCEx_CRSConfig:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2119   .text.HAL_RCCEx_CRSConfig:00000000 HAL_RCCEx_CRSConfig
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2183   .text.HAL_RCCEx_CRSConfig:0000007c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2187   .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2193   .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000000 HAL_RCCEx_CRSSoftwareSynchronizationGenerate
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2212   .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:0000001c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2215   .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2221   .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000000 HAL_RCCEx_CRSGetSynchronizationInfo
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2260   .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000044 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2263   .text.HAL_RCCEx_CRSWaitSynchronization:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2269   .text.HAL_RCCEx_CRSWaitSynchronization:00000000 HAL_RCCEx_CRSWaitSynchronization
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2379   .text.HAL_RCCEx_CRSWaitSynchronization:000000e0 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2382   .text.HAL_RCCEx_CRS_IRQHandler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2388   .text.HAL_RCCEx_CRS_IRQHandler:00000000 HAL_RCCEx_CRS_IRQHandler
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s 			page 47
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:18     .text.HAL_RCCEx_PeriphCLKConfig:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:24     .text.HAL_RCCEx_PeriphCLKConfig:00000000 HAL_RCCEx_PeriphCLKConfig
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:162    .text.HAL_RCCEx_PeriphCLKConfig:00000130 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:165    .text.HAL_RCCEx_PeriphCLKConfig:00000138 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:449    .text.HAL_RCCEx_PeriphCLKConfig:000003e0 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:452    .text.HAL_RCCEx_PeriphCLKConfig:000003e4 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:530    .text.HAL_RCCEx_PeriphCLKConfig:00000498 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:533    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:539    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 HAL_RCCEx_GetPeriphCLKConfig
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:659    .text.HAL_RCCEx_GetPeriphCLKConfig:00000134 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:663    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:669    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 HAL_RCCEx_GetPeriphCLKFreq
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:854    .text.HAL_RCCEx_GetPeriphCLKFreq:000001f0 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:886    .text.HAL_RCCEx_GetPeriphCLKFreq:00000270 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:937    .text.HAL_RCCEx_GetPeriphCLKFreq:000002dc $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:942    .text.HAL_RCCEx_GetPeriphCLKFreq:000002ec $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1214   .text.HAL_RCCEx_GetPeriphCLKFreq:00000578 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1217   .text.HAL_RCCEx_GetPeriphCLKFreq:00000580 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1484   .text.HAL_RCCEx_GetPeriphCLKFreq:00000804 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1489   .text.HAL_RCCEx_GetPeriphCLKFreq:00000814 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1774   .text.HAL_RCCEx_GetPeriphCLKFreq:00000a70 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1779   .text.HAL_RCCEx_EnableLSECSS:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1785   .text.HAL_RCCEx_EnableLSECSS:00000000 HAL_RCCEx_EnableLSECSS
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1804   .text.HAL_RCCEx_EnableLSECSS:00000020 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1807   .text.HAL_RCCEx_DisableLSECSS:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1813   .text.HAL_RCCEx_DisableLSECSS:00000000 HAL_RCCEx_DisableLSECSS
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1837   .text.HAL_RCCEx_DisableLSECSS:0000002c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1840   .text.HAL_RCCEx_EnableLSECSS_IT:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1846   .text.HAL_RCCEx_EnableLSECSS_IT:00000000 HAL_RCCEx_EnableLSECSS_IT
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1880   .text.HAL_RCCEx_EnableLSECSS_IT:00000044 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1884   .text.HAL_RCCEx_LSECSS_IRQHandler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1890   .text.HAL_RCCEx_LSECSS_IRQHandler:00000000 HAL_RCCEx_LSECSS_IRQHandler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1919   .text.HAL_RCCEx_LSECSS_Callback:00000000 HAL_RCCEx_LSECSS_Callback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1910   .text.HAL_RCCEx_LSECSS_IRQHandler:00000024 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1913   .text.HAL_RCCEx_LSECSS_Callback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1932   .text.HAL_RCCEx_EnableLSCO:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:1938   .text.HAL_RCCEx_EnableLSCO:00000000 HAL_RCCEx_EnableLSCO
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2035   .text.HAL_RCCEx_EnableLSCO:000000dc $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2039   .text.HAL_RCCEx_DisableLSCO:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2045   .text.HAL_RCCEx_DisableLSCO:00000000 HAL_RCCEx_DisableLSCO
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2109   .text.HAL_RCCEx_DisableLSCO:00000080 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2113   .text.HAL_RCCEx_CRSConfig:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2119   .text.HAL_RCCEx_CRSConfig:00000000 HAL_RCCEx_CRSConfig
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2183   .text.HAL_RCCEx_CRSConfig:0000007c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2187   .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2193   .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000000 HAL_RCCEx_CRSSoftwareSynchronizationGenerate
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2212   .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2215   .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2221   .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000000 HAL_RCCEx_CRSGetSynchronizationInfo
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2260   .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000044 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2263   .text.HAL_RCCEx_CRSWaitSynchronization:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2269   .text.HAL_RCCEx_CRSWaitSynchronization:00000000 HAL_RCCEx_CRSWaitSynchronization
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2379   .text.HAL_RCCEx_CRSWaitSynchronization:000000e0 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2382   .text.HAL_RCCEx_CRS_IRQHandler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2388   .text.HAL_RCCEx_CRS_IRQHandler:00000000 HAL_RCCEx_CRS_IRQHandler
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s 			page 47
 
 
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2501   .text.HAL_RCCEx_CRS_SyncOkCallback:00000000 HAL_RCCEx_CRS_SyncOkCallback
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2520   .text.HAL_RCCEx_CRS_SyncWarnCallback:00000000 HAL_RCCEx_CRS_SyncWarnCallback
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2539   .text.HAL_RCCEx_CRS_ExpectedSyncCallback:00000000 HAL_RCCEx_CRS_ExpectedSyncCallback
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2558   .text.HAL_RCCEx_CRS_ErrorCallback:00000000 HAL_RCCEx_CRS_ErrorCallback
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2492   .text.HAL_RCCEx_CRS_IRQHandler:000000d8 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2495   .text.HAL_RCCEx_CRS_SyncOkCallback:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2514   .text.HAL_RCCEx_CRS_SyncWarnCallback:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2533   .text.HAL_RCCEx_CRS_ExpectedSyncCallback:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccsT7wIr.s:2552   .text.HAL_RCCEx_CRS_ErrorCallback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2501   .text.HAL_RCCEx_CRS_SyncOkCallback:00000000 HAL_RCCEx_CRS_SyncOkCallback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2520   .text.HAL_RCCEx_CRS_SyncWarnCallback:00000000 HAL_RCCEx_CRS_SyncWarnCallback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2539   .text.HAL_RCCEx_CRS_ExpectedSyncCallback:00000000 HAL_RCCEx_CRS_ExpectedSyncCallback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2558   .text.HAL_RCCEx_CRS_ErrorCallback:00000000 HAL_RCCEx_CRS_ErrorCallback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2492   .text.HAL_RCCEx_CRS_IRQHandler:000000d8 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2495   .text.HAL_RCCEx_CRS_SyncOkCallback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2514   .text.HAL_RCCEx_CRS_SyncWarnCallback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2533   .text.HAL_RCCEx_CRS_ExpectedSyncCallback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccDYnB1A.s:2552   .text.HAL_RCCEx_CRS_ErrorCallback:00000000 $t
 
 UNDEFINED SYMBOLS
 HAL_GetTick

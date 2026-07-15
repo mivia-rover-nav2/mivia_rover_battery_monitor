@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
   56 003c D2B2     		uxtb	r2, r2
   57 003e 1A70     		strb	r2, [r3]
   58              	.L2:
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 2
 
 
   59 0040 7B68     		ldr	r3, [r7, #4]
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  114      00000000 
  115              		.global	hi2c1
  116              		.section	.bss.hi2c1,"aw",%nobits
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 3
 
 
  117              		.align	2
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  179              		.section	.bss.lastCanTxTime,"aw",%nobits
  180              		.align	2
  183              	lastCanTxTime:
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 4
 
 
  184 0000 00000000 		.space	4
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  245 005e 0122     		movs	r2, #1
  246 0060 2021     		movs	r1, #32
  247 0062 4FF09040 		mov	r0, #1207959552
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 5
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 5
 
 
  248 0066 FFF7FEFF 		bl	HAL_GPIO_WritePin
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  302 00ec C3ED007A 		vstr.32	s15, [r3]
  303 00f0 6B4B     		ldr	r3, .L23+32
  304 00f2 D3ED007A 		vldr.32	s15, [r3]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 6
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 6
 
 
  305 00f6 6B4C     		ldr	r4, .L23+36
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  359 0174 4C4A     		ldr	r2, .L23+40
  360 0176 3B69     		ldr	r3, [r7, #16]
  361 0178 1360     		str	r3, [r2]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 7
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 7
 
 
  362 017a 4248     		ldr	r0, .L23+4
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  416 0212 632B     		cmp	r3, #99
  417 0214 04D9     		bls	.L19
  418 0216 264A     		ldr	r2, .L23+48
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 8
 
 
  419 0218 3B69     		ldr	r3, [r7, #16]
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  473 0298 00F07F45 		.word	1166012416
  474 029c 33335340 		.word	1079194419
  475 02a0 00000000 		.word	currentVoltage
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 9
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 9
 
 
  476 02a4 00000000 		.word	batteryInfo
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  532 0068 002B     		cmp	r3, #0
  533 006a 04DA     		bge	.L28
  534 006c 084B     		ldr	r3, .L29+12
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 10
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 10
 
 
  535 006e 1B68     		ldr	r3, [r3]
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  591 003a BB68     		ldr	r3, [r7, #8]
  592 003c 0133     		adds	r3, r3, #1
  593 003e BB60     		str	r3, [r7, #8]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 11
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 11
 
 
  594              	.L32:
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  650 0042 0422     		movs	r2, #4
  651 0044 9A61     		str	r2, [r3, #24]
  652 0046 2B4B     		ldr	r3, .L42
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 12
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 12
 
 
  653 0048 0022     		movs	r2, #0
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  707 00c4 0423     		movs	r3, #4
  708 00c6 7B61     		str	r3, [r7, #20]
  709 00c8 0023     		movs	r3, #0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 13
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 13
 
 
  710 00ca BB61     		str	r3, [r7, #24]
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  766 002c 1A62     		str	r2, [r3, #32]
  767 002e 0848     		ldr	r0, .L47
  768 0030 FFF7FEFF 		bl	HAL_I2C_Init
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 14
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 14
 
 
  769 0034 0346     		mov	r3, r0
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  825 0044 7B68     		ldr	r3, [r7, #4]
  826 0046 164B     		ldr	r3, .L50
  827 0048 DB6C     		ldr	r3, [r3, #76]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 15
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 15
 
 
  828 004a 154A     		ldr	r2, .L50
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  884 000c 0021     		movs	r1, #0
  885 000e 1846     		mov	r0, r3
  886 0010 FFF7FEFF 		bl	memset
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 16
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 16
 
 
  887 0014 07F16C03 		add	r3, r7, #108
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  941 00a8 294B     		ldr	r3, .L58
  942 00aa DB6C     		ldr	r3, [r3, #76]
  943 00ac 03F00103 		and	r3, r3, #1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 17
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 17
 
 
  944 00b0 3B60     		str	r3, [r7]
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  998 0134 002B     		cmp	r3, #0
  999 0136 07D0     		beq	.L57
  1000 0138 0122     		movs	r2, #1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 18
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 18
 
 
  1001 013a 2021     		movs	r1, #32
@@ -1058,70 +1058,70 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 1
  1037 0008 00BF     		nop
  1038 000a FDE7     		b	.L61
  1040              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 19
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:18     .text.ITM_SendChar:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:23     .text.ITM_SendChar:00000000 ITM_SendChar
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:68     .text._write:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:74     .text._write:00000000 _write
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:113    .bss.hadc1:00000000 hadc1
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:110    .bss.hadc1:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:120    .bss.hi2c1:00000000 hi2c1
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:117    .bss.hi2c1:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:127    .bss.hfdcan1:00000000 hfdcan1
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:124    .bss.hfdcan1:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:130    .bss.currentVoltage:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:133    .bss.currentVoltage:00000000 currentVoltage
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:136    .bss.rawAdcValue:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:139    .bss.rawAdcValue:00000000 rawAdcValue
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:142    .data.batteryInfo:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:145    .data.batteryInfo:00000000 batteryInfo
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:150    .bss.displayWholeVolt:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:153    .bss.displayWholeVolt:00000000 displayWholeVolt
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:156    .bss.displayFracVolt:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:159    .bss.displayFracVolt:00000000 displayFracVolt
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:162    .bss.adcHistory:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:165    .bss.adcHistory:00000000 adcHistory
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:168    .bss.adcHistoryIndex:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:171    .bss.adcHistoryIndex:00000000 adcHistoryIndex
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:174    .bss.lastAdcTime:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:177    .bss.lastAdcTime:00000000 lastAdcTime
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:180    .bss.lastCanTxTime:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:183    .bss.lastCanTxTime:00000000 lastCanTxTime
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:186    .bss.lastCanPollTime:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:189    .bss.lastCanPollTime:00000000 lastCanPollTime
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:192    .bss.lastDisplayTime:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:195    .bss.lastDisplayTime:00000000 lastDisplayTime
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:200    .data.is_screen_connected:00000000 is_screen_connected
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:203    .text.main:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:209    .text.main:00000000 main
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:876    .text.SystemClock_Config:00000000 SystemClock_Config
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:793    .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:618    .text.MX_ADC1_Init:00000000 MX_ADC1_Init
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:741    .text.MX_I2C1_Init:00000000 MX_I2C1_Init
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:1023   .text.Error_Handler:00000000 Error_Handler
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:490    .text.Calculate_Display_Voltage_Parts:00000000 Calculate_Display_Voltage_Parts
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:560    .text.Filter_GetAverage:00000000 Filter_GetAverage
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:467    .text.main:00000280 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:485    .text.Calculate_Display_Voltage_Parts:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:549    .text.Calculate_Display_Voltage_Parts:00000084 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:555    .text.Filter_GetAverage:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:609    .text.Filter_GetAverage:00000058 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:613    .text.MX_ADC1_Init:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:732    .text.MX_ADC1_Init:000000f4 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:736    .text.MX_I2C1_Init:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:783    .text.MX_I2C1_Init:00000050 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:788    .text.MX_GPIO_Init:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:866    .text.MX_GPIO_Init:000000a0 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:870    .text.SystemClock_Config:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:1014   .text.SystemClock_Config:00000150 $d
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s 			page 20
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:18     .text.ITM_SendChar:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:23     .text.ITM_SendChar:00000000 ITM_SendChar
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:68     .text._write:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:74     .text._write:00000000 _write
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:113    .bss.hadc1:00000000 hadc1
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:110    .bss.hadc1:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:120    .bss.hi2c1:00000000 hi2c1
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:117    .bss.hi2c1:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:127    .bss.hfdcan1:00000000 hfdcan1
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:124    .bss.hfdcan1:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:130    .bss.currentVoltage:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:133    .bss.currentVoltage:00000000 currentVoltage
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:136    .bss.rawAdcValue:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:139    .bss.rawAdcValue:00000000 rawAdcValue
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:142    .data.batteryInfo:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:145    .data.batteryInfo:00000000 batteryInfo
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:150    .bss.displayWholeVolt:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:153    .bss.displayWholeVolt:00000000 displayWholeVolt
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:156    .bss.displayFracVolt:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:159    .bss.displayFracVolt:00000000 displayFracVolt
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:162    .bss.adcHistory:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:165    .bss.adcHistory:00000000 adcHistory
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:168    .bss.adcHistoryIndex:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:171    .bss.adcHistoryIndex:00000000 adcHistoryIndex
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:174    .bss.lastAdcTime:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:177    .bss.lastAdcTime:00000000 lastAdcTime
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:180    .bss.lastCanTxTime:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:183    .bss.lastCanTxTime:00000000 lastCanTxTime
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:186    .bss.lastCanPollTime:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:189    .bss.lastCanPollTime:00000000 lastCanPollTime
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:192    .bss.lastDisplayTime:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:195    .bss.lastDisplayTime:00000000 lastDisplayTime
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:200    .data.is_screen_connected:00000000 is_screen_connected
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:203    .text.main:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:209    .text.main:00000000 main
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:876    .text.SystemClock_Config:00000000 SystemClock_Config
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:793    .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:618    .text.MX_ADC1_Init:00000000 MX_ADC1_Init
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:741    .text.MX_I2C1_Init:00000000 MX_I2C1_Init
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:1023   .text.Error_Handler:00000000 Error_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:490    .text.Calculate_Display_Voltage_Parts:00000000 Calculate_Display_Voltage_Parts
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:560    .text.Filter_GetAverage:00000000 Filter_GetAverage
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:467    .text.main:00000280 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:485    .text.Calculate_Display_Voltage_Parts:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:549    .text.Calculate_Display_Voltage_Parts:00000084 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:555    .text.Filter_GetAverage:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:609    .text.Filter_GetAverage:00000058 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:613    .text.MX_ADC1_Init:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:732    .text.MX_ADC1_Init:000000f4 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:736    .text.MX_I2C1_Init:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:783    .text.MX_I2C1_Init:00000050 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:788    .text.MX_GPIO_Init:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:866    .text.MX_GPIO_Init:000000a0 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:870    .text.SystemClock_Config:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:1014   .text.SystemClock_Config:00000150 $d
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s 			page 20
 
 
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccfGWIt1.s:1017   .text.Error_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc2P3tUm.s:1017   .text.Error_Handler:00000000 $t
 
 UNDEFINED SYMBOLS
 HAL_Init

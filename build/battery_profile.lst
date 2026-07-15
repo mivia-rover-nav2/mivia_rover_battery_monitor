@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 1
   59 002c CDCC7440 		.word	1081396429
   60 0030 66667640 		.word	1081501286
   61 0034 00007840 		.word	1081606144
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s 			page 2
 
 
   62 0038 9A997940 		.word	1081711002
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 1
  120 0050 9A994941 		.word	1095342490
  121              		.section	.rodata.voltageTable_4S,"a"
  122              		.align	2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s 			page 3
 
 
  125              	voltageTable_4S:
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 1
  180 002e 05E0     		b	.L8
  181              	.L5:
  182 0030 094B     		ldr	r3, .L9+8
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s 			page 4
 
 
  183 0032 03E0     		b	.L8
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 1
  239              	.L14:
  240 0034 45000000 		.word	.L17+1
  241 0038 53000000 		.word	.L16+1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 5
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s 			page 5
 
 
  242 003c 61000000 		.word	.L15+1
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 1
  296 00b2 B4EEE77A 		vcmpe.f32	s14, s15
  297 00b6 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  298 00ba 0DD5     		bpl	.L40
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 6
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s 			page 6
 
 
  299 00bc 4FF00003 		mov	r3, #0
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 1
  353 0148 9B00     		lsls	r3, r3, #2
  354 014a FA6A     		ldr	r2, [r7, #44]
  355 014c 1344     		add	r3, r3, r2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 7
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s 			page 7
 
 
  356 014e 93ED007A 		vldr.32	s14, [r3]
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 1
  410 01e4 66EEA77A 		vmul.f32	s15, s13, s15
  411 01e8 77EE277A 		vadd.f32	s15, s14, s15
  412 01ec C7ED047A 		vstr.32	s15, [r7, #16]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s 			page 8
 
 
  413 01f0 FB68     		ldr	r3, [r7, #12]
@@ -467,30 +467,30 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 1
  456 0264 17B7D138 		.word	953267991
  457 0268 00000000 		.word	batteryPercentTable
  459              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s 			page 9
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 battery_profile.c
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:18     .rodata.batteryPercentTable:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:21     .rodata.batteryPercentTable:00000000 batteryPercentTable
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:44     .rodata.voltageTable_1S:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:47     .rodata.voltageTable_1S:00000000 voltageTable_1S
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:70     .rodata.voltageTable_2S:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:73     .rodata.voltageTable_2S:00000000 voltageTable_2S
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:96     .rodata.voltageTable_3S:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:99     .rodata.voltageTable_3S:00000000 voltageTable_3S
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:122    .rodata.voltageTable_4S:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:125    .rodata.voltageTable_4S:00000000 voltageTable_4S
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:148    .text.Battery_Profile_Get_Divider_Ratio:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:154    .text.Battery_Profile_Get_Divider_Ratio:00000000 Battery_Profile_Get_Divider_Ratio
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:170    .text.Battery_Profile_Get_Divider_Ratio:00000018 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:174    .text.Battery_Profile_Get_Divider_Ratio:00000028 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:200    .text.Battery_Profile_Get_Divider_Ratio:00000050 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:206    .text.Battery_Profile_Get_Info:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:212    .text.Battery_Profile_Get_Info:00000000 Battery_Profile_Get_Info
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:240    .text.Battery_Profile_Get_Info:00000034 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:244    .text.Battery_Profile_Get_Info:00000044 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccFzHeQe.s:442    .text.Battery_Profile_Get_Info:0000022c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:18     .rodata.batteryPercentTable:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:21     .rodata.batteryPercentTable:00000000 batteryPercentTable
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:44     .rodata.voltageTable_1S:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:47     .rodata.voltageTable_1S:00000000 voltageTable_1S
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:70     .rodata.voltageTable_2S:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:73     .rodata.voltageTable_2S:00000000 voltageTable_2S
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:96     .rodata.voltageTable_3S:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:99     .rodata.voltageTable_3S:00000000 voltageTable_3S
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:122    .rodata.voltageTable_4S:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:125    .rodata.voltageTable_4S:00000000 voltageTable_4S
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:148    .text.Battery_Profile_Get_Divider_Ratio:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:154    .text.Battery_Profile_Get_Divider_Ratio:00000000 Battery_Profile_Get_Divider_Ratio
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:170    .text.Battery_Profile_Get_Divider_Ratio:00000018 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:174    .text.Battery_Profile_Get_Divider_Ratio:00000028 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:200    .text.Battery_Profile_Get_Divider_Ratio:00000050 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:206    .text.Battery_Profile_Get_Info:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:212    .text.Battery_Profile_Get_Info:00000000 Battery_Profile_Get_Info
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:240    .text.Battery_Profile_Get_Info:00000034 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:244    .text.Battery_Profile_Get_Info:00000044 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccpJHMWY.s:442    .text.Battery_Profile_Get_Info:0000022c $d
 
 NO UNDEFINED SYMBOLS

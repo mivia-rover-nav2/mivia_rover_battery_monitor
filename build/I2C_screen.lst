@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
   41      08
   42 0046 00606000 		.ascii	"\000``\000\000"
   42      00
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 2
 
 
   43 004b 20100804 		.ascii	" \020\010\004\002"
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
   70 00d2 2040413F 		.ascii	" @A?\001"
   70      01
   71 00d7 7F081422 		.ascii	"\177\010\024\"A"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 3
 
 
   71      41
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
   98      02
   99 0163 0C525252 		.ascii	"\014RRR>"
   99      3E
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 4
 
 
  100 0168 7F080404 		.ascii	"\177\010\004\004x"
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
  132 0000 80B5     		push	{r7, lr}
  133 0002 86B0     		sub	sp, sp, #24
  134 0004 02AF     		add	r7, sp, #8
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 5
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 5
 
 
  135 0006 7860     		str	r0, [r7, #4]
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
  186 0020 2270     		strb	r2, [r4]
  187 0022 0023     		movs	r3, #0
  188 0024 87F82730 		strb	r3, [r7, #39]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 6
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 6
 
 
  189 0028 1AE0     		b	.L4
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
  245 000c FFF7FEFF 		bl	memset
  246 0010 00BF     		nop
  247 0012 80BD     		pop	{r7, pc}
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 7
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 7
 
 
  248              	.L13:
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
  304 005c 104A     		ldr	r2, .L18
  305 005e 9918     		adds	r1, r3, r2
  306 0060 7A7F     		ldrb	r2, [r7, #29]	@ zero_extendqisi2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 8
 
 
  307 0062 07F10C03 		add	r3, r7, #12
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
  363 001e 7F2B     		cmp	r3, #127
  364 0020 4CDC     		bgt	.L27
  365 0022 B7F90430 		ldrsh	r3, [r7, #4]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 9
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 9
 
 
  366 0026 002B     		cmp	r3, #0
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
  420 00a0 5BB2     		sxtb	r3, r3
  421 00a2 DB43     		mvns	r3, r3
  422 00a4 5BB2     		sxtb	r3, r3
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 10
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 10
 
 
  423 00a6 1340     		ands	r3, r3, r2
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
  479 002c FB70     		strb	r3, [r7, #3]
  480              	.L32:
  481 002e FB78     		ldrb	r3, [r7, #3]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 11
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 11
 
 
  482 0030 203B     		subs	r3, r3, #32
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
  536 00aa FB88     		ldrh	r3, [r7, #6]
  537 00ac 1344     		add	r3, r3, r2
  538 00ae 9BB2     		uxth	r3, r3
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 12
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 12
 
 
  539 00b0 18B2     		sxth	r0, r3
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
  595              	SSD1306_DrawString:
  596              		@ args = 4, pretend = 0, frame = 24
  597              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 13
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 13
 
 
  598 0000 90B5     		push	{r4, r7, lr}
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
  652 006e BB60     		str	r3, [r7, #8]
  653              	.L42:
  654 0070 BB68     		ldr	r3, [r7, #8]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 14
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 14
 
 
  655 0072 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
  711 0050 B7F90030 		ldrsh	r3, [r7]
  712 0054 0B44     		add	r3, r3, r1
  713 0056 9A42     		cmp	r2, r3
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 15
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 15
 
 
  714 0058 E7DB     		blt	.L49
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
  770 003c 0133     		adds	r3, r3, #1
  771 003e 9BB2     		uxth	r3, r3
  772 0040 FB81     		strh	r3, [r7, #14]	@ movhi
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 16
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 16
 
 
  773              	.L52:
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
  827 00c8 E7DB     		blt	.L57
  828 00ca BB88     		ldrh	r3, [r7, #4]	@ movhi
  829 00cc 3B81     		strh	r3, [r7, #8]	@ movhi
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 17
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 17
 
 
  830 00ce 13E0     		b	.L58
@@ -993,39 +993,39 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 1
  859              		@ sp needed
  860 0112 90BD     		pop	{r4, r7, pc}
  862              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s 			page 18
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s 			page 18
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 I2C_screen.c
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:18     .bss.ssd1306_buffer:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:21     .bss.ssd1306_buffer:00000000 ssd1306_buffer
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:24     .rodata.font5x7:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:27     .rodata.font5x7:00000000 font5x7
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:124    .text.SSD1306_WriteCmd:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:129    .text.SSD1306_WriteCmd:00000000 SSD1306_WriteCmd
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:159    .rodata:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:164    .text.SSD1306_Init:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:170    .text.SSD1306_Init:00000000 SSD1306_Init
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:237    .text.SSD1306_ClearBuffer:00000000 SSD1306_ClearBuffer
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:260    .text.SSD1306_Display:00000000 SSD1306_Display
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:228    .text.SSD1306_Init:0000007c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:231    .text.SSD1306_ClearBuffer:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:251    .text.SSD1306_ClearBuffer:00000014 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:254    .text.SSD1306_Display:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:337    .text.SSD1306_Display:000000a0 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:340    .text.SSD1306_DrawPixel:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:346    .text.SSD1306_DrawPixel:00000000 SSD1306_DrawPixel
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:444    .text.SSD1306_DrawPixel:000000c8 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:447    .text.SSD1306_DrawChar:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:453    .text.SSD1306_DrawChar:00000000 SSD1306_DrawChar
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:672    .text.SSD1306_FillRect:00000000 SSD1306_FillRect
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:586    .text.SSD1306_DrawChar:00000110 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:589    .text.SSD1306_DrawString:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:595    .text.SSD1306_DrawString:00000000 SSD1306_DrawString
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:666    .text.SSD1306_FillRect:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:735    .text.SSD1306_DrawRect:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHYMqpn.s:741    .text.SSD1306_DrawRect:00000000 SSD1306_DrawRect
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:18     .bss.ssd1306_buffer:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:21     .bss.ssd1306_buffer:00000000 ssd1306_buffer
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:24     .rodata.font5x7:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:27     .rodata.font5x7:00000000 font5x7
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:124    .text.SSD1306_WriteCmd:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:129    .text.SSD1306_WriteCmd:00000000 SSD1306_WriteCmd
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:159    .rodata:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:164    .text.SSD1306_Init:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:170    .text.SSD1306_Init:00000000 SSD1306_Init
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:237    .text.SSD1306_ClearBuffer:00000000 SSD1306_ClearBuffer
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:260    .text.SSD1306_Display:00000000 SSD1306_Display
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:228    .text.SSD1306_Init:0000007c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:231    .text.SSD1306_ClearBuffer:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:251    .text.SSD1306_ClearBuffer:00000014 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:254    .text.SSD1306_Display:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:337    .text.SSD1306_Display:000000a0 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:340    .text.SSD1306_DrawPixel:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:346    .text.SSD1306_DrawPixel:00000000 SSD1306_DrawPixel
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:444    .text.SSD1306_DrawPixel:000000c8 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:447    .text.SSD1306_DrawChar:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:453    .text.SSD1306_DrawChar:00000000 SSD1306_DrawChar
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:672    .text.SSD1306_FillRect:00000000 SSD1306_FillRect
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:586    .text.SSD1306_DrawChar:00000110 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:589    .text.SSD1306_DrawString:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:595    .text.SSD1306_DrawString:00000000 SSD1306_DrawString
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:666    .text.SSD1306_FillRect:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:735    .text.SSD1306_DrawRect:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccHIEj9E.s:741    .text.SSD1306_DrawRect:00000000 SSD1306_DrawRect
 
 UNDEFINED SYMBOLS
 HAL_I2C_Master_Transmit

@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
   56 003e FB68     		ldr	r3, [r7, #12]
   57 0040 1B68     		ldr	r3, [r3]
   58 0042 22F00102 		bic	r2, r2, #1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 2
 
 
   59 0046 1A60     		str	r2, [r3]
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  113 00ba 1B68     		ldr	r3, [r3]
  114 00bc 42F00102 		orr	r2, r2, #1
  115 00c0 1A60     		str	r2, [r3]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 3
 
 
  116 00c2 F868     		ldr	r0, [r7, #12]
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  175              		.thumb_func
  177              	HAL_UARTEx_TxFifoEmptyCallback:
  178              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 4
 
 
  179              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  235 0046 7B68     		ldr	r3, [r7, #4]
  236 0048 1B68     		ldr	r3, [r3]
  237 004a 42F00102 		orr	r2, r2, #1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 5
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 5
 
 
  238 004e 1A60     		str	r2, [r3]
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  294 0050 0A43     		orrs	r2, r2, r1
  295 0052 9A60     		str	r2, [r3, #8]
  296 0054 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 6
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 6
 
 
  297 0056 002B     		cmp	r3, #0
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  353 0000 80B4     		push	{r7}
  354 0002 89B0     		sub	sp, sp, #36
  355 0004 00AF     		add	r7, sp, #0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 7
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 7
 
 
  356 0006 7860     		str	r0, [r7, #4]
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  410 0064 7047     		bx	lr
  412              		.section	.text.HAL_UARTEx_DisableStopMode,"ax",%progbits
  413              		.align	1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 8
 
 
  414              		.global	HAL_UARTEx_DisableStopMode
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  469 004e E6D1     		bne	.L30
  470 0050 7B68     		ldr	r3, [r7, #4]
  471 0052 0022     		movs	r2, #0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 9
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 9
 
 
  472 0054 83F88420 		strb	r2, [r3, #132]
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  528 0052 FA68     		ldr	r2, [r7, #12]
  529 0054 1A60     		str	r2, [r3]
  530 0056 7868     		ldr	r0, [r7, #4]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 10
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 10
 
 
  531 0058 FFF7FEFF 		bl	UARTEx_SetNbDataToProcess
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  587 0044 FB60     		str	r3, [r7, #12]
  588 0046 7B68     		ldr	r3, [r7, #4]
  589 0048 0022     		movs	r2, #0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 11
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 11
 
 
  590 004a 5A66     		str	r2, [r3, #100]
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  646 0038 1B68     		ldr	r3, [r3]
  647 003a 22F00102 		bic	r2, r2, #1
  648 003e 1A60     		str	r2, [r3]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 12
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 12
 
 
  649 0040 7B68     		ldr	r3, [r7, #4]
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  705 0024 C3F88820 		str	r2, [r3, #136]
  706 0028 7B68     		ldr	r3, [r7, #4]
  707 002a 1B68     		ldr	r3, [r3]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 13
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 13
 
 
  708 002c 1B68     		ldr	r3, [r3]
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  764 0010 FB68     		ldr	r3, [r7, #12]
  765 0012 D3F88C30 		ldr	r3, [r3, #140]
  766 0016 202B     		cmp	r3, #32
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 14
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 14
 
 
  767 0018 40F0EF80 		bne	.L44
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  821 0090 1B69     		ldr	r3, [r3, #16]
  822 0092 002B     		cmp	r3, #0
  823 0094 04D1     		bne	.L52
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 15
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 15
 
 
  824 0096 FB68     		ldr	r3, [r7, #12]
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  878 0104 3B68     		ldr	r3, [r7]
  879 0106 0022     		movs	r2, #0
  880 0108 1A80     		strh	r2, [r3]	@ movhi
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 16
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 16
 
 
  881 010a 5FE0     		b	.L57
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  935 0176 1340     		ands	r3, r3, r2
  936 0178 DAB2     		uxtb	r2, r3
  937 017a FB69     		ldr	r3, [r7, #28]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 17
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 17
 
 
  938 017c 1A70     		strb	r2, [r3]
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  992 01f0 2022     		movs	r2, #32
  993 01f2 C3F88C20 		str	r2, [r3, #140]
  994 01f6 0023     		movs	r3, #0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 18
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 18
 
 
  995 01f8 00E0     		b	.L47
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  1051 004a 012B     		cmp	r3, #1
  1052 004c 1DD1     		bne	.L70
  1053 004e FB68     		ldr	r3, [r7, #12]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 19
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 19
 
 
  1054 0050 1B68     		ldr	r3, [r3]
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  1109              		.syntax unified
  1110              		.thumb
  1111              		.thumb_func
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 20
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 20
 
 
  1113              	HAL_UARTEx_ReceiveToIdle_DMA:
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  1167              	@ 1155 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
  1168 0066 53E8003F 		ldrex r3, [r3]
  1169              	@ 0 "" 2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 21
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 21
 
 
  1170              		.thumb
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  1226 000a 1B6F     		ldr	r3, [r3, #112]
  1227 000c 1846     		mov	r0, r3
  1228 000e 0C37     		adds	r7, r7, #12
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 22
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 22
 
 
  1229 0010 BD46     		mov	sp, r7
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  1287 0000 80B4     		push	{r7}
  1288 0002 85B0     		sub	sp, sp, #20
  1289 0004 00AF     		add	r7, sp, #0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 23
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 23
 
 
  1290 0006 7860     		str	r0, [r7, #4]
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  1344 0082 A3F86820 		strh	r2, [r3, #104]	@ movhi
  1345              	.L91:
  1346 0086 00BF     		nop
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 24
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 24
 
 
  1347 0088 1437     		adds	r7, r7, #20
@@ -1402,52 +1402,52 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 1
  1369 0000 08040204 		.ascii	"\010\004\002\004\010\001\001\001"
  1369      08010101 
  1370              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s 			page 25
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s 			page 25
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_hal_uart_ex.c
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:18     .text.HAL_RS485Ex_Init:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:24     .text.HAL_RS485Ex_Init:00000000 HAL_RS485Ex_Init
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:127    .text.HAL_UARTEx_WakeupCallback:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:133    .text.HAL_UARTEx_WakeupCallback:00000000 HAL_UARTEx_WakeupCallback
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:149    .text.HAL_UARTEx_RxFifoFullCallback:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:155    .text.HAL_UARTEx_RxFifoFullCallback:00000000 HAL_UARTEx_RxFifoFullCallback
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:171    .text.HAL_UARTEx_TxFifoEmptyCallback:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:177    .text.HAL_UARTEx_TxFifoEmptyCallback:00000000 HAL_UARTEx_TxFifoEmptyCallback
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:193    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:199    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 HAL_MultiProcessorEx_AddressLength_Set
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:250    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:256    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 HAL_UARTEx_StopModeWakeUpSourceConfig
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:1240   .text.UARTEx_Wakeup_AddressConfig:00000000 UARTEx_Wakeup_AddressConfig
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:343    .text.HAL_UARTEx_EnableStopMode:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:349    .text.HAL_UARTEx_EnableStopMode:00000000 HAL_UARTEx_EnableStopMode
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:413    .text.HAL_UARTEx_DisableStopMode:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:419    .text.HAL_UARTEx_DisableStopMode:00000000 HAL_UARTEx_DisableStopMode
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:483    .text.HAL_UARTEx_EnableFifoMode:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:489    .text.HAL_UARTEx_EnableFifoMode:00000000 HAL_UARTEx_EnableFifoMode
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:1283   .text.UARTEx_SetNbDataToProcess:00000000 UARTEx_SetNbDataToProcess
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:547    .text.HAL_UARTEx_DisableFifoMode:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:553    .text.HAL_UARTEx_DisableFifoMode:00000000 HAL_UARTEx_DisableFifoMode
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:611    .text.HAL_UARTEx_SetTxFifoThreshold:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:617    .text.HAL_UARTEx_SetTxFifoThreshold:00000000 HAL_UARTEx_SetTxFifoThreshold
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:679    .text.HAL_UARTEx_SetRxFifoThreshold:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:685    .text.HAL_UARTEx_SetRxFifoThreshold:00000000 HAL_UARTEx_SetRxFifoThreshold
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:747    .text.HAL_UARTEx_ReceiveToIdle:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:753    .text.HAL_UARTEx_ReceiveToIdle:00000000 HAL_UARTEx_ReceiveToIdle
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:1006   .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:1012   .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 HAL_UARTEx_ReceiveToIdle_IT
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:1107   .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:1113   .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 HAL_UARTEx_ReceiveToIdle_DMA
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:1211   .text.HAL_UARTEx_GetRxEventType:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:1217   .text.HAL_UARTEx_GetRxEventType:00000000 HAL_UARTEx_GetRxEventType
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:1235   .text.UARTEx_Wakeup_AddressConfig:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:1278   .text.UARTEx_SetNbDataToProcess:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:1355   .text.UARTEx_SetNbDataToProcess:00000094 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:1362   .rodata.numerator.1:00000000 numerator.1
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:1368   .rodata.denominator.0:00000000 denominator.0
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:1359   .rodata.numerator.1:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc0Jt81K.s:1365   .rodata.denominator.0:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:18     .text.HAL_RS485Ex_Init:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:24     .text.HAL_RS485Ex_Init:00000000 HAL_RS485Ex_Init
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:127    .text.HAL_UARTEx_WakeupCallback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:133    .text.HAL_UARTEx_WakeupCallback:00000000 HAL_UARTEx_WakeupCallback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:149    .text.HAL_UARTEx_RxFifoFullCallback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:155    .text.HAL_UARTEx_RxFifoFullCallback:00000000 HAL_UARTEx_RxFifoFullCallback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:171    .text.HAL_UARTEx_TxFifoEmptyCallback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:177    .text.HAL_UARTEx_TxFifoEmptyCallback:00000000 HAL_UARTEx_TxFifoEmptyCallback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:193    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:199    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 HAL_MultiProcessorEx_AddressLength_Set
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:250    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:256    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 HAL_UARTEx_StopModeWakeUpSourceConfig
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:1240   .text.UARTEx_Wakeup_AddressConfig:00000000 UARTEx_Wakeup_AddressConfig
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:343    .text.HAL_UARTEx_EnableStopMode:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:349    .text.HAL_UARTEx_EnableStopMode:00000000 HAL_UARTEx_EnableStopMode
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:413    .text.HAL_UARTEx_DisableStopMode:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:419    .text.HAL_UARTEx_DisableStopMode:00000000 HAL_UARTEx_DisableStopMode
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:483    .text.HAL_UARTEx_EnableFifoMode:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:489    .text.HAL_UARTEx_EnableFifoMode:00000000 HAL_UARTEx_EnableFifoMode
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:1283   .text.UARTEx_SetNbDataToProcess:00000000 UARTEx_SetNbDataToProcess
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:547    .text.HAL_UARTEx_DisableFifoMode:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:553    .text.HAL_UARTEx_DisableFifoMode:00000000 HAL_UARTEx_DisableFifoMode
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:611    .text.HAL_UARTEx_SetTxFifoThreshold:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:617    .text.HAL_UARTEx_SetTxFifoThreshold:00000000 HAL_UARTEx_SetTxFifoThreshold
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:679    .text.HAL_UARTEx_SetRxFifoThreshold:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:685    .text.HAL_UARTEx_SetRxFifoThreshold:00000000 HAL_UARTEx_SetRxFifoThreshold
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:747    .text.HAL_UARTEx_ReceiveToIdle:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:753    .text.HAL_UARTEx_ReceiveToIdle:00000000 HAL_UARTEx_ReceiveToIdle
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:1006   .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:1012   .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 HAL_UARTEx_ReceiveToIdle_IT
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:1107   .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:1113   .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 HAL_UARTEx_ReceiveToIdle_DMA
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:1211   .text.HAL_UARTEx_GetRxEventType:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:1217   .text.HAL_UARTEx_GetRxEventType:00000000 HAL_UARTEx_GetRxEventType
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:1235   .text.UARTEx_Wakeup_AddressConfig:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:1278   .text.UARTEx_SetNbDataToProcess:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:1355   .text.UARTEx_SetNbDataToProcess:00000094 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:1362   .rodata.numerator.1:00000000 numerator.1
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:1368   .rodata.denominator.0:00000000 denominator.0
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:1359   .rodata.numerator.1:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVuk5sp.s:1365   .rodata.denominator.0:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_MspInit

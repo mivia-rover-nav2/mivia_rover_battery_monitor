@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 1
   56 003e 22F00102 		bic	r2, r2, #1
   57 0042 1A60     		str	r2, [r3]
   58 0044 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s 			page 2
 
 
   59 0046 1B68     		ldr	r3, [r3]
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 1
  115 000c 93F84130 		ldrb	r3, [r3, #65]
  116 0010 DBB2     		uxtb	r3, r3
  117 0012 202B     		cmp	r3, #32
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s 			page 3
 
 
  118 0014 39D1     		bne	.L6
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 1
  172              	.L8:
  173 008c 1846     		mov	r0, r3
  174 008e 1437     		adds	r7, r7, #20
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s 			page 4
 
 
  175 0090 BD46     		mov	sp, r7
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 1
  231 005a 1B68     		ldr	r3, [r3]
  232 005c 42F00102 		orr	r2, r2, #1
  233 0060 1A60     		str	r2, [r3]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 5
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s 			page 5
 
 
  234 0062 7B68     		ldr	r3, [r7, #4]
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 1
  290 003c 22F00102 		bic	r2, r2, #1
  291 0040 1A60     		str	r2, [r3]
  292 0042 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 6
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s 			page 6
 
 
  293 0044 1B68     		ldr	r3, [r3]
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 1
  349 0020 064B     		ldr	r3, .L18+4
  350 0022 5A68     		ldr	r2, [r3, #4]
  351 0024 0549     		ldr	r1, .L18+4
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 7
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s 			page 7
 
 
  352 0026 7B68     		ldr	r3, [r7, #4]
@@ -418,27 +418,27 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 1
  408 003c 00100240 		.word	1073876992
  409 0040 00000140 		.word	1073807360
  411              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s 			page 8
 
 
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s 			page 9
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_hal_i2c_ex.c
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:18     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:24     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 HAL_I2CEx_ConfigAnalogFilter
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:99     .text.HAL_I2CEx_ConfigDigitalFilter:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:105    .text.HAL_I2CEx_ConfigDigitalFilter:00000000 HAL_I2CEx_ConfigDigitalFilter
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:181    .text.HAL_I2CEx_EnableWakeUp:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:187    .text.HAL_I2CEx_EnableWakeUp:00000000 HAL_I2CEx_EnableWakeUp
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:253    .text.HAL_I2CEx_DisableWakeUp:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:259    .text.HAL_I2CEx_DisableWakeUp:00000000 HAL_I2CEx_DisableWakeUp
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:325    .text.HAL_I2CEx_EnableFastModePlus:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:331    .text.HAL_I2CEx_EnableFastModePlus:00000000 HAL_I2CEx_EnableFastModePlus
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:364    .text.HAL_I2CEx_EnableFastModePlus:00000038 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:368    .text.HAL_I2CEx_DisableFastModePlus:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:374    .text.HAL_I2CEx_DisableFastModePlus:00000000 HAL_I2CEx_DisableFastModePlus
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cclknPYg.s:408    .text.HAL_I2CEx_DisableFastModePlus:0000003c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s:18     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s:24     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 HAL_I2CEx_ConfigAnalogFilter
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s:99     .text.HAL_I2CEx_ConfigDigitalFilter:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s:105    .text.HAL_I2CEx_ConfigDigitalFilter:00000000 HAL_I2CEx_ConfigDigitalFilter
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s:181    .text.HAL_I2CEx_EnableWakeUp:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s:187    .text.HAL_I2CEx_EnableWakeUp:00000000 HAL_I2CEx_EnableWakeUp
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s:253    .text.HAL_I2CEx_DisableWakeUp:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s:259    .text.HAL_I2CEx_DisableWakeUp:00000000 HAL_I2CEx_DisableWakeUp
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s:325    .text.HAL_I2CEx_EnableFastModePlus:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s:331    .text.HAL_I2CEx_EnableFastModePlus:00000000 HAL_I2CEx_EnableFastModePlus
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s:364    .text.HAL_I2CEx_EnableFastModePlus:00000038 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s:368    .text.HAL_I2CEx_DisableFastModePlus:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s:374    .text.HAL_I2CEx_DisableFastModePlus:00000000 HAL_I2CEx_DisableFastModePlus
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cckv5HVi.s:408    .text.HAL_I2CEx_DisableFastModePlus:0000003c $d
 
 NO UNDEFINED SYMBOLS

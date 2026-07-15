@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 1
   56 003e DB68     		ldr	r3, [r3, #12]
   57 0040 013B     		subs	r3, r3, #1
   58 0042 DB04     		lsls	r3, r3, #19
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s 			page 2
 
 
   59 0044 1A43     		orrs	r2, r2, r3
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 1
  115 001e 7B68     		ldr	r3, [r7, #4]
  116 0020 93F82430 		ldrb	r3, [r3, #36]	@ zero_extendqisi2
  117 0024 012B     		cmp	r3, #1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s 			page 3
 
 
  118 0026 01D1     		bne	.L7
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 1
  172              		@ sp needed
  173 008e 5DF8047B 		ldr	r7, [sp], #4
  174 0092 7047     		bx	lr
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s 			page 4
 
 
  176              		.section	.text.HAL_DMAEx_EnableMuxRequestGenerator,"ax",%progbits
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 1
  233 0006 7860     		str	r0, [r7, #4]
  234 0008 7B68     		ldr	r3, [r7, #4]
  235 000a 93F82530 		ldrb	r3, [r3, #37]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 5
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s 			page 5
 
 
  236 000e DBB2     		uxtb	r3, r3
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 1
  292 002a DB6C     		ldr	r3, [r3, #76]
  293 002c 7A68     		ldr	r2, [r7, #4]
  294 002e 126D     		ldr	r2, [r2, #80]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 6
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s 			page 6
 
 
  295 0030 5A60     		str	r2, [r3, #4]
@@ -358,25 +358,25 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 1
  349 009e 0837     		adds	r7, r7, #8
  350 00a0 BD46     		mov	sp, r7
  351              		@ sp needed
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 7
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s 			page 7
 
 
  352 00a2 80BD     		pop	{r7, pc}
  354              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s 			page 8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_hal_dma_ex.c
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:18     .text.HAL_DMAEx_ConfigMuxSync:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:24     .text.HAL_DMAEx_ConfigMuxSync:00000000 HAL_DMAEx_ConfigMuxSync
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:91     .text.HAL_DMAEx_ConfigMuxRequestGenerator:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:97     .text.HAL_DMAEx_ConfigMuxRequestGenerator:00000000 HAL_DMAEx_ConfigMuxRequestGenerator
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:177    .text.HAL_DMAEx_EnableMuxRequestGenerator:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:183    .text.HAL_DMAEx_EnableMuxRequestGenerator:00000000 HAL_DMAEx_EnableMuxRequestGenerator
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:220    .text.HAL_DMAEx_DisableMuxRequestGenerator:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:226    .text.HAL_DMAEx_DisableMuxRequestGenerator:00000000 HAL_DMAEx_DisableMuxRequestGenerator
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:263    .text.HAL_DMAEx_MUX_IRQHandler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccj8GoAm.s:269    .text.HAL_DMAEx_MUX_IRQHandler:00000000 HAL_DMAEx_MUX_IRQHandler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s:18     .text.HAL_DMAEx_ConfigMuxSync:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s:24     .text.HAL_DMAEx_ConfigMuxSync:00000000 HAL_DMAEx_ConfigMuxSync
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s:91     .text.HAL_DMAEx_ConfigMuxRequestGenerator:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s:97     .text.HAL_DMAEx_ConfigMuxRequestGenerator:00000000 HAL_DMAEx_ConfigMuxRequestGenerator
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s:177    .text.HAL_DMAEx_EnableMuxRequestGenerator:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s:183    .text.HAL_DMAEx_EnableMuxRequestGenerator:00000000 HAL_DMAEx_EnableMuxRequestGenerator
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s:220    .text.HAL_DMAEx_DisableMuxRequestGenerator:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s:226    .text.HAL_DMAEx_DisableMuxRequestGenerator:00000000 HAL_DMAEx_DisableMuxRequestGenerator
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s:263    .text.HAL_DMAEx_MUX_IRQHandler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccskIUhj.s:269    .text.HAL_DMAEx_MUX_IRQHandler:00000000 HAL_DMAEx_MUX_IRQHandler
 
 NO UNDEFINED SYMBOLS

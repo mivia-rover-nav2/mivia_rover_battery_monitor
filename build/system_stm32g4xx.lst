@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s 			page 1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s 			page 1
   58 0016 BD46     		mov	sp, r7
   59              		@ sp needed
   60 0018 5DF8047B 		ldr	r7, [sp], #4
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s 			page 2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s 			page 2
 
 
   61 001c 7047     		bx	lr
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s 			page 1
  117 004e 1E4A     		ldr	r2, .L13+8
  118 0050 FB68     		ldr	r3, [r7, #12]
  119 0052 B2FBF3F3 		udiv	r3, r2, r3
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s 			page 3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s 			page 3
 
 
  120 0056 7B61     		str	r3, [r7, #20]
@@ -178,27 +178,27 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s 			page 1
  174 00c4 00000000 		.word	SystemCoreClock
  175 00c8 0024F400 		.word	16000000
  176 00cc 00366E01 		.word	24000000
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s 			page 4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s 			page 4
 
 
  177 00d0 00000000 		.word	AHBPrescTable
  179              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s 			page 5
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 system_stm32g4xx.c
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:22     .data.SystemCoreClock:00000000 SystemCoreClock
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:19     .data.SystemCoreClock:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:29     .rodata.AHBPrescTable:00000000 AHBPrescTable
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:26     .rodata.AHBPrescTable:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:37     .rodata.APBPrescTable:00000000 APBPrescTable
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:34     .rodata.APBPrescTable:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:40     .text.SystemInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:46     .text.SystemInit:00000000 SystemInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:65     .text.SystemInit:00000020 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:68     .text.SystemCoreClockUpdate:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:74     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cccZAYrg.s:173    .text.SystemCoreClockUpdate:000000c0 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s:22     .data.SystemCoreClock:00000000 SystemCoreClock
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s:19     .data.SystemCoreClock:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s:29     .rodata.AHBPrescTable:00000000 AHBPrescTable
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s:26     .rodata.AHBPrescTable:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s:37     .rodata.APBPrescTable:00000000 APBPrescTable
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s:34     .rodata.APBPrescTable:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s:40     .text.SystemInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s:46     .text.SystemInit:00000000 SystemInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s:65     .text.SystemInit:00000020 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s:68     .text.SystemCoreClockUpdate:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s:74     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc7Rgc8u.s:173    .text.SystemCoreClockUpdate:000000c0 $d
 
 NO UNDEFINED SYMBOLS

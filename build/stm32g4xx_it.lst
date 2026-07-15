@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s 			page 1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s 			page 1
   60              		@ frame_needed = 1, uses_anonymous_args = 0
   61              		@ link register save eliminated.
   62 0000 80B4     		push	{r7}
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s 			page 2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s 			page 2
 
 
   63 0002 00AF     		add	r7, sp, #0
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s 			page 1
  124              		.syntax unified
  125              		.thumb
  126              		.thumb_func
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s 			page 3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s 			page 3
 
 
  128              	DebugMon_Handler:
@@ -178,35 +178,35 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s 			page 1
  188 0006 FFF7FEFF 		bl	BSP_PB_IRQHandler
  189 000a 00BF     		nop
  190 000c 80BD     		pop	{r7, pc}
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s 			page 4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s 			page 4
 
 
  192              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s 			page 5
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_it.c
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:18     .text.NMI_Handler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:24     .text.NMI_Handler:00000000 NMI_Handler
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:35     .text.HardFault_Handler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:41     .text.HardFault_Handler:00000000 HardFault_Handler
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:52     .text.MemManage_Handler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:58     .text.MemManage_Handler:00000000 MemManage_Handler
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:69     .text.BusFault_Handler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:75     .text.BusFault_Handler:00000000 BusFault_Handler
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:86     .text.UsageFault_Handler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:92     .text.UsageFault_Handler:00000000 UsageFault_Handler
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:103    .text.SVC_Handler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:109    .text.SVC_Handler:00000000 SVC_Handler
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:122    .text.DebugMon_Handler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:128    .text.DebugMon_Handler:00000000 DebugMon_Handler
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:141    .text.PendSV_Handler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:147    .text.PendSV_Handler:00000000 PendSV_Handler
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:160    .text.SysTick_Handler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:166    .text.SysTick_Handler:00000000 SysTick_Handler
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:176    .text.EXTI15_10_IRQHandler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccs4CW1o.s:182    .text.EXTI15_10_IRQHandler:00000000 EXTI15_10_IRQHandler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:18     .text.NMI_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:24     .text.NMI_Handler:00000000 NMI_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:35     .text.HardFault_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:41     .text.HardFault_Handler:00000000 HardFault_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:52     .text.MemManage_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:58     .text.MemManage_Handler:00000000 MemManage_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:69     .text.BusFault_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:75     .text.BusFault_Handler:00000000 BusFault_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:86     .text.UsageFault_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:92     .text.UsageFault_Handler:00000000 UsageFault_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:103    .text.SVC_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:109    .text.SVC_Handler:00000000 SVC_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:122    .text.DebugMon_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:128    .text.DebugMon_Handler:00000000 DebugMon_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:141    .text.PendSV_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:147    .text.PendSV_Handler:00000000 PendSV_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:160    .text.SysTick_Handler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:166    .text.SysTick_Handler:00000000 SysTick_Handler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:176    .text.EXTI15_10_IRQHandler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccSH2BP7.s:182    .text.EXTI15_10_IRQHandler:00000000 EXTI15_10_IRQHandler
 
 UNDEFINED SYMBOLS
 HAL_IncTick

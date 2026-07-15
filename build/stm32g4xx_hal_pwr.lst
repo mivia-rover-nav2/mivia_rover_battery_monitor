@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 1
   58              		@ args = 0, pretend = 0, frame = 0
   59              		@ frame_needed = 1, uses_anonymous_args = 0
   60              		@ link register save eliminated.
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s 			page 2
 
 
   61 0000 80B4     		push	{r7}
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 1
  119 0004 00AF     		add	r7, sp, #0
  120 0006 7860     		str	r0, [r7, #4]
  121 0008 2B4B     		ldr	r3, .L16
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s 			page 3
 
 
  122 000a 5B68     		ldr	r3, [r3, #4]
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 1
  176 0086 0D4B     		ldr	r3, .L16+4
  177 0088 9B68     		ldr	r3, [r3, #8]
  178 008a 0C4A     		ldr	r2, .L16+4
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s 			page 4
 
 
  179 008c 43F48033 		orr	r3, r3, #65536
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 1
  236              		.global	HAL_PWR_DisablePVD
  237              		.syntax unified
  238              		.thumb
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 5
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s 			page 5
 
 
  239              		.thumb_func
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 1
  296 0032 0C37     		adds	r7, r7, #12
  297 0034 BD46     		mov	sp, r7
  298              		@ sp needed
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 6
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s 			page 6
 
 
  299 0036 5DF8047B 		ldr	r7, [sp], #4
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 1
  357 000e 002B     		cmp	r3, #0
  358 0010 09D1     		bne	.L31
  359 0012 124B     		ldr	r3, .L36
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 7
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s 			page 7
 
 
  360 0014 5B69     		ldr	r3, [r3, #20]
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 1
  415              		.align	1
  416              		.global	HAL_PWR_EnterSTOPMode
  417              		.syntax unified
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s 			page 8
 
 
  418              		.thumb
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 1
  475              	@ 0 "" 2
  476              		.thumb
  477              		.syntax unified
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 9
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s 			page 9
 
 
  478 0022 00BF     		nop
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 1
  536 0012 BD46     		mov	sp, r7
  537              		@ sp needed
  538 0014 5DF8047B 		ldr	r7, [sp], #4
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 10
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s 			page 10
 
 
  539 0018 7047     		bx	lr
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 1
  597 001a 00BF     		.align	2
  598              	.L55:
  599 001c 00ED00E0 		.word	-536810240
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 11
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s 			page 11
 
 
  601              		.section	.text.HAL_PWR_PVDCallback,"ax",%progbits
@@ -619,57 +619,57 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 1
  617 0008 5DF8047B 		ldr	r7, [sp], #4
  618 000c 7047     		bx	lr
  620              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s 			page 12
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_hal_pwr.c
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:18     .text.HAL_PWR_DeInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:24     .text.HAL_PWR_DeInit:00000000 HAL_PWR_DeInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:48     .text.HAL_PWR_DeInit:00000028 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:51     .text.HAL_PWR_EnableBkUpAccess:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:57     .text.HAL_PWR_EnableBkUpAccess:00000000 HAL_PWR_EnableBkUpAccess
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:76     .text.HAL_PWR_EnableBkUpAccess:0000001c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:79     .text.HAL_PWR_DisableBkUpAccess:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:85     .text.HAL_PWR_DisableBkUpAccess:00000000 HAL_PWR_DisableBkUpAccess
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:104    .text.HAL_PWR_DisableBkUpAccess:0000001c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:107    .text.HAL_PWR_ConfigPVD:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:113    .text.HAL_PWR_ConfigPVD:00000000 HAL_PWR_ConfigPVD
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:203    .text.HAL_PWR_ConfigPVD:000000b8 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:207    .text.HAL_PWR_EnablePVD:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:213    .text.HAL_PWR_EnablePVD:00000000 HAL_PWR_EnablePVD
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:232    .text.HAL_PWR_EnablePVD:0000001c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:235    .text.HAL_PWR_DisablePVD:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:241    .text.HAL_PWR_DisablePVD:00000000 HAL_PWR_DisablePVD
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:260    .text.HAL_PWR_DisablePVD:0000001c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:263    .text.HAL_PWR_EnableWakeUpPin:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:269    .text.HAL_PWR_EnableWakeUpPin:00000000 HAL_PWR_EnableWakeUpPin
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:304    .text.HAL_PWR_EnableWakeUpPin:0000003c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:307    .text.HAL_PWR_DisableWakeUpPin:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:313    .text.HAL_PWR_DisableWakeUpPin:00000000 HAL_PWR_DisableWakeUpPin
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:338    .text.HAL_PWR_DisableWakeUpPin:00000028 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:341    .text.HAL_PWR_EnterSLEEPMode:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:347    .text.HAL_PWR_EnterSLEEPMode:00000000 HAL_PWR_EnterSLEEPMode
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:411    .text.HAL_PWR_EnterSLEEPMode:0000005c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:415    .text.HAL_PWR_EnterSTOPMode:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:421    .text.HAL_PWR_EnterSTOPMode:00000000 HAL_PWR_EnterSTOPMode
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:449    .text.HAL_PWR_EnterSTANDBYMode:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:455    .text.HAL_PWR_EnterSTANDBYMode:00000000 HAL_PWR_EnterSTANDBYMode
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:486    .text.HAL_PWR_EnterSTANDBYMode:0000002c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:490    .text.HAL_PWR_EnableSleepOnExit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:496    .text.HAL_PWR_EnableSleepOnExit:00000000 HAL_PWR_EnableSleepOnExit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:515    .text.HAL_PWR_EnableSleepOnExit:0000001c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:518    .text.HAL_PWR_DisableSleepOnExit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:524    .text.HAL_PWR_DisableSleepOnExit:00000000 HAL_PWR_DisableSleepOnExit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:543    .text.HAL_PWR_DisableSleepOnExit:0000001c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:546    .text.HAL_PWR_EnableSEVOnPend:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:552    .text.HAL_PWR_EnableSEVOnPend:00000000 HAL_PWR_EnableSEVOnPend
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:571    .text.HAL_PWR_EnableSEVOnPend:0000001c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:574    .text.HAL_PWR_DisableSEVOnPend:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:580    .text.HAL_PWR_DisableSEVOnPend:00000000 HAL_PWR_DisableSEVOnPend
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:599    .text.HAL_PWR_DisableSEVOnPend:0000001c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:602    .text.HAL_PWR_PVDCallback:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccwb43yI.s:608    .text.HAL_PWR_PVDCallback:00000000 HAL_PWR_PVDCallback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:18     .text.HAL_PWR_DeInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:24     .text.HAL_PWR_DeInit:00000000 HAL_PWR_DeInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:48     .text.HAL_PWR_DeInit:00000028 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:51     .text.HAL_PWR_EnableBkUpAccess:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:57     .text.HAL_PWR_EnableBkUpAccess:00000000 HAL_PWR_EnableBkUpAccess
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:76     .text.HAL_PWR_EnableBkUpAccess:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:79     .text.HAL_PWR_DisableBkUpAccess:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:85     .text.HAL_PWR_DisableBkUpAccess:00000000 HAL_PWR_DisableBkUpAccess
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:104    .text.HAL_PWR_DisableBkUpAccess:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:107    .text.HAL_PWR_ConfigPVD:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:113    .text.HAL_PWR_ConfigPVD:00000000 HAL_PWR_ConfigPVD
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:203    .text.HAL_PWR_ConfigPVD:000000b8 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:207    .text.HAL_PWR_EnablePVD:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:213    .text.HAL_PWR_EnablePVD:00000000 HAL_PWR_EnablePVD
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:232    .text.HAL_PWR_EnablePVD:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:235    .text.HAL_PWR_DisablePVD:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:241    .text.HAL_PWR_DisablePVD:00000000 HAL_PWR_DisablePVD
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:260    .text.HAL_PWR_DisablePVD:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:263    .text.HAL_PWR_EnableWakeUpPin:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:269    .text.HAL_PWR_EnableWakeUpPin:00000000 HAL_PWR_EnableWakeUpPin
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:304    .text.HAL_PWR_EnableWakeUpPin:0000003c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:307    .text.HAL_PWR_DisableWakeUpPin:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:313    .text.HAL_PWR_DisableWakeUpPin:00000000 HAL_PWR_DisableWakeUpPin
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:338    .text.HAL_PWR_DisableWakeUpPin:00000028 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:341    .text.HAL_PWR_EnterSLEEPMode:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:347    .text.HAL_PWR_EnterSLEEPMode:00000000 HAL_PWR_EnterSLEEPMode
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:411    .text.HAL_PWR_EnterSLEEPMode:0000005c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:415    .text.HAL_PWR_EnterSTOPMode:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:421    .text.HAL_PWR_EnterSTOPMode:00000000 HAL_PWR_EnterSTOPMode
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:449    .text.HAL_PWR_EnterSTANDBYMode:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:455    .text.HAL_PWR_EnterSTANDBYMode:00000000 HAL_PWR_EnterSTANDBYMode
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:486    .text.HAL_PWR_EnterSTANDBYMode:0000002c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:490    .text.HAL_PWR_EnableSleepOnExit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:496    .text.HAL_PWR_EnableSleepOnExit:00000000 HAL_PWR_EnableSleepOnExit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:515    .text.HAL_PWR_EnableSleepOnExit:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:518    .text.HAL_PWR_DisableSleepOnExit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:524    .text.HAL_PWR_DisableSleepOnExit:00000000 HAL_PWR_DisableSleepOnExit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:543    .text.HAL_PWR_DisableSleepOnExit:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:546    .text.HAL_PWR_EnableSEVOnPend:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:552    .text.HAL_PWR_EnableSEVOnPend:00000000 HAL_PWR_EnableSEVOnPend
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:571    .text.HAL_PWR_EnableSEVOnPend:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:574    .text.HAL_PWR_DisableSEVOnPend:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:580    .text.HAL_PWR_DisableSEVOnPend:00000000 HAL_PWR_DisableSEVOnPend
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:599    .text.HAL_PWR_DisableSEVOnPend:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:602    .text.HAL_PWR_PVDCallback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccVmGoI2.s:608    .text.HAL_PWR_PVDCallback:00000000 HAL_PWR_PVDCallback
 
 UNDEFINED SYMBOLS
 HAL_PWREx_DisableLowPowerRunMode

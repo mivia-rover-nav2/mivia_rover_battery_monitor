@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
   56 003e 43F08043 		orr	r3, r3, #1073741824
   57 0042 5360     		str	r3, [r2, #4]
   58 0044 FFF7FEFF 		bl	HAL_GetTick
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 2
 
 
   59 0048 7860     		str	r0, [r7, #4]
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  113 00ba 1B68     		ldr	r3, [r3]
  114 00bc 03F00073 		and	r3, r3, #33554432
  115 00c0 002B     		cmp	r3, #0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 3
 
 
  116 00c2 F0D1     		bne	.L9
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  172 0020 9B68     		ldr	r3, [r3, #8]
  173 0022 03F00C03 		and	r3, r3, #12
  174 0026 BB61     		str	r3, [r7, #24]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 4
 
 
  175 0028 944B     		ldr	r3, .L80
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  229 0098 784B     		ldr	r3, .L80
  230 009a 1B68     		ldr	r3, [r3]
  231 009c 774A     		ldr	r2, .L80
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 5
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 5
 
 
  232 009e 23F48033 		bic	r3, r3, #65536
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  286 010a 7B68     		ldr	r3, [r7, #4]
  287 010c 1B68     		ldr	r3, [r3]
  288 010e 03F00203 		and	r3, r3, #2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 6
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 6
 
 
  289 0112 002B     		cmp	r3, #0
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  343 0180 002B     		cmp	r3, #0
  344 0182 23D0     		beq	.L34
  345 0184 3D4B     		ldr	r3, .L80
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 7
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 7
 
 
  346 0186 1B68     		ldr	r3, [r3]
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  400 01fa 002B     		cmp	r3, #0
  401 01fc F0D1     		bne	.L38
  402 01fe 00E0     		b	.L28
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 8
 
 
  403              	.L79:
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  457              	.L81:
  458 027a 00BF     		.align	2
  459              	.L80:
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 9
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 9
 
 
  460 027c 00100240 		.word	1073876992
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  514              	.L51:
  515 02f6 FFF7FEFF 		bl	HAL_GetTick
  516 02fa 0246     		mov	r2, r0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 10
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 10
 
 
  517 02fc 3B69     		ldr	r3, [r7, #16]
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  571 037e 16D0     		beq	.L55
  572 0380 FFF7FEFF 		bl	HAL_GetTick
  573 0384 3861     		str	r0, [r7, #16]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 11
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 11
 
 
  574 0386 0AE0     		b	.L56
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  628 03fa 9B69     		ldr	r3, [r3, #24]
  629 03fc 002B     		cmp	r3, #0
  630 03fe 1CD0     		beq	.L62
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 12
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 12
 
 
  631 0400 2D4B     		ldr	r3, .L82
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  685 047e 9B68     		ldr	r3, [r3, #8]
  686 0480 03F00C03 		and	r3, r3, #12
  687 0484 0C2B     		cmp	r3, #12
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 13
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 13
 
 
  688 0486 00F08380 		beq	.L68
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  742 04f6 7A68     		ldr	r2, [r7, #4]
  743 04f8 526B     		ldr	r2, [r2, #52]
  744 04fa 5208     		lsrs	r2, r2, #1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 14
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 14
 
 
  745 04fc 013A     		subs	r2, r2, #1
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  799 0570 01D9     		bls	.L74
  800 0572 0323     		movs	r3, #3
  801 0574 4CE0     		b	.L14
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 15
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 15
 
 
  802              	.L74:
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  856 05e8 7B68     		ldr	r3, [r7, #4]
  857 05ea 1B6B     		ldr	r3, [r3, #48]
  858 05ec 5B08     		lsrs	r3, r3, #1
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 16
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 16
 
 
  859 05ee 013B     		subs	r3, r3, #1
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  915 001c 03F00F03 		and	r3, r3, #15
  916 0020 3A68     		ldr	r2, [r7]
  917 0022 9A42     		cmp	r2, r3
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 17
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 17
 
 
  918 0024 10D9     		bls	.L89
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  972              	.L94:
  973 009a 724B     		ldr	r3, .L108+4
  974 009c 9B68     		ldr	r3, [r3, #8]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 18
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 18
 
 
  975 009e 23F0F003 		bic	r3, r3, #240
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1029              	.L98:
  1030 0114 FFF7FEFF 		bl	HAL_GetTick
  1031 0118 0246     		mov	r2, r0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 19
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 19
 
 
  1032 011a FB68     		ldr	r3, [r7, #12]
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1086              	.L99:
  1087 0190 7B69     		ldr	r3, [r7, #20]
  1088 0192 802B     		cmp	r3, #128
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 20
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 20
 
 
  1089 0194 05D1     		bne	.L102
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1143              	.L106:
  1144 020a 7B68     		ldr	r3, [r7, #4]
  1145 020c 1B68     		ldr	r3, [r3]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 21
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 21
 
 
  1146 020e 03F00803 		and	r3, r3, #8
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1202 0000 80B5     		push	{r7, lr}
  1203 0002 8CB0     		sub	sp, sp, #48
  1204 0004 00AF     		add	r7, sp, #0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 22
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 22
 
 
  1205 0006 F860     		str	r0, [r7, #12]
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1259 0080 00BF     		nop
  1260 0082 3037     		adds	r7, r7, #48
  1261 0084 BD46     		mov	sp, r7
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 23
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 23
 
 
  1262              		@ sp needed
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1318 0052 0CD1     		bne	.L120
  1319 0054 1A4A     		ldr	r2, .L123+8
  1320 0056 BB68     		ldr	r3, [r7, #8]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 24
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 24
 
 
  1321 0058 B2FBF3F3 		udiv	r3, r2, r3
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1376              		.thumb_func
  1378              	HAL_RCC_GetHCLKFreq:
  1379              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 25
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 25
 
 
  1380              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1438 0004 FFF7FEFF 		bl	HAL_RCC_GetHCLKFreq
  1439 0008 0246     		mov	r2, r0
  1440 000a 064B     		ldr	r3, .L135
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 26
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 26
 
 
  1441 000c 9B68     		ldr	r3, [r3, #8]
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1497              	.L139:
  1498 0044 464B     		ldr	r3, .L152
  1499 0046 1B68     		ldr	r3, [r3]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 27
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 27
 
 
  1500 0048 03F48073 		and	r3, r3, #256
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1554 00bc 5A61     		str	r2, [r3, #20]
  1555              	.L147:
  1556 00be 284B     		ldr	r3, .L152
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 28
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 28
 
 
  1557 00c0 D3F89830 		ldr	r3, [r3, #152]
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1611 0134 DB68     		ldr	r3, [r3, #12]
  1612 0136 5B0E     		lsrs	r3, r3, #25
  1613 0138 03F00303 		and	r3, r3, #3
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 29
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 29
 
 
  1614 013c 0133     		adds	r3, r3, #1
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1670 0036 9B68     		ldr	r3, [r3, #8]
  1671 0038 DB08     		lsrs	r3, r3, #3
  1672 003a 03F4E062 		and	r2, r3, #1792
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 30
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 30
 
 
  1673 003e 7B68     		ldr	r3, [r7, #4]
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1731 0000 80B4     		push	{r7}
  1732 0002 00AF     		add	r7, sp, #0
  1733 0004 064B     		ldr	r3, .L161
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 31
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 31
 
 
  1734 0006 D3F89030 		ldr	r3, [r3, #144]
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1792 0010 05D1     		bne	.L168
  1793 0012 FFF7FEFF 		bl	HAL_RCC_CSSCallback
  1794 0016 034B     		ldr	r3, .L169
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 32
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 32
 
 
  1795 0018 4FF48072 		mov	r2, #256
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1853 002c 144A     		ldr	r2, .L176
  1854 002e D268     		ldr	r2, [r2, #12]
  1855 0030 120A     		lsrs	r2, r2, #8
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 33
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 33
 
 
  1856 0032 02F07F02 		and	r2, r2, #127
@@ -1962,67 +1962,67 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 1
  1894 0084 00366E01 		.word	24000000
  1895 0088 0024F400 		.word	16000000
  1897              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 34
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 34
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_hal_rcc.c
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:18     .text.HAL_RCC_DeInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:24     .text.HAL_RCC_DeInit:00000000 HAL_RCC_DeInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:141    .text.HAL_RCC_DeInit:000000f4 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:147    .text.HAL_RCC_OscConfig:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:153    .text.HAL_RCC_OscConfig:00000000 HAL_RCC_OscConfig
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:460    .text.HAL_RCC_OscConfig:0000027c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:463    .text.HAL_RCC_OscConfig:00000284 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:713    .text.HAL_RCC_OscConfig:000004b8 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:716    .text.HAL_RCC_OscConfig:000004c0 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:886    .text.HAL_RCC_OscConfig:00000618 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:891    .text.HAL_RCC_ClockConfig:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:897    .text.HAL_RCC_ClockConfig:00000000 HAL_RCC_ClockConfig
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1830   .text.RCC_GetSysClockFreqFromPLLSource:00000000 RCC_GetSysClockFreqFromPLLSource
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1276   .text.HAL_RCC_GetSysClockFreq:00000000 HAL_RCC_GetSysClockFreq
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1185   .text.HAL_RCC_ClockConfig:00000260 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1193   .text.HAL_RCC_MCOConfig:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1199   .text.HAL_RCC_MCOConfig:00000000 HAL_RCC_MCOConfig
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1267   .text.HAL_RCC_MCOConfig:00000088 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1270   .text.HAL_RCC_GetSysClockFreq:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1367   .text.HAL_RCC_GetSysClockFreq:000000b8 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1372   .text.HAL_RCC_GetHCLKFreq:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1378   .text.HAL_RCC_GetHCLKFreq:00000000 HAL_RCC_GetHCLKFreq
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1394   .text.HAL_RCC_GetHCLKFreq:00000014 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1397   .text.HAL_RCC_GetPCLK1Freq:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1403   .text.HAL_RCC_GetPCLK1Freq:00000000 HAL_RCC_GetPCLK1Freq
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1423   .text.HAL_RCC_GetPCLK1Freq:00000024 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1427   .text.HAL_RCC_GetPCLK2Freq:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1433   .text.HAL_RCC_GetPCLK2Freq:00000000 HAL_RCC_GetPCLK2Freq
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1453   .text.HAL_RCC_GetPCLK2Freq:00000024 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1457   .text.HAL_RCC_GetOscConfig:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1463   .text.HAL_RCC_GetOscConfig:00000000 HAL_RCC_GetOscConfig
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1633   .text.HAL_RCC_GetOscConfig:00000160 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1636   .text.HAL_RCC_GetClockConfig:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1642   .text.HAL_RCC_GetClockConfig:00000000 HAL_RCC_GetClockConfig
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1689   .text.HAL_RCC_GetClockConfig:0000005c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1693   .text.HAL_RCC_EnableCSS:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1699   .text.HAL_RCC_EnableCSS:00000000 HAL_RCC_EnableCSS
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1718   .text.HAL_RCC_EnableCSS:0000001c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1721   .text.HAL_RCC_EnableLSECSS:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1727   .text.HAL_RCC_EnableLSECSS:00000000 HAL_RCC_EnableLSECSS
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1746   .text.HAL_RCC_EnableLSECSS:00000020 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1749   .text.HAL_RCC_DisableLSECSS:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1755   .text.HAL_RCC_DisableLSECSS:00000000 HAL_RCC_DisableLSECSS
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1774   .text.HAL_RCC_DisableLSECSS:00000020 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1777   .text.HAL_RCC_NMI_IRQHandler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1783   .text.HAL_RCC_NMI_IRQHandler:00000000 HAL_RCC_NMI_IRQHandler
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1812   .text.HAL_RCC_CSSCallback:00000000 HAL_RCC_CSSCallback
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1803   .text.HAL_RCC_NMI_IRQHandler:00000024 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1806   .text.HAL_RCC_CSSCallback:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1825   .text.RCC_GetSysClockFreqFromPLLSource:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s:1893   .text.RCC_GetSysClockFreqFromPLLSource:00000080 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:18     .text.HAL_RCC_DeInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:24     .text.HAL_RCC_DeInit:00000000 HAL_RCC_DeInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:141    .text.HAL_RCC_DeInit:000000f4 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:147    .text.HAL_RCC_OscConfig:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:153    .text.HAL_RCC_OscConfig:00000000 HAL_RCC_OscConfig
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:460    .text.HAL_RCC_OscConfig:0000027c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:463    .text.HAL_RCC_OscConfig:00000284 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:713    .text.HAL_RCC_OscConfig:000004b8 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:716    .text.HAL_RCC_OscConfig:000004c0 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:886    .text.HAL_RCC_OscConfig:00000618 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:891    .text.HAL_RCC_ClockConfig:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:897    .text.HAL_RCC_ClockConfig:00000000 HAL_RCC_ClockConfig
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1830   .text.RCC_GetSysClockFreqFromPLLSource:00000000 RCC_GetSysClockFreqFromPLLSource
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1276   .text.HAL_RCC_GetSysClockFreq:00000000 HAL_RCC_GetSysClockFreq
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1185   .text.HAL_RCC_ClockConfig:00000260 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1193   .text.HAL_RCC_MCOConfig:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1199   .text.HAL_RCC_MCOConfig:00000000 HAL_RCC_MCOConfig
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1267   .text.HAL_RCC_MCOConfig:00000088 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1270   .text.HAL_RCC_GetSysClockFreq:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1367   .text.HAL_RCC_GetSysClockFreq:000000b8 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1372   .text.HAL_RCC_GetHCLKFreq:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1378   .text.HAL_RCC_GetHCLKFreq:00000000 HAL_RCC_GetHCLKFreq
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1394   .text.HAL_RCC_GetHCLKFreq:00000014 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1397   .text.HAL_RCC_GetPCLK1Freq:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1403   .text.HAL_RCC_GetPCLK1Freq:00000000 HAL_RCC_GetPCLK1Freq
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1423   .text.HAL_RCC_GetPCLK1Freq:00000024 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1427   .text.HAL_RCC_GetPCLK2Freq:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1433   .text.HAL_RCC_GetPCLK2Freq:00000000 HAL_RCC_GetPCLK2Freq
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1453   .text.HAL_RCC_GetPCLK2Freq:00000024 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1457   .text.HAL_RCC_GetOscConfig:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1463   .text.HAL_RCC_GetOscConfig:00000000 HAL_RCC_GetOscConfig
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1633   .text.HAL_RCC_GetOscConfig:00000160 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1636   .text.HAL_RCC_GetClockConfig:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1642   .text.HAL_RCC_GetClockConfig:00000000 HAL_RCC_GetClockConfig
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1689   .text.HAL_RCC_GetClockConfig:0000005c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1693   .text.HAL_RCC_EnableCSS:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1699   .text.HAL_RCC_EnableCSS:00000000 HAL_RCC_EnableCSS
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1718   .text.HAL_RCC_EnableCSS:0000001c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1721   .text.HAL_RCC_EnableLSECSS:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1727   .text.HAL_RCC_EnableLSECSS:00000000 HAL_RCC_EnableLSECSS
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1746   .text.HAL_RCC_EnableLSECSS:00000020 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1749   .text.HAL_RCC_DisableLSECSS:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1755   .text.HAL_RCC_DisableLSECSS:00000000 HAL_RCC_DisableLSECSS
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1774   .text.HAL_RCC_DisableLSECSS:00000020 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1777   .text.HAL_RCC_NMI_IRQHandler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1783   .text.HAL_RCC_NMI_IRQHandler:00000000 HAL_RCC_NMI_IRQHandler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1812   .text.HAL_RCC_CSSCallback:00000000 HAL_RCC_CSSCallback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1803   .text.HAL_RCC_NMI_IRQHandler:00000024 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1806   .text.HAL_RCC_CSSCallback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1825   .text.RCC_GetSysClockFreqFromPLLSource:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s:1893   .text.RCC_GetSysClockFreqFromPLLSource:00000080 $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick
 HAL_InitTick
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//cc1TXIfD.s 			page 35
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNKwI2u.s 			page 35
 
 
 SystemCoreClock

@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
   66 0000 00800040 		.word	1073774592
   67              		.section	.bss.COM_ActiveLogPort,"aw",%nobits
   70              	COM_ActiveLogPort:
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 2
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 2
 
 
   71 0000 00       		.space	1
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  125 0011 000000   		.align	2
  126              	.LC1:
  127 0014 4D423133 		.ascii	"MB1367\000"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 3
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 3
 
 
  127      363700
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  184 0030 BB61     		str	r3, [r7, #24]
  185 0032 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  186 0034 0C4A     		ldr	r2, .L15+4
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 4
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 4
 
 
  187 0036 52F82330 		ldr	r3, [r2, r3, lsl #2]
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  243 0034 BD46     		mov	sp, r7
  244              		@ sp needed
  245 0036 80BD     		pop	{r7, pc}
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 5
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 5
 
 
  246              	.L20:
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  304 0016 1846     		mov	r0, r3
  305 0018 FFF7FEFF 		bl	HAL_GPIO_WritePin
  306 001c 0023     		movs	r3, #0
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 6
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 6
 
 
  307 001e 1846     		mov	r0, r3
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  365 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  366 000c 064A     		ldr	r2, .L35
  367 000e 52F82330 		ldr	r3, [r2, r3, lsl #2]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 7
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 7
 
 
  368 0012 2022     		movs	r2, #32
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  424 0044 52F82330 		ldr	r3, [r2, r3, lsl #2]
  425 0048 07F10C02 		add	r2, r7, #12
  426 004c 1146     		mov	r1, r2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 8
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 8
 
 
  427 004e 1846     		mov	r0, r3
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  481 00c8 00000000 		.word	BUTTON_PORT
  482 00cc 00000000 		.word	hpb_exti
  483 00d0 00000000 		.word	BUTTON_EXTI_LINE.2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 9
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 9
 
 
  484 00d4 00000000 		.word	ButtonCallback.1
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  542 0016 1146     		mov	r1, r2
  543 0018 1846     		mov	r0, r3
  544 001a FFF7FEFF 		bl	HAL_GPIO_ReadPin
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 10
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 10
 
 
  545 001e 0346     		mov	r3, r0
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  603 000a 00BF     		nop
  604 000c 0C37     		adds	r7, r7, #12
  605 000e BD46     		mov	sp, r7
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 11
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 11
 
 
  606              		@ sp needed
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  662 0058 80BD     		pop	{r7, pc}
  663              	.L60:
  664 005a 00BF     		.align	2
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 12
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 12
 
 
  665              	.L59:
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  721 0062 FB68     		ldr	r3, [r7, #12]
  722              	.L64:
  723 0064 1846     		mov	r0, r3
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 13
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 13
 
 
  724 0066 1037     		adds	r7, r7, #16
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  780 0048 4FF40042 		mov	r2, #32768
  781 004c DA61     		str	r2, [r3, #28]
  782 004e 7868     		ldr	r0, [r7, #4]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 14
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 14
 
 
  783 0050 FFF7FEFF 		bl	HAL_UART_Init
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  841              		@ frame_needed = 1, uses_anonymous_args = 0
  842 0000 80B5     		push	{r7, lr}
  843 0002 82B0     		sub	sp, sp, #8
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 15
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 15
 
 
  844 0004 00AF     		add	r7, sp, #0
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  902 0012 D364     		str	r3, [r2, #76]
  903 0014 1F4B     		ldr	r3, .L82
  904 0016 DB6C     		ldr	r3, [r3, #76]
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 16
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 16
 
 
  905 0018 03F00103 		and	r3, r3, #1
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  959              	.L82:
  960 0094 00100240 		.word	1073876992
  962              		.section	.text.COM1_MspDeInit,"ax",%progbits
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 17
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 17
 
 
  963              		.align	1
@@ -1011,103 +1011,103 @@ ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 1
  1018              	BSP_BUTTON_PRIO.0:
  1019 0000 0F000000 		.word	15
  1020              		.ident	"GCC: (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623"
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 18
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 18
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_nucleo.c
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:22     .bss.hpb_exti:00000000 hpb_exti
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:19     .bss.hpb_exti:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:29     .bss.hcom_uart:00000000 hcom_uart
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:26     .bss.hcom_uart:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:32     .data.LED_PORT:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:35     .data.LED_PORT:00000000 LED_PORT
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:38     .rodata.LED_PIN:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:41     .rodata.LED_PIN:00000000 LED_PIN
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:44     .data.BUTTON_PORT:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:47     .data.BUTTON_PORT:00000000 BUTTON_PORT
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:50     .rodata.BUTTON_PIN:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:53     .rodata.BUTTON_PIN:00000000 BUTTON_PIN
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:56     .rodata.BUTTON_IRQn:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:59     .rodata.BUTTON_IRQn:00000000 BUTTON_IRQn
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:62     .data.COM_USART:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:65     .data.COM_USART:00000000 COM_USART
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:70     .bss.COM_ActiveLogPort:00000000 COM_ActiveLogPort
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:71     .bss.COM_ActiveLogPort:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:73     .text.BSP_GetVersion:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:79     .text.BSP_GetVersion:00000000 BSP_GetVersion
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:94     .text.BSP_GetVersion:00000010 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:97     .rodata:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:101    .text.BSP_GetBoardName:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:107    .text.BSP_GetBoardName:00000000 BSP_GetBoardName
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:122    .text.BSP_GetBoardName:00000010 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:129    .text.BSP_GetBoardID:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:135    .text.BSP_GetBoardID:00000000 BSP_GetBoardID
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:150    .text.BSP_GetBoardID:00000010 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:153    .text.BSP_LED_Init:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:159    .text.BSP_LED_Init:00000000 BSP_LED_Init
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:208    .text.BSP_LED_Init:00000064 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:212    .text.BSP_LED_DeInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:218    .text.BSP_LED_DeInit:00000000 BSP_LED_DeInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:249    .text.BSP_LED_DeInit:00000038 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:252    .text.BSP_LED_On:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:258    .text.BSP_LED_On:00000000 BSP_LED_On
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:282    .text.BSP_LED_On:00000028 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:285    .text.BSP_LED_Off:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:291    .text.BSP_LED_Off:00000000 BSP_LED_Off
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:315    .text.BSP_LED_Off:00000028 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:318    .text.BSP_LED_Toggle:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:324    .text.BSP_LED_Toggle:00000000 BSP_LED_Toggle
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:348    .text.BSP_LED_Toggle:00000028 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:351    .text.BSP_LED_GetState:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:357    .text.BSP_LED_GetState:00000000 BSP_LED_GetState
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:381    .text.BSP_LED_GetState:00000028 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:384    .text.BSP_PB_Init:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:390    .text.BSP_PB_Init:00000000 BSP_PB_Init
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:480    .text.BSP_PB_Init:000000c4 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:1006   .rodata.BUTTON_EXTI_LINE.2:00000000 BUTTON_EXTI_LINE.2
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:1012   .data.ButtonCallback.1:00000000 ButtonCallback.1
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:1018   .data.BSP_BUTTON_PRIO.0:00000000 BSP_BUTTON_PRIO.0
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:488    .text.BSP_PB_DeInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:494    .text.BSP_PB_DeInit:00000000 BSP_PB_DeInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:521    .text.BSP_PB_DeInit:00000030 $d
-ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s 			page 19
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:22     .bss.hpb_exti:00000000 hpb_exti
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:19     .bss.hpb_exti:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:29     .bss.hcom_uart:00000000 hcom_uart
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:26     .bss.hcom_uart:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:32     .data.LED_PORT:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:35     .data.LED_PORT:00000000 LED_PORT
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:38     .rodata.LED_PIN:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:41     .rodata.LED_PIN:00000000 LED_PIN
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:44     .data.BUTTON_PORT:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:47     .data.BUTTON_PORT:00000000 BUTTON_PORT
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:50     .rodata.BUTTON_PIN:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:53     .rodata.BUTTON_PIN:00000000 BUTTON_PIN
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:56     .rodata.BUTTON_IRQn:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:59     .rodata.BUTTON_IRQn:00000000 BUTTON_IRQn
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:62     .data.COM_USART:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:65     .data.COM_USART:00000000 COM_USART
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:70     .bss.COM_ActiveLogPort:00000000 COM_ActiveLogPort
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:71     .bss.COM_ActiveLogPort:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:73     .text.BSP_GetVersion:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:79     .text.BSP_GetVersion:00000000 BSP_GetVersion
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:94     .text.BSP_GetVersion:00000010 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:97     .rodata:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:101    .text.BSP_GetBoardName:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:107    .text.BSP_GetBoardName:00000000 BSP_GetBoardName
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:122    .text.BSP_GetBoardName:00000010 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:129    .text.BSP_GetBoardID:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:135    .text.BSP_GetBoardID:00000000 BSP_GetBoardID
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:150    .text.BSP_GetBoardID:00000010 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:153    .text.BSP_LED_Init:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:159    .text.BSP_LED_Init:00000000 BSP_LED_Init
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:208    .text.BSP_LED_Init:00000064 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:212    .text.BSP_LED_DeInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:218    .text.BSP_LED_DeInit:00000000 BSP_LED_DeInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:249    .text.BSP_LED_DeInit:00000038 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:252    .text.BSP_LED_On:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:258    .text.BSP_LED_On:00000000 BSP_LED_On
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:282    .text.BSP_LED_On:00000028 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:285    .text.BSP_LED_Off:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:291    .text.BSP_LED_Off:00000000 BSP_LED_Off
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:315    .text.BSP_LED_Off:00000028 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:318    .text.BSP_LED_Toggle:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:324    .text.BSP_LED_Toggle:00000000 BSP_LED_Toggle
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:348    .text.BSP_LED_Toggle:00000028 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:351    .text.BSP_LED_GetState:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:357    .text.BSP_LED_GetState:00000000 BSP_LED_GetState
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:381    .text.BSP_LED_GetState:00000028 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:384    .text.BSP_PB_Init:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:390    .text.BSP_PB_Init:00000000 BSP_PB_Init
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:480    .text.BSP_PB_Init:000000c4 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:1006   .rodata.BUTTON_EXTI_LINE.2:00000000 BUTTON_EXTI_LINE.2
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:1012   .data.ButtonCallback.1:00000000 ButtonCallback.1
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:1018   .data.BSP_BUTTON_PRIO.0:00000000 BSP_BUTTON_PRIO.0
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:488    .text.BSP_PB_DeInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:494    .text.BSP_PB_DeInit:00000000 BSP_PB_DeInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:521    .text.BSP_PB_DeInit:00000030 $d
+ARM GAS  /var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s 			page 19
 
 
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:524    .text.BSP_PB_GetState:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:530    .text.BSP_PB_GetState:00000000 BSP_PB_GetState
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:554    .text.BSP_PB_GetState:00000028 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:557    .text.BSP_PB_IRQHandler:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:563    .text.BSP_PB_IRQHandler:00000000 BSP_PB_IRQHandler
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:585    .text.BSP_PB_IRQHandler:00000020 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:588    .text.BSP_PB_Callback:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:594    .text.BSP_PB_Callback:00000000 BSP_PB_Callback
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:611    .text.BSP_COM_Init:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:617    .text.BSP_COM_Init:00000000 BSP_COM_Init
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:891    .text.COM1_MspInit:00000000 COM1_MspInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:741    .text.MX_LPUART1_Init:00000000 MX_LPUART1_Init
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:666    .text.BSP_COM_Init:0000005c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:669    .text.BSP_COM_DeInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:675    .text.BSP_COM_DeInit:00000000 BSP_COM_DeInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:968    .text.COM1_MspDeInit:00000000 COM1_MspDeInit
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:731    .text.BSP_COM_DeInit:0000006c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:735    .text.MX_LPUART1_Init:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:793    .text.MX_LPUART1_Init:00000060 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:796    .text.BSP_COM_SelectLogPort:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:802    .text.BSP_COM_SelectLogPort:00000000 BSP_COM_SelectLogPort
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:830    .text.BSP_COM_SelectLogPort:00000028 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:833    .text.__io_putchar:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:839    .text.__io_putchar:00000000 __io_putchar
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:866    .text.__io_putchar:00000030 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:870    .text.BUTTON_USER_EXTI_Callback:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:875    .text.BUTTON_USER_EXTI_Callback:00000000 BUTTON_USER_EXTI_Callback
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:886    .text.COM1_MspInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:960    .text.COM1_MspInit:00000094 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:963    .text.COM1_MspDeInit:00000000 $t
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:1000   .text.COM1_MspDeInit:0000003c $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:1003   .rodata.BUTTON_EXTI_LINE.2:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:1009   .data.ButtonCallback.1:00000000 $d
-/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccZgo19a.s:1015   .data.BSP_BUTTON_PRIO.0:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:524    .text.BSP_PB_GetState:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:530    .text.BSP_PB_GetState:00000000 BSP_PB_GetState
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:554    .text.BSP_PB_GetState:00000028 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:557    .text.BSP_PB_IRQHandler:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:563    .text.BSP_PB_IRQHandler:00000000 BSP_PB_IRQHandler
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:585    .text.BSP_PB_IRQHandler:00000020 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:588    .text.BSP_PB_Callback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:594    .text.BSP_PB_Callback:00000000 BSP_PB_Callback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:611    .text.BSP_COM_Init:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:617    .text.BSP_COM_Init:00000000 BSP_COM_Init
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:891    .text.COM1_MspInit:00000000 COM1_MspInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:741    .text.MX_LPUART1_Init:00000000 MX_LPUART1_Init
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:666    .text.BSP_COM_Init:0000005c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:669    .text.BSP_COM_DeInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:675    .text.BSP_COM_DeInit:00000000 BSP_COM_DeInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:968    .text.COM1_MspDeInit:00000000 COM1_MspDeInit
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:731    .text.BSP_COM_DeInit:0000006c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:735    .text.MX_LPUART1_Init:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:793    .text.MX_LPUART1_Init:00000060 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:796    .text.BSP_COM_SelectLogPort:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:802    .text.BSP_COM_SelectLogPort:00000000 BSP_COM_SelectLogPort
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:830    .text.BSP_COM_SelectLogPort:00000028 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:833    .text.__io_putchar:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:839    .text.__io_putchar:00000000 __io_putchar
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:866    .text.__io_putchar:00000030 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:870    .text.BUTTON_USER_EXTI_Callback:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:875    .text.BUTTON_USER_EXTI_Callback:00000000 BUTTON_USER_EXTI_Callback
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:886    .text.COM1_MspInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:960    .text.COM1_MspInit:00000094 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:963    .text.COM1_MspDeInit:00000000 $t
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:1000   .text.COM1_MspDeInit:0000003c $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:1003   .rodata.BUTTON_EXTI_LINE.2:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:1009   .data.ButtonCallback.1:00000000 $d
+/var/folders/k1/1yttftd15rl7jxtpyc5m93n80000gn/T//ccNTre8m.s:1015   .data.BSP_BUTTON_PRIO.0:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_Init
